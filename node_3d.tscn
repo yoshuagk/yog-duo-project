@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8wgko2iycdxn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4xowi"]
+
+[node name="main_scene" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.6220173, 0, 0, -0.36659968)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.2048368, 0, 0, 0, -4.371139e-08, -1.054759, 0, 1, -4.6104983e-08, 0, 0.82627195, -0.6708512)
+mesh = SubResource("PlaneMesh_4xowi")
