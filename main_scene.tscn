@@ -1,16 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://buovdimclgrd6"]
+[gd_scene load_steps=7 format=3 uid="uid://buovdimclgrd6"]
 
 [ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://images/Paper Prototype #1.png" id="1_0f027"]
+[ext_resource type="Script" uid="uid://77rsgo4cli8d" path="res://player.gd" id="2_2c62f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ns6u7"]
 albedo_texture = ExtResource("1_0f027")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4xowi"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0f027"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2c62f"]
+
 [node name="main_scene" type="Node3D"]
 
 [node name="forest_ground" type="CSGBox3D" parent="."]
 transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.23385397, 0.5212807, 0.98038095, -0.5468075)
+use_collision = true
 size = Vector3(0.7859802, 0.9334717, 1)
 
 [node name="map_reference" type="MeshInstance3D" parent="."]
@@ -49,3 +55,21 @@ size = Vector3(0.8220215, 0.4428711, 0.7149658)
 [node name="wood_platform6" type="CSGBox3D" parent="."]
 transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.17949274, 1.2332891, -0.5466541)
 size = Vector3(0.8220215, 0.4428711, 0.7149658)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3926331, 0.29196656)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5065422, 1.9367168)
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1623766, 1.1085912, -0.53583825)
+script = ExtResource("2_2c62f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_0f027")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_2c62f")
