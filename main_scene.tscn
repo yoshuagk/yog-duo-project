@@ -3,65 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://images/Paper Prototype #1.png" id="1_0f027"]
 [ext_resource type="Script" uid="uid://77rsgo4cli8d" path="res://player.gd" id="2_2c62f"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0f027"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2c62f"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ns6u7"]
 albedo_texture = ExtResource("1_0f027")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4xowi"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_0f027"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2c62f"]
-
 [node name="main_scene" type="Node3D"]
-
-[node name="forest_ground" type="CSGBox3D" parent="."]
-transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.23385397, 0.5212807, 0.98038095, -0.5468075)
-use_collision = true
-size = Vector3(0.7859802, 0.9334717, 1)
-
-[node name="map_reference" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.223464, 0, 0, 0, -4.371139e-08, -1.267169, 0, 1, -5.538972e-08, 0, 0.82627195, -0.6708512)
-material_override = SubResource("StandardMaterial3D_ns6u7")
-mesh = SubResource("PlaneMesh_4xowi")
-
-[node name="forest_ground2" type="CSGBox3D" parent="."]
-transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.23385397, -2.0337312, 0.98038095, -0.5468075)
-size = Vector3(0.09788275, 0.9334717, 1)
-
-[node name="forest_ground3" type="CSGBox3D" parent="."]
-transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.23385397, -1.420222, 0.98038095, -0.5468075)
-size = Vector3(0.12237108, 0.9334717, 1)
-
-[node name="wood_platform1" type="CSGBox3D" parent="."]
-transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 1.1663264, 1.2864074, -0.5466541)
-size = Vector3(0.8220215, 0.4428711, 0.7149658)
-
-[node name="wood_platform2" type="CSGBox3D" parent="."]
-transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.82286656, 1.8063968, -0.5466541)
-size = Vector3(0.8220215, 0.4428711, 0.7149658)
-
-[node name="wood_platform3" type="CSGBox3D" parent="."]
-transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.92700994, 1.8063968, -0.5466541)
-size = Vector3(0.8220215, 0.4428711, 0.7149658)
-
-[node name="wood_platform4" type="CSGBox3D" parent="."]
-transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.05938141, 1.8465148, -0.5466541)
-size = Vector3(0.8220215, 0.4428711, 0.7149658)
-
-[node name="wood_platform5" type="CSGBox3D" parent="."]
-transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.2951509, 1.8465148, -0.5466541)
-size = Vector3(0.8220215, 0.4428711, 0.7149658)
-
-[node name="wood_platform6" type="CSGBox3D" parent="."]
-transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.17949274, 1.2332891, -0.5466541)
-use_collision = true
-size = Vector3(0.8220215, 0.4428711, 0.7149658)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3926331, 0.29196656)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5065422, 1.9367168)
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1623766, 1.1085912, -0.53583825)
@@ -71,9 +22,65 @@ jump_height = 0.3
 gravity = 5.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, -0.014407992, 0)
 mesh = SubResource("CapsuleMesh_0f027")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_2c62f")
+
+[node name="Player Camera" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04679528, 0.14629889, 1.4145206)
+keep_aspect = 0
+v_offset = 0.05
+projection = 1
+size = 1.319309
+
+[node name="area_1_start_room" type="Node3D" parent="."]
+
+[node name="forest_ground" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.23385397, 0.5212807, 0.98038095, -0.5468075)
+use_collision = true
+size = Vector3(0.7859802, 0.9334717, 1)
+
+[node name="map_reference" type="MeshInstance3D" parent="area_1_start_room"]
+transform = Transform3D(2.223464, 0, 0, 0, -4.371139e-08, -1.267169, 0, 1, -5.538972e-08, 0, 0.82627195, -0.6708512)
+material_override = SubResource("StandardMaterial3D_ns6u7")
+mesh = SubResource("PlaneMesh_4xowi")
+skeleton = NodePath("../..")
+
+[node name="forest_ground2" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.23385397, -2.0337312, 0.98038095, -0.5468075)
+size = Vector3(0.09788275, 0.9334717, 1)
+
+[node name="forest_ground3" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(3.8510487, 0, 0, 0, 0.0793885, 0, 0, 0, 0.23385397, -1.420222, 0.98038095, -0.5468075)
+size = Vector3(0.12237108, 0.9334717, 1)
+
+[node name="wood_platform1" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 1.1663264, 1.2864074, -0.5466541)
+size = Vector3(0.8220215, 0.4428711, 0.7149658)
+
+[node name="wood_platform2" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.82286656, 1.8063968, -0.5466541)
+size = Vector3(0.8220215, 0.4428711, 0.7149658)
+
+[node name="wood_platform3" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.92700994, 1.8063968, -0.5466541)
+size = Vector3(0.8220215, 0.4428711, 0.7149658)
+
+[node name="wood_platform4" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.05938141, 1.8465148, -0.5466541)
+size = Vector3(0.8220215, 0.4428711, 0.7149658)
+
+[node name="wood_platform5" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.2951509, 1.8465148, -0.5466541)
+size = Vector3(0.8220215, 0.4428711, 0.7149658)
+
+[node name="wood_platform6" type="CSGBox3D" parent="area_1_start_room"]
+transform = Transform3D(0.2873127, 0, 0, 0, 0.0756709, 0, 0, 0, 0.32674503, 0.17949274, 1.2332891, -0.5466541)
+use_collision = true
+size = Vector3(0.8220215, 0.4428711, 0.7149658)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="area_1_start_room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5065422, 1.9367168)
