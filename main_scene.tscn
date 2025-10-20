@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://buovdimclgrd6"]
+[gd_scene load_steps=8 format=3 uid="uid://buovdimclgrd6"]
 
 [ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://images/Paper Prototype #1.png" id="1_0f027"]
 [ext_resource type="Script" uid="uid://77rsgo4cli8d" path="res://player.gd" id="2_2c62f"]
@@ -11,6 +11,9 @@
 albedo_texture = ExtResource("1_0f027")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4xowi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gyfs4"]
+size = Vector3(4.388672, 2.5897827, 1.6259766)
 
 [node name="main_scene" type="Node3D"]
 
@@ -34,6 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04679528, 0.14629889, 1.41
 keep_aspect = 0
 v_offset = 0.05
 projection = 1
+current = true
 size = 1.319309
 
 [node name="area_1_start_room" type="Node3D" parent="."]
@@ -84,3 +88,10 @@ size = Vector3(0.8220215, 0.4428711, 0.7149658)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="area_1_start_room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5065422, 1.9367168)
+
+[node name="LevelBounds" type="Area3D" parent="."]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelBounds"]
+transform = Transform3D(0.97224575, 0, 0, 0, 0.97224575, 0, 0, 0, 0.97224575, -0.0954206, 0.8369463, 0.11458844)
+shape = SubResource("BoxShape3D_gyfs4")
