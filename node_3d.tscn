@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0gu67u6a4v7c"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_4xowi"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1796882)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.026847, 0.23782611, 1.546124)
+mesh = SubResource("TorusMesh_4xowi")
