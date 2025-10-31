@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtt2mqkcxj4b"]
+
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_xipfw"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_o66s1"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_ucycf"]
+[ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="4_o66s1"]
+[ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="5_cambounds"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xipfw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o66s1"]
+
+[sub_resource type="Resource" id="Resource_o66s1"]
+script = ExtResource("3_ucycf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucycf"]
+size = Vector3(65.91831, 26.552296, 14.156685)
+
+[node name="Camera Test" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
+script = ExtResource("4_o66s1")
+jump_height = 7.0
+gravity = 45.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_xipfw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_o66s1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 7.645761, -2.4762053, -7.749011)
+use_collision = true
+size = Vector3(1.3719482, 4.625, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.4007, -10.0342)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, 2.79713)
+projection = 1
+size = 12.617071
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("1_xipfw")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, 2.79713)
+top_level = true
+script = ExtResource("2_o66s1")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../CharacterBody3D")
+tween_resource = SubResource("Resource_o66s1")
+inactive_update_mode = 1
+follow_damping = true
+follow_damping_value = Vector3(0.2, 0.2, 0)
+follow_distance = 10.0
+dead_zone_width = 0.15
+dead_zone_height = 0.5
+show_viewfinder_in_play = true
+spring_length = 10.0
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 6.634427, 3.301518, -7.749011)
+use_collision = true
+size = Vector3(0.15, 0.3, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 18.978455, 3.6369672, -7.749011)
+use_collision = true
+size = Vector3(0.16882324, 1, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 32.714966, 3.6369672, -7.749011)
+use_collision = true
+size = Vector3(0.16882324, 1, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -23.528633, 10.0521145, -7.749011)
+use_collision = true
+size = Vector3(0.13986206, 29.55664, 1)
+
+[node name="CameraConfiner" type="Area3D" parent="." node_paths=PackedStringArray("phantom_camera", "camera3d")]
+script = ExtResource("5_cambounds")
+phantom_camera = NodePath("../PhantomCamera3D")
+camera3d = NodePath("../Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraConfiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.107258, 11.429663, -3.4389915)
+shape = SubResource("BoxShape3D_ucycf")

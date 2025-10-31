@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnb0fcddncnk1"]
+
+[ext_resource type="Script" uid="uid://df3iyqgfffwtj" path="res://player_manager.gd" id="1_ahlmt"]
+[ext_resource type="PackedScene" uid="uid://48ccefpk23gm" path="res://player.tscn" id="2_wm554"]
+
+[node name="Player_Manager" type="Node3D"]
+script = ExtResource("1_ahlmt")
+character1 = NodePath("Player")
+character2 = NodePath("Player_Fox")
+character3 = NodePath("Player3")
+camera = NodePath("../Camera_Rig/Camera3D")
+start_node = NodePath("../Player_Position")
+
+[node name="Player" parent="." instance=ExtResource("2_wm554")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1623764, 0.22383845, -0.53583825)
+speed = 6.0
+jump_height = 2.0
+gravity = null
+
+[node name="Player_Fox" parent="." instance=ExtResource("2_wm554")]
+transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, -0.32475328, 0.44270802, -0.4363681)
+speed = 6.0
+jump_height = 2.0
+gravity = null
+
+[node name="Player3" parent="." instance=ExtResource("2_wm554")]
+transform = Transform3D(1.615, 0, 0, 0, 1.615, 0, 0, 0, 1.615, -0.1623764, 0.3156072, -0.53583825)
+speed = 6.0
+jump_height = 2.0
+gravity = null

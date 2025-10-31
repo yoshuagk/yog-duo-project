@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://48ccefpk23gm"]
-
-[ext_resource type="Script" uid="uid://77rsgo4cli8d" path="res://player.gd" id="1_4flbx"]
+[gd_scene load_steps=3 format=3 uid="uid://48ccefpk23gm"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0f027"]
 
@@ -9,10 +7,6 @@ radius = 0.52441406
 height = 2.058899
 
 [node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_4flbx")
-speed = 0.5
-jump_height = 0.3
-gravity = 5.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, -0.014407992, 0)
