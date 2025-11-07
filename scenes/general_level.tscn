@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://dyqktm3ptehvh"]
 
-[ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://images/Paper Prototype #1.png" id="1_ly8tk"]
-[ext_resource type="Texture2D" uid="uid://dpnn3tbd7ypg0" path="res://images/bear room.png" id="2_aqwag"]
-[ext_resource type="Texture2D" uid="uid://ju0qf5duln0c" path="res://images/fox room.png" id="3_aioq2"]
+[ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://Assets/Images/Paper Prototype #1.png" id="1_ly8tk"]
+[ext_resource type="Texture2D" uid="uid://dpnn3tbd7ypg0" path="res://Assets/Images/bear room.png" id="2_aqwag"]
+[ext_resource type="Texture2D" uid="uid://ju0qf5duln0c" path="res://Assets/Images/fox room.png" id="3_aioq2"]
 [ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="4_q4nlx"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_bhwh1"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_wtek4"]
