@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlayerForm" load_steps=3 format=3 uid="uid://dq0ssulyp5cai"]
+
+[ext_resource type="Script" uid="uid://dhbh7qf4ws0bu" path="res://PlayerForm.gd" id="1_1"]
+[ext_resource type="Texture2D" uid="uid://ba4co73xtppv3" path="res://images/placeholder/Fox.png" id="2_ut87v"]
+
+[resource]
+script = ExtResource("1_1")
+form_name = &"Small"
+speed = 7.5
+jump_height = 3.5
+gravity_scale = 2.0
+collider_radius = 0.8
+collider_height = 1.2
+camera_offset_y = -0.4
+sprite_texture = ExtResource("2_ut87v")
+debug_color = Color(0.3, 0.8, 0.3, 1)
