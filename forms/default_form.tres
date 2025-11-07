@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerForm" load_steps=3 format=3 uid="uid://c620jlqml2qp"]
+
+[ext_resource type="Script" uid="uid://dhbh7qf4ws0bu" path="res://PlayerForm.gd" id="1_1"]
+[ext_resource type="Texture2D" uid="uid://bgee2yw6x42mq" path="res://images/placeholder/Default.png" id="2_pvb4p"]
+
+[resource]
+script = ExtResource("1_1")
+form_name = &"Default"
+speed = 5.0
+jump_height = 5.0
+gravity_scale = 4.0
+collider_radius = 0.8
+sprite_texture = ExtResource("2_pvb4p")
+debug_color = Color(0.5, 0.5, 0.8, 1)
