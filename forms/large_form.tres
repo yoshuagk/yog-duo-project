@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerForm" load_steps=3 format=3 uid="uid://cbxaxu4vb4f4j"]
+
+[ext_resource type="Script" uid="uid://dhbh7qf4ws0bu" path="res://PlayerForm.gd" id="1_1"]
+[ext_resource type="Texture2D" uid="uid://clqu82o1x86at" path="res://images/placeholder/Bear.png" id="2_shy0n"]
+
+[resource]
+script = ExtResource("1_1")
+form_name = &"Large"
+speed = 3.5
+gravity_scale = 5.0
+collider_radius = 0.8
+collider_height = 3.0
+camera_offset_y = 0.5
+sprite_texture = ExtResource("2_shy0n")
+debug_color = Color(0.8, 0.3, 0.3, 1)
