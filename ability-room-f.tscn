@@ -1,19 +1,19 @@
 [gd_scene load_steps=17 format=3 uid="uid://hhemcmioeqrv"]
 
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_drthq"]
-[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_mmrob"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_w28ks"]
-[ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="4_r0moo"]
-[ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="5_vkqey"]
-[ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="6_dg8lh"]
-[ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="7_if1i1"]
-[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="8_0la6b"]
-[ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="8_mmrob"]
-[ext_resource type="Script" uid="uid://c0hvmpa51btha" path="res://AltarInteractable.gd" id="9_65jlb"]
-[ext_resource type="Resource" uid="uid://dq0ssulyp5cai" path="res://forms/small_form.tres" id="10_57mdj"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_gkwta"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_uru40"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_n28sk"]
+[ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="4_xjgji"]
+[ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="5_yaeta"]
+[ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="6_kcsqd"]
+[ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="7_lbbf7"]
+[ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="8_reuh4"]
+[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="9_mxvjd"]
+[ext_resource type="Script" uid="uid://c0hvmpa51btha" path="res://AltarInteractable.gd" id="10_8j8k0"]
+[ext_resource type="Resource" uid="uid://dq0ssulyp5cai" path="res://forms/small_form.tres" id="11_t2mmg"]
 
 [sub_resource type="Resource" id="Resource_dawam"]
-script = ExtResource("3_w28ks")
+script = ExtResource("3_n28sk")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lmw7g"]
 size = Vector3(46.438526, 26.543169, 14.156685)
@@ -47,13 +47,13 @@ size = 12.617071
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
 process_physics_priority = 300
-script = ExtResource("1_drthq")
+script = ExtResource("1_gkwta")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 0.92240286, 2.79713)
 top_level = true
-script = ExtResource("2_mmrob")
+script = ExtResource("2_uru40")
 priority = 1
 follow_mode = 5
 follow_target = NodePath("../Player/CharacterBody3D")
@@ -73,7 +73,7 @@ use_collision = true
 size = Vector3(0.13986206, 29.55664, 1)
 
 [node name="CameraConfiner" type="Area3D" parent="." node_paths=PackedStringArray("phantom_camera", "camera3d")]
-script = ExtResource("4_r0moo")
+script = ExtResource("4_xjgji")
 phantom_camera = NodePath("../PhantomCamera3D")
 camera3d = NodePath("../Camera3D")
 
@@ -91,17 +91,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 0, 0)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
-script = ExtResource("5_vkqey")
+script = ExtResource("5_yaeta")
 
 [node name="FormController" type="Node" parent="Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container", "phantom_camera")]
-script = ExtResource("6_dg8lh")
+script = ExtResource("6_kcsqd")
 character_body = NodePath("..")
 movement_script = NodePath("..")
 collision_shape = NodePath("../CollisionShape3D")
 visuals_container = NodePath("../Visuals")
 abilities_container = NodePath("../Abilities")
 phantom_camera = NodePath("../../../PhantomCamera3D")
-default_form = ExtResource("7_if1i1")
+default_form = ExtResource("7_lbbf7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007086873, -0.38889122)
@@ -110,10 +110,10 @@ shape = SubResource("CapsuleShape3D_8c42j")
 [node name="Visuals" type="Node3D" parent="Player/CharacterBody3D"]
 
 [node name="Abilities" type="Node" parent="Player/CharacterBody3D"]
-script = ExtResource("8_mmrob")
+script = ExtResource("8_reuh4")
 
 [node name="HealthComponent" type="Node3D" parent="Player/CharacterBody3D"]
-script = ExtResource("8_0la6b")
+script = ExtResource("9_mxvjd")
 
 [node name="Altar 2" type="CSGBox3D" parent="."]
 transform = Transform3D(41.111958, 0, 0, 0, 0.99999994, 1.8179417e-06, 0, -3.7252903e-09, 4.6832232, -16.054703, 2.0730772, -9.429804)
@@ -125,8 +125,8 @@ material = SubResource("ORMMaterial3D_lij6s")
 
 [node name="Area3D" type="Area3D" parent="Altar 2/InteractZone"]
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
-script = ExtResource("9_65jlb")
-form_to_grant = ExtResource("10_57mdj")
+script = ExtResource("10_8j8k0")
+form_to_grant = ExtResource("11_t2mmg")
 interactable_name = "Altar 2"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Altar 2/InteractZone/Area3D"]

@@ -6,6 +6,12 @@ class_name AbilitiesContainer
 
 ## reference to the FormController to check which form is active
 @onready var form_controller: FormController = get_parent().get_node("FormController")
+@export var character_body : CharacterBody3D
+
+## keeps track of the last spawned duplicate for default ability
+var default_statue: Node3D = null
+## tracks whether the player is currently in spirit state
+var is_spirit: bool = false
 
 func _ready() -> void:
 	if not form_controller:
@@ -13,7 +19,11 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ability_key"):
-		use_ability()
+		if is_spirit:
+			use_ability()
+			return
+		if character_body and character_body.is_on_floor():
+			use_ability()
 
 ## triggers the ability based on the current form
 func use_ability() -> void:
@@ -37,10 +47,56 @@ func use_ability() -> void:
 		_:
 			print("No ability defined for form '%s'" % current_form.form_name)
 
-## Default form ability (placeholder)
+## Default form ability
 func _use_default_ability() -> void:
 	print("=== DEFAULT FORM ABILITY ACTIVATED ===")
-	# add logic for astral projection
+
+	var player := get_parent() as CharacterBody3D
+	if not player:
+		print("Default ability: could not find player body")
+		return
+
+	# If already in spirit state, return to the body and end the state
+	if is_spirit:
+		if default_statue and is_instance_valid(default_statue):
+			# teleport player back to the statue position
+			player.global_position = default_statue.global_position
+			# clean up the statue
+			default_statue.queue_free()
+			default_statue = null
+		is_spirit = false
+		print("Back to body")
+		return
+
+	# Otherwise, enter spirit state and drop a statue at current position
+	if default_statue and is_instance_valid(default_statue):
+		default_statue.queue_free()
+		default_statue = null
+
+	# create a container node that will hold the visual duplicate
+	default_statue = Node3D.new()
+	default_statue.name = "DefaultStatue"
+	default_statue.global_transform = player.global_transform
+
+	# add to the active scene (fallback to root if needed)
+	var scene_root := get_tree().current_scene
+	if scene_root:
+		scene_root.add_child(default_statue)
+	else:
+		get_tree().root.add_child(default_statue)
+
+	# try to duplicate the current visual under the player's Visuals node
+	var visuals_container := player.get_node_or_null("Visuals")
+	if visuals_container and visuals_container.get_child_count() > 0:
+		var current_visual := visuals_container.get_child(0)
+		var statue_visual := current_visual.duplicate()
+		# keep the same relative transform as the active visual
+		statue_visual.transform = current_visual.transform
+		default_statue.add_child(statue_visual)
+
+	is_spirit = true
+	print("placed statue at %s" % default_statue.global_position)
+
 
 ## Fox form ability to dig through to special diggable blocks
 func _use_fox_ability() -> void:
