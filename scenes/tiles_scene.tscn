@@ -1,0 +1,1921 @@
+[gd_scene load_steps=498 format=4 uid="uid://b1u68liuo55t"]
+
+[ext_resource type="PackedScene" uid="uid://lx5mt7gjeyiu" path="res://Assets/Models/arrow.glb" id="1_co8x0"]
+[ext_resource type="PackedScene" uid="uid://c5217giih3rml" path="res://Assets/Models/arrows.glb" id="2_jmm24"]
+[ext_resource type="PackedScene" uid="uid://f0m4gfdidrsd" path="res://Assets/Models/barrel.glb" id="3_kvfow"]
+[ext_resource type="PackedScene" uid="uid://yefm6o728sil" path="res://Assets/Models/bed.glb" id="4_b0lc3"]
+[ext_resource type="PackedScene" uid="uid://cw8i3hgyyds42" path="res://Assets/Models/bed_floor.glb" id="5_y6oej"]
+[ext_resource type="PackedScene" uid="uid://bmnf5a1m3y373" path="res://Assets/Models/block-grass-corner-low.glb" id="6_53w1h"]
+[ext_resource type="PackedScene" uid="uid://dm534qyc4m8kg" path="res://Assets/Models/block-grass-corner-overhang-low.glb" id="7_3avit"]
+[ext_resource type="PackedScene" uid="uid://dsi5lqpfsdu1a" path="res://Assets/Models/block-grass-corner-overhang.glb" id="8_q0y0s"]
+[ext_resource type="PackedScene" uid="uid://cupkwam5vmb3j" path="res://Assets/Models/block-grass-corner.glb" id="9_nk6o3"]
+[ext_resource type="PackedScene" uid="uid://b3flpe5sy5tte" path="res://Assets/Models/block-grass-curve-half.glb" id="10_pl40v"]
+[ext_resource type="PackedScene" uid="uid://83extgntwbci" path="res://Assets/Models/block-grass-curve-low.glb" id="11_54282"]
+[ext_resource type="PackedScene" uid="uid://c4juvapr16b7k" path="res://Assets/Models/block-grass-curve.glb" id="12_r5me4"]
+[ext_resource type="PackedScene" uid="uid://ce2m0msuo3vvk" path="res://Assets/Models/block-grass-edge.glb" id="13_s1nbh"]
+[ext_resource type="PackedScene" uid="uid://cum0aj7x8xtln" path="res://Assets/Models/block-grass-hexagon.glb" id="14_mdvef"]
+[ext_resource type="PackedScene" uid="uid://cwy5abtf3qccr" path="res://Assets/Models/block-grass-large-slope-narrow.glb" id="15_ieb8c"]
+[ext_resource type="PackedScene" uid="uid://dt0nprwqlvfs1" path="res://Assets/Models/block-grass-large-slope-steep-narrow.glb" id="16_s8m1p"]
+[ext_resource type="PackedScene" uid="uid://4j8y87em2rny" path="res://Assets/Models/block-grass-large-slope-steep.glb" id="17_0jb0e"]
+[ext_resource type="PackedScene" uid="uid://4dwxcperx22u" path="res://Assets/Models/block-grass-large-slope.glb" id="18_y6gpq"]
+[ext_resource type="PackedScene" uid="uid://dee7eqekygswb" path="res://Assets/Models/block-grass-large-tall.glb" id="19_e2tle"]
+[ext_resource type="PackedScene" uid="uid://eiuypkuobqc7" path="res://Assets/Models/block-grass-large.glb" id="20_v7e2r"]
+[ext_resource type="PackedScene" uid="uid://t8p6buu1px3f" path="res://Assets/Models/block-grass-long.glb" id="21_qawgo"]
+[ext_resource type="PackedScene" uid="uid://ck73wele8lufm" path="res://Assets/Models/block-grass-low-hexagon.glb" id="22_g3wqb"]
+[ext_resource type="PackedScene" uid="uid://c8oet5q7q0il5" path="res://Assets/Models/block-grass-low-large.glb" id="23_t2pjb"]
+[ext_resource type="PackedScene" uid="uid://dd6fapra0ng6w" path="res://Assets/Models/block-grass-low-long.glb" id="24_7yowx"]
+[ext_resource type="PackedScene" uid="uid://mudcmgnoqhtk" path="res://Assets/Models/block-grass-low-narrow.glb" id="25_ukrpc"]
+[ext_resource type="PackedScene" uid="uid://ctqfaosww1wck" path="res://Assets/Models/block-grass-low.glb" id="26_61otv"]
+[ext_resource type="PackedScene" uid="uid://dr73vwke1q14x" path="res://Assets/Models/block-grass-narrow.glb" id="27_ya32i"]
+[ext_resource type="PackedScene" uid="uid://bivumlxnn6nh7" path="res://Assets/Models/block-grass-overhang-corner.glb" id="28_q72sn"]
+[ext_resource type="PackedScene" uid="uid://bgog6c3kvi5ba" path="res://Assets/Models/block-grass-overhang-edge.glb" id="29_ji4gb"]
+[ext_resource type="PackedScene" uid="uid://cwd6w54kgxnn2" path="res://Assets/Models/block-grass-overhang-hexagon.glb" id="30_lmxvb"]
+[ext_resource type="PackedScene" uid="uid://bbbamxoipjtfl" path="res://Assets/Models/block-grass-overhang-large-slope-narrow.glb" id="31_2qif3"]
+[ext_resource type="PackedScene" uid="uid://cu48dejar5jq5" path="res://Assets/Models/block-grass-overhang-large-slope-steep-narrow.glb" id="32_2tg5k"]
+[ext_resource type="PackedScene" uid="uid://cwslpbpop67oe" path="res://Assets/Models/block-grass-overhang-large-slope-steep.glb" id="33_up0lx"]
+[ext_resource type="PackedScene" uid="uid://dqti2b4nkom3r" path="res://Assets/Models/block-grass-overhang-large-slope.glb" id="34_6ba3l"]
+[ext_resource type="PackedScene" uid="uid://do33pyxtkgeyj" path="res://Assets/Models/block-grass-overhang-large-tall.glb" id="35_sjo64"]
+[ext_resource type="PackedScene" uid="uid://b2kuse36nuasl" path="res://Assets/Models/block-grass-overhang-large.glb" id="36_0afe7"]
+[ext_resource type="PackedScene" uid="uid://csuo4rsxbtwme" path="res://Assets/Models/block-grass-overhang-long.glb" id="37_v1w5q"]
+[ext_resource type="PackedScene" uid="uid://dg71kn8lynukg" path="res://Assets/Models/block-grass-overhang-low-hexagon.glb" id="38_biw04"]
+[ext_resource type="PackedScene" uid="uid://iieh53pewnrq" path="res://Assets/Models/block-grass-overhang-low-large.glb" id="39_ljtsn"]
+[ext_resource type="PackedScene" uid="uid://cv8x68f373ec4" path="res://Assets/Models/block-grass-overhang-low-long.glb" id="40_abtlr"]
+[ext_resource type="PackedScene" uid="uid://ckcka2i2uhsm7" path="res://Assets/Models/block-grass-overhang-low-narrow.glb" id="41_ty5yl"]
+[ext_resource type="PackedScene" uid="uid://c1j6d8f3psv1a" path="res://Assets/Models/block-grass-overhang-low.glb" id="42_sjfxo"]
+[ext_resource type="PackedScene" uid="uid://d0wu0k60wu0i2" path="res://Assets/Models/block-grass-overhang-narrow.glb" id="43_i2mjb"]
+[ext_resource type="PackedScene" uid="uid://bb62bsowqh0gf" path="res://Assets/Models/block-grass.glb" id="44_rr06t"]
+[ext_resource type="PackedScene" uid="uid://d2lt2e2focmkb" path="res://Assets/Models/block-moving-blue.glb" id="45_4sk2t"]
+[ext_resource type="PackedScene" uid="uid://cc7fiusmnmlhn" path="res://Assets/Models/block-moving-large.glb" id="46_g3u8o"]
+[ext_resource type="PackedScene" uid="uid://dnwttknmmh1ja" path="res://Assets/Models/block-moving.glb" id="47_njg2j"]
+[ext_resource type="PackedScene" uid="uid://de0cpi2k3f2yb" path="res://Assets/Models/block-snow-corner-low.glb" id="48_w8pj6"]
+[ext_resource type="PackedScene" uid="uid://c1xk1ggy16hyx" path="res://Assets/Models/block-snow-corner-overhang-low.glb" id="49_goqls"]
+[ext_resource type="PackedScene" uid="uid://bsb44pc41xqcf" path="res://Assets/Models/block-snow-corner-overhang.glb" id="50_hjvmj"]
+[ext_resource type="PackedScene" uid="uid://dj4ejoasui2xf" path="res://Assets/Models/block-snow-corner.glb" id="51_knva2"]
+[ext_resource type="PackedScene" uid="uid://c0cxebqitt2pt" path="res://Assets/Models/block-snow-curve-half.glb" id="52_airse"]
+[ext_resource type="PackedScene" uid="uid://c2f1j54ec5fa" path="res://Assets/Models/block-snow-curve-low.glb" id="53_80m1l"]
+[ext_resource type="PackedScene" uid="uid://viyubs6e3g3k" path="res://Assets/Models/block-snow-curve.glb" id="54_g7igx"]
+[ext_resource type="PackedScene" uid="uid://clguh03evc8rk" path="res://Assets/Models/block-snow-edge.glb" id="55_wyycj"]
+[ext_resource type="PackedScene" uid="uid://cf065ix7ka3hb" path="res://Assets/Models/block-snow-hexagon.glb" id="56_a5feh"]
+[ext_resource type="PackedScene" uid="uid://ct2bt5allqsmm" path="res://Assets/Models/block-snow-large-slope-narrow.glb" id="57_u0x5p"]
+[ext_resource type="PackedScene" uid="uid://cconeagu7pxj" path="res://Assets/Models/block-snow-large-slope-steep-narrow.glb" id="58_011e1"]
+[ext_resource type="PackedScene" uid="uid://c3wvap2p8bcs" path="res://Assets/Models/block-snow-large-slope-steep.glb" id="59_lsrln"]
+[ext_resource type="PackedScene" uid="uid://b1u27t4ngk3wt" path="res://Assets/Models/block-snow-large-slope.glb" id="60_iwv8m"]
+[ext_resource type="PackedScene" uid="uid://2f4ictcv1exy" path="res://Assets/Models/block-snow-large-tall.glb" id="61_lm7hp"]
+[ext_resource type="PackedScene" uid="uid://dx5vmvo20sqry" path="res://Assets/Models/block-snow-large.glb" id="62_1bjmw"]
+[ext_resource type="PackedScene" uid="uid://b51ha4s4374kq" path="res://Assets/Models/block-snow-long.glb" id="63_rguo1"]
+[ext_resource type="PackedScene" uid="uid://yteefk05lofl" path="res://Assets/Models/block-snow-low-hexagon.glb" id="64_1v2x6"]
+[ext_resource type="PackedScene" uid="uid://4twkrfwr1kox" path="res://Assets/Models/block-snow-low-large.glb" id="65_ksb68"]
+[ext_resource type="PackedScene" uid="uid://ddk3h2s75vi3l" path="res://Assets/Models/block-snow-low-long.glb" id="66_kpevr"]
+[ext_resource type="PackedScene" uid="uid://p427nwq3p0jc" path="res://Assets/Models/block-snow-low-narrow.glb" id="67_hlp02"]
+[ext_resource type="PackedScene" uid="uid://d2j87t8m2v34n" path="res://Assets/Models/block-snow-low.glb" id="68_s0ime"]
+[ext_resource type="PackedScene" uid="uid://b3w26dplybuuf" path="res://Assets/Models/block-snow-narrow.glb" id="69_dlm1f"]
+[ext_resource type="PackedScene" uid="uid://bv3fj0v3ptq7c" path="res://Assets/Models/block-snow-overhang-corner.glb" id="70_u23db"]
+[ext_resource type="PackedScene" uid="uid://camyoe4hgah44" path="res://Assets/Models/block-snow-overhang-edge.glb" id="71_scx7p"]
+[ext_resource type="PackedScene" uid="uid://dnr08eenw4kvf" path="res://Assets/Models/block-snow-overhang-hexagon.glb" id="72_qst8l"]
+[ext_resource type="PackedScene" uid="uid://cgjd5nn4k6fby" path="res://Assets/Models/block-snow-overhang-large-slope-narrow.glb" id="73_rralq"]
+[ext_resource type="PackedScene" uid="uid://dgevl6d2juer8" path="res://Assets/Models/block-snow-overhang-large-slope-steep-narrow.glb" id="74_rpr26"]
+[ext_resource type="PackedScene" uid="uid://k4rqqdx2pjw2" path="res://Assets/Models/block-snow-overhang-large-slope-steep.glb" id="75_r24f2"]
+[ext_resource type="PackedScene" uid="uid://dlfnb0jvq54ms" path="res://Assets/Models/block-snow-overhang-large-slope.glb" id="76_rfsgx"]
+[ext_resource type="PackedScene" uid="uid://6dh5fbgsk0bc" path="res://Assets/Models/block-snow-overhang-large-tall.glb" id="77_0wd43"]
+[ext_resource type="PackedScene" uid="uid://dh2hrgqcn04n5" path="res://Assets/Models/block-snow-overhang-large.glb" id="78_ofkrm"]
+[ext_resource type="PackedScene" uid="uid://73sm34xcaouw" path="res://Assets/Models/block-snow-overhang-long.glb" id="79_mwf8v"]
+[ext_resource type="PackedScene" uid="uid://byt7r552487ny" path="res://Assets/Models/block-snow-overhang-low-hexagon.glb" id="80_1nu1l"]
+[ext_resource type="PackedScene" uid="uid://cch137k5xqwwr" path="res://Assets/Models/block-snow-overhang-low-large.glb" id="81_08usk"]
+[ext_resource type="PackedScene" uid="uid://cadf3nie6onjb" path="res://Assets/Models/block-snow-overhang-low-long.glb" id="82_tndd6"]
+[ext_resource type="PackedScene" uid="uid://b6dewyxi3mwe" path="res://Assets/Models/block-snow-overhang-low-narrow.glb" id="83_re7jc"]
+[ext_resource type="PackedScene" uid="uid://cd43nj7dhc640" path="res://Assets/Models/block-snow-overhang-low.glb" id="84_tx0bd"]
+[ext_resource type="PackedScene" uid="uid://dcowp0dqreyhi" path="res://Assets/Models/block-snow-overhang-narrow.glb" id="85_5ncvh"]
+[ext_resource type="PackedScene" uid="uid://cdhk3tldxcgaw" path="res://Assets/Models/block-snow.glb" id="86_2fpgv"]
+[ext_resource type="PackedScene" uid="uid://338istvtbis0" path="res://Assets/Models/bomb.glb" id="87_2xav6"]
+[ext_resource type="PackedScene" uid="uid://cchdhh5ycl6cy" path="res://Assets/Models/bridge_center_stone.glb" id="88_t242s"]
+[ext_resource type="PackedScene" uid="uid://d2wtgprg6n23w" path="res://Assets/Models/bridge_center_stoneRound.glb" id="89_ebeo5"]
+[ext_resource type="PackedScene" uid="uid://d0cutpdvthmxx" path="res://Assets/Models/bridge_center_wood.glb" id="90_yrc72"]
+[ext_resource type="PackedScene" uid="uid://bw577xyge8jhd" path="res://Assets/Models/bridge_center_woodRound.glb" id="91_al5tv"]
+[ext_resource type="PackedScene" uid="uid://b2hho5ey1obqh" path="res://Assets/Models/bridge_side_stone.glb" id="92_wakvt"]
+[ext_resource type="PackedScene" uid="uid://c10tx6gi1uauv" path="res://Assets/Models/bridge_side_stoneRound.glb" id="93_80lmo"]
+[ext_resource type="PackedScene" uid="uid://dpu2dia7uonwa" path="res://Assets/Models/bridge_side_wood.glb" id="94_5fckr"]
+[ext_resource type="PackedScene" uid="uid://bjbgjtmx06uof" path="res://Assets/Models/bridge_side_woodRound.glb" id="95_3f8fk"]
+[ext_resource type="PackedScene" uid="uid://wb3240w5xx0v" path="res://Assets/Models/bridge_stone.glb" id="96_twlvw"]
+[ext_resource type="PackedScene" uid="uid://dvya4sf4e0bso" path="res://Assets/Models/bridge_stoneNarrow.glb" id="97_wceea"]
+[ext_resource type="PackedScene" uid="uid://cfh0sd7am6eml" path="res://Assets/Models/bridge_stoneRound.glb" id="98_blr4l"]
+[ext_resource type="PackedScene" uid="uid://blu5q0661gk4y" path="res://Assets/Models/bridge_stoneRoundNarrow.glb" id="99_gufvk"]
+[ext_resource type="PackedScene" uid="uid://b076bp4ml2yst" path="res://Assets/Models/bridge_wood.glb" id="100_agcqs"]
+[ext_resource type="PackedScene" uid="uid://bilsb8owrysjp" path="res://Assets/Models/bridge_woodNarrow.glb" id="101_c8h0g"]
+[ext_resource type="PackedScene" uid="uid://b3nn7cuqdmww7" path="res://Assets/Models/bridge_woodRound.glb" id="102_td3f0"]
+[ext_resource type="PackedScene" uid="uid://bvlts60hppwxe" path="res://Assets/Models/bridge_woodRoundNarrow.glb" id="103_3mqd8"]
+[ext_resource type="PackedScene" uid="uid://b2myyvotoeix4" path="res://Assets/Models/button-round.glb" id="104_0x8c3"]
+[ext_resource type="PackedScene" uid="uid://bpibh7wv772mo" path="res://Assets/Models/button-square.glb" id="105_553hv"]
+[ext_resource type="PackedScene" uid="uid://dadw6vf38kqgy" path="res://Assets/Models/cactus_short.glb" id="106_nt3ss"]
+[ext_resource type="PackedScene" uid="uid://tqidcksv35ht" path="res://Assets/Models/cactus_tall.glb" id="107_61076"]
+[ext_resource type="PackedScene" uid="uid://d21bx64yradps" path="res://Assets/Models/campfire_bricks.glb" id="108_dctwg"]
+[ext_resource type="PackedScene" uid="uid://b71j3sd1qv263" path="res://Assets/Models/campfire_logs.glb" id="109_d0fqh"]
+[ext_resource type="PackedScene" uid="uid://df3y03gfplepi" path="res://Assets/Models/campfire_planks.glb" id="110_pej16"]
+[ext_resource type="PackedScene" uid="uid://c5aq1r05tlo6" path="res://Assets/Models/campfire_stones.glb" id="111_dcrdx"]
+[ext_resource type="PackedScene" uid="uid://dye5e28kiaums" path="res://Assets/Models/canoe.glb" id="112_7klh0"]
+[ext_resource type="PackedScene" uid="uid://cfe6pfncfnny0" path="res://Assets/Models/canoe_paddle.glb" id="113_i1eoo"]
+[ext_resource type="PackedScene" uid="uid://dqaererheb6fh" path="res://Assets/Models/chest.glb" id="114_st8al"]
+[ext_resource type="PackedScene" uid="uid://3fettdqhh0wc" path="res://Assets/Models/cliff_blockCave_rock.glb" id="115_8yjlh"]
+[ext_resource type="PackedScene" uid="uid://x5dw6hyhc40m" path="res://Assets/Models/cliff_blockCave_stone.glb" id="116_l1nn3"]
+[ext_resource type="PackedScene" uid="uid://c60spy2exvea7" path="res://Assets/Models/cliff_blockDiagonal_rock.glb" id="117_qow5o"]
+[ext_resource type="PackedScene" uid="uid://cqvh5qj2jooha" path="res://Assets/Models/cliff_blockDiagonal_stone.glb" id="118_5wwgb"]
+[ext_resource type="PackedScene" uid="uid://bxcbdpx4csso2" path="res://Assets/Models/cliff_blockSlopeHalfWalls_rock.glb" id="123_pie3i"]
+[ext_resource type="PackedScene" uid="uid://464wmipnl3gq" path="res://Assets/Models/cliff_blockSlopeHalfWalls_stone.glb" id="124_7311i"]
+[ext_resource type="PackedScene" uid="uid://gpyktlpj0mv3" path="res://Assets/Models/cliff_blockSlopeWalls_rock.glb" id="125_n5o3s"]
+[ext_resource type="PackedScene" uid="uid://buguvxl7t6foy" path="res://Assets/Models/cliff_blockSlopeWalls_stone.glb" id="126_k0721"]
+[ext_resource type="PackedScene" uid="uid://dvx5es57knbw7" path="res://Assets/Models/cliff_blockSlope_rock.glb" id="127_sdvux"]
+[ext_resource type="PackedScene" uid="uid://c1iss3qsobihf" path="res://Assets/Models/cliff_blockSlope_stone.glb" id="128_3w0ox"]
+[ext_resource type="PackedScene" uid="uid://d1tmy1c7fra18" path="res://Assets/Models/cliff_cave_rock.glb" id="131_t88g5"]
+[ext_resource type="PackedScene" uid="uid://c4n6d778513kt" path="res://Assets/Models/cliff_cave_stone.glb" id="132_s3ogt"]
+[ext_resource type="PackedScene" uid="uid://bhjyvgiexdr5h" path="res://Assets/Models/cliff_cornerInnerLarge_rock.glb" id="133_10fik"]
+[ext_resource type="PackedScene" uid="uid://j13utegg5iib" path="res://Assets/Models/cliff_cornerInnerLarge_stone.glb" id="134_byr8v"]
+[ext_resource type="PackedScene" uid="uid://b8tfi3bwn7s0a" path="res://Assets/Models/cliff_cornerInnerTop_rock.glb" id="135_d2ijd"]
+[ext_resource type="PackedScene" uid="uid://bmxeug8o5gfx3" path="res://Assets/Models/cliff_cornerInnerTop_stone.glb" id="136_b1oe2"]
+[ext_resource type="PackedScene" uid="uid://bhrna8gc1tli2" path="res://Assets/Models/cliff_cornerInner_rock.glb" id="137_7vbhd"]
+[ext_resource type="PackedScene" uid="uid://cuaeup5sqwfb7" path="res://Assets/Models/cliff_cornerInner_stone.glb" id="138_0qvam"]
+[ext_resource type="PackedScene" uid="uid://bh0wtx7fxvx31" path="res://Assets/Models/cliff_cornerLarge_rock.glb" id="139_8c6ro"]
+[ext_resource type="PackedScene" uid="uid://6qr6jpuhahyo" path="res://Assets/Models/cliff_cornerLarge_stone.glb" id="140_0644l"]
+[ext_resource type="PackedScene" uid="uid://dv464lc5dydam" path="res://Assets/Models/cliff_cornerTop_rock.glb" id="141_fto2v"]
+[ext_resource type="PackedScene" uid="uid://dc82yjos7a16y" path="res://Assets/Models/cliff_cornerTop_stone.glb" id="142_kbqdu"]
+[ext_resource type="PackedScene" uid="uid://uju03v4w0nns" path="res://Assets/Models/cliff_corner_rock.glb" id="143_5pqi7"]
+[ext_resource type="PackedScene" uid="uid://cg4mxb3sddob6" path="res://Assets/Models/cliff_corner_stone.glb" id="144_0ahv4"]
+[ext_resource type="PackedScene" uid="uid://c2btg2k36aj5e" path="res://Assets/Models/cliff_diagonal_rock.glb" id="145_0vyim"]
+[ext_resource type="PackedScene" uid="uid://41vc62co4cj3" path="res://Assets/Models/cliff_diagonal_stone.glb" id="146_tqoua"]
+[ext_resource type="PackedScene" uid="uid://30tv0yfc3piq" path="res://Assets/Models/cliff_halfCornerInner_rock.glb" id="147_fh2nn"]
+[ext_resource type="PackedScene" uid="uid://dkkbvwygggqxi" path="res://Assets/Models/cliff_halfCornerInner_stone.glb" id="148_unp8h"]
+[ext_resource type="PackedScene" uid="uid://bwdh7ck32t1w6" path="res://Assets/Models/cliff_halfCorner_rock.glb" id="149_niq7r"]
+[ext_resource type="PackedScene" uid="uid://d3gtvb1wj6ex4" path="res://Assets/Models/cliff_halfCorner_stone.glb" id="150_uiirm"]
+[ext_resource type="PackedScene" uid="uid://c6s8tm4skm4y5" path="res://Assets/Models/cliff_half_rock.glb" id="151_bcsi3"]
+[ext_resource type="PackedScene" uid="uid://d0mdsc288cv5r" path="res://Assets/Models/cliff_half_stone.glb" id="152_eggu5"]
+[ext_resource type="PackedScene" uid="uid://8qxsk8w4eghq" path="res://Assets/Models/cliff_large_rock.glb" id="153_kmkar"]
+[ext_resource type="PackedScene" uid="uid://d2s4ng2wiih8i" path="res://Assets/Models/cliff_large_stone.glb" id="154_afdok"]
+[ext_resource type="PackedScene" uid="uid://7stnkngc4nxu" path="res://Assets/Models/cliff_rock.glb" id="155_i34bx"]
+[ext_resource type="PackedScene" uid="uid://ctqbrxgc8fdde" path="res://Assets/Models/cliff_stepsCornerInner_rock.glb" id="156_g3y3j"]
+[ext_resource type="PackedScene" uid="uid://gupsy2vrydj7" path="res://Assets/Models/cliff_stepsCornerInner_stone.glb" id="157_7jnqc"]
+[ext_resource type="PackedScene" uid="uid://8s32qim10svr" path="res://Assets/Models/cliff_stepsCorner_rock.glb" id="158_bhy7y"]
+[ext_resource type="PackedScene" uid="uid://btxmpudsj0k45" path="res://Assets/Models/cliff_stepsCorner_stone.glb" id="159_jga7n"]
+[ext_resource type="PackedScene" uid="uid://di3h1wito6dto" path="res://Assets/Models/cliff_steps_rock.glb" id="160_tcv4m"]
+[ext_resource type="PackedScene" uid="uid://03jdrxgflwss" path="res://Assets/Models/cliff_steps_stone.glb" id="161_ycsa3"]
+[ext_resource type="PackedScene" uid="uid://bf0xqp7ek55mj" path="res://Assets/Models/cliff_stone.glb" id="162_d2ky2"]
+[ext_resource type="PackedScene" uid="uid://dcsx7gy2seqtw" path="res://Assets/Models/cliff_topDiagonal_rock.glb" id="163_kt23w"]
+[ext_resource type="PackedScene" uid="uid://brgjcnn2lwctf" path="res://Assets/Models/cliff_topDiagonal_stone.glb" id="164_t6wpn"]
+[ext_resource type="PackedScene" uid="uid://bek1wolen5q3g" path="res://Assets/Models/cliff_top_rock.glb" id="165_261th"]
+[ext_resource type="PackedScene" uid="uid://doflm0uy4283k" path="res://Assets/Models/cliff_top_stone.glb" id="166_lees4"]
+[ext_resource type="PackedScene" uid="uid://tdeh02f833pb" path="res://Assets/Models/cliff_waterfallTop_rock.glb" id="167_hboo3"]
+[ext_resource type="PackedScene" uid="uid://c4q1a14o8l2my" path="res://Assets/Models/cliff_waterfallTop_stone.glb" id="168_duu5s"]
+[ext_resource type="PackedScene" uid="uid://bu517ljfkru23" path="res://Assets/Models/cliff_waterfall_rock.glb" id="169_pbpy2"]
+[ext_resource type="PackedScene" uid="uid://csnhqp8uafert" path="res://Assets/Models/cliff_waterfall_stone.glb" id="170_8kedq"]
+[ext_resource type="PackedScene" uid="uid://bhy2vtkc2pg4n" path="res://Assets/Models/coin-bronze.glb" id="171_2mjax"]
+[ext_resource type="PackedScene" uid="uid://bb3inwhqto4nj" path="res://Assets/Models/coin-gold.glb" id="172_rg287"]
+[ext_resource type="PackedScene" uid="uid://b8rlg60w2yq1c" path="res://Assets/Models/coin-silver.glb" id="173_1y65f"]
+[ext_resource type="PackedScene" uid="uid://c7g7a7s6h5xt7" path="res://Assets/Models/crate-item-strong.glb" id="174_sg371"]
+[ext_resource type="PackedScene" uid="uid://b7mjfaplykfvr" path="res://Assets/Models/crate-item.glb" id="175_sraan"]
+[ext_resource type="PackedScene" uid="uid://dddrcighqhvqx" path="res://Assets/Models/crate-strong.glb" id="176_clwee"]
+[ext_resource type="PackedScene" uid="uid://duk2j8cicptbj" path="res://Assets/Models/crate.glb" id="177_u3vcv"]
+[ext_resource type="PackedScene" uid="uid://v0hrxohcjjv2" path="res://Assets/Models/crops_bambooStageA.glb" id="178_773ky"]
+[ext_resource type="PackedScene" uid="uid://b10jaxud6baaf" path="res://Assets/Models/crops_bambooStageB.glb" id="179_cunkd"]
+[ext_resource type="PackedScene" uid="uid://dx3jsmss2ireo" path="res://Assets/Models/crops_cornStageA.glb" id="180_mb6v0"]
+[ext_resource type="PackedScene" uid="uid://s14wu024bfcl" path="res://Assets/Models/crops_cornStageB.glb" id="181_3wgxi"]
+[ext_resource type="PackedScene" uid="uid://xe0xqemdh00p" path="res://Assets/Models/crops_cornStageC.glb" id="182_8qdrn"]
+[ext_resource type="PackedScene" uid="uid://bufccqmjastyq" path="res://Assets/Models/crops_cornStageD.glb" id="183_76wpo"]
+[ext_resource type="PackedScene" uid="uid://lbqa575pnrga" path="res://Assets/Models/crops_dirtDoubleRow.glb" id="184_eoq3h"]
+[ext_resource type="PackedScene" uid="uid://b2om7iru3oa" path="res://Assets/Models/crops_dirtDoubleRowCorner.glb" id="185_06dnf"]
+[ext_resource type="PackedScene" uid="uid://jj2iuffv2l58" path="res://Assets/Models/crops_dirtDoubleRowEnd.glb" id="186_akeox"]
+[ext_resource type="PackedScene" uid="uid://c4tnxkifcw3i0" path="res://Assets/Models/crops_dirtRow.glb" id="187_w88vr"]
+[ext_resource type="PackedScene" uid="uid://dma4vm5cl0veh" path="res://Assets/Models/crops_dirtRowCorner.glb" id="188_6afvi"]
+[ext_resource type="PackedScene" uid="uid://dk5eklf33u06g" path="res://Assets/Models/crops_dirtRowEnd.glb" id="189_6v37m"]
+[ext_resource type="PackedScene" uid="uid://blj8vgydvw84f" path="res://Assets/Models/crops_dirtSingle.glb" id="190_1k4ik"]
+[ext_resource type="PackedScene" uid="uid://chw6ligkufwh" path="res://Assets/Models/crops_leafsStageA.glb" id="191_pew0p"]
+[ext_resource type="PackedScene" uid="uid://d320nmatqke28" path="res://Assets/Models/crops_leafsStageB.glb" id="192_j3g0c"]
+[ext_resource type="PackedScene" uid="uid://br8s4ojlii4qy" path="res://Assets/Models/crops_wheatStageA.glb" id="193_xlo3g"]
+[ext_resource type="PackedScene" uid="uid://88nwa1u5mp74" path="res://Assets/Models/crops_wheatStageB.glb" id="194_edjds"]
+[ext_resource type="PackedScene" uid="uid://cj6vm78v8d1k7" path="res://Assets/Models/crop_carrot.glb" id="195_vh1hx"]
+[ext_resource type="PackedScene" uid="uid://dwpvtmqyqssn7" path="res://Assets/Models/crop_melon.glb" id="196_ag1bj"]
+[ext_resource type="PackedScene" uid="uid://v5je0n6hfu1h" path="res://Assets/Models/crop_pumpkin.glb" id="197_23ick"]
+[ext_resource type="PackedScene" uid="uid://bl5127ida2fra" path="res://Assets/Models/crop_turnip.glb" id="198_qmtcu"]
+[ext_resource type="PackedScene" uid="uid://bwsuyd61n151i" path="res://Assets/Models/door-large-open.glb" id="199_m2e2a"]
+[ext_resource type="PackedScene" uid="uid://b5hl4bnfr7prr" path="res://Assets/Models/door-open.glb" id="200_t05gl"]
+[ext_resource type="PackedScene" uid="uid://gler7ye8f05d" path="res://Assets/Models/door-rotate-large.glb" id="201_y1ww2"]
+[ext_resource type="PackedScene" uid="uid://d3x2piw5kided" path="res://Assets/Models/door-rotate.glb" id="202_i22fi"]
+[ext_resource type="PackedScene" uid="uid://b6d22dbdunoi2" path="res://Assets/Models/fence-broken.glb" id="203_vjdos"]
+[ext_resource type="PackedScene" uid="uid://d4mjife7xbyjm" path="res://Assets/Models/fence-corner-curved.glb" id="204_7mnhm"]
+[ext_resource type="PackedScene" uid="uid://ccrwc5k2uceea" path="res://Assets/Models/fence-corner.glb" id="205_j47ro"]
+[ext_resource type="PackedScene" uid="uid://bxxk608pemndq" path="res://Assets/Models/fence-low-broken.glb" id="206_4doya"]
+[ext_resource type="PackedScene" uid="uid://t1p6rbxitex3" path="res://Assets/Models/fence-low-corner-curved.glb" id="207_eowfa"]
+[ext_resource type="PackedScene" uid="uid://bfrq1j6cixp18" path="res://Assets/Models/fence-low-corner.glb" id="208_3vcx2"]
+[ext_resource type="PackedScene" uid="uid://bu7jhrhwnafdt" path="res://Assets/Models/fence-low-straight.glb" id="209_46gk6"]
+[ext_resource type="PackedScene" uid="uid://cirf3qoftsx4s" path="res://Assets/Models/fence-straight.glb" id="210_jgwcr"]
+[ext_resource type="PackedScene" uid="uid://koscc4leasj7" path="res://Assets/Models/fence_bend.glb" id="211_r1ofp"]
+[ext_resource type="PackedScene" uid="uid://m174siygruac" path="res://Assets/Models/fence_bendCenter.glb" id="212_bvof2"]
+[ext_resource type="PackedScene" uid="uid://d2ep21g8bxc5i" path="res://Assets/Models/fence_corner.glb" id="213_8002m"]
+[ext_resource type="PackedScene" uid="uid://cxmeppyooh8xq" path="res://Assets/Models/fence_gate.glb" id="214_35uay"]
+[ext_resource type="PackedScene" uid="uid://dina24s5fqs4b" path="res://Assets/Models/fence_planks.glb" id="215_m4ft1"]
+[ext_resource type="PackedScene" uid="uid://by3b6qcu6k61k" path="res://Assets/Models/fence_planksDouble.glb" id="216_bhgwv"]
+[ext_resource type="PackedScene" uid="uid://bxuodv25bvgk0" path="res://Assets/Models/fence_simple.glb" id="217_bbquh"]
+[ext_resource type="PackedScene" uid="uid://beduw03chibvd" path="res://Assets/Models/fence_simpleCenter.glb" id="218_4napy"]
+[ext_resource type="PackedScene" uid="uid://cisldt23ynhgk" path="res://Assets/Models/fence_simpleDiagonal.glb" id="219_p2jc2"]
+[ext_resource type="PackedScene" uid="uid://d4k65828ojyci" path="res://Assets/Models/fence_simpleDiagonalCenter.glb" id="220_mq3d3"]
+[ext_resource type="PackedScene" uid="uid://c6d6laeug55pd" path="res://Assets/Models/fence_simpleHigh.glb" id="221_vmo0e"]
+[ext_resource type="PackedScene" uid="uid://dlgiga1wc1t2f" path="res://Assets/Models/fence_simpleLow.glb" id="222_pt6eg"]
+[ext_resource type="PackedScene" uid="uid://bxsvx4jdoa2vh" path="res://Assets/Models/flag.glb" id="223_i5oak"]
+[ext_resource type="PackedScene" uid="uid://go41sxvbgqni" path="res://Assets/Models/flowers-tall.glb" id="224_1erjl"]
+[ext_resource type="PackedScene" uid="uid://duwioxahvxxsa" path="res://Assets/Models/flowers.glb" id="225_n44w7"]
+[ext_resource type="PackedScene" uid="uid://brig3pa7u8y1l" path="res://Assets/Models/flower_purpleA.glb" id="226_1p0pc"]
+[ext_resource type="PackedScene" uid="uid://bn4601uv06fsa" path="res://Assets/Models/flower_purpleB.glb" id="227_j1t04"]
+[ext_resource type="PackedScene" uid="uid://bly672qaumwpu" path="res://Assets/Models/flower_purpleC.glb" id="228_do4ye"]
+[ext_resource type="PackedScene" uid="uid://dcbvlsv7p7p0j" path="res://Assets/Models/flower_redA.glb" id="229_iiwhr"]
+[ext_resource type="PackedScene" uid="uid://dotppa4pw8fon" path="res://Assets/Models/flower_redB.glb" id="230_i1328"]
+[ext_resource type="PackedScene" uid="uid://bgd2tt8emi7px" path="res://Assets/Models/flower_redC.glb" id="231_31lkc"]
+[ext_resource type="PackedScene" uid="uid://cp76i5gdoyepw" path="res://Assets/Models/flower_yellowA.glb" id="232_fv4vo"]
+[ext_resource type="PackedScene" uid="uid://t1q0ujnqqi8s" path="res://Assets/Models/flower_yellowB.glb" id="233_1hsq0"]
+[ext_resource type="PackedScene" uid="uid://cwso6dof5i63t" path="res://Assets/Models/flower_yellowC.glb" id="234_gfq7e"]
+[ext_resource type="PackedScene" uid="uid://d22ruseehnqmv" path="res://Assets/Models/grass.glb" id="235_arwtr"]
+[ext_resource type="PackedScene" uid="uid://b72ishe218p1x" path="res://Assets/Models/grass_large.glb" id="236_5b7ki"]
+[ext_resource type="PackedScene" uid="uid://ckopmoe47ahr7" path="res://Assets/Models/grass_leafs.glb" id="237_an3v7"]
+[ext_resource type="PackedScene" uid="uid://dtnqkimr0xufg" path="res://Assets/Models/grass_leafsLarge.glb" id="238_78xhf"]
+[ext_resource type="PackedScene" uid="uid://be0o5hepj56oh" path="res://Assets/Models/ground_grass.glb" id="239_sx1cf"]
+[ext_resource type="PackedScene" uid="uid://cyqwrng7jlwix" path="res://Assets/Models/ground_pathBend.glb" id="240_cvuc6"]
+[ext_resource type="PackedScene" uid="uid://dhklcjmh7l5qj" path="res://Assets/Models/ground_pathBendBank.glb" id="241_6bsaw"]
+[ext_resource type="PackedScene" uid="uid://d181cm67tvlks" path="res://Assets/Models/ground_pathCorner.glb" id="242_7gtbf"]
+[ext_resource type="PackedScene" uid="uid://8rnui17s5e5e" path="res://Assets/Models/ground_pathCornerSmall.glb" id="243_wpeim"]
+[ext_resource type="PackedScene" uid="uid://uw8o3hv0hopt" path="res://Assets/Models/ground_pathCross.glb" id="244_dbq72"]
+[ext_resource type="PackedScene" uid="uid://bbn6jhey2fu0f" path="res://Assets/Models/ground_pathEnd.glb" id="245_apnbm"]
+[ext_resource type="PackedScene" uid="uid://sbjtijxddfq1" path="res://Assets/Models/ground_pathEndClosed.glb" id="246_y8q10"]
+[ext_resource type="PackedScene" uid="uid://jhabp72iec3o" path="res://Assets/Models/ground_pathOpen.glb" id="247_yybmf"]
+[ext_resource type="PackedScene" uid="uid://denlqvau26i4d" path="res://Assets/Models/ground_pathRocks.glb" id="248_pqf4b"]
+[ext_resource type="PackedScene" uid="uid://d1cs6tshv0fnb" path="res://Assets/Models/ground_pathSide.glb" id="249_103cc"]
+[ext_resource type="PackedScene" uid="uid://6o0wg8wfvgtt" path="res://Assets/Models/ground_pathSideOpen.glb" id="250_kxhfg"]
+[ext_resource type="PackedScene" uid="uid://dcomo52hu4511" path="res://Assets/Models/ground_pathSplit.glb" id="251_acb23"]
+[ext_resource type="PackedScene" uid="uid://b6ala65gmjnn0" path="res://Assets/Models/ground_pathStraight.glb" id="252_3kbws"]
+[ext_resource type="PackedScene" uid="uid://x3d0532s18td" path="res://Assets/Models/ground_pathTile.glb" id="253_mxlmb"]
+[ext_resource type="PackedScene" uid="uid://ccc2phvmvghaq" path="res://Assets/Models/ground_riverBend.glb" id="254_a44s3"]
+[ext_resource type="PackedScene" uid="uid://b66f0acjvobl3" path="res://Assets/Models/ground_riverBendBank.glb" id="255_xeqad"]
+[ext_resource type="PackedScene" uid="uid://bn8ygstya6xhv" path="res://Assets/Models/ground_riverCorner.glb" id="256_dt763"]
+[ext_resource type="PackedScene" uid="uid://dwqjmtnwyy8ir" path="res://Assets/Models/ground_riverCornerSmall.glb" id="257_n1fiu"]
+[ext_resource type="PackedScene" uid="uid://c80cflrku3sxp" path="res://Assets/Models/ground_riverCross.glb" id="258_7wubv"]
+[ext_resource type="PackedScene" uid="uid://n13cfaebhqap" path="res://Assets/Models/ground_riverEnd.glb" id="259_bqkto"]
+[ext_resource type="PackedScene" uid="uid://j00yodf02a2f" path="res://Assets/Models/ground_riverEndClosed.glb" id="260_r1unr"]
+[ext_resource type="PackedScene" uid="uid://dbq5od1d2ckgy" path="res://Assets/Models/ground_riverOpen.glb" id="261_fblal"]
+[ext_resource type="PackedScene" uid="uid://d16b2p7dbjy1c" path="res://Assets/Models/ground_riverRocks.glb" id="262_m6eql"]
+[ext_resource type="PackedScene" uid="uid://bbgetgt0ccjwa" path="res://Assets/Models/ground_riverSide.glb" id="263_j8ph1"]
+[ext_resource type="PackedScene" uid="uid://cua8k35t241kq" path="res://Assets/Models/ground_riverSideOpen.glb" id="264_cn6p2"]
+[ext_resource type="PackedScene" uid="uid://d3bvd7ag3umki" path="res://Assets/Models/ground_riverSplit.glb" id="265_lrdc1"]
+[ext_resource type="PackedScene" uid="uid://j0w4xuggk4h0" path="res://Assets/Models/ground_riverStraight.glb" id="266_2r3ul"]
+[ext_resource type="PackedScene" uid="uid://3tg3bcx52tpu" path="res://Assets/Models/ground_riverTile.glb" id="267_wh7oc"]
+[ext_resource type="PackedScene" uid="uid://ck7t3lkdgtviq" path="res://Assets/Models/hanging_moss.glb" id="268_2s6ha"]
+[ext_resource type="PackedScene" uid="uid://chefynwlum7ia" path="res://Assets/Models/heart.glb" id="269_43n1u"]
+[ext_resource type="PackedScene" uid="uid://cm022ym7pxwxb" path="res://Assets/Models/hedge-corner.glb" id="270_68prk"]
+[ext_resource type="PackedScene" uid="uid://5r43iwsuwfsg" path="res://Assets/Models/hedge.glb" id="271_esphk"]
+[ext_resource type="PackedScene" uid="uid://b2pptrk48bkef" path="res://Assets/Models/jewel.glb" id="272_rt5mr"]
+[ext_resource type="PackedScene" uid="uid://ivhh01ixgsge" path="res://Assets/Models/key.glb" id="273_wgaw3"]
+[ext_resource type="PackedScene" uid="uid://ki4p1erfx2jh" path="res://Assets/Models/ladder-broken.glb" id="274_prlqi"]
+[ext_resource type="PackedScene" uid="uid://bigin2xnfbfib" path="res://Assets/Models/ladder-long.glb" id="275_5hew4"]
+[ext_resource type="PackedScene" uid="uid://bs2f10u763t5l" path="res://Assets/Models/ladder.glb" id="276_s7n6h"]
+[ext_resource type="PackedScene" uid="uid://bbp1xogkrnc21" path="res://Assets/Models/lever.glb" id="277_itpxf"]
+[ext_resource type="PackedScene" uid="uid://btyub6hqlot6x" path="res://Assets/Models/lily_large.glb" id="278_g54mw"]
+[ext_resource type="PackedScene" uid="uid://cf3kb1vg6sd2j" path="res://Assets/Models/lily_small.glb" id="279_ry52t"]
+[ext_resource type="PackedScene" uid="uid://rs6i5grtxuwo" path="res://Assets/Models/lock.glb" id="280_ds03a"]
+[ext_resource type="PackedScene" uid="uid://cjcrkbm68qx0r" path="res://Assets/Models/log.glb" id="281_rshcn"]
+[ext_resource type="PackedScene" uid="uid://dv51n6u4f8kid" path="res://Assets/Models/log_large.glb" id="282_dbuyu"]
+[ext_resource type="PackedScene" uid="uid://8dqbuqdt6g1e" path="res://Assets/Models/log_stack.glb" id="283_cmps5"]
+[ext_resource type="PackedScene" uid="uid://77gv58n7hlbf" path="res://Assets/Models/log_stackLarge.glb" id="284_n4x2a"]
+[ext_resource type="PackedScene" uid="uid://jpqn61qdthtx" path="res://Assets/Models/mushrooms.glb" id="285_ar7gq"]
+[ext_resource type="PackedScene" uid="uid://udid74k4vngp" path="res://Assets/Models/mushroom_red.glb" id="286_o3or0"]
+[ext_resource type="PackedScene" uid="uid://dsffrpivvq1v3" path="res://Assets/Models/mushroom_redGroup.glb" id="287_koba5"]
+[ext_resource type="PackedScene" uid="uid://b44pwxijym8x" path="res://Assets/Models/mushroom_redTall.glb" id="288_6ynlp"]
+[ext_resource type="PackedScene" uid="uid://dbag184fi8s5h" path="res://Assets/Models/mushroom_tan.glb" id="289_qphe4"]
+[ext_resource type="PackedScene" uid="uid://dkrmbdhuc0vo8" path="res://Assets/Models/mushroom_tanGroup.glb" id="290_d2eo8"]
+[ext_resource type="PackedScene" uid="uid://b23xfc5tfwff3" path="res://Assets/Models/mushroom_tanTall.glb" id="291_6xkm7"]
+[ext_resource type="PackedScene" uid="uid://ca1r4rihkatat" path="res://Assets/Models/path_stone.glb" id="292_auouy"]
+[ext_resource type="PackedScene" uid="uid://dlpudisx5y17i" path="res://Assets/Models/path_stoneCircle.glb" id="293_i82yy"]
+[ext_resource type="PackedScene" uid="uid://bmdi6fosccjq5" path="res://Assets/Models/path_stoneCorner.glb" id="294_5qtr7"]
+[ext_resource type="PackedScene" uid="uid://cdp6gv7iyk642" path="res://Assets/Models/path_stoneEnd.glb" id="295_gqmah"]
+[ext_resource type="PackedScene" uid="uid://bnsq5iocj1g6m" path="res://Assets/Models/path_wood.glb" id="296_1fq2w"]
+[ext_resource type="PackedScene" uid="uid://bnthx3x1kc3x4" path="res://Assets/Models/path_woodCorner.glb" id="297_hwpvd"]
+[ext_resource type="PackedScene" uid="uid://cethotaj4qc0h" path="res://Assets/Models/path_woodEnd.glb" id="298_chejk"]
+[ext_resource type="PackedScene" uid="uid://dt3v4olbjsscs" path="res://Assets/Models/plant.glb" id="299_a27vn"]
+[ext_resource type="PackedScene" uid="uid://p177iluukrce" path="res://Assets/Models/plant_bush.glb" id="300_8vo7b"]
+[ext_resource type="PackedScene" uid="uid://bu5pl5c8lntr1" path="res://Assets/Models/plant_bushDetailed.glb" id="301_eosxf"]
+[ext_resource type="PackedScene" uid="uid://dij8dbgs8bbop" path="res://Assets/Models/plant_bushLarge.glb" id="302_dujxb"]
+[ext_resource type="PackedScene" uid="uid://b4k82lqomfmdm" path="res://Assets/Models/plant_bushLargeTriangle.glb" id="303_oisxe"]
+[ext_resource type="PackedScene" uid="uid://ng7vsbtabxlm" path="res://Assets/Models/plant_bushSmall.glb" id="304_raacg"]
+[ext_resource type="PackedScene" uid="uid://brvvit0f2h6bg" path="res://Assets/Models/plant_bushTriangle.glb" id="305_3j4kn"]
+[ext_resource type="Texture2D" uid="uid://b24qkfaynk38p" path="res://Assets/Models/Textures/colormap.png" id="305_cdrbk"]
+[ext_resource type="PackedScene" uid="uid://c1ucx8l5es8m6" path="res://Assets/Models/plant_flatShort.glb" id="306_vq3lx"]
+[ext_resource type="PackedScene" uid="uid://d23c2mf307ven" path="res://Assets/Models/plant_flatTall.glb" id="307_eojo1"]
+[ext_resource type="PackedScene" uid="uid://y14umh4xlt6a" path="res://Assets/Models/platform-fortified.glb" id="308_0tgyq"]
+[ext_resource type="PackedScene" uid="uid://4akbhiype704" path="res://Assets/Models/platform-overhang.glb" id="309_jutwx"]
+[ext_resource type="PackedScene" uid="uid://d167ibjlocjvu" path="res://Assets/Models/platform-ramp.glb" id="310_37d0g"]
+[ext_resource type="PackedScene" uid="uid://cjar20vlmxo67" path="res://Assets/Models/platform_beach.glb" id="312_eianf"]
+[ext_resource type="PackedScene" uid="uid://8fc0uj6yaley" path="res://Assets/Models/platform_grass.glb" id="313_h3je7"]
+[ext_resource type="PackedScene" uid="uid://ckjn0n5d02mqt" path="res://Assets/Models/platform_stone.glb" id="314_c5hv0"]
+[ext_resource type="PackedScene" uid="uid://bk0lpaa1ct3f6" path="res://Assets/Models/poles.glb" id="315_uxtq8"]
+[ext_resource type="PackedScene" uid="uid://dvoljob7g0pkr" path="res://Assets/Models/pot_large.glb" id="316_gk1rs"]
+[ext_resource type="PackedScene" uid="uid://dooildc66m507" path="res://Assets/Models/pot_small.glb" id="317_whoqu"]
+[ext_resource type="PackedScene" uid="uid://b2mapnrtxr0c3" path="res://Assets/Models/rocks.glb" id="318_1hpr3"]
+[ext_resource type="PackedScene" uid="uid://b2k11n1vpjarg" path="res://Assets/Models/rock_largeA.glb" id="319_y66xf"]
+[ext_resource type="PackedScene" uid="uid://ceyxp2txg7osj" path="res://Assets/Models/rock_largeB.glb" id="320_vybjv"]
+[ext_resource type="PackedScene" uid="uid://ckn5dbxr5hoo0" path="res://Assets/Models/rock_largeC.glb" id="321_4116a"]
+[ext_resource type="PackedScene" uid="uid://c6o27h6ejxbk8" path="res://Assets/Models/rock_largeD.glb" id="322_suesd"]
+[ext_resource type="PackedScene" uid="uid://b3s1hu7osxs1m" path="res://Assets/Models/rock_largeE.glb" id="323_kpnpg"]
+[ext_resource type="PackedScene" uid="uid://dwkdtm3mvmdsg" path="res://Assets/Models/rock_largeF.glb" id="324_kyhn4"]
+[ext_resource type="PackedScene" uid="uid://co85m7qkuv6ic" path="res://Assets/Models/rock_smallA.glb" id="325_e8s7y"]
+[ext_resource type="PackedScene" uid="uid://bep2d2ed5k2ek" path="res://Assets/Models/rock_smallB.glb" id="326_vximb"]
+[ext_resource type="PackedScene" uid="uid://bqrfgl8s6pcvd" path="res://Assets/Models/rock_smallC.glb" id="327_0w1mq"]
+[ext_resource type="PackedScene" uid="uid://desomuu0ilw5i" path="res://Assets/Models/rock_smallD.glb" id="328_wapbf"]
+[ext_resource type="PackedScene" uid="uid://crtayj11kvai3" path="res://Assets/Models/rock_smallE.glb" id="329_wkc6i"]
+[ext_resource type="PackedScene" uid="uid://dx3q45nq80svp" path="res://Assets/Models/rock_smallF.glb" id="330_3pkyg"]
+[ext_resource type="PackedScene" uid="uid://2kghgfyaoen0" path="res://Assets/Models/rock_smallFlatA.glb" id="331_v7cb8"]
+[ext_resource type="PackedScene" uid="uid://bcn4242wkcaa8" path="res://Assets/Models/rock_smallFlatB.glb" id="332_fhehi"]
+[ext_resource type="PackedScene" uid="uid://5cs3avofjplw" path="res://Assets/Models/rock_smallFlatC.glb" id="333_v1kto"]
+[ext_resource type="PackedScene" uid="uid://c7fg5h8janvyp" path="res://Assets/Models/rock_smallG.glb" id="334_s5haq"]
+[ext_resource type="PackedScene" uid="uid://62wt0a4e2o4a" path="res://Assets/Models/rock_smallH.glb" id="335_o7wmt"]
+[ext_resource type="PackedScene" uid="uid://bbxc0lctyni21" path="res://Assets/Models/rock_smallI.glb" id="336_boxn7"]
+[ext_resource type="PackedScene" uid="uid://w2ih64janp5i" path="res://Assets/Models/rock_smallTopA.glb" id="337_jhe4x"]
+[ext_resource type="PackedScene" uid="uid://cwlesspal1xob" path="res://Assets/Models/rock_smallTopB.glb" id="338_phgi2"]
+[ext_resource type="PackedScene" uid="uid://1hg5al6rqg5b" path="res://Assets/Models/rock_tallA.glb" id="339_pk3oj"]
+[ext_resource type="PackedScene" uid="uid://bbipi3p00wntl" path="res://Assets/Models/rock_tallB.glb" id="340_5gphx"]
+[ext_resource type="PackedScene" uid="uid://df471145k28e5" path="res://Assets/Models/rock_tallC.glb" id="341_sbxcj"]
+[ext_resource type="PackedScene" uid="uid://36io57ai0540" path="res://Assets/Models/rock_tallD.glb" id="342_aspcj"]
+[ext_resource type="PackedScene" uid="uid://p6ptni7clbef" path="res://Assets/Models/rock_tallE.glb" id="343_55ys0"]
+[ext_resource type="PackedScene" uid="uid://db0qih2x00esy" path="res://Assets/Models/rock_tallF.glb" id="344_cbnue"]
+[ext_resource type="PackedScene" uid="uid://ccywwf633igqg" path="res://Assets/Models/rock_tallG.glb" id="345_67kga"]
+[ext_resource type="PackedScene" uid="uid://430fd302qrlp" path="res://Assets/Models/rock_tallH.glb" id="346_r0h5n"]
+[ext_resource type="PackedScene" uid="uid://cb8wds75pawtm" path="res://Assets/Models/rock_tallI.glb" id="347_huq8c"]
+[ext_resource type="PackedScene" uid="uid://dt1o10tme531q" path="res://Assets/Models/rock_tallJ.glb" id="348_27y0a"]
+[ext_resource type="PackedScene" uid="uid://bvjiahlep22lu" path="res://Assets/Models/saw.glb" id="349_dm03k"]
+[ext_resource type="PackedScene" uid="uid://yt36e8gvc6pg" path="res://Assets/Models/sign.glb" id="350_ynbxd"]
+[ext_resource type="PackedScene" uid="uid://de5dkwmyeb2sj" path="res://Assets/Models/spike-block-wide.glb" id="351_xfj86"]
+[ext_resource type="PackedScene" uid="uid://chtb2ynw4fttm" path="res://Assets/Models/spike-block.glb" id="352_7iuy1"]
+[ext_resource type="PackedScene" uid="uid://cm57ynbgpkeqt" path="res://Assets/Models/statue_block.glb" id="353_mejg4"]
+[ext_resource type="PackedScene" uid="uid://cekpj0nac61nq" path="res://Assets/Models/statue_column.glb" id="354_riniu"]
+[ext_resource type="PackedScene" uid="uid://byb6sqoyt1eho" path="res://Assets/Models/statue_columnDamaged.glb" id="355_dcy05"]
+[ext_resource type="PackedScene" uid="uid://c1kul3rtv7qft" path="res://Assets/Models/statue_head.glb" id="356_7dcxi"]
+[ext_resource type="PackedScene" uid="uid://duo1saty38b5s" path="res://Assets/Models/statue_obelisk.glb" id="357_doq6s"]
+[ext_resource type="PackedScene" uid="uid://x4x0q5grydf" path="res://Assets/Models/statue_ring.glb" id="358_lcmib"]
+[ext_resource type="PackedScene" uid="uid://cd7gnu415plef" path="res://Assets/Models/stones.glb" id="359_ybcp1"]
+[ext_resource type="PackedScene" uid="uid://b3qwtqwmyf3ua" path="res://Assets/Models/stone_largeA.glb" id="360_hini7"]
+[ext_resource type="PackedScene" uid="uid://dq71shdnvxko4" path="res://Assets/Models/stone_largeB.glb" id="361_3e4e6"]
+[ext_resource type="PackedScene" uid="uid://dhpgvp6hj4eok" path="res://Assets/Models/stone_largeC.glb" id="362_hkgem"]
+[ext_resource type="PackedScene" uid="uid://bl2gofr8apuaf" path="res://Assets/Models/stone_largeD.glb" id="363_4ny10"]
+[ext_resource type="PackedScene" uid="uid://vslhhyk77tb4" path="res://Assets/Models/stone_largeE.glb" id="364_upxvt"]
+[ext_resource type="PackedScene" uid="uid://bydpw0w7hxwqr" path="res://Assets/Models/stone_largeF.glb" id="365_dunn5"]
+[ext_resource type="PackedScene" uid="uid://dpk6rt0lefpxv" path="res://Assets/Models/stone_smallA.glb" id="366_etpli"]
+[ext_resource type="PackedScene" uid="uid://qa22uqirttlv" path="res://Assets/Models/stone_smallB.glb" id="367_mkctp"]
+[ext_resource type="PackedScene" uid="uid://cr76gn3iswqyt" path="res://Assets/Models/stone_smallC.glb" id="368_kd2nx"]
+[ext_resource type="PackedScene" uid="uid://e51hn1kjqibk" path="res://Assets/Models/stone_smallD.glb" id="369_jbhtw"]
+[ext_resource type="PackedScene" uid="uid://bxp1bi72i3pva" path="res://Assets/Models/stone_smallE.glb" id="370_tw0ub"]
+[ext_resource type="PackedScene" uid="uid://b4ri2dpbipxgt" path="res://Assets/Models/stone_smallF.glb" id="371_d7lh1"]
+[ext_resource type="PackedScene" uid="uid://cosxuen4ko2ik" path="res://Assets/Models/stone_smallFlatA.glb" id="372_o353c"]
+[ext_resource type="PackedScene" uid="uid://wp8leva7csra" path="res://Assets/Models/stone_smallFlatB.glb" id="373_18i36"]
+[ext_resource type="PackedScene" uid="uid://b2c5ku1jxqbks" path="res://Assets/Models/stone_smallFlatC.glb" id="374_h1pls"]
+[ext_resource type="PackedScene" uid="uid://c4bf1031sxed8" path="res://Assets/Models/stone_smallG.glb" id="375_lf2qf"]
+[ext_resource type="PackedScene" uid="uid://nlhqs3umk47k" path="res://Assets/Models/stone_smallH.glb" id="376_m1ar3"]
+[ext_resource type="PackedScene" uid="uid://d1sn6b1k1ar7" path="res://Assets/Models/stone_smallI.glb" id="377_dovke"]
+[ext_resource type="PackedScene" uid="uid://l6vs63rortu5" path="res://Assets/Models/stone_smallTopA.glb" id="378_s18xx"]
+[ext_resource type="PackedScene" uid="uid://bnudncqc8r4vi" path="res://Assets/Models/stone_smallTopB.glb" id="379_vfn6c"]
+[ext_resource type="PackedScene" uid="uid://bajr68q8rftt" path="res://Assets/Models/stone_tallA.glb" id="380_blppe"]
+[ext_resource type="PackedScene" uid="uid://u5fdstb7jr6k" path="res://Assets/Models/stone_tallB.glb" id="381_nln6p"]
+[ext_resource type="PackedScene" uid="uid://ddrsb6765njbg" path="res://Assets/Models/stone_tallC.glb" id="382_khjpr"]
+[ext_resource type="PackedScene" uid="uid://chs3mc61xgxi5" path="res://Assets/Models/stone_tallD.glb" id="383_j0f7p"]
+[ext_resource type="PackedScene" uid="uid://4id6wpk7f5p1" path="res://Assets/Models/stone_tallE.glb" id="384_bwvtc"]
+[ext_resource type="PackedScene" uid="uid://c1a1wmp1opp6u" path="res://Assets/Models/stone_tallF.glb" id="385_tcewd"]
+[ext_resource type="PackedScene" uid="uid://ctb5c8yi8focx" path="res://Assets/Models/stone_tallG.glb" id="386_kveh7"]
+[ext_resource type="PackedScene" uid="uid://cwxgcmpegxq5w" path="res://Assets/Models/stone_tallH.glb" id="387_he6x7"]
+[ext_resource type="PackedScene" uid="uid://6sw52xpm0pg1" path="res://Assets/Models/stone_tallI.glb" id="388_mbnw7"]
+[ext_resource type="PackedScene" uid="uid://bremedrsjoqg8" path="res://Assets/Models/stone_tallJ.glb" id="389_0b144"]
+[ext_resource type="PackedScene" uid="uid://d1kwgqavcu2dx" path="res://Assets/Models/stump_old.glb" id="390_aeud8"]
+[ext_resource type="PackedScene" uid="uid://8opkt5dawe2n" path="res://Assets/Models/stump_oldTall.glb" id="391_gyyqe"]
+[ext_resource type="PackedScene" uid="uid://458vtmwf1tty" path="res://Assets/Models/stump_round.glb" id="392_oi64q"]
+[ext_resource type="PackedScene" uid="uid://q1f0xymwamk" path="res://Assets/Models/stump_roundDetailed.glb" id="393_2shis"]
+[ext_resource type="PackedScene" uid="uid://ba4pm2ysbgqgw" path="res://Assets/Models/stump_square.glb" id="394_v81f3"]
+[ext_resource type="PackedScene" uid="uid://c2ylhn8p0upwv" path="res://Assets/Models/stump_squareDetailed.glb" id="395_aalry"]
+[ext_resource type="PackedScene" uid="uid://cyobo44bqvmg6" path="res://Assets/Models/stump_squareDetailedWide.glb" id="396_f2gbq"]
+[ext_resource type="PackedScene" uid="uid://xdrfeaynljwo" path="res://Assets/Models/tent_detailedClosed.glb" id="397_wfq14"]
+[ext_resource type="PackedScene" uid="uid://bdojj3aounqgb" path="res://Assets/Models/tent_detailedOpen.glb" id="398_3kqah"]
+[ext_resource type="PackedScene" uid="uid://dtj2hsmy2klj5" path="res://Assets/Models/tent_smallClosed.glb" id="399_i252t"]
+[ext_resource type="PackedScene" uid="uid://de625qgbw64or" path="res://Assets/Models/tent_smallOpen.glb" id="400_4trcn"]
+[ext_resource type="PackedScene" uid="uid://jwx60i7anon2" path="res://Assets/Models/trap-spikes-large.glb" id="401_uy783"]
+[ext_resource type="PackedScene" uid="uid://cjqk00whpnelw" path="res://Assets/Models/trap-spikes.glb" id="402_ixen4"]
+[ext_resource type="PackedScene" uid="uid://prtwp1gq2vo2" path="res://Assets/Models/tree-pine-small.glb" id="403_r4xxt"]
+[ext_resource type="PackedScene" uid="uid://btp020wxft0q6" path="res://Assets/Models/tree-pine-snow-small.glb" id="404_7bbbk"]
+[ext_resource type="PackedScene" uid="uid://dd0tplpulcgt" path="res://Assets/Models/tree-pine-snow.glb" id="405_hq4vs"]
+[ext_resource type="PackedScene" uid="uid://yh83316ld2d0" path="res://Assets/Models/tree-pine.glb" id="406_dxrpu"]
+[ext_resource type="PackedScene" uid="uid://r2rbyv07spov" path="res://Assets/Models/tree-snow.glb" id="407_xq0fc"]
+[ext_resource type="PackedScene" uid="uid://dr0scbvo0ibgh" path="res://Assets/Models/tree.glb" id="408_d34aq"]
+[ext_resource type="PackedScene" uid="uid://c5mhyinkwl5gq" path="res://Assets/Models/tree_blocks.glb" id="409_dcytx"]
+[ext_resource type="PackedScene" uid="uid://d3qf7wik2r4yr" path="res://Assets/Models/tree_blocks_dark.glb" id="410_wsjtv"]
+[ext_resource type="PackedScene" uid="uid://bsxwvg83lb1ci" path="res://Assets/Models/tree_blocks_fall.glb" id="411_re87m"]
+[ext_resource type="PackedScene" uid="uid://cwvifqk8dxeg1" path="res://Assets/Models/tree_cone.glb" id="412_uemr1"]
+[ext_resource type="PackedScene" uid="uid://dvhmcqg7dwks4" path="res://Assets/Models/tree_cone_dark.glb" id="413_huoq1"]
+[ext_resource type="PackedScene" uid="uid://b5v8ebsx0xwxg" path="res://Assets/Models/tree_cone_fall.glb" id="414_xgqnq"]
+[ext_resource type="PackedScene" uid="uid://cwn83ibrbmsfq" path="res://Assets/Models/tree_default.glb" id="415_ie7xy"]
+[ext_resource type="PackedScene" uid="uid://clo0a4838unw3" path="res://Assets/Models/tree_default_dark.glb" id="416_8bm6l"]
+[ext_resource type="PackedScene" uid="uid://dtlyi15mnt64o" path="res://Assets/Models/tree_default_fall.glb" id="417_7lpsn"]
+[ext_resource type="PackedScene" uid="uid://bi4jq27rvjiwr" path="res://Assets/Models/tree_detailed.glb" id="418_8o8j8"]
+[ext_resource type="PackedScene" uid="uid://b1x6220th0w75" path="res://Assets/Models/tree_detailed_dark.glb" id="419_tytij"]
+[ext_resource type="PackedScene" uid="uid://dw5pxfp3f2rr4" path="res://Assets/Models/tree_detailed_fall.glb" id="420_rhysp"]
+[ext_resource type="PackedScene" uid="uid://bj6kccsdpf73r" path="res://Assets/Models/tree_fat.glb" id="421_t81cp"]
+[ext_resource type="PackedScene" uid="uid://d226ktl444xlt" path="res://Assets/Models/tree_fat_darkh.glb" id="422_n6nst"]
+[ext_resource type="PackedScene" uid="uid://62nngo64smsp" path="res://Assets/Models/tree_fat_fall.glb" id="423_xwtss"]
+[ext_resource type="PackedScene" uid="uid://bhqbp7q3s10gf" path="res://Assets/Models/tree_oak.glb" id="424_rd37f"]
+[ext_resource type="PackedScene" uid="uid://cvc4tg37wji13" path="res://Assets/Models/tree_oak_dark.glb" id="425_kk82i"]
+[ext_resource type="PackedScene" uid="uid://ccfx36fclxfrt" path="res://Assets/Models/tree_oak_fall.glb" id="426_3n5fk"]
+[ext_resource type="PackedScene" uid="uid://c8l68xjc530jh" path="res://Assets/Models/tree_palm.glb" id="427_bf4kv"]
+[ext_resource type="PackedScene" uid="uid://bmybwok7jw6vg" path="res://Assets/Models/tree_palmBend.glb" id="428_cbiw4"]
+[ext_resource type="PackedScene" uid="uid://2m42f0cix6ms" path="res://Assets/Models/tree_palmDetailedShort.glb" id="429_5urcp"]
+[ext_resource type="PackedScene" uid="uid://c3wddbinsnett" path="res://Assets/Models/tree_palmDetailedTall.glb" id="430_hddb0"]
+[ext_resource type="PackedScene" uid="uid://cjuypdwpx8ra6" path="res://Assets/Models/tree_palmShort.glb" id="431_7idgg"]
+[ext_resource type="PackedScene" uid="uid://3v5g72jq7u4n" path="res://Assets/Models/tree_palmTall.glb" id="432_7uwix"]
+[ext_resource type="PackedScene" uid="uid://dnegbtg5ul708" path="res://Assets/Models/tree_pineDefaultA.glb" id="433_sf1jr"]
+[ext_resource type="PackedScene" uid="uid://gau2hrrhd8fi" path="res://Assets/Models/tree_pineDefaultB.glb" id="434_xejwj"]
+[ext_resource type="PackedScene" uid="uid://cpu3hlsqn4lfg" path="res://Assets/Models/tree_pineGroundA.glb" id="435_j1ak8"]
+[ext_resource type="PackedScene" uid="uid://w13k1ypr7l14" path="res://Assets/Models/tree_pineGroundB.glb" id="436_qhyih"]
+[ext_resource type="PackedScene" uid="uid://b4f21n64y7074" path="res://Assets/Models/tree_pineRoundA.glb" id="437_fx0dn"]
+[ext_resource type="PackedScene" uid="uid://bdhjkwjpejuh1" path="res://Assets/Models/tree_pineRoundB.glb" id="438_s8yqh"]
+[ext_resource type="PackedScene" uid="uid://chc6ixnqvaud6" path="res://Assets/Models/tree_pineRoundC.glb" id="439_4lf4l"]
+[ext_resource type="PackedScene" uid="uid://cri473ah8gpu4" path="res://Assets/Models/tree_pineRoundD.glb" id="440_b3ttk"]
+[ext_resource type="PackedScene" uid="uid://1onfg7adexib" path="res://Assets/Models/tree_pineRoundE.glb" id="441_qnkht"]
+[ext_resource type="PackedScene" uid="uid://ch3f31k7c6hxs" path="res://Assets/Models/tree_pineRoundF.glb" id="442_fmuaa"]
+[ext_resource type="PackedScene" uid="uid://k2oij5ta2ph" path="res://Assets/Models/tree_pineSmallA.glb" id="443_njeok"]
+[ext_resource type="PackedScene" uid="uid://cmdhitupaw7c7" path="res://Assets/Models/tree_pineSmallB.glb" id="444_4ttea"]
+[ext_resource type="PackedScene" uid="uid://d1m6jjqalhb3c" path="res://Assets/Models/tree_pineSmallC.glb" id="445_2wkam"]
+[ext_resource type="PackedScene" uid="uid://o7t4881v53c7" path="res://Assets/Models/tree_pineSmallD.glb" id="446_gee0t"]
+[ext_resource type="PackedScene" uid="uid://dbkwjmhdc5qhs" path="res://Assets/Models/tree_pineTallA.glb" id="447_fs562"]
+[ext_resource type="PackedScene" uid="uid://byc1lhlb3wbjj" path="res://Assets/Models/tree_pineTallA_detailed.glb" id="448_g3xfe"]
+[ext_resource type="PackedScene" uid="uid://ixxajjtal53d" path="res://Assets/Models/tree_pineTallB.glb" id="449_nah4q"]
+[ext_resource type="PackedScene" uid="uid://d1tm8k3etp8de" path="res://Assets/Models/tree_pineTallB_detailed.glb" id="450_icneb"]
+[ext_resource type="PackedScene" uid="uid://b05kd3j4erb0s" path="res://Assets/Models/tree_pineTallC.glb" id="451_id2md"]
+[ext_resource type="PackedScene" uid="uid://cdysbw8o2wi83" path="res://Assets/Models/tree_pineTallC_detailed.glb" id="452_xs1te"]
+[ext_resource type="PackedScene" uid="uid://bxw5fak7f0woh" path="res://Assets/Models/tree_pineTallD.glb" id="453_huxmr"]
+[ext_resource type="PackedScene" uid="uid://bdjftkx0hni20" path="res://Assets/Models/tree_pineTallD_detailed.glb" id="454_4p6wd"]
+[ext_resource type="PackedScene" uid="uid://dp6i5j6vm5eto" path="res://Assets/Models/tree_plateau.glb" id="455_ppr2h"]
+[ext_resource type="PackedScene" uid="uid://c2f4jo1gd64ox" path="res://Assets/Models/tree_plateau_dark.glb" id="456_kfftx"]
+[ext_resource type="PackedScene" uid="uid://brwxsx443fcgl" path="res://Assets/Models/tree_plateau_fall.glb" id="457_vrjv4"]
+[ext_resource type="PackedScene" uid="uid://d13ly4dpspljs" path="res://Assets/Models/tree_simple.glb" id="458_jiuuy"]
+[ext_resource type="PackedScene" uid="uid://qx2r77bx8dyt" path="res://Assets/Models/tree_simple_dark.glb" id="459_ixiix"]
+[ext_resource type="PackedScene" uid="uid://ckap2rk11ldug" path="res://Assets/Models/tree_simple_fall.glb" id="460_5jkkk"]
+[ext_resource type="PackedScene" uid="uid://bhj38ep7isu01" path="res://Assets/Models/tree_small.glb" id="461_8je5m"]
+[ext_resource type="PackedScene" uid="uid://lqbw3ia3may4" path="res://Assets/Models/tree_small_dark.glb" id="462_1cbie"]
+[ext_resource type="PackedScene" uid="uid://hp7xm02uvwkp" path="res://Assets/Models/tree_small_fall.glb" id="463_vaqhj"]
+[ext_resource type="PackedScene" uid="uid://ub57roijgij1" path="res://Assets/Models/tree_tall.glb" id="464_y6r1e"]
+[ext_resource type="PackedScene" uid="uid://wjnweu4fb1rn" path="res://Assets/Models/tree_tall_dark.glb" id="465_4uuwb"]
+[ext_resource type="PackedScene" uid="uid://dsjsqwxowargd" path="res://Assets/Models/tree_tall_fall.glb" id="466_tujky"]
+[ext_resource type="PackedScene" uid="uid://b8a2hgksd37if" path="res://Assets/Models/tree_thin.glb" id="467_w6atd"]
+[ext_resource type="PackedScene" uid="uid://dx2semo8biyxy" path="res://Assets/Models/tree_thin_dark.glb" id="468_31vd1"]
+[ext_resource type="PackedScene" uid="uid://c8a2x8g7doyxm" path="res://Assets/Models/tree_thin_fall.glb" id="469_kk1to"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3182"]
+resource_name = "grass"
+albedo_color = Color(0.45234028, 0.92950165, 0.8658767, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nihag"]
+resource_name = "dirt"
+albedo_color = Color(0.9482425, 0.7443257, 0.6190008, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j0qjy"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0.5, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.5, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgAEAAAAAAAEAAUABQAEAAIABQAGAAAAAwAGAAUAAgAHAAUABQAHAAMAAwAHAAIA"),
+"name": "dirt",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAP////8AAAAAAAD//wAA////////AAAAAAAAAAAAAP//AAAAAAAA/////wAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_25cw3"]
+resource_name = "cliff_blockHalf_rock_Mesh cliff_blockHalf_rock"
+_surfaces = [{
+"aabb": AABB(-0.5, 0.5, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/////wAA//8AAGAM//9gDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_o3182"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP///78AAAAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.5, 1),
+"attribute_data": PackedByteArray("AABgDP//YAz//y+GAAAvhv//YAz//y+GAAAvhgAAYAz//2AM//8vhgAAL4YAAGAM//8vhgAAL4YAAGAM//9gDAAAYAz//2AM/////wAA//8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_nihag"),
+"name": "dirt",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD//wAA/78AAP//////vwAAAAD///+/AAAAAAAA/78AAP//AAD//wAAAAAAAP////8AAAAA////////AAD//////////wCA//8AAP//AIAAAAAA//8AgAAA/////wCA//8AAAAA/7///wAA////v/////////+//////wAA/7///wAAAAD//wAAAAAAAP//AAAAAP///////wAA//////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_j0qjy")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cdrbk"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.5, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, 0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5j4tk"]
+resource_name = "grass"
+albedo_color = Color(0.45234028, 0.92950165, 0.8658767, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuwo6"]
+resource_name = "stone"
+albedo_color = Color(0.8658767, 0.9482425, 0.9592555, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5kwsq"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0.5, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.5, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgAEAAAAAAAEAAUABQAEAAIABQAGAAAAAwAGAAUAAgAHAAUABQAHAAMAAwAHAAIA"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAP////8AAAAAAAD//wAA////////AAAAAAAAAAAAAP//AAAAAAAA/////wAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0mjh1"]
+resource_name = "cliff_blockHalf_stone_Mesh cliff_blockHalf_stone"
+_surfaces = [{
+"aabb": AABB(-0.5, 0.5, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/////wAA//8AAGAM//9gDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_5j4tk"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP///78AAAAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.5, 1),
+"attribute_data": PackedByteArray("AABgDP//YAz//y+GAAAvhv//YAz//y+GAAAvhgAAYAz//2AM//8vhgAAL4YAAGAM//8vhgAAL4YAAGAM//9gDAAAYAz//2AM/////wAA//8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_cuwo6"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD//wAA/78AAP//////vwAAAAD///+/AAAAAAAA/78AAP//AAD//wAAAAAAAP////8AAAAA////////AAD//////////wCA//8AAP//AIAAAAAA//8AgAAA/////wCA//8AAAAA/7///wAA////v/////////+//////wAA/7///wAAAAD//wAAAAAAAP//AAAAAP///////wAA//////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5kwsq")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5hjuj"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.5, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, 0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjyph"]
+resource_name = "grass"
+albedo_color = Color(0.45234028, 0.92950165, 0.8658767, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_juvwm"]
+resource_name = "dirt"
+albedo_color = Color(0.9482425, 0.7443257, 0.6190008, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ue4vm"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0.25, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.25, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgAEAAAAAAAEAAUABQAEAAIABQAGAAAAAwAGAAUAAgAHAAUABQAHAAMAAwAHAAIA"),
+"name": "dirt",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAP////8AAAAAAAD//wAA////////AAAAAAAAAAAAAP//AAAAAAAA/////wAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2caxb"]
+resource_name = "cliff_blockQuarter_rock_Mesh cliff_blockQuarter_rock"
+_surfaces = [{
+"aabb": AABB(-0.5, 0.25, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/////wAA//8AAGAM//9gDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_bjyph"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP///78AAAAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.25, 1),
+"attribute_data": PackedByteArray("AABHSf//R0n//y+GAAAvhv//R0n//y+GAAAvhgAAR0n//0dJ//8vhgAAL4YAAEdJ//8vhgAAL4YAAEdJ//9HSQAAYAz//2AM/////wAA//8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_juvwm"),
+"name": "dirt",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD//wAA/78AAP//////vwAAAAD///+/AAAAAAAA/78AAP//AAD//wAAAAAAAP////8AAAAA////////AAD//////////wCA//8AAP//AIAAAAAA//8AgAAA/////wCA//8AAAAA/7///wAA////v/////////+//////wAA/7///wAAAAD//wAAAAAAAP//AAAAAP///////wAA//////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ue4vm")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_srrst"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.25, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, 0, 0.5, 0.5, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2xch"]
+resource_name = "grass"
+albedo_color = Color(0.45234028, 0.92950165, 0.8658767, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut5hq"]
+resource_name = "stone"
+albedo_color = Color(0.8658767, 0.9482425, 0.9592555, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ulmhu"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0.25, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.25, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgAEAAAAAAAEAAUABQAEAAIABQAGAAAAAwAGAAUAAgAHAAUABQAHAAMAAwAHAAIA"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAP////8AAAAAAAD//wAA////////AAAAAAAAAAAAAP//AAAAAAAA/////wAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mjhl4"]
+resource_name = "cliff_blockQuarter_stone_Mesh cliff_blockQuarter_stone"
+_surfaces = [{
+"aabb": AABB(-0.5, 0.25, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/////wAA//8AAGAM//9gDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_i2xch"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP///78AAAAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.25, 1),
+"attribute_data": PackedByteArray("AABHSf//R0n//y+GAAAvhv//R0n//y+GAAAvhgAAR0n//0dJ//8vhgAAL4YAAEdJ//8vhgAAL4YAAEdJ//9HSQAAYAz//2AM/////wAA//8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_ut5hq"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD//wAA/78AAP//////vwAAAAD///+/AAAAAAAA/78AAP//AAD//wAAAAAAAP////8AAAAA////////AAD//////////wCA//8AAP//AIAAAAAA//8AgAAA/////wCA//8AAAAA/7///wAA////v/////////+//////wAA/7///wAAAAD//wAAAAAAAP//AAAAAP///////wAA//////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ulmhu")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_23kvv"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.25, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, 0, 0.5, 0.5, 0.25, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q0gy"]
+resource_name = "grass"
+albedo_color = Color(0.45234028, 0.92950165, 0.8658767, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehwul"]
+resource_name = "dirt"
+albedo_color = Color(0.9482425, 0.7443257, 0.6190008, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_saqag"]
+_surfaces = [{
+"aabb": AABB(-0.5, 1, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgAEAAAAAAAEAAUABQAEAAIABQAGAAAAAwAGAAUAAgAHAAUABQAHAAMAAwAHAAIA"),
+"name": "dirt",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAP////8AAAAAAAD//wAA////////AAAAAAAAAAAAAP//AAAAAAAA/////wAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xj6b5"]
+resource_name = "cliff_block_rock_Mesh cliff_block_rock"
+_surfaces = [{
+"aabb": AABB(-0.5, 1, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/////wAA//8AAGAM//9gDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_2q0gy"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP///78AAAAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("AAAAAP//AAD//1WDAABVg///AAD//1WDAABVgwAAAAD//wAA//9VgwAAVYMAAAAA//9VgwAAVYMAAAAA//8AAAAAqkH//6pB//8AxQAAAMU="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_ehwul"),
+"name": "dirt",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 76.74016, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD//wAA/78AAP//////vwAAAAD///+/AAAAAAAA/78AAP//AAD//wAAAAAAAP////8AAAAA////////AAD//////////wCA//8AAP//AIAAAAAA//8AgAAA/////wCA//8AAAAA/7///wAA////v/////////+//////wAA/7///wAAAAD//wAAAAAAAP//AAAAAP///////wAA//////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_saqag")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8op65"]
+points = PackedVector3Array(0.5, 1, 0.5, 0.5, 1, -0.5, -0.5, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_er4tc"]
+resource_name = "grass"
+albedo_color = Color(0.45234028, 0.92950165, 0.8658767, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmq7w"]
+resource_name = "stone"
+albedo_color = Color(0.8658767, 0.9482425, 0.9592555, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_by6e3"]
+_surfaces = [{
+"aabb": AABB(-0.5, 1, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgAEAAAAAAAEAAUABQAEAAIABQAGAAAAAwAGAAUAAgAHAAUABQAHAAMAAwAHAAIA"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAP////8AAAAAAAD//wAA////////AAAAAAAAAAAAAP//AAAAAAAA/////wAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wm4ys"]
+resource_name = "cliff_block_stone_Mesh cliff_block_stone"
+_surfaces = [{
+"aabb": AABB(-0.5, 1, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/////wAA//8AAGAM//9gDA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_er4tc"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("//8AAP///78AAAAA////vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
+}, {
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("AAAAAP//AAD//1WDAABVg///AAD//1WDAABVgwAAAAD//wAA//9VgwAAVYMAAAAA//9VgwAAVYMAAAAA//8AAAAAqkH//6pB//8AxQAAAMU="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_nmq7w"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 76.74016, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD//wAA/78AAP//////vwAAAAD///+/AAAAAAAA/78AAP//AAD//wAAAAAAAP////8AAAAA////////AAD//////////wCA//8AAP//AIAAAAAA//8AgAAA/////wCA//8AAAAA/7///wAA////v/////////+//////wAA/7///wAAAAD//wAAAAAAAP//AAAAAP///////wAA//////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_by6e3")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_78wm2"]
+points = PackedVector3Array(0.5, 1, 0.5, 0.5, 1, -0.5, -0.5, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krbhm"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("305_cdrbk")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1w4s0"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.19500001, 1),
+"format": 34896613377,
+"index_count": 252,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAAAAgAEAAAAAAAFAAMAAwAGAAIABwAFAAAAAwAFAAcAAAAEAAcABwAGAAMABwAEAAIAAgAGAAcACAAJAAoACgAJAAsACwAJAAgACgAMAAgACAANAAsACwAOAAoADwANAAgACwANAA8ACAAMAA8ADwAOAAsADwAMAAoACgAOAA8AEAARABIAEgARABMAEwARABAAEgAUABAAEAAVABMAEwAWABIAFwAVABAAEwAVABcAEAAUABcAFwAWABMAFwAUABIAEgAWABcAGAAZABoAGgAZABsAGwAZABgAGgAcABgAGAAdABsAGwAeABoAHgAbAB0AHwAdABgAHQAfAB4AGAAcAB8AGgAeAB8AHwAcABoAIAAhACIAIgAhACMAIwAhACAAIgAkACAAIAAlACMAIwAmACIAJwAlACAAIwAlACcAIAAkACcAJwAmACMAJwAkACIAIgAmACcAKAApACoAKQAoACsAKwAsACkAKgApACwALQArACgALAArAC0AKgAuACgAKAAuAC0ALQAuACoALAAvACoAKgAvAC0ALQAvACwAMAAxADIAMwAxADAAMgAxADMAMAA0ADMAMgA1ADAANAAwADUAMwA2ADIANQA3ADQAMwA0ADcANwA1ADIANwA2ADMAMgA2ADcA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("uB6JnQAAAAC4HgAAAAAAAHA9AAAAAAAAuB4AAP//AABwPYmdAAAAALgeiZ3//wAAcD0AAP//AABwPYmd//8AAI7CAAD//wAAjsIAAAAAAACOwomdAAAAAEbhAAAAAAAAjsKJnf//AABG4QAA//8AAEbhiZ0AAAAARuGJnf//AAAAAP//JKcAAAAAiZ0kpwAA//+JnSSnAAAAAImd2dgAAP//xM4kpwAAAAD//9nYAAD//4md2dgAAP//xM7Z2AAAAACJndoYAAD//4md2hgAAP//iZ0AAAAA/////9oYAAAAAImdAAAAAAAAxM7aGAAA/////wAAAAAAAMTOAAAAAAAAxM4kZwAAAACJnSRnAAD//4mdJGcAAAAAiZ3amAAA/////yRnAAAAAMTO2pgAAP//iZ3amAAA/////9qYAAD//8TO2lgAAP//xM4lJwAA//+JnSUnAAAAAP//2lgAAAAA//8lJwAAAACJndpYAAD//4md2lgAAAAAiZ0lJwAAAADEziTnAAAAAImdJOcAAP//iZ0k5wAAAACJnf//AAAAAMTO//8AAP////8k5wAA//+Jnf//AAD///////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_200oo"]
+resource_name = "platform_platform"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.19500001, 1),
+"attribute_data": PackedByteArray("/9dlxv/XmPn/15j5/9dlxv/XZcb/15j5/9eY+f/XZcb/15j5/9eY+f/XmPn/15j5/9eY+f/XmPn/12XG/9dlxv/XZcb/12XG/9eY+f/XmPn/12XG/9dlxv/XZcb/12XG/9eY+f/XmPn/12XG/9dlxv/XZcb/15j5/9eY+f/XZcb/15j5/9eY+f/XmPn/15j5/9dlxv/XZcb/15j5/9eY+f/XZcb/15j5/9eY+f/XZcb/12XG/9dlxv/XZcb/12XG/7cy0/+3y+z/t8vs/7f/3/+3/9//t//f/7fL7P+3y+z/t//f/7fL7P+3y+z/tzLT/7fL7P+3y+z/tzLT/7cy0/+3MtP/t//f/7f/3/+3MtP/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7f/3/+3/9//tzLT/7cy0/+3y+z/t8vs/7cy0/+3y+z/t8vs/7f/3/+3/9//t8vs/7fL7P+3MtP/tzLT/7cy0/+3/9//t//f/7f/3/+3y+z/t8vs/7cy0/+3/9//tzLT/7cy0/+3/9//tzLT/7fL7P+3y+z/t//f/7fL7P+3y+z/t8vs/7fL7P+3MtP/tzLT/7fL7P+3y+z/t8vs/7fL7P+3/9//t//f/7f/3/+3/9//t8vs/7fL7P+3/9//t//f/7cy0/+3MtP/t//f/7fL7P+3y+z/tzLT/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7cy0/+3MtP/tzLT/7fL7P+3y+z/t//f/7f/3/+3y+z/t8vs/7cy0/+3MtP/tzLT/7f/3/+3/9//t8vs/7fL7P+3/9//t//f/7cy0/+3y+z/t8vs/7f/3/+3y+z/t8vs/7fL7P+3y+z/tzLT/7cy0/+3y+z/t8vs"),
+"format": 34896613399,
+"index_count": 252,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgATABNAE4ATgBPAEwAUABRAFIAUgBTAFAAVABVAFYAVgBXAFQAWABZAFoAWgBbAFgAXABdAF4AXgBfAFwAYABhAGIAYgBjAGAAZABlAGYAZgBnAGQAaABpAGoAagBrAGgAbABtAG4AbgBvAGwAcABxAHIAcgBzAHAAdAB1AHYAdgB3AHQAeAB5AHoAegB7AHgAfAB9AH4AfgB/AHwAgACBAIIAggCDAIAAhACFAIYAhgCHAIQAiACJAIoAigCLAIgAjACNAI4AjgCPAIwAkACRAJIAkgCTAJAAlACVAJYAlgCXAJQAmACZAJoAmgCbAJgAnACdAJ4AngCfAJwAoAChAKIAogCjAKAApAClAKYApgCnAKQA"),
+"material": SubResource("StandardMaterial3D_krbhm"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 168,
+"vertex_data": PackedByteArray("uB6JnQAA//+4HgAAAAD//3A9AAAAAP//cD2JnQAA//9wPYmd//8AgHA9AAD//wCAuB4AAP//AIC4Homd//8AgLgeAAD///+/cD0AAP///79wPQAAAAD/v7geAAAAAP+/uB4AAP///7+4HgAAAAD/v7geiZ0AAP+/uB6Jnf///79wPYmd////v3A9iZ0AAP+/cD0AAAAA/79wPQAA////v7geiZ0AAP//cD2JnQAA//9wPYmd/////7geiZ3/////jsIAAP///7+OwgAAAAD/v47CiZ0AAP+/jsKJnf///79G4Ymd//8AgEbhAAD//wCAjsIAAP//AICOwomd//8AgI7CAAD///+/RuEAAP///79G4QAAAAD/v47CAAAAAP+/RuGJnf///79G4YmdAAD/v0bhAAAAAP+/RuEAAP///7+OwomdAAD//47CAAAAAP//RuEAAAAA//9G4YmdAAD//47CiZ0AAP//RuGJnQAA//9G4Ymd/////47CiZ3/////AAD//ySn//8AAImdJKf/////iZ0kp//////EziSn/////8TO2dj/v///xM4kp/+///+JnSSn/7///4md2dj/v///xM7Z2ACA//+JndnYAIAAAImd2dgAgAAA///Z2ACAAACJndnY/78AAImdJKf/vwAA//8kp/+/AAD//9nY/78AAP//JKd01P//xM4kp3TU///EztnYdNQAAP//2dh01AAAiZ3Z2P+///+JndnY/7///4mdJKf/vwAAiZ0kp/+/AACJndoY/7///4md2hj/v///iZ0AAP+/AACJnQAA/78AAImd2hj/vwAAiZ0AAP+/AADEzgAA/78AAMTO2hj/v//////aGP+//////wAA/7///4mdAAD/v///iZ3aGP+//////9oYAID//4md2hgAgAAAiZ3aGACAAADEztoYAIAAAMTOAAD//wAAiZ0AAP////+JnQAA////////AAD///////8AAHTU/////9oYdNQAAMTO2hh01AAAxM4AAHTUAADEziRn//8AAImdJGf/////iZ0kZ////////yRn//8AAMTOJGd01P////8kZ3TU/////9qYdNQAAMTO2ph01P/////amACA//+JndqYAIAAAImd2pgAgAAAxM7amACAAACJndqY/7///4md2pj/v///iZ0kZ/+/AACJnSRn/7//////2pj/v/////8kZ/+///+JnSRn/7///4md2pj/vwAAiZ3amP+/AACJnSRn/78AAMTOJGf/vwAAxM7amP+////EztpY/7///8TOJSf/v///iZ0lJ/+///+JndpY/7///8TOJSd01P//xM7aWHTUAAD//9pYdNQAAP//JSd01P//xM7aWACA//+JndpYAIAAAImd2lgAgAAA///aWACAAACJndpY/7///4md2lj/v///iZ0lJ/+/AACJnSUn/78AAImd2lj/vwAAiZ0lJ/+/AAD//yUn/78AAP//2lj/vwAA//8lJ///AACJnSUn/////4mdJSf/////xM4lJ///AADEziTn//8AAImdJOf/////iZ0k5////////yTn////////JOd01P///////3TUAADEzv//dNQAAMTOJOd01AAAiZ3///+/AACJnSTn/78AAMTOJOf/vwAAxM7///+/////////AID//4md//8AgAAAiZ3//wCAAADEzv//AIAAAImd////v///iZ3///+///+JnSTn/78AAImdJOf/v/////////+//////yTn/7///4mdJOf/v///iZ3///+//3////9/////f////3////9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/+//3//v/9//7//f/+//3////9/////f////3////9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3///0HUISpB1CEqQdQhKkHUISoAAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9///8gqryrIKq8qyCqvKsgqryr/3////9/////f////3///yCqvKsgqryrIKq8qyCqvKv/f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////38AAP9/AAD/fwAA/38AAEHUISpB1CEqQdQhKkHUISr/f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f////3////9/////f////3////9/////f////3///yCqvKsgqryrIKq8qyCqvKv/f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1w4s0")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_co8x0"]
+points = PackedVector3Array(-0.5, 0.11998533, -0.5, -0.5, 0.15749267, -0.5, -0.38009006, 0, -0.5, -0.5, 0.11998533, 0.5, -0.5, 0.19498093, -0.34710258, 0.5, 0.19498093, -0.5, -0.38009006, 0, 0.5, 0.37989426, 0, -0.5, -0.5, 0.15749267, 0.5, -0.5, 0.19498093, 0.3470047, 0.5, 0.19498093, 0.5, 0.5, 0.11998533, -0.5, 0.37989426, 0, 0.5, 0.5, 0.11998533, 0.5)
+
+[node name="tiles" type="Node3D"]
+
+[node name="arrow2" parent="." instance=ExtResource("1_co8x0")]
+
+[node name="arrows2" parent="." instance=ExtResource("2_jmm24")]
+
+[node name="barrel2" parent="." instance=ExtResource("3_kvfow")]
+
+[node name="bed2" parent="." instance=ExtResource("4_b0lc3")]
+
+[node name="bed_floor2" parent="." instance=ExtResource("5_y6oej")]
+
+[node name="block-grass-corner-low2" parent="." instance=ExtResource("6_53w1h")]
+
+[node name="block-grass-corner-overhang-low2" parent="." instance=ExtResource("7_3avit")]
+
+[node name="block-grass-corner-overhang2" parent="." instance=ExtResource("8_q0y0s")]
+
+[node name="block-grass-corner2" parent="." instance=ExtResource("9_nk6o3")]
+
+[node name="block-grass-curve-half2" parent="." instance=ExtResource("10_pl40v")]
+
+[node name="block-grass-curve-low2" parent="." instance=ExtResource("11_54282")]
+
+[node name="block-grass-curve2" parent="." instance=ExtResource("12_r5me4")]
+
+[node name="block-grass-edge2" parent="." instance=ExtResource("13_s1nbh")]
+
+[node name="block-grass-hexagon2" parent="." instance=ExtResource("14_mdvef")]
+
+[node name="block-grass-large-slope-narrow2" parent="." instance=ExtResource("15_ieb8c")]
+
+[node name="block-grass-large-slope-steep-narrow2" parent="." instance=ExtResource("16_s8m1p")]
+
+[node name="block-grass-large-slope-steep2" parent="." instance=ExtResource("17_0jb0e")]
+
+[node name="block-grass-large-slope2" parent="." instance=ExtResource("18_y6gpq")]
+
+[node name="block-grass-large-tall2" parent="." instance=ExtResource("19_e2tle")]
+
+[node name="block-grass-large2" parent="." instance=ExtResource("20_v7e2r")]
+
+[node name="block-grass-long2" parent="." instance=ExtResource("21_qawgo")]
+
+[node name="block-grass-low-hexagon2" parent="." instance=ExtResource("22_g3wqb")]
+
+[node name="block-grass-low-large2" parent="." instance=ExtResource("23_t2pjb")]
+
+[node name="block-grass-low-long2" parent="." instance=ExtResource("24_7yowx")]
+
+[node name="block-grass-low-narrow2" parent="." instance=ExtResource("25_ukrpc")]
+
+[node name="block-grass-low2" parent="." instance=ExtResource("26_61otv")]
+
+[node name="block-grass-narrow2" parent="." instance=ExtResource("27_ya32i")]
+
+[node name="block-grass-overhang-corner2" parent="." instance=ExtResource("28_q72sn")]
+
+[node name="block-grass-overhang-edge2" parent="." instance=ExtResource("29_ji4gb")]
+
+[node name="block-grass-overhang-hexagon2" parent="." instance=ExtResource("30_lmxvb")]
+
+[node name="block-grass-overhang-large-slope-narrow2" parent="." instance=ExtResource("31_2qif3")]
+
+[node name="block-grass-overhang-large-slope-steep-narrow2" parent="." instance=ExtResource("32_2tg5k")]
+
+[node name="block-grass-overhang-large-slope-steep2" parent="." instance=ExtResource("33_up0lx")]
+
+[node name="block-grass-overhang-large-slope2" parent="." instance=ExtResource("34_6ba3l")]
+
+[node name="block-grass-overhang-large-tall2" parent="." instance=ExtResource("35_sjo64")]
+
+[node name="block-grass-overhang-large2" parent="." instance=ExtResource("36_0afe7")]
+
+[node name="block-grass-overhang-long2" parent="." instance=ExtResource("37_v1w5q")]
+
+[node name="block-grass-overhang-low-hexagon2" parent="." instance=ExtResource("38_biw04")]
+
+[node name="block-grass-overhang-low-large2" parent="." instance=ExtResource("39_ljtsn")]
+
+[node name="block-grass-overhang-low-long2" parent="." instance=ExtResource("40_abtlr")]
+
+[node name="block-grass-overhang-low-narrow2" parent="." instance=ExtResource("41_ty5yl")]
+
+[node name="block-grass-overhang-low2" parent="." instance=ExtResource("42_sjfxo")]
+
+[node name="block-grass-overhang-narrow2" parent="." instance=ExtResource("43_i2mjb")]
+
+[node name="block-grass2" parent="." instance=ExtResource("44_rr06t")]
+
+[node name="block-moving-blue2" parent="." instance=ExtResource("45_4sk2t")]
+
+[node name="block-moving-large2" parent="." instance=ExtResource("46_g3u8o")]
+
+[node name="block-moving2" parent="." instance=ExtResource("47_njg2j")]
+
+[node name="block-snow-corner-low2" parent="." instance=ExtResource("48_w8pj6")]
+
+[node name="block-snow-corner-overhang-low2" parent="." instance=ExtResource("49_goqls")]
+
+[node name="block-snow-corner-overhang2" parent="." instance=ExtResource("50_hjvmj")]
+
+[node name="block-snow-corner2" parent="." instance=ExtResource("51_knva2")]
+
+[node name="block-snow-curve-half2" parent="." instance=ExtResource("52_airse")]
+
+[node name="block-snow-curve-low2" parent="." instance=ExtResource("53_80m1l")]
+
+[node name="block-snow-curve2" parent="." instance=ExtResource("54_g7igx")]
+
+[node name="block-snow-edge2" parent="." instance=ExtResource("55_wyycj")]
+
+[node name="block-snow-hexagon2" parent="." instance=ExtResource("56_a5feh")]
+
+[node name="block-snow-large-slope-narrow2" parent="." instance=ExtResource("57_u0x5p")]
+
+[node name="block-snow-large-slope-steep-narrow2" parent="." instance=ExtResource("58_011e1")]
+
+[node name="block-snow-large-slope-steep2" parent="." instance=ExtResource("59_lsrln")]
+
+[node name="block-snow-large-slope2" parent="." instance=ExtResource("60_iwv8m")]
+
+[node name="block-snow-large-tall2" parent="." instance=ExtResource("61_lm7hp")]
+
+[node name="block-snow-large2" parent="." instance=ExtResource("62_1bjmw")]
+
+[node name="block-snow-long2" parent="." instance=ExtResource("63_rguo1")]
+
+[node name="block-snow-low-hexagon2" parent="." instance=ExtResource("64_1v2x6")]
+
+[node name="block-snow-low-large2" parent="." instance=ExtResource("65_ksb68")]
+
+[node name="block-snow-low-long2" parent="." instance=ExtResource("66_kpevr")]
+
+[node name="block-snow-low-narrow2" parent="." instance=ExtResource("67_hlp02")]
+
+[node name="block-snow-low2" parent="." instance=ExtResource("68_s0ime")]
+
+[node name="block-snow-narrow2" parent="." instance=ExtResource("69_dlm1f")]
+
+[node name="block-snow-overhang-corner2" parent="." instance=ExtResource("70_u23db")]
+
+[node name="block-snow-overhang-edge2" parent="." instance=ExtResource("71_scx7p")]
+
+[node name="block-snow-overhang-hexagon2" parent="." instance=ExtResource("72_qst8l")]
+
+[node name="block-snow-overhang-large-slope-narrow2" parent="." instance=ExtResource("73_rralq")]
+
+[node name="block-snow-overhang-large-slope-steep-narrow2" parent="." instance=ExtResource("74_rpr26")]
+
+[node name="block-snow-overhang-large-slope-steep2" parent="." instance=ExtResource("75_r24f2")]
+
+[node name="block-snow-overhang-large-slope2" parent="." instance=ExtResource("76_rfsgx")]
+
+[node name="block-snow-overhang-large-tall2" parent="." instance=ExtResource("77_0wd43")]
+
+[node name="block-snow-overhang-large2" parent="." instance=ExtResource("78_ofkrm")]
+
+[node name="block-snow-overhang-long2" parent="." instance=ExtResource("79_mwf8v")]
+
+[node name="block-snow-overhang-low-hexagon2" parent="." instance=ExtResource("80_1nu1l")]
+
+[node name="block-snow-overhang-low-large2" parent="." instance=ExtResource("81_08usk")]
+
+[node name="block-snow-overhang-low-long2" parent="." instance=ExtResource("82_tndd6")]
+
+[node name="block-snow-overhang-low-narrow2" parent="." instance=ExtResource("83_re7jc")]
+
+[node name="block-snow-overhang-low2" parent="." instance=ExtResource("84_tx0bd")]
+
+[node name="block-snow-overhang-narrow2" parent="." instance=ExtResource("85_5ncvh")]
+
+[node name="block-snow2" parent="." instance=ExtResource("86_2fpgv")]
+
+[node name="bomb2" parent="." instance=ExtResource("87_2xav6")]
+
+[node name="bridge_center_stone2" parent="." instance=ExtResource("88_t242s")]
+
+[node name="bridge_center_stoneRound2" parent="." instance=ExtResource("89_ebeo5")]
+
+[node name="bridge_center_wood2" parent="." instance=ExtResource("90_yrc72")]
+
+[node name="bridge_center_woodRound2" parent="." instance=ExtResource("91_al5tv")]
+
+[node name="bridge_side_stone2" parent="." instance=ExtResource("92_wakvt")]
+
+[node name="bridge_side_stoneRound2" parent="." instance=ExtResource("93_80lmo")]
+
+[node name="bridge_side_wood2" parent="." instance=ExtResource("94_5fckr")]
+
+[node name="bridge_side_woodRound2" parent="." instance=ExtResource("95_3f8fk")]
+
+[node name="bridge_stone2" parent="." instance=ExtResource("96_twlvw")]
+
+[node name="bridge_stoneNarrow2" parent="." instance=ExtResource("97_wceea")]
+
+[node name="bridge_stoneRound2" parent="." instance=ExtResource("98_blr4l")]
+
+[node name="bridge_stoneRoundNarrow2" parent="." instance=ExtResource("99_gufvk")]
+
+[node name="bridge_wood2" parent="." instance=ExtResource("100_agcqs")]
+
+[node name="bridge_woodNarrow2" parent="." instance=ExtResource("101_c8h0g")]
+
+[node name="bridge_woodRound2" parent="." instance=ExtResource("102_td3f0")]
+
+[node name="bridge_woodRoundNarrow2" parent="." instance=ExtResource("103_3mqd8")]
+
+[node name="button-round2" parent="." instance=ExtResource("104_0x8c3")]
+
+[node name="button-square2" parent="." instance=ExtResource("105_553hv")]
+
+[node name="cactus_short2" parent="." instance=ExtResource("106_nt3ss")]
+
+[node name="cactus_tall2" parent="." instance=ExtResource("107_61076")]
+
+[node name="campfire_bricks2" parent="." instance=ExtResource("108_dctwg")]
+
+[node name="campfire_logs2" parent="." instance=ExtResource("109_d0fqh")]
+
+[node name="campfire_planks2" parent="." instance=ExtResource("110_pej16")]
+
+[node name="campfire_stones2" parent="." instance=ExtResource("111_dcrdx")]
+
+[node name="canoe2" parent="." instance=ExtResource("112_7klh0")]
+
+[node name="canoe_paddle2" parent="." instance=ExtResource("113_i1eoo")]
+
+[node name="chest2" parent="." instance=ExtResource("114_st8al")]
+
+[node name="cliff_blockCave_rock2" parent="." instance=ExtResource("115_8yjlh")]
+
+[node name="cliff_blockCave_stone2" parent="." instance=ExtResource("116_l1nn3")]
+
+[node name="cliff_blockDiagonal_rock2" parent="." instance=ExtResource("117_qow5o")]
+
+[node name="cliff_blockDiagonal_stone2" parent="." instance=ExtResource("118_5wwgb")]
+
+[node name="cliff_blockHalf_rock2" type="Node3D" parent="."]
+
+[node name="cliff_blockHalf_rock" type="MeshInstance3D" parent="cliff_blockHalf_rock2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_25cw3")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockHalf_rock2/cliff_blockHalf_rock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cliff_blockHalf_rock2/cliff_blockHalf_rock/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("ConvexPolygonShape3D_cdrbk")
+
+[node name="cliff_blockHalf_stone2" type="Node3D" parent="."]
+
+[node name="cliff_blockHalf_stone" type="MeshInstance3D" parent="cliff_blockHalf_stone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_0mjh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockHalf_stone2/cliff_blockHalf_stone"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cliff_blockHalf_stone2/cliff_blockHalf_stone/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_5hjuj")
+
+[node name="cliff_blockQuarter_rock2" type="Node3D" parent="."]
+
+[node name="cliff_blockQuarter_rock" type="MeshInstance3D" parent="cliff_blockQuarter_rock2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_2caxb")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockQuarter_rock2/cliff_blockQuarter_rock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cliff_blockQuarter_rock2/cliff_blockQuarter_rock/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_srrst")
+
+[node name="cliff_blockQuarter_stone2" type="Node3D" parent="."]
+
+[node name="cliff_blockQuarter_stone" type="MeshInstance3D" parent="cliff_blockQuarter_stone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_mjhl4")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockQuarter_stone2/cliff_blockQuarter_stone"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cliff_blockQuarter_stone2/cliff_blockQuarter_stone/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_23kvv")
+
+[node name="cliff_blockSlopeHalfWalls_rock2" parent="." instance=ExtResource("123_pie3i")]
+
+[node name="cliff_blockSlopeHalfWalls_stone2" parent="." instance=ExtResource("124_7311i")]
+
+[node name="cliff_blockSlopeWalls_rock2" parent="." instance=ExtResource("125_n5o3s")]
+
+[node name="cliff_blockSlopeWalls_stone2" parent="." instance=ExtResource("126_k0721")]
+
+[node name="cliff_blockSlope_rock2" parent="." instance=ExtResource("127_sdvux")]
+
+[node name="cliff_blockSlope_stone2" parent="." instance=ExtResource("128_3w0ox")]
+
+[node name="cliff_block_rock2" type="Node3D" parent="."]
+
+[node name="cliff_block_rock" type="MeshInstance3D" parent="cliff_block_rock2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_xj6b5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cliff_block_rock2/cliff_block_rock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cliff_block_rock2/cliff_block_rock/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_8op65")
+
+[node name="cliff_block_stone2" type="Node3D" parent="."]
+
+[node name="cliff_block_stone" type="MeshInstance3D" parent="cliff_block_stone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_wm4ys")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cliff_block_stone2/cliff_block_stone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cliff_block_stone2/cliff_block_stone/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("ConvexPolygonShape3D_78wm2")
+
+[node name="cliff_cave_rock2" parent="." instance=ExtResource("131_t88g5")]
+
+[node name="cliff_cave_stone2" parent="." instance=ExtResource("132_s3ogt")]
+
+[node name="cliff_cornerInnerLarge_rock2" parent="." instance=ExtResource("133_10fik")]
+
+[node name="cliff_cornerInnerLarge_stone2" parent="." instance=ExtResource("134_byr8v")]
+
+[node name="cliff_cornerInnerTop_rock2" parent="." instance=ExtResource("135_d2ijd")]
+
+[node name="cliff_cornerInnerTop_stone2" parent="." instance=ExtResource("136_b1oe2")]
+
+[node name="cliff_cornerInner_rock2" parent="." instance=ExtResource("137_7vbhd")]
+
+[node name="cliff_cornerInner_stone2" parent="." instance=ExtResource("138_0qvam")]
+
+[node name="cliff_cornerLarge_rock2" parent="." instance=ExtResource("139_8c6ro")]
+
+[node name="cliff_cornerLarge_stone2" parent="." instance=ExtResource("140_0644l")]
+
+[node name="cliff_cornerTop_rock2" parent="." instance=ExtResource("141_fto2v")]
+
+[node name="cliff_cornerTop_stone2" parent="." instance=ExtResource("142_kbqdu")]
+
+[node name="cliff_corner_rock2" parent="." instance=ExtResource("143_5pqi7")]
+
+[node name="cliff_corner_stone2" parent="." instance=ExtResource("144_0ahv4")]
+
+[node name="cliff_diagonal_rock2" parent="." instance=ExtResource("145_0vyim")]
+
+[node name="cliff_diagonal_stone2" parent="." instance=ExtResource("146_tqoua")]
+
+[node name="cliff_halfCornerInner_rock2" parent="." instance=ExtResource("147_fh2nn")]
+
+[node name="cliff_halfCornerInner_stone2" parent="." instance=ExtResource("148_unp8h")]
+
+[node name="cliff_halfCorner_rock2" parent="." instance=ExtResource("149_niq7r")]
+
+[node name="cliff_halfCorner_stone2" parent="." instance=ExtResource("150_uiirm")]
+
+[node name="cliff_half_rock2" parent="." instance=ExtResource("151_bcsi3")]
+
+[node name="cliff_half_stone2" parent="." instance=ExtResource("152_eggu5")]
+
+[node name="cliff_large_rock2" parent="." instance=ExtResource("153_kmkar")]
+
+[node name="cliff_large_stone2" parent="." instance=ExtResource("154_afdok")]
+
+[node name="cliff_rock2" parent="." instance=ExtResource("155_i34bx")]
+
+[node name="cliff_stepsCornerInner_rock2" parent="." instance=ExtResource("156_g3y3j")]
+
+[node name="cliff_stepsCornerInner_stone2" parent="." instance=ExtResource("157_7jnqc")]
+
+[node name="cliff_stepsCorner_rock2" parent="." instance=ExtResource("158_bhy7y")]
+
+[node name="cliff_stepsCorner_stone2" parent="." instance=ExtResource("159_jga7n")]
+
+[node name="cliff_steps_rock2" parent="." instance=ExtResource("160_tcv4m")]
+
+[node name="cliff_steps_stone2" parent="." instance=ExtResource("161_ycsa3")]
+
+[node name="cliff_stone2" parent="." instance=ExtResource("162_d2ky2")]
+
+[node name="cliff_topDiagonal_rock2" parent="." instance=ExtResource("163_kt23w")]
+
+[node name="cliff_topDiagonal_stone2" parent="." instance=ExtResource("164_t6wpn")]
+
+[node name="cliff_top_rock2" parent="." instance=ExtResource("165_261th")]
+
+[node name="cliff_top_stone2" parent="." instance=ExtResource("166_lees4")]
+
+[node name="cliff_waterfallTop_rock2" parent="." instance=ExtResource("167_hboo3")]
+
+[node name="cliff_waterfallTop_stone2" parent="." instance=ExtResource("168_duu5s")]
+
+[node name="cliff_waterfall_rock2" parent="." instance=ExtResource("169_pbpy2")]
+
+[node name="cliff_waterfall_stone2" parent="." instance=ExtResource("170_8kedq")]
+
+[node name="coin-bronze2" parent="." instance=ExtResource("171_2mjax")]
+
+[node name="coin-gold2" parent="." instance=ExtResource("172_rg287")]
+
+[node name="coin-silver2" parent="." instance=ExtResource("173_1y65f")]
+
+[node name="crate-item-strong2" parent="." instance=ExtResource("174_sg371")]
+
+[node name="crate-item2" parent="." instance=ExtResource("175_sraan")]
+
+[node name="crate-strong2" parent="." instance=ExtResource("176_clwee")]
+
+[node name="crate2" parent="." instance=ExtResource("177_u3vcv")]
+
+[node name="crops_bambooStageA2" parent="." instance=ExtResource("178_773ky")]
+
+[node name="crops_bambooStageB2" parent="." instance=ExtResource("179_cunkd")]
+
+[node name="crops_cornStageA2" parent="." instance=ExtResource("180_mb6v0")]
+
+[node name="crops_cornStageB2" parent="." instance=ExtResource("181_3wgxi")]
+
+[node name="crops_cornStageC2" parent="." instance=ExtResource("182_8qdrn")]
+
+[node name="crops_cornStageD2" parent="." instance=ExtResource("183_76wpo")]
+
+[node name="crops_dirtDoubleRow2" parent="." instance=ExtResource("184_eoq3h")]
+
+[node name="crops_dirtDoubleRowCorner2" parent="." instance=ExtResource("185_06dnf")]
+
+[node name="crops_dirtDoubleRowEnd2" parent="." instance=ExtResource("186_akeox")]
+
+[node name="crops_dirtRow2" parent="." instance=ExtResource("187_w88vr")]
+
+[node name="crops_dirtRowCorner2" parent="." instance=ExtResource("188_6afvi")]
+
+[node name="crops_dirtRowEnd2" parent="." instance=ExtResource("189_6v37m")]
+
+[node name="crops_dirtSingle2" parent="." instance=ExtResource("190_1k4ik")]
+
+[node name="crops_leafsStageA2" parent="." instance=ExtResource("191_pew0p")]
+
+[node name="crops_leafsStageB2" parent="." instance=ExtResource("192_j3g0c")]
+
+[node name="crops_wheatStageA2" parent="." instance=ExtResource("193_xlo3g")]
+
+[node name="crops_wheatStageB2" parent="." instance=ExtResource("194_edjds")]
+
+[node name="crop_carrot2" parent="." instance=ExtResource("195_vh1hx")]
+
+[node name="crop_melon2" parent="." instance=ExtResource("196_ag1bj")]
+
+[node name="crop_pumpkin2" parent="." instance=ExtResource("197_23ick")]
+
+[node name="crop_turnip2" parent="." instance=ExtResource("198_qmtcu")]
+
+[node name="door-large-open2" parent="." instance=ExtResource("199_m2e2a")]
+
+[node name="door-open2" parent="." instance=ExtResource("200_t05gl")]
+
+[node name="door-rotate-large2" parent="." instance=ExtResource("201_y1ww2")]
+
+[node name="door-rotate2" parent="." instance=ExtResource("202_i22fi")]
+
+[node name="fence-broken2" parent="." instance=ExtResource("203_vjdos")]
+
+[node name="fence-corner-curved2" parent="." instance=ExtResource("204_7mnhm")]
+
+[node name="fence-corner2" parent="." instance=ExtResource("205_j47ro")]
+
+[node name="fence-low-broken2" parent="." instance=ExtResource("206_4doya")]
+
+[node name="fence-low-corner-curved2" parent="." instance=ExtResource("207_eowfa")]
+
+[node name="fence-low-corner2" parent="." instance=ExtResource("208_3vcx2")]
+
+[node name="fence-low-straight2" parent="." instance=ExtResource("209_46gk6")]
+
+[node name="fence-straight2" parent="." instance=ExtResource("210_jgwcr")]
+
+[node name="fence_bend2" parent="." instance=ExtResource("211_r1ofp")]
+
+[node name="fence_bendCenter2" parent="." instance=ExtResource("212_bvof2")]
+
+[node name="fence_corner2" parent="." instance=ExtResource("213_8002m")]
+
+[node name="fence_gate2" parent="." instance=ExtResource("214_35uay")]
+
+[node name="fence_planks2" parent="." instance=ExtResource("215_m4ft1")]
+
+[node name="fence_planksDouble2" parent="." instance=ExtResource("216_bhgwv")]
+
+[node name="fence_simple2" parent="." instance=ExtResource("217_bbquh")]
+
+[node name="fence_simpleCenter2" parent="." instance=ExtResource("218_4napy")]
+
+[node name="fence_simpleDiagonal2" parent="." instance=ExtResource("219_p2jc2")]
+
+[node name="fence_simpleDiagonalCenter2" parent="." instance=ExtResource("220_mq3d3")]
+
+[node name="fence_simpleHigh2" parent="." instance=ExtResource("221_vmo0e")]
+
+[node name="fence_simpleLow2" parent="." instance=ExtResource("222_pt6eg")]
+
+[node name="flag2" parent="." instance=ExtResource("223_i5oak")]
+
+[node name="flowers-tall2" parent="." instance=ExtResource("224_1erjl")]
+
+[node name="flowers" parent="." instance=ExtResource("225_n44w7")]
+
+[node name="flower_purpleA2" parent="." instance=ExtResource("226_1p0pc")]
+
+[node name="flower_purpleB2" parent="." instance=ExtResource("227_j1t04")]
+
+[node name="flower_purpleC2" parent="." instance=ExtResource("228_do4ye")]
+
+[node name="flower_redA2" parent="." instance=ExtResource("229_iiwhr")]
+
+[node name="flower_redB2" parent="." instance=ExtResource("230_i1328")]
+
+[node name="flower_redC2" parent="." instance=ExtResource("231_31lkc")]
+
+[node name="flower_yellowA2" parent="." instance=ExtResource("232_fv4vo")]
+
+[node name="flower_yellowB2" parent="." instance=ExtResource("233_1hsq0")]
+
+[node name="flower_yellowC2" parent="." instance=ExtResource("234_gfq7e")]
+
+[node name="grass2" parent="." instance=ExtResource("235_arwtr")]
+
+[node name="grass_large2" parent="." instance=ExtResource("236_5b7ki")]
+
+[node name="grass_leafs2" parent="." instance=ExtResource("237_an3v7")]
+
+[node name="grass_leafsLarge2" parent="." instance=ExtResource("238_78xhf")]
+
+[node name="ground_grass2" parent="." instance=ExtResource("239_sx1cf")]
+
+[node name="ground_pathBend2" parent="." instance=ExtResource("240_cvuc6")]
+
+[node name="ground_pathBendBank2" parent="." instance=ExtResource("241_6bsaw")]
+
+[node name="ground_pathCorner2" parent="." instance=ExtResource("242_7gtbf")]
+
+[node name="ground_pathCornerSmall2" parent="." instance=ExtResource("243_wpeim")]
+
+[node name="ground_pathCross2" parent="." instance=ExtResource("244_dbq72")]
+
+[node name="ground_pathEnd2" parent="." instance=ExtResource("245_apnbm")]
+
+[node name="ground_pathEndClosed2" parent="." instance=ExtResource("246_y8q10")]
+
+[node name="ground_pathOpen2" parent="." instance=ExtResource("247_yybmf")]
+
+[node name="ground_pathRocks2" parent="." instance=ExtResource("248_pqf4b")]
+
+[node name="ground_pathSide2" parent="." instance=ExtResource("249_103cc")]
+
+[node name="ground_pathSideOpen2" parent="." instance=ExtResource("250_kxhfg")]
+
+[node name="ground_pathSplit2" parent="." instance=ExtResource("251_acb23")]
+
+[node name="ground_pathStraight2" parent="." instance=ExtResource("252_3kbws")]
+
+[node name="ground_pathTile2" parent="." instance=ExtResource("253_mxlmb")]
+
+[node name="ground_riverBend2" parent="." instance=ExtResource("254_a44s3")]
+
+[node name="ground_riverBendBank2" parent="." instance=ExtResource("255_xeqad")]
+
+[node name="ground_riverCorner2" parent="." instance=ExtResource("256_dt763")]
+
+[node name="ground_riverCornerSmall2" parent="." instance=ExtResource("257_n1fiu")]
+
+[node name="ground_riverCross2" parent="." instance=ExtResource("258_7wubv")]
+
+[node name="ground_riverEnd2" parent="." instance=ExtResource("259_bqkto")]
+
+[node name="ground_riverEndClosed2" parent="." instance=ExtResource("260_r1unr")]
+
+[node name="ground_riverOpen2" parent="." instance=ExtResource("261_fblal")]
+
+[node name="ground_riverRocks2" parent="." instance=ExtResource("262_m6eql")]
+
+[node name="ground_riverSide2" parent="." instance=ExtResource("263_j8ph1")]
+
+[node name="ground_riverSideOpen2" parent="." instance=ExtResource("264_cn6p2")]
+
+[node name="ground_riverSplit2" parent="." instance=ExtResource("265_lrdc1")]
+
+[node name="ground_riverStraight2" parent="." instance=ExtResource("266_2r3ul")]
+
+[node name="ground_riverTile2" parent="." instance=ExtResource("267_wh7oc")]
+
+[node name="hanging_moss2" parent="." instance=ExtResource("268_2s6ha")]
+
+[node name="heart2" parent="." instance=ExtResource("269_43n1u")]
+
+[node name="hedge-corner2" parent="." instance=ExtResource("270_68prk")]
+
+[node name="hedge2" parent="." instance=ExtResource("271_esphk")]
+
+[node name="jewel2" parent="." instance=ExtResource("272_rt5mr")]
+
+[node name="key2" parent="." instance=ExtResource("273_wgaw3")]
+
+[node name="ladder-broken2" parent="." instance=ExtResource("274_prlqi")]
+
+[node name="ladder-long2" parent="." instance=ExtResource("275_5hew4")]
+
+[node name="ladder2" parent="." instance=ExtResource("276_s7n6h")]
+
+[node name="lever2" parent="." instance=ExtResource("277_itpxf")]
+
+[node name="lily_large2" parent="." instance=ExtResource("278_g54mw")]
+
+[node name="lily_small2" parent="." instance=ExtResource("279_ry52t")]
+
+[node name="lock2" parent="." instance=ExtResource("280_ds03a")]
+
+[node name="log2" parent="." instance=ExtResource("281_rshcn")]
+
+[node name="log_large2" parent="." instance=ExtResource("282_dbuyu")]
+
+[node name="log_stack2" parent="." instance=ExtResource("283_cmps5")]
+
+[node name="log_stackLarge2" parent="." instance=ExtResource("284_n4x2a")]
+
+[node name="mushrooms2" parent="." instance=ExtResource("285_ar7gq")]
+
+[node name="mushroom_red2" parent="." instance=ExtResource("286_o3or0")]
+
+[node name="mushroom_redGroup2" parent="." instance=ExtResource("287_koba5")]
+
+[node name="mushroom_redTall2" parent="." instance=ExtResource("288_6ynlp")]
+
+[node name="mushroom_tan2" parent="." instance=ExtResource("289_qphe4")]
+
+[node name="mushroom_tanGroup2" parent="." instance=ExtResource("290_d2eo8")]
+
+[node name="mushroom_tanTall2" parent="." instance=ExtResource("291_6xkm7")]
+
+[node name="path_stone2" parent="." instance=ExtResource("292_auouy")]
+
+[node name="path_stoneCircle2" parent="." instance=ExtResource("293_i82yy")]
+
+[node name="path_stoneCorner2" parent="." instance=ExtResource("294_5qtr7")]
+
+[node name="path_stoneEnd2" parent="." instance=ExtResource("295_gqmah")]
+
+[node name="path_wood2" parent="." instance=ExtResource("296_1fq2w")]
+
+[node name="path_woodCorner2" parent="." instance=ExtResource("297_hwpvd")]
+
+[node name="path_woodEnd2" parent="." instance=ExtResource("298_chejk")]
+
+[node name="plant2" parent="." instance=ExtResource("299_a27vn")]
+
+[node name="plant_bush2" parent="." instance=ExtResource("300_8vo7b")]
+
+[node name="plant_bushDetailed2" parent="." instance=ExtResource("301_eosxf")]
+
+[node name="plant_bushLarge2" parent="." instance=ExtResource("302_dujxb")]
+
+[node name="plant_bushLargeTriangle2" parent="." instance=ExtResource("303_oisxe")]
+
+[node name="plant_bushSmall2" parent="." instance=ExtResource("304_raacg")]
+
+[node name="plant_bushTriangle2" parent="." instance=ExtResource("305_3j4kn")]
+
+[node name="plant_flatShort2" parent="." instance=ExtResource("306_vq3lx")]
+
+[node name="plant_flatTall2" parent="." instance=ExtResource("307_eojo1")]
+
+[node name="platform-fortified2" parent="." instance=ExtResource("308_0tgyq")]
+
+[node name="platform-overhang2" parent="." instance=ExtResource("309_jutwx")]
+
+[node name="platform-ramp2" parent="." instance=ExtResource("310_37d0g")]
+
+[node name="platform2" type="Node3D" parent="."]
+
+[node name="platform" type="MeshInstance3D" parent="platform2"]
+mesh = SubResource("ArrayMesh_200oo")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="platform2/platform"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platform2/platform/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_co8x0")
+
+[node name="platform_beach2" parent="." instance=ExtResource("312_eianf")]
+
+[node name="platform_grass2" parent="." instance=ExtResource("313_h3je7")]
+
+[node name="platform_stone2" parent="." instance=ExtResource("314_c5hv0")]
+
+[node name="poles2" parent="." instance=ExtResource("315_uxtq8")]
+
+[node name="pot_large2" parent="." instance=ExtResource("316_gk1rs")]
+
+[node name="pot_small2" parent="." instance=ExtResource("317_whoqu")]
+
+[node name="rocks2" parent="." instance=ExtResource("318_1hpr3")]
+
+[node name="rock_largeA2" parent="." instance=ExtResource("319_y66xf")]
+
+[node name="rock_largeB2" parent="." instance=ExtResource("320_vybjv")]
+
+[node name="rock_largeC2" parent="." instance=ExtResource("321_4116a")]
+
+[node name="rock_largeD2" parent="." instance=ExtResource("322_suesd")]
+
+[node name="rock_largeE2" parent="." instance=ExtResource("323_kpnpg")]
+
+[node name="rock_largeF2" parent="." instance=ExtResource("324_kyhn4")]
+
+[node name="rock_smallA2" parent="." instance=ExtResource("325_e8s7y")]
+
+[node name="rock_smallB2" parent="." instance=ExtResource("326_vximb")]
+
+[node name="rock_smallC2" parent="." instance=ExtResource("327_0w1mq")]
+
+[node name="rock_smallD2" parent="." instance=ExtResource("328_wapbf")]
+
+[node name="rock_smallE2" parent="." instance=ExtResource("329_wkc6i")]
+
+[node name="rock_smallF2" parent="." instance=ExtResource("330_3pkyg")]
+
+[node name="rock_smallFlatA2" parent="." instance=ExtResource("331_v7cb8")]
+
+[node name="rock_smallFlatB2" parent="." instance=ExtResource("332_fhehi")]
+
+[node name="rock_smallFlatC2" parent="." instance=ExtResource("333_v1kto")]
+
+[node name="rock_smallG2" parent="." instance=ExtResource("334_s5haq")]
+
+[node name="rock_smallH2" parent="." instance=ExtResource("335_o7wmt")]
+
+[node name="rock_smallI2" parent="." instance=ExtResource("336_boxn7")]
+
+[node name="rock_smallTopA2" parent="." instance=ExtResource("337_jhe4x")]
+
+[node name="rock_smallTopB2" parent="." instance=ExtResource("338_phgi2")]
+
+[node name="rock_tallA2" parent="." instance=ExtResource("339_pk3oj")]
+
+[node name="rock_tallB2" parent="." instance=ExtResource("340_5gphx")]
+
+[node name="rock_tallC2" parent="." instance=ExtResource("341_sbxcj")]
+
+[node name="rock_tallD2" parent="." instance=ExtResource("342_aspcj")]
+
+[node name="rock_tallE2" parent="." instance=ExtResource("343_55ys0")]
+
+[node name="rock_tallF2" parent="." instance=ExtResource("344_cbnue")]
+
+[node name="rock_tallG2" parent="." instance=ExtResource("345_67kga")]
+
+[node name="rock_tallH2" parent="." instance=ExtResource("346_r0h5n")]
+
+[node name="rock_tallI2" parent="." instance=ExtResource("347_huq8c")]
+
+[node name="rock_tallJ2" parent="." instance=ExtResource("348_27y0a")]
+
+[node name="saw2" parent="." instance=ExtResource("349_dm03k")]
+
+[node name="sign2" parent="." instance=ExtResource("350_ynbxd")]
+
+[node name="spike-block-wide2" parent="." instance=ExtResource("351_xfj86")]
+
+[node name="spike-block2" parent="." instance=ExtResource("352_7iuy1")]
+
+[node name="statue_block2" parent="." instance=ExtResource("353_mejg4")]
+
+[node name="statue_column2" parent="." instance=ExtResource("354_riniu")]
+
+[node name="statue_columnDamaged2" parent="." instance=ExtResource("355_dcy05")]
+
+[node name="statue_head2" parent="." instance=ExtResource("356_7dcxi")]
+
+[node name="statue_obelisk2" parent="." instance=ExtResource("357_doq6s")]
+
+[node name="statue_ring2" parent="." instance=ExtResource("358_lcmib")]
+
+[node name="stones2" parent="." instance=ExtResource("359_ybcp1")]
+
+[node name="stone_largeA2" parent="." instance=ExtResource("360_hini7")]
+
+[node name="stone_largeB2" parent="." instance=ExtResource("361_3e4e6")]
+
+[node name="stone_largeC2" parent="." instance=ExtResource("362_hkgem")]
+
+[node name="stone_largeD2" parent="." instance=ExtResource("363_4ny10")]
+
+[node name="stone_largeE2" parent="." instance=ExtResource("364_upxvt")]
+
+[node name="stone_largeF2" parent="." instance=ExtResource("365_dunn5")]
+
+[node name="stone_smallA2" parent="." instance=ExtResource("366_etpli")]
+
+[node name="stone_smallB2" parent="." instance=ExtResource("367_mkctp")]
+
+[node name="stone_smallC2" parent="." instance=ExtResource("368_kd2nx")]
+
+[node name="stone_smallD2" parent="." instance=ExtResource("369_jbhtw")]
+
+[node name="stone_smallE2" parent="." instance=ExtResource("370_tw0ub")]
+
+[node name="stone_smallF2" parent="." instance=ExtResource("371_d7lh1")]
+
+[node name="stone_smallFlatA2" parent="." instance=ExtResource("372_o353c")]
+
+[node name="stone_smallFlatB2" parent="." instance=ExtResource("373_18i36")]
+
+[node name="stone_smallFlatC2" parent="." instance=ExtResource("374_h1pls")]
+
+[node name="stone_smallG2" parent="." instance=ExtResource("375_lf2qf")]
+
+[node name="stone_smallH2" parent="." instance=ExtResource("376_m1ar3")]
+
+[node name="stone_smallI2" parent="." instance=ExtResource("377_dovke")]
+
+[node name="stone_smallTopA2" parent="." instance=ExtResource("378_s18xx")]
+
+[node name="stone_smallTopB2" parent="." instance=ExtResource("379_vfn6c")]
+
+[node name="stone_tallA2" parent="." instance=ExtResource("380_blppe")]
+
+[node name="stone_tallB2" parent="." instance=ExtResource("381_nln6p")]
+
+[node name="stone_tallC2" parent="." instance=ExtResource("382_khjpr")]
+
+[node name="stone_tallD2" parent="." instance=ExtResource("383_j0f7p")]
+
+[node name="stone_tallE2" parent="." instance=ExtResource("384_bwvtc")]
+
+[node name="stone_tallF2" parent="." instance=ExtResource("385_tcewd")]
+
+[node name="stone_tallG2" parent="." instance=ExtResource("386_kveh7")]
+
+[node name="stone_tallH2" parent="." instance=ExtResource("387_he6x7")]
+
+[node name="stone_tallI2" parent="." instance=ExtResource("388_mbnw7")]
+
+[node name="stone_tallJ2" parent="." instance=ExtResource("389_0b144")]
+
+[node name="stump_old2" parent="." instance=ExtResource("390_aeud8")]
+
+[node name="stump_oldTall2" parent="." instance=ExtResource("391_gyyqe")]
+
+[node name="stump_round2" parent="." instance=ExtResource("392_oi64q")]
+
+[node name="stump_roundDetailed2" parent="." instance=ExtResource("393_2shis")]
+
+[node name="stump_square2" parent="." instance=ExtResource("394_v81f3")]
+
+[node name="stump_squareDetailed2" parent="." instance=ExtResource("395_aalry")]
+
+[node name="stump_squareDetailedWide2" parent="." instance=ExtResource("396_f2gbq")]
+
+[node name="tent_detailedClosed2" parent="." instance=ExtResource("397_wfq14")]
+
+[node name="tent_detailedOpen2" parent="." instance=ExtResource("398_3kqah")]
+
+[node name="tent_smallClosed2" parent="." instance=ExtResource("399_i252t")]
+
+[node name="tent_smallOpen2" parent="." instance=ExtResource("400_4trcn")]
+
+[node name="trap-spikes-large2" parent="." instance=ExtResource("401_uy783")]
+
+[node name="trap-spikes2" parent="." instance=ExtResource("402_ixen4")]
+
+[node name="tree-pine-small2" parent="." instance=ExtResource("403_r4xxt")]
+
+[node name="tree-pine-snow-small2" parent="." instance=ExtResource("404_7bbbk")]
+
+[node name="tree-pine-snow2" parent="." instance=ExtResource("405_hq4vs")]
+
+[node name="tree-pine2" parent="." instance=ExtResource("406_dxrpu")]
+
+[node name="tree-snow2" parent="." instance=ExtResource("407_xq0fc")]
+
+[node name="tree2" parent="." instance=ExtResource("408_d34aq")]
+
+[node name="tree_blocks2" parent="." instance=ExtResource("409_dcytx")]
+
+[node name="tree_blocks_dark2" parent="." instance=ExtResource("410_wsjtv")]
+
+[node name="tree_blocks_fall2" parent="." instance=ExtResource("411_re87m")]
+
+[node name="tree_cone2" parent="." instance=ExtResource("412_uemr1")]
+
+[node name="tree_cone_dark2" parent="." instance=ExtResource("413_huoq1")]
+
+[node name="tree_cone_fall2" parent="." instance=ExtResource("414_xgqnq")]
+
+[node name="tree_default2" parent="." instance=ExtResource("415_ie7xy")]
+
+[node name="tree_default_dark2" parent="." instance=ExtResource("416_8bm6l")]
+
+[node name="tree_default_fall2" parent="." instance=ExtResource("417_7lpsn")]
+
+[node name="tree_detailed2" parent="." instance=ExtResource("418_8o8j8")]
+
+[node name="tree_detailed_dark2" parent="." instance=ExtResource("419_tytij")]
+
+[node name="tree_detailed_fall2" parent="." instance=ExtResource("420_rhysp")]
+
+[node name="tree_fat2" parent="." instance=ExtResource("421_t81cp")]
+
+[node name="tree_fat_darkh2" parent="." instance=ExtResource("422_n6nst")]
+
+[node name="tree_fat_fall2" parent="." instance=ExtResource("423_xwtss")]
+
+[node name="tree_oak2" parent="." instance=ExtResource("424_rd37f")]
+
+[node name="tree_oak_dark2" parent="." instance=ExtResource("425_kk82i")]
+
+[node name="tree_oak_fall2" parent="." instance=ExtResource("426_3n5fk")]
+
+[node name="tree_palm2" parent="." instance=ExtResource("427_bf4kv")]
+
+[node name="tree_palmBend2" parent="." instance=ExtResource("428_cbiw4")]
+
+[node name="tree_palmDetailedShort2" parent="." instance=ExtResource("429_5urcp")]
+
+[node name="tree_palmDetailedTall2" parent="." instance=ExtResource("430_hddb0")]
+
+[node name="tree_palmShort2" parent="." instance=ExtResource("431_7idgg")]
+
+[node name="tree_palmTall2" parent="." instance=ExtResource("432_7uwix")]
+
+[node name="tree_pineDefaultA2" parent="." instance=ExtResource("433_sf1jr")]
+
+[node name="tree_pineDefaultB2" parent="." instance=ExtResource("434_xejwj")]
+
+[node name="tree_pineGroundA2" parent="." instance=ExtResource("435_j1ak8")]
+
+[node name="tree_pineGroundB2" parent="." instance=ExtResource("436_qhyih")]
+
+[node name="tree_pineRoundA2" parent="." instance=ExtResource("437_fx0dn")]
+
+[node name="tree_pineRoundB2" parent="." instance=ExtResource("438_s8yqh")]
+
+[node name="tree_pineRoundC2" parent="." instance=ExtResource("439_4lf4l")]
+
+[node name="tree_pineRoundD2" parent="." instance=ExtResource("440_b3ttk")]
+
+[node name="tree_pineRoundE2" parent="." instance=ExtResource("441_qnkht")]
+
+[node name="tree_pineRoundF2" parent="." instance=ExtResource("442_fmuaa")]
+
+[node name="tree_pineSmallA2" parent="." instance=ExtResource("443_njeok")]
+
+[node name="tree_pineSmallB2" parent="." instance=ExtResource("444_4ttea")]
+
+[node name="tree_pineSmallC2" parent="." instance=ExtResource("445_2wkam")]
+
+[node name="tree_pineSmallD2" parent="." instance=ExtResource("446_gee0t")]
+
+[node name="tree_pineTallA2" parent="." instance=ExtResource("447_fs562")]
+
+[node name="tree_pineTallA_detailed2" parent="." instance=ExtResource("448_g3xfe")]
+
+[node name="tree_pineTallB2" parent="." instance=ExtResource("449_nah4q")]
+
+[node name="tree_pineTallB_detailed2" parent="." instance=ExtResource("450_icneb")]
+
+[node name="tree_pineTallC2" parent="." instance=ExtResource("451_id2md")]
+
+[node name="tree_pineTallC_detailed2" parent="." instance=ExtResource("452_xs1te")]
+
+[node name="tree_pineTallD2" parent="." instance=ExtResource("453_huxmr")]
+
+[node name="tree_pineTallD_detailed2" parent="." instance=ExtResource("454_4p6wd")]
+
+[node name="tree_plateau2" parent="." instance=ExtResource("455_ppr2h")]
+
+[node name="tree_plateau_dark2" parent="." instance=ExtResource("456_kfftx")]
+
+[node name="tree_plateau_fall2" parent="." instance=ExtResource("457_vrjv4")]
+
+[node name="tree_simple2" parent="." instance=ExtResource("458_jiuuy")]
+
+[node name="tree_simple_dark2" parent="." instance=ExtResource("459_ixiix")]
+
+[node name="tree_simple_fall2" parent="." instance=ExtResource("460_5jkkk")]
+
+[node name="tree_small2" parent="." instance=ExtResource("461_8je5m")]
+
+[node name="tree_small_dark2" parent="." instance=ExtResource("462_1cbie")]
+
+[node name="tree_small_fall2" parent="." instance=ExtResource("463_vaqhj")]
+
+[node name="tree_tall2" parent="." instance=ExtResource("464_y6r1e")]
+
+[node name="tree_tall_dark2" parent="." instance=ExtResource("465_4uuwb")]
+
+[node name="tree_tall_fall2" parent="." instance=ExtResource("466_tujky")]
+
+[node name="tree_thin2" parent="." instance=ExtResource("467_w6atd")]
+
+[node name="tree_thin_dark2" parent="." instance=ExtResource("468_31vd1")]
+
+[node name="tree_thin_fall2" parent="." instance=ExtResource("469_kk1to")]

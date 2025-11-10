@@ -1,26 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://dyqktm3ptehvh"]
+[gd_scene load_steps=10 format=3 uid="uid://dyqktm3ptehvh"]
 
-[ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://Assets/Images/Paper Prototype #1.png" id="1_ly8tk"]
-[ext_resource type="Texture2D" uid="uid://dpnn3tbd7ypg0" path="res://Assets/Images/bear room.png" id="2_aqwag"]
-[ext_resource type="Texture2D" uid="uid://ju0qf5duln0c" path="res://Assets/Images/fox room.png" id="3_aioq2"]
 [ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="4_q4nlx"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_bhwh1"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_wtek4"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_j4rco"]
 [ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="8_wn75i"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4qex"]
-albedo_texture = ExtResource("1_ly8tk")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_y4m1k"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4nlx"]
-albedo_texture = ExtResource("2_aqwag")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_bhwh1"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtek4"]
-albedo_texture = ExtResource("3_aioq2")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4ep1r"]
 
@@ -33,31 +17,6 @@ script = ExtResource("7_j4rco")
 size = Vector3(65.91831, 26.552296, 14.156685)
 
 [node name="General Level" type="Node3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.9986405, 0.045143176, -0.026063442, -0.023115454, 0.83166444, 0.55479753, 0.046721354, -0.5534408, 0.83157724, 0, 3.7562115, 5.391432)
-shadow_enabled = true
-
-[node name="Reference" type="Node3D" parent="."]
-transform = Transform3D(8.48, 0, 0, 0, 8.48, 0, 0, 0, 8.48, 0, 0, -8.776103)
-
-[node name="main_area_reference" type="MeshInstance3D" parent="Reference"]
-transform = Transform3D(2.223464, 0, 0, 0, -4.371139e-08, -1.267169, 0, 1, -5.5389716e-08, 0, 1.26, 0)
-material_override = SubResource("StandardMaterial3D_l4qex")
-mesh = SubResource("PlaneMesh_y4m1k")
-skeleton = NodePath("../../..")
-
-[node name="bear_area_reference" type="MeshInstance3D" parent="Reference"]
-transform = Transform3D(1.845, 0, 0, 0, -4.371139e-08, -0.69, 0, 1, -3.016086e-08, -4.0833473, 0.75415814, 0)
-material_override = SubResource("StandardMaterial3D_q4nlx")
-mesh = SubResource("PlaneMesh_bhwh1")
-
-[node name="bear_area_reference2" type="MeshInstance3D" parent="Reference"]
-transform = Transform3D(1.845, 0, 0, 0, -4.371139e-08, -0.535, 0, 1, -2.3385594e-08, 4.0708375, 2.2017074, 0)
-material_override = SubResource("StandardMaterial3D_wtek4")
-mesh = SubResource("PlaneMesh_bhwh1")
-
-[node name="Level Blocks" type="Node3D" parent="."]
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, 35.604763)
