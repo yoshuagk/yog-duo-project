@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://j110mk1ih24q"]
+[gd_scene load_steps=19 format=3 uid="uid://j110mk1ih24q"]
 
 [ext_resource type="Script" uid="uid://fa0xwmfpscgn" path="res://main_script.gd" id="1_clfx8"]
 [ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://Assets/Images/Paper Prototype #1.png" id="1_dsm1t"]
@@ -8,24 +8,26 @@
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_3b1kr"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_g2mum"]
 [ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="7_0jott"]
+[ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="9_g2mum"]
+[ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="10_0jott"]
+[ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="11_5y1jv"]
+[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="12_tiwqc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5y1jv"]
 albedo_texture = ExtResource("1_dsm1t")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tiwqc"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_8uwir"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0m8rs"]
-
-[sub_resource type="Resource" id="Resource_bj6wq"]
-script = ExtResource("6_g2mum")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xopyu"]
-size = Vector3(65.91831, 26.552296, 14.156685)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_w6jwk"]
 size = Vector3(0.30285645, 2.1578674, 1)
+
+[sub_resource type="Resource" id="Resource_8uwir"]
+script = ExtResource("6_g2mum")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0m8rs"]
+size = Vector3(37.9272, 15.299463, 14.156685)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bj6wq"]
 
 [node name="Forest Area" type="Node3D"]
 script = ExtResource("1_clfx8")
@@ -54,63 +56,79 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, -32)
 
-[node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
-transform = Transform3D(0.705, 0, 0, 0, 0.705, 0, 0, 0, 0.705, -1.2336233, 1.9587045, -31.273792)
-script = ExtResource("3_w6jwk")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-mesh = SubResource("CapsuleMesh_8uwir")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-shape = SubResource("CapsuleShape3D_0m8rs")
-
-[node name="Camera Related" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42.807632)
-
-[node name="Camera3D" type="Camera3D" parent="Camera Related"]
-physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2336233, 1.9587045, -64.08142)
-projection = 1
-size = 12.617071
-
-[node name="PhantomCameraHost" type="Node" parent="Camera Related/Camera3D"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("4_cwpjo")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
-[node name="PhantomCamera3D" type="Node3D" parent="Camera Related" node_paths=PackedStringArray("follow_target")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2336233, 1.9587045, -21.273792)
-top_level = true
-script = ExtResource("5_3b1kr")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../../Player")
-tween_resource = SubResource("Resource_bj6wq")
-inactive_update_mode = 1
-follow_damping = true
-follow_damping_value = Vector3(0.2, 0.2, 0)
-follow_distance = 10.0
-dead_zone_width = 0.15
-dead_zone_height = 0.5
-show_viewfinder_in_play = true
-spring_length = 10.0
-metadata/_custom_type_script = "uid://csjccrhj5wnx7"
-
-[node name="CameraConfiner" type="Area3D" parent="Camera Related" node_paths=PackedStringArray("phantom_camera", "camera3d")]
-script = ExtResource("7_0jott")
-phantom_camera = NodePath("../PhantomCamera3D")
-camera3d = NodePath("../Camera3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera Related/CameraConfiner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.107258, 11.429663, -3.4389915)
-shape = SubResource("BoxShape3D_xopyu")
-
 [node name="Fox Scene Trigger" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.329311, 3.6978064, -31.349413)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fox Scene Trigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5205536, 0)
 shape = SubResource("BoxShape3D_w6jwk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.569913, 1.5039468, -21.302437)
+projection = 1
+size = 12.617071
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("4_cwpjo")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.569913, 1.5039468, -21.302437)
+top_level = true
+script = ExtResource("5_3b1kr")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Player/CharacterBody3D")
+tween_resource = SubResource("Resource_8uwir")
+inactive_update_mode = 1
+follow_damping = true
+follow_damping_value = Vector3(0.2, 0.2, 0)
+follow_distance = 10.0
+dead_zone_width = 0.15
+dead_zone_height = 0.5
+spring_length = 10.0
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="CameraConfiner" type="Area3D" parent="." node_paths=PackedStringArray("phantom_camera", "camera3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5815439, -20.508436)
+script = ExtResource("7_0jott")
+phantom_camera = NodePath("../PhantomCamera3D")
+camera3d = NodePath("../Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraConfiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117362976, 7.5556383, -3.4389915)
+shape = SubResource("BoxShape3D_0m8rs")
+
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.569913, 0.5815439, -24.099567)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
+script = ExtResource("3_w6jwk")
+
+[node name="FormController" type="Node" parent="Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container", "phantom_camera")]
+script = ExtResource("9_g2mum")
+character_body = NodePath("..")
+movement_script = NodePath("..")
+collision_shape = NodePath("../CollisionShape3D")
+visuals_container = NodePath("../Visuals")
+abilities_container = NodePath("../Abilities")
+phantom_camera = NodePath("../../../PhantomCamera3D")
+default_form = ExtResource("10_0jott")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007086873, -0.38889122)
+shape = SubResource("CapsuleShape3D_bj6wq")
+
+[node name="Visuals" type="Node3D" parent="Player/CharacterBody3D"]
+
+[node name="Abilities" type="Node" parent="Player/CharacterBody3D"]
+script = ExtResource("11_5y1jv")
+
+[node name="HealthComponent" type="Node3D" parent="Player/CharacterBody3D"]
+script = ExtResource("12_tiwqc")
 
 [connection signal="body_entered" from="Fox Scene Trigger" to="." method="_on_fox_scene_trigger_body_entered"]
