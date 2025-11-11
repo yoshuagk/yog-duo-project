@@ -57,8 +57,6 @@ metadata/_editor_floor_ = Vector3(0, 0, -32)
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
 transform = Transform3D(0.705, 0, 0, 0, 0.705, 0, 0, 0, 0.705, -1.2336233, 1.9587045, -31.273792)
 script = ExtResource("3_w6jwk")
-jump_height = 7.0
-gravity = 45.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 mesh = SubResource("CapsuleMesh_8uwir")
