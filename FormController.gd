@@ -25,30 +25,45 @@ signal form_changed(new_form: PlayerForm)
 ## The default form that can never be removed from the cycle
 @export var default_form: PlayerForm = null
 
-## Current form index
+# current form and active form should be default
 var current_form_index: int = 0
-## Current active form
 var current_form: PlayerForm = null
 
-## Track instantiated ability nodes for cleanup
+# keeps track of current abilities on current character
 var _active_ability_nodes: Array[Node] = []
 ## Track instantiated visual node
 var _active_visual_node: Node = null
 
 func _ready() -> void:
-	# checks if characterbody and default form is assigned
-	if not default_form:
-		push_error("FormController: default_form not assigned!")
-		return
-	
-	if not character_body:
-		push_error("FormController: character_body not set!")
-		return
-	
 	# start with just the default form
 	forms = [default_form]
 	current_form_index = 0
 	apply_form(forms[current_form_index])
+
+
+func _physics_process(_delta: float) -> void:
+	# for the placeholder image to make sure the spirit can also rotate
+	if _active_visual_node and _active_visual_node is MeshInstance3D:
+		var mat = _active_visual_node.get_surface_override_material(0)
+		if mat and mat is StandardMaterial3D:
+			var should_flip := false
+			
+			# Check if in spirit mode - flip based on velocity direction
+			if character_body and character_body.has_method("get") and character_body.get("is_spirit_mode"):
+				# In spirit mode, check horizontal velocity
+				var velocity = character_body.velocity
+				if abs(velocity.x) > 0.1:  # Moving horizontally
+					should_flip = velocity.x < 0  # Flip if moving left
+			else:
+				# Normal mode - check rotation
+				if character_body and abs(character_body.rotation.y) > 1.5:  # Facing left (close to PI)
+					should_flip = true
+			
+			# Apply the flip
+			if should_flip:
+				mat.uv1_scale = Vector3(-1, 1, 1)  # Flip horizontally
+			else:
+				mat.uv1_scale = Vector3(1, 1, 1)  # Normal orientation
 
 
 func _input(event: InputEvent) -> void:
@@ -78,10 +93,6 @@ func set_form_by_index(index: int) -> void:
 
 ## apply the given form to the player
 func apply_form(form: PlayerForm) -> void:
-	if not form:
-		push_error("FormController: Tried to apply null form!")
-		return
-	
 	current_form = form
 	
 	# update movement parameters with each form
@@ -93,6 +104,12 @@ func apply_form(form: PlayerForm) -> void:
 		if "gravity" in movement_script:
 			var base_gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 			movement_script.gravity = base_gravity * form.gravity_scale
+		if "can_wall_climb" in movement_script:
+			movement_script.can_wall_climb = form.can_wall_climb
+		if "collider_radius" in movement_script:
+			movement_script.collider_radius = form.collider_radius
+		if "collider_height" in movement_script:
+			movement_script.collider_height = form.collider_height
 		
 		# calls recalculate_jump in movemest script
 		if movement_script.has_method("recalculate_jump"):
@@ -111,9 +128,9 @@ func apply_form(form: PlayerForm) -> void:
 	_update_abilities(form)
 	
 	# update camera offset
-	if phantom_camera:
-		var current_offset := phantom_camera.follow_offset
-		phantom_camera.follow_offset = Vector3(current_offset.x, form.camera_offset_y, current_offset.z)
+	#if phantom_camera:
+		#var current_offset := phantom_camera.follow_offset
+		#phantom_camera.follow_offset = Vector3(current_offset.x, form.camera_offset_y, current_offset.z)
 	
 	# Emit signal for other systems
 	# in this case it will be to have the ui show name/icon of form when transfored
@@ -124,7 +141,9 @@ func apply_form(form: PlayerForm) -> void:
 
 ## Replace visuals with the form's mesh_scene or a colored capsule
 func _update_visuals(form: PlayerForm) -> void:
+	# keep for later when using actual models
 	if not visuals_container:
+		print("FormController: No visuals_container!")
 		return
 	
 	# Remove old visual
@@ -132,16 +151,26 @@ func _update_visuals(form: PlayerForm) -> void:
 		_active_visual_node.queue_free()
 		_active_visual_node = null
 	
+	print("FormController: Updating visuals for form '%s'" % form.form_name)
+	print("  - mesh_scene: %s" % form.mesh_scene)
+	print("  - sprite_texture: %s" % form.sprite_texture)
+	print("  - collider_radius: %s" % form.collider_radius)
+	print("  - collider_height: %s" % form.collider_height)
+	
 	# Instance new visual
 	if form.mesh_scene:
+		print("FormController: Using mesh_scene")
 		_active_visual_node = form.mesh_scene.instantiate()
 		visuals_container.add_child(_active_visual_node)
 	elif form.sprite_texture:
+		print("FormController: Using sprite_texture")
 		# Create a textured quad as a simple billboard sprite placeholder
 		var sprite_mesh_instance := MeshInstance3D.new()
 		var quad := QuadMesh.new()
 		# Size the quad roughly to the collider dimensions
-		quad.size = Vector2(max(0.1, form.collider_radius * 2.0), max(0.1, form.collider_height))
+		var quad_size := Vector2(max(0.1, form.collider_radius * 2.0), max(0.1, form.collider_height))
+		print("  - Quad size: %s" % quad_size)
+		quad.size = quad_size
 		sprite_mesh_instance.mesh = quad
 
 		var mat := StandardMaterial3D.new()
@@ -151,11 +180,15 @@ func _update_visuals(form: PlayerForm) -> void:
 		mat.albedo_color = Color(1, 1, 1, 1)
 		mat.cull_mode = BaseMaterial3D.CULL_DISABLED
 		mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		# Enable texture flipping based on parent rotation
+		mat.uv1_scale = Vector3(1, 1, 1)  # Will be modified in _physics_process
 		sprite_mesh_instance.set_surface_override_material(0, mat)
 
 		visuals_container.add_child(sprite_mesh_instance)
 		_active_visual_node = sprite_mesh_instance
+		print("  - Sprite billboard created successfully at: %s" % sprite_mesh_instance.global_position)
 	else:
+		print("FormController: Using debug capsule")
 		# Create a simple colored capsule mesh for testing
 		var mesh_instance := MeshInstance3D.new()
 		var capsule_mesh := CapsuleMesh.new()
@@ -177,6 +210,7 @@ func _update_visuals(form: PlayerForm) -> void:
 			_active_visual_node.position.y += form.visual_y_offset
 		if "scale" in _active_visual_node and form.visual_scale != Vector3.ONE:
 			_active_visual_node.scale *= form.visual_scale
+		print("FormController: Visual node final position: %s" % _active_visual_node.global_position)
 
 
 ## Replace abilities with the form's ability_scenes

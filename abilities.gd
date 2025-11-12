@@ -7,6 +7,8 @@ class_name AbilitiesContainer
 ## reference to the FormController to check which form is active
 @onready var form_controller: FormController = get_parent().get_node("FormController")
 @export var character_body : CharacterBody3D
+## Spirit move radius (units) limiting free-fly distance from dropped statue
+@export var spirit_move_radius: float = 8.0
 
 ## keeps track of the last spawned duplicate for default ability
 var default_statue: Node3D = null
@@ -56,6 +58,9 @@ func _use_default_ability() -> void:
 		print("Default ability: could not find player body")
 		return
 
+	# Access movement script via FormController to toggle spirit controls
+	var movement_script := form_controller.movement_script if form_controller else null
+
 	# If already in spirit state, return to the body and end the state
 	if is_spirit:
 		if default_statue and is_instance_valid(default_statue):
@@ -64,6 +69,11 @@ func _use_default_ability() -> void:
 			# clean up the statue
 			default_statue.queue_free()
 			default_statue = null
+		# disable spirit movement
+		if movement_script and movement_script.has_method("set_spirit_mode"):
+			movement_script.set_spirit_mode(false)
+			if movement_script.has_method("clear_spirit_bounds"):
+				movement_script.clear_spirit_bounds()
 		is_spirit = false
 		print("Back to body")
 		return
@@ -93,6 +103,13 @@ func _use_default_ability() -> void:
 		# keep the same relative transform as the active visual
 		statue_visual.transform = current_visual.transform
 		default_statue.add_child(statue_visual)
+
+	# enable spirit movement
+	if movement_script and movement_script.has_method("set_spirit_mode"):
+		movement_script.set_spirit_mode(true)
+		# set spirit bounds centered on the statue
+		if movement_script.has_method("set_spirit_bounds"):
+			movement_script.set_spirit_bounds(default_statue.global_position, spirit_move_radius)
 
 	is_spirit = true
 	print("placed statue at %s" % default_statue.global_position)
@@ -160,5 +177,30 @@ func _is_diggable(block: Node) -> bool:
 ## bear form ability
 func _use_bear_ability() -> void:
 	print("=== BEAR FORM ABILITY ACTIVATED ===")
-	# add logic for bear attack
-	# add logic for bear walk climb
+	
+	# Find or create the BearHitbox
+	var hitbox: BearHitbox = get_node_or_null("BearHitbox")
+	if not hitbox:
+		push_warning("BearHitbox not found under Abilities node!")
+		return
+	
+	# Check if ready to attack
+	if not hitbox.is_ready_to_attack():
+		print("Bear attack on cooldown")
+		return
+	
+	# Get player position and facing direction
+	var player := get_parent() as CharacterBody3D
+	if not player:
+		return
+	
+	# Determine facing direction from Visuals rotation
+	#var visuals := player.get_node_or_null("Visuals")
+	#var facing_right := true
+	#if visuals:
+		# If rotation.y is PI (180 degrees), player is facing left
+		#facing_right = abs(visuals.rotation.y) < 1.0
+	
+	# Trigger the attack
+	hitbox.perform_attack(player.global_position)
+	print("Bear attacks")

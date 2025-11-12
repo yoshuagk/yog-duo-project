@@ -1,0 +1,199 @@
+[gd_scene load_steps=20 format=3 uid="uid://b8pbb6mn2mtkb"]
+
+[ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="5_x0l45"]
+[ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="6_3l6ch"]
+[ext_resource type="Script" uid="uid://b2xufpx2lnmkl" path="res://BearHitbox.gd" id="6_wrwbm"]
+[ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="7_q6x0n"]
+[ext_resource type="Script" uid="uid://6k8sycu8m2si" path="res://Hurtbox.gd" id="8_6akl3"]
+[ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="8_pey16"]
+[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="9_briw4"]
+[ext_resource type="Script" uid="uid://bpj43gia5p7co" path="res://player_camera.gd" id="10_ddv08"]
+[ext_resource type="Script" uid="uid://c0hvmpa51btha" path="res://AltarInteractable.gd" id="10_yp778"]
+[ext_resource type="Resource" uid="uid://cbxaxu4vb4f4j" path="res://forms/large_form.tres" id="11_ddv08"]
+[ext_resource type="Script" uid="uid://bgx2fmdplmnjt" path="res://KeyCollectible.gd" id="11_x0l45"]
+[ext_resource type="Script" uid="uid://syvmwwx412rw" path="res://DoorInteractable.gd" id="11_yp778"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6akl3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ndwtp"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_wrwbm"]
+emission_enabled = true
+emission = Color(0.14000297, 0.26477826, 0.73926175, 1)
+emission_energy_multiplier = 4.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yp778"]
+size = Vector3(0.13574219, 5.463501, 0.88934326)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l1q54"]
+size = Vector3(0.033447266, 7.241089, 1.0314941)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0l45"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ddv08"]
+size = Vector3(0.1376648, 6.86499, 0.942749)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -0.02081877, -4.537424, -7.749011)
+use_collision = true
+size = Vector3(1.1840076, 8.747437, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.4007, -10.0342)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -26.464132, 12.014296, -7.749011)
+use_collision = true
+size = Vector3(0.28266716, 31.896042, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 22.205444, 10.448355, -7.749011)
+use_collision = true
+size = Vector3(0.114852905, 28.76416, 1)
+
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 12.763259, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
+script = ExtResource("5_x0l45")
+
+[node name="FormController" type="Node" parent="Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container")]
+script = ExtResource("6_3l6ch")
+character_body = NodePath("..")
+movement_script = NodePath("..")
+collision_shape = NodePath("../CollisionShape3D")
+visuals_container = NodePath("../Visuals")
+abilities_container = NodePath("../FormAbilities")
+default_form = ExtResource("7_q6x0n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007086873, -0.38889122)
+shape = SubResource("CapsuleShape3D_6akl3")
+
+[node name="Visuals" type="Node3D" parent="Player/CharacterBody3D"]
+
+[node name="HealthComponent" type="Node3D" parent="Player/CharacterBody3D"]
+script = ExtResource("9_briw4")
+
+[node name="FormAbilities" type="Node3D" parent="Player/CharacterBody3D" node_paths=PackedStringArray("character_body")]
+script = ExtResource("8_pey16")
+character_body = NodePath("..")
+spirit_move_radius = 10.0
+
+[node name="BearHitbox" type="Area3D" parent="Player/CharacterBody3D/FormAbilities"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("6_wrwbm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D/FormAbilities/BearHitbox"]
+transform = Transform3D(1.175, 0, 0, 0, 1.175, 0, 0, 0, 1.175, 1.1953201, 0, 0)
+shape = SubResource("BoxShape3D_ndwtp")
+
+[node name="Altar 2" type="CSGBox3D" parent="."]
+transform = Transform3D(41.111958, 0, 0, 0, 0.99999994, 1.8179417e-06, 0, -3.7252903e-09, 4.6832232, -15.888002, 14.741084, -9.429804)
+use_collision = true
+size = Vector3(0.027492523, 4.475952, 0.30810547)
+material = SubResource("ORMMaterial3D_wrwbm")
+
+[node name="InteractZone" type="Node3D" parent="Altar 2"]
+
+[node name="Area3D" type="Area3D" parent="Altar 2/InteractZone"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("10_yp778")
+form_to_grant = ExtResource("11_ddv08")
+interactable_name = "Altar 2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Altar 2/InteractZone/Area3D"]
+transform = Transform3D(0.85000014, 0, 0, 0, 0.85, -2.2351742e-08, 0, 3.562309e-08, 0.85, 0, 0.019953012, 0.23380232)
+shape = SubResource("BoxShape3D_yp778")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -12.332045, 11.810263, -7.749011)
+use_collision = true
+size = Vector3(0.5329238, 1.245697, 1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -8.563982, 16.445177, -7.749011)
+use_collision = true
+size = Vector3(0.026034832, 8.559624, 1)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -4.4600368, 20.218752, -7.749011)
+use_collision = true
+size = Vector3(0.21128294, 1.0192888, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -0.02081877, 29.887213, -7.749011)
+use_collision = true
+size = Vector3(1.1840076, 3.9438477, 1)
+
+[node name="breakwall" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -3.368494, 24.281326, -7.749011)
+use_collision = true
+size = Vector3(0.026034832, 6.9044867, 1)
+
+[node name="HealthComponent" type="Node3D" parent="breakwall"]
+script = ExtResource("9_briw4")
+max_health = 1
+
+[node name="hurtbox" type="Area3D" parent="breakwall"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("8_6akl3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="breakwall/hurtbox"]
+transform = Transform3D(0.999961, 0, 0, 0, 0.99997497, 0, 0, 0, 0.9999999, 0.0006123334, -0.007881165, 0.0052491426)
+shape = SubResource("BoxShape3D_l1q54")
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target")]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.018432, 15.833591, 11.119089)
+current = true
+fov = 48.44863
+size = 10.416296
+script = ExtResource("10_ddv08")
+follow_target = NodePath("../Player/CharacterBody3D")
+follow_smoothing = 0.01
+
+[node name="testkey" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0308723, 22.64751, -7.5778084)
+
+[node name="Area3D" type="Area3D" parent="testkey" groups=["collectable"]]
+script = ExtResource("11_x0l45")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="testkey/Area3D"]
+shape = SubResource("BoxShape3D_x0l45")
+
+[node name="testkey2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.89765, 3.2688313, -7.5778084)
+
+[node name="Area3D" type="Area3D" parent="testkey2" groups=["collectable"]]
+script = ExtResource("11_x0l45")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="testkey2/Area3D"]
+shape = SubResource("BoxShape3D_x0l45")
+
+[node name="testkey3" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.272743, 3.2688313, -7.5778084)
+
+[node name="Area3D" type="Area3D" parent="testkey3" groups=["collectable"]]
+script = ExtResource("11_x0l45")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="testkey3/Area3D"]
+shape = SubResource("BoxShape3D_x0l45")
+
+[node name="testdoor" type="CSGBox3D" parent="."]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -0.010353088, 3.151144, -9.812785)
+use_collision = true
+size = Vector3(0.12656832, 6.8391113, 0.118652344)
+
+[node name="Area3D" type="Area3D" parent="testdoor"]
+script = ExtResource("11_yp778")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="testdoor/Area3D"]
+transform = Transform3D(0.9999745, 0, 0, 0, 0.9999836, 0, 0, 0, 0.9999999, 0.00035163603, 0.17443848, 0.42645216)
+shape = SubResource("BoxShape3D_ddv08")

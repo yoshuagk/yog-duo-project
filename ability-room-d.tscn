@@ -1,17 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcwceoignpyeo"]
+[gd_scene load_steps=11 format=3 uid="uid://bcwceoignpyeo"]
 
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_itfl2"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_ds0q2"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_hutdy"]
-[ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="4_ygd3u"]
 [ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="5_4qvuk"]
 [ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="6_x0h62"]
 [ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="7_tfphp"]
 [ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="8_1hsxj"]
 [ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="9_7135o"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_1i75g"]
-size = Vector3(46.438526, 26.543169, 14.156685)
 
 [sub_resource type="Resource" id="Resource_v68xu"]
 script = ExtResource("3_hutdy")
@@ -34,15 +30,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.4007, -10.0342)
 transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -23.528633, 10.0521145, -7.749011)
 use_collision = true
 size = Vector3(0.13986206, 29.55664, 1)
-
-[node name="CameraConfiner" type="Area3D" parent="level" node_paths=PackedStringArray("phantom_camera", "camera3d")]
-script = ExtResource("4_ygd3u")
-phantom_camera = NodePath("../PhantomCamera3D")
-camera3d = NodePath("../Camera3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="level/CameraConfiner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6326351, 11.434226, -3.4389915)
-shape = SubResource("BoxShape3D_1i75g")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="level"]
 transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 22.719532, 10.0521145, -7.749011)
@@ -125,18 +112,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
 script = ExtResource("5_4qvuk")
 
-[node name="FormController" type="Node" parent="level/Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container", "phantom_camera")]
+[node name="FormController" type="Node" parent="level/Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container")]
 script = ExtResource("6_x0h62")
 character_body = NodePath("..")
 movement_script = NodePath("..")
 collision_shape = NodePath("../CollisionShape3D")
 visuals_container = NodePath("../Visuals")
 abilities_container = NodePath("../Abilities")
-phantom_camera = NodePath("../../../PhantomCamera3D")
 default_form = ExtResource("7_tfphp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Player/CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007086873, -0.38889122)
 shape = SubResource("CapsuleShape3D_xwrkv")
 
 [node name="Visuals" type="Node3D" parent="level/Player/CharacterBody3D"]
@@ -144,6 +129,7 @@ shape = SubResource("CapsuleShape3D_xwrkv")
 [node name="Abilities" type="Node" parent="level/Player/CharacterBody3D" node_paths=PackedStringArray("character_body")]
 script = ExtResource("8_1hsxj")
 character_body = NodePath("..")
+spirit_move_radius = 5.0
 
 [node name="HealthComponent" type="Node3D" parent="level/Player/CharacterBody3D"]
 script = ExtResource("9_7135o")

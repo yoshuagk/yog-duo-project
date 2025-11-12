@@ -13,19 +13,19 @@ func _physics_process(delta: float) -> void:
 	if not follow_target:
 		return
 	
-	# get player target position
+	# Get target position
 	var target_pos := follow_target.global_position
 	
-	# calculates the desired x and y position
+	# Calculate desired camera position (follow X and Y, fixed Z)
 	var desired_x := target_pos.x
 	var desired_y := target_pos.y
 	
 	# Apply bounds if enabled
-	#if use_bounds:
-		#desired_x = clamp(desired_x, bounds_min.x, bounds_max.x)
-		#desired_y = clamp(desired_y, bounds_min.y, bounds_max.y)
+	if use_bounds:
+		desired_x = clamp(desired_x, bounds_min.x, bounds_max.x)
+		desired_y = clamp(desired_y, bounds_min.y, bounds_max.y)
 	
-	# how smooth the camera moves to the player
+	# Smoothly move camera or snap instantly
 	if follow_smoothing > 0.0:
 		var current := global_position
 		var target := Vector3(desired_x, desired_y, target_pos.z + fixed_z_distance)
