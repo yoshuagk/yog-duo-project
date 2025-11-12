@@ -1,0 +1,134 @@
+[gd_scene load_steps=19 format=3 uid="uid://j110mk1ih24q"]
+
+[ext_resource type="Script" uid="uid://fa0xwmfpscgn" path="res://main_script.gd" id="1_clfx8"]
+[ext_resource type="Texture2D" uid="uid://bc5epdi5pbxar" path="res://Assets/Images/Paper Prototype #1.png" id="1_dsm1t"]
+[ext_resource type="MeshLibrary" uid="uid://vloknl86ugxf" path="res://Assets/tiles.tres" id="2_clfx8"]
+[ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="3_w6jwk"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_cwpjo"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_3b1kr"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_g2mum"]
+[ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="7_0jott"]
+[ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="9_g2mum"]
+[ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="10_0jott"]
+[ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="11_5y1jv"]
+[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="12_tiwqc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5y1jv"]
+albedo_texture = ExtResource("1_dsm1t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tiwqc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w6jwk"]
+size = Vector3(0.30285645, 2.1578674, 1)
+
+[sub_resource type="Resource" id="Resource_8uwir"]
+script = ExtResource("6_g2mum")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0m8rs"]
+size = Vector3(37.9272, 15.299463, 14.156685)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bj6wq"]
+
+[node name="Forest Area" type="Node3D"]
+script = ExtResource("1_clfx8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.9986405, 0.045143176, -0.026063442, -0.023115454, 0.83166444, 0.55479753, 0.046721354, -0.5534408, 0.83157724, 0, 3.7562115, 5.391432)
+shadow_enabled = true
+
+[node name="Reference" type="Node3D" parent="."]
+transform = Transform3D(8.48, 0, 0, 0, 8.48, 0, 0, 0, 8.48, 0, 0, -8.776103)
+
+[node name="main_area_reference" type="MeshInstance3D" parent="Reference"]
+transform = Transform3D(2.223464, 0, 0, 0, -4.371139e-08, -1.267169, 0, 1, -5.5389716e-08, 0, -0.13446994, -2.7972376)
+material_override = SubResource("StandardMaterial3D_5y1jv")
+mesh = SubResource("PlaneMesh_tiwqc")
+skeleton = NodePath("../../..")
+
+[node name="Level Blocks" type="Node3D" parent="."]
+
+[node name="GridMap" type="GridMap" parent="Level Blocks"]
+mesh_library = ExtResource("2_clfx8")
+cell_size = Vector3(1, 0.5, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65517, 65504, 118, 65518, 65504, 118, 65519, 65504, 118, 65522, 65504, 118, 65523, 65504, 118, 65524, 65504, 118, 65525, 65504, 118, 65528, 65504, 118, 65529, 65504, 118, 65530, 65504, 118, 65531, 65504, 118, 65532, 65504, 118, 65533, 65504, 118, 65534, 65504, 118, 65535, 65504, 118, 0, 65504, 118, 1, 65504, 118, 2, 65504, 118, 3, 65504, 118, 4, 65504, 118, 5, 65504, 118, 6, 65504, 118, 7, 65504, 118, 8, 65504, 118, 9, 65504, 118, 10, 65504, 118, 11, 65504, 118, 12, 65504, 118, 13, 65504, 118, 14, 65504, 118, 15, 65504, 118, 16, 65504, 129, 131053, 65504, 129, 262125, 65504, 129, 327661, 65504, 129, 393197, 65504, 129, 458733, 65504, 129, 524269, 65504, 129, 589805, 65504, 129, 655341, 65504, 129, 720877, 65504, 129, 786413, 65504, 129, 851949, 65504, 129, 917485, 65504, 129, 983021, 65504, 129, 1048557, 65504, 129, 1114093, 65504, 129, 1179629, 65504, 129, 1310701, 65504, 129, 131054, 65504, 129, 196590, 65504, 129, 262126, 65504, 129, 327662, 65504, 129, 393198, 65504, 129, 458734, 65504, 129, 524270, 65504, 129, 589806, 65504, 129, 655342, 65504, 129, 131055, 65504, 129, 196591, 65504, 129, 262127, 65504, 129, 327663, 65504, 129, 393199, 65504, 129, 458735, 65504, 129, 524271, 65504, 129, 589807, 65504, 129, 655343, 65504, 129, 131059, 65504, 129, 196595, 65504, 129, 262131, 65504, 129, 327667, 65504, 129, 655344, 65504, 129, 655345, 65504, 129, 655346, 65504, 129, 655347, 65504, 129, 524275, 65504, 129, 131064, 65504, 129, 131065, 65504, 119, 720887, 65504, 312, 720888, 65504, 312, 720889, 65504, 312, 655360, 65504, 312, 655361, 65504, 312, 655362, 65504, 312, 655363, 65504, 312, 655364, 65504, 312, 655365, 65504, 312, 655366, 65504, 312, 655367, 65504, 312, 917510, 65504, 312, 917511, 65504, 312, 917512, 65504, 312, 655370, 65504, 312, 393225, 65504, 312, 393226, 65504, 312, 983040, 65504, 312, 983041, 65504, 312, 983042, 65504, 312, 327681, 65504, 312, 720912, 65504, 312, 65543, 65504, 129, 65542, 65504, 129, 65541, 65504, 129, 196613, 65504, 129, 327685, 65504, 129, 131078, 65504, 129, 65551, 65504, 129, 262159, 65504, 129, 327695, 65504, 129, 327696, 65504, 119, 327697, 65504, 119, 720913, 65504, 312, 720914, 65504, 312, 262162, 65504, 129, 196626, 65504, 129, 131090, 65504, 129, 65554, 65504, 129, 18, 65504, 129)
+}
+metadata/_editor_floor_ = Vector3(0, 0, -32)
+
+[node name="Fox Scene Trigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.329311, 3.6978064, -31.349413)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fox Scene Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5205536, 0)
+shape = SubResource("BoxShape3D_w6jwk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.569913, 1.5039468, -21.302437)
+projection = 1
+size = 12.617071
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("4_cwpjo")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.569913, 1.5039468, -21.302437)
+top_level = true
+script = ExtResource("5_3b1kr")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Player/CharacterBody3D")
+tween_resource = SubResource("Resource_8uwir")
+inactive_update_mode = 1
+follow_damping = true
+follow_damping_value = Vector3(0.2, 0.2, 0)
+follow_distance = 10.0
+dead_zone_width = 0.15
+dead_zone_height = 0.5
+spring_length = 10.0
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="CameraConfiner" type="Area3D" parent="." node_paths=PackedStringArray("phantom_camera", "camera3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5815439, -20.508436)
+script = ExtResource("7_0jott")
+phantom_camera = NodePath("../PhantomCamera3D")
+camera3d = NodePath("../Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraConfiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117362976, 7.5556383, -3.4389915)
+shape = SubResource("BoxShape3D_0m8rs")
+
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.569913, 0.5815439, -24.099567)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
+script = ExtResource("3_w6jwk")
+
+[node name="FormController" type="Node" parent="Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container", "phantom_camera")]
+script = ExtResource("9_g2mum")
+character_body = NodePath("..")
+movement_script = NodePath("..")
+collision_shape = NodePath("../CollisionShape3D")
+visuals_container = NodePath("../Visuals")
+abilities_container = NodePath("../Abilities")
+phantom_camera = NodePath("../../../PhantomCamera3D")
+default_form = ExtResource("10_0jott")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007086873, -0.38889122)
+shape = SubResource("CapsuleShape3D_bj6wq")
+
+[node name="Visuals" type="Node3D" parent="Player/CharacterBody3D"]
+
+[node name="Abilities" type="Node" parent="Player/CharacterBody3D"]
+script = ExtResource("11_5y1jv")
+
+[node name="HealthComponent" type="Node3D" parent="Player/CharacterBody3D"]
+script = ExtResource("12_tiwqc")
+
+[connection signal="body_entered" from="Fox Scene Trigger" to="." method="_on_fox_scene_trigger_body_entered"]

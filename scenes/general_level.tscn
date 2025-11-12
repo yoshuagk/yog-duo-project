@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://dyqktm3ptehvh"]
+
+[ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="4_q4nlx"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_bhwh1"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_wtek4"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_j4rco"]
+[ext_resource type="Script" uid="uid://cwpihwrqs0kd0" path="res://CameraBounds.gd" id="8_wn75i"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4ep1r"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5yi4w"]
+
+[sub_resource type="Resource" id="Resource_uv5fw"]
+script = ExtResource("7_j4rco")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3rrk8"]
+size = Vector3(65.91831, 26.552296, 14.156685)
+
+[node name="General Level" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, 35.604763)
+script = ExtResource("4_q4nlx")
+jump_height = 7.0
+gravity = 45.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_4ep1r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_5yi4w")
+
+[node name="Camera Related" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42.807632)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Related"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, 2.7971306)
+projection = 1
+size = 12.617071
+
+[node name="PhantomCameraHost" type="Node" parent="Camera Related/Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("5_bhwh1")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PhantomCamera3D" type="Node3D" parent="Camera Related" node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, 45.604763)
+top_level = true
+script = ExtResource("6_wtek4")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../../Player")
+tween_resource = SubResource("Resource_uv5fw")
+inactive_update_mode = 1
+follow_damping = true
+follow_damping_value = Vector3(0.2, 0.2, 0)
+follow_distance = 10.0
+dead_zone_width = 0.15
+dead_zone_height = 0.5
+show_viewfinder_in_play = true
+spring_length = 10.0
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="CameraConfiner" type="Area3D" parent="Camera Related" node_paths=PackedStringArray("phantom_camera", "camera3d")]
+script = ExtResource("8_wn75i")
+phantom_camera = NodePath("../PhantomCamera3D")
+camera3d = NodePath("../Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera Related/CameraConfiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.107258, 11.429663, -3.4389915)
+shape = SubResource("BoxShape3D_3rrk8")
