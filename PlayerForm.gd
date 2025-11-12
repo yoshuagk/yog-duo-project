@@ -15,6 +15,8 @@ class_name PlayerForm
 @export var jump_height: float = 2.0
 ## Gravity multiplier (1.0 = use default gravity)
 @export var gravity_scale: float = 1.0
+## Whether this form can wall climb (passive ability)
+@export var can_wall_climb: bool = false
 
 @export_group("Collider")
 ## Capsule radius
