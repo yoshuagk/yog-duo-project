@@ -1,22 +1,40 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyqktm3ptehvh"]
+[gd_scene load_steps=11 format=3 uid="uid://dyqktm3ptehvh"]
 
 [ext_resource type="Script" uid="uid://bfuqiu7wp17py" path="res://main_scene_script.gd" id="1_l4qex"]
-[ext_resource type="Script" path="res://FormController.gd" id="3_bhwh1"]
+[ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="3_bhwh1"]
 [ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="4_q4nlx"]
 [ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="4_wtek4"]
 [ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="5_j4rco"]
-[ext_resource type="Script" path="res://health_component.gd" id="6_wn75i"]
+[ext_resource type="Script" uid="uid://b2xufpx2lnmkl" path="res://BearHitbox.gd" id="5_l4qex"]
+[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="6_wn75i"]
+[ext_resource type="Script" uid="uid://bpj43gia5p7co" path="res://player_camera.gd" id="7_y4m1k"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ep1r"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q4nlx"]
+radius = 0.43066406
+height = 1.7836914
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhwh1"]
 
 [node name="General_Level" type="Node3D"]
 script = ExtResource("1_l4qex")
 
+[node name="Level_Container" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target")]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 0.9848078, 0.17364818, 0, -0.17364818, 0.9848078, 0, 4.841527, 6)
+current = true
+fov = 93.06142
+size = 12.617071
+script = ExtResource("7_y4m1k")
+follow_target = NodePath("../Player/CharacterBody3D")
+fixed_z_distance = 5.0
+
 [node name="Player" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2517595, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47732544, 1.4663935, 2.9155884)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="Player"]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
 script = ExtResource("4_q4nlx")
 
 [node name="FormController" type="Node" parent="Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container")]
@@ -25,25 +43,28 @@ character_body = NodePath("..")
 movement_script = NodePath("..")
 collision_shape = NodePath("../CollisionShape3D")
 visuals_container = NodePath("../Visuals")
-abilities_container = NodePath("../Abilities")
+abilities_container = NodePath("../FormAbilities")
 default_form = ExtResource("4_wtek4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007086873, -0.38889122)
-shape = SubResource("CapsuleShape3D_4ep1r")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.041888237, -0.38889122)
+shape = SubResource("CapsuleShape3D_q4nlx")
 
 [node name="Visuals" type="Node3D" parent="Player/CharacterBody3D"]
-
-[node name="Abilities" type="Node" parent="Player/CharacterBody3D"]
-script = ExtResource("5_j4rco")
 
 [node name="HealthComponent" type="Node3D" parent="Player/CharacterBody3D"]
 script = ExtResource("6_wn75i")
 
-[node name="Camera3D" type="Camera3D" parent="Player/CharacterBody3D"]
-physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 2, 10)
-current = true
-size = 12.617071
+[node name="FormAbilities" type="Node3D" parent="Player/CharacterBody3D" node_paths=PackedStringArray("character_body")]
+script = ExtResource("5_j4rco")
+character_body = NodePath("..")
+spirit_move_radius = 10.0
 
-[node name="Level_Container" type="Node3D" parent="."]
+[node name="BearHitbox" type="Area3D" parent="Player/CharacterBody3D/FormAbilities"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("5_l4qex")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D/FormAbilities/BearHitbox"]
+transform = Transform3D(1.175, 0, 0, 0, 1.175, 0, 0, 0, 1.175, 1.1953201, 0, 0)
+shape = SubResource("BoxShape3D_bhwh1")

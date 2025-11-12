@@ -94,7 +94,6 @@ shape = SubResource("BoxShape3D_ndwtp")
 
 [node name="Altar 2" type="CSGBox3D" parent="."]
 transform = Transform3D(41.111958, 0, 0, 0, 0.99999994, 1.8179417e-06, 0, -3.7252903e-09, 4.6832232, -15.888002, 14.741084, -9.429804)
-use_collision = true
 size = Vector3(0.027492523, 4.475952, 0.30810547)
 material = SubResource("ORMMaterial3D_wrwbm")
 
