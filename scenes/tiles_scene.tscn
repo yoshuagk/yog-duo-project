@@ -1,4 +1,4 @@
-[gd_scene load_steps=498 format=4 uid="uid://b1u68liuo55t"]
+[gd_scene load_steps=526 format=4 uid="uid://b1u68liuo55t"]
 
 [ext_resource type="PackedScene" uid="uid://lx5mt7gjeyiu" path="res://Assets/Models/arrow.glb" id="1_co8x0"]
 [ext_resource type="PackedScene" uid="uid://c5217giih3rml" path="res://Assets/Models/arrows.glb" id="2_jmm24"]
@@ -159,7 +159,6 @@
 [ext_resource type="PackedScene" uid="uid://dcsx7gy2seqtw" path="res://Assets/Models/cliff_topDiagonal_rock.glb" id="163_kt23w"]
 [ext_resource type="PackedScene" uid="uid://brgjcnn2lwctf" path="res://Assets/Models/cliff_topDiagonal_stone.glb" id="164_t6wpn"]
 [ext_resource type="PackedScene" uid="uid://bek1wolen5q3g" path="res://Assets/Models/cliff_top_rock.glb" id="165_261th"]
-[ext_resource type="PackedScene" uid="uid://doflm0uy4283k" path="res://Assets/Models/cliff_top_stone.glb" id="166_lees4"]
 [ext_resource type="PackedScene" uid="uid://tdeh02f833pb" path="res://Assets/Models/cliff_waterfallTop_rock.glb" id="167_hboo3"]
 [ext_resource type="PackedScene" uid="uid://c4q1a14o8l2my" path="res://Assets/Models/cliff_waterfallTop_stone.glb" id="168_duu5s"]
 [ext_resource type="PackedScene" uid="uid://bu517ljfkru23" path="res://Assets/Models/cliff_waterfall_rock.glb" id="169_pbpy2"]
@@ -274,8 +273,6 @@
 [ext_resource type="PackedScene" uid="uid://btyub6hqlot6x" path="res://Assets/Models/lily_large.glb" id="278_g54mw"]
 [ext_resource type="PackedScene" uid="uid://cf3kb1vg6sd2j" path="res://Assets/Models/lily_small.glb" id="279_ry52t"]
 [ext_resource type="PackedScene" uid="uid://rs6i5grtxuwo" path="res://Assets/Models/lock.glb" id="280_ds03a"]
-[ext_resource type="PackedScene" uid="uid://cjcrkbm68qx0r" path="res://Assets/Models/log.glb" id="281_rshcn"]
-[ext_resource type="PackedScene" uid="uid://dv51n6u4f8kid" path="res://Assets/Models/log_large.glb" id="282_dbuyu"]
 [ext_resource type="PackedScene" uid="uid://8dqbuqdt6g1e" path="res://Assets/Models/log_stack.glb" id="283_cmps5"]
 [ext_resource type="PackedScene" uid="uid://77gv58n7hlbf" path="res://Assets/Models/log_stackLarge.glb" id="284_n4x2a"]
 [ext_resource type="PackedScene" uid="uid://jpqn61qdthtx" path="res://Assets/Models/mushrooms.glb" id="285_ar7gq"]
@@ -423,7 +420,6 @@
 [ext_resource type="PackedScene" uid="uid://c8l68xjc530jh" path="res://Assets/Models/tree_palm.glb" id="427_bf4kv"]
 [ext_resource type="PackedScene" uid="uid://bmybwok7jw6vg" path="res://Assets/Models/tree_palmBend.glb" id="428_cbiw4"]
 [ext_resource type="PackedScene" uid="uid://2m42f0cix6ms" path="res://Assets/Models/tree_palmDetailedShort.glb" id="429_5urcp"]
-[ext_resource type="PackedScene" uid="uid://c3wddbinsnett" path="res://Assets/Models/tree_palmDetailedTall.glb" id="430_hddb0"]
 [ext_resource type="PackedScene" uid="uid://cjuypdwpx8ra6" path="res://Assets/Models/tree_palmShort.glb" id="431_7idgg"]
 [ext_resource type="PackedScene" uid="uid://3v5g72jq7u4n" path="res://Assets/Models/tree_palmTall.glb" id="432_7uwix"]
 [ext_resource type="PackedScene" uid="uid://dnegbtg5ul708" path="res://Assets/Models/tree_pineDefaultA.glb" id="433_sf1jr"]
@@ -528,6 +524,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j0qjy")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucfcu"]
+albedo_color = Color(0.7294118, 0.654902, 0.27058825, 1)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cdrbk"]
 points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.5, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, 0.5, 0.5, 0.5)
 
@@ -594,6 +593,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5kwsq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0lrsf"]
+albedo_color = Color(0.7294118, 0.654902, 0.27058825, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5hjuj"]
 points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.5, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, 0.5, 0.5, 0.5)
@@ -662,6 +664,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ue4vm")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0uoy"]
+albedo_color = Color(0.7294118, 0.654902, 0.27058825, 1)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_srrst"]
 points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.25, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, 0, 0.5, 0.5, 0.25, 0.5)
 
@@ -728,6 +733,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ulmhu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdrbk"]
+albedo_color = Color(0.7294118, 0.654902, 0.27058825, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_23kvv"]
 points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.25, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, 0, 0.5, 0.5, 0.25, 0.5)
@@ -796,6 +804,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_saqag")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hjuj"]
+albedo_color = Color(0.7294118, 0.654902, 0.27058825, 1)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8op65"]
 points = PackedVector3Array(0.5, 1, 0.5, 0.5, 1, -0.5, -0.5, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5)
 
@@ -863,8 +874,215 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_by6e3")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srrst"]
+albedo_color = Color(0.7294118, 0.654902, 0.27058825, 1)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_78wm2"]
 points = PackedVector3Array(0.5, 1, 0.5, 0.5, 1, -0.5, -0.5, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwi6y"]
+resource_name = "grass"
+albedo_color = Color(0.45234028, 0.92950165, 0.8658767, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ifh3n"]
+resource_name = "stone"
+albedo_color = Color(0.8658767, 0.9482425, 0.9592555, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_86isq"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0.9, 0.23149998, 1, 0.100000024, 0.26850003),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAwAEAAEAAQAAAAMABQADAAAAAAAGAAUAAgAHAAAAAgAIAAcACAAJAAcACQAKAAcABwAKAAsACwAMAAcAAAAHAA0ADQAHAAwAAAANAAYADgANAAwADAAPAA4ADQAOABAAEAARAA0ADQARAAYAEQAQABIAEgATABEAEQAUAAYAFAARABMAFAAVAAYAFgAVABQAFAAXABYAFwAUABMAEwAYABcA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 25,
+"vertex_data": PackedByteArray("qir//6egAACqKgAAT0EAAFU1AAD7MAAAAAD//1dfAAAAAAAAAAAAAAAA/////wAA////////AABVVf//V18AAP8//z99OAAAqkoAAFMQAABUVQAAAAAAAP9fAABTEAAAqmr/f1NQAAD/f///p6AAAP9/AABPQQAAVHUAAPswAACqqgAAAAAAAKqq//9XXwAAVLUAAFMQAAD/v/9/U1AAAFTV//+noAAA/////1dfAAD//wAAAAAAAFTVAABPQQAAqcoAAPswAAA=")
+}, {
+"aabb": AABB(-0.5, -1.7706456e-16, 0.3315, 1, 1, 0.1685),
+"format": 34896613377,
+"index_count": 75,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgAEAAAAAAAEAAUABQAEAAIABQAGAAAABgAFAAcABwAIAAYACAAHAAkACQAHAAUACQAKAAgACwAKAAkAAgAMAAUADAAJAAUAAwAMAAIACQANAAsADAANAAkACwANAA4ADAAOAA0ADgAPAAsAEAAMAAMADAAQAA4ADwAOABAAAwARABAAEAARAA8A"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAP////8AAAAAAAD//wAA////////AAAAAAAAAAAAAKoqAAARaAAAqir//xFoAABVVQAAAAAAAFVV//8AAAAA/38AABFoAAD/f///EWgAAKqq//8AAAAA//8AAP//AACqqgAAAAAAAFTVAAARaAAAVNX//xFoAAD//wAAAAAAAP////8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_12tf5"]
+resource_name = "cliff_top_stone_Mesh cliff_top_stone"
+_surfaces = [{
+"aabb": AABB(-0.5, 0.9, 0.23149998, 1, 0.100000024, 0.26850003),
+"attribute_data": PackedByteArray("2fUOFR7suiWW4LoluMcOFXzXjyGFybol/b26JQAASsAAAKyrqioOtP//SsD/fw60VVWsq6qqrKtU1Q60//+sq0Y4DhUBQroleTa6JRMmZB0lCg4V4BO6JWgfuiUzh4cK7pAyG2aFMhsAdd0SElmHCs1iMhtVbjIbINYAANvfqxC6sasQ/6cAAP9XAABETqsQIyCrEN4pAADspocKMZ0yGxBvMhvLeIcK"),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAgAEAAMABAAFAAMABQAGAAMABwAIAAkACQAKAAcACQALAAoACQAMAAsACwANAAoADQAOAAoADgAPAAoAEAARABIAEgATABAAFAAQABMAFQAUABMAEwAWABUAFwAYABkAGQAaABcAGwAXABoAHAAbABoAGgAdABwAHgAfACAAIAAhAB4AIgAjACQAJAAlACIAJgAnACgAKAApACYA"),
+"material": SubResource("StandardMaterial3D_qwi6y"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 82.36081, 0, 0),
+"vertex_count": 42,
+"vertex_data": PackedByteArray("qir//6egNvGqKgAAT0E28VU1AAD7MDbxVVX//1dfNvH/P/8/fTg28apKAABTEDbxVFUAAAAANvEAAP//////vwAA//9XX/+/qir//6eg/7//////////v/9///+noP+/VVX//1df/7+qqv//V1//v1TV//+noP+//////1df/7+qqv//V1828aqqAAAAADbxVLUAAFMQNvH/v/9/U1A28VTV//+noDbxVNUAAE9BNvGpygAA+zA28VVV//9XXzbxVFUAAAAANvH/XwAAUxA28apq/39TUDbx/3///6egNvH/fwAAT0E28VR1AAD7MDbxAAD//1dfNvEAAAAAAAA28aoqAABPQTbxqir//6egNvFU1f//p6A28VTVAABPQTbx//8AAAAANvH/////V1828f9///+noDbx/38AAE9BNvGqqgAAAAA28aqq//9XXzbxvIYj17yGI9e8hiPXvIYj17yGI9e8hiPXvIYj1////3////9/////f////3////9/////f////3////9/////f9uovAbbqLwG26i8BtuovAbbqL0G26i9BtuovAbbqLwG26i8BtuovAbbqLwG26i8BtuovAbbqLwG26i8BtuovAbbqLwG26i8BryGI9e8hiPXvIYj17yGI9e8hiPXvIYj17yGI9e8hiPX")
+}, {
+"aabb": AABB(-0.5, -1.7706456e-16, 0.3315, 1, 1, 0.1685),
+"attribute_data": PackedByteArray("3NQAAP//AAD//1WD3NRVg0Y4AABGOFWDJQpVgyUKAAAg1gAAINZVg/+nVYP/pwAAM4cAADOHVYMSWVWDElkAANn1AADZ9VWDuMdVg7jHAABU1d63///frv//AMUAAADF/3/et6mq365UVd+uqiretwAA367splWDy3hVg8t4AADspgAA/1cAAP9XVYPeKVWD3ikAAP//AAD//1WDAABVgwAAAAAiK1WDAABVgwAAAAAiKwAA"),
+"format": 34896613399,
+"index_count": 75,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAFwAYABQAGAAZABQAFwAaABgAFwAbABoAFwAcABsAHQAeAB8AHwAgAB0AIQAiACMAIwAkACEAJQAmACcAJwAoACUAKQAqACsAKwAsACkA"),
+"material": SubResource("StandardMaterial3D_ifh3n"),
+"name": "stone",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 76.74016, 0, 0),
+"vertex_count": 45,
+"vertex_data": PackedByteArray("AAD//wAA/78AAP//////vwAAAAD///+/AAAAAAAA/7+qqv//AAAb8KqqAAAAABvwVNUAABFoG/BU1f//EWgb8AAA//8AABvwAAAAAAAAG/CqKgAAEWgb8Koq//8RaBvwVVX//wAAG/BVVQAAAAAb8P9/AAARaBvw/3///xFoG/CqKv//EWgb8KoqAAARaBvwVVUAAAAAG/BVVf//AAAb8KoqAAARaP//AAAAAAAA//8AAAAA////////AAD//////38AABFo//9VVQAAAAD//6qqAAAAAP//VNUAABFo/////wAAAAD///9/AAARaBvwqqoAAAAAG/Cqqv//AAAb8P9///8RaBvwVNX//xFoG/BU1QAAEWgb8P//AAAAABvw/////wAAG/D///////8AgP//AAD//wCAAAAAAP//AIAAAP////8AgP//AAAAAP+///8AAP///7//////////v/////8AAP+//3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f////3////9/////f////3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_86isq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23kvv"]
+albedo_color = Color(0.73, 0.65335006, 0.2701, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jmm24"]
+points = PackedVector3Array(0.5, 1, 0.5, 0.5, -1.7706456e-16, 0.5, 0.5, 1, 0.33147788, -0.5, 1, 0.5, 0.5, -1.7706456e-16, 0.33147788, -0.5, -1.7706456e-16, 0.5, 0.5, 0.8999609, 0.23149998, -0.5, 1, 0.33147788, -0.5, -1.7706456e-16, 0.33147788, -0.5, 0.8999609, 0.23149998)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wj1ly"]
+resource_name = "woodBark"
+albedo_color = Color(0.9482425, 0.7443257, 0.6190008, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hbit"]
+resource_name = "woodInner"
+albedo_color = Color(0.98256004, 0.92759997, 0.87210315, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o5o51"]
+_surfaces = [{
+"aabb": AABB(-0.109243855, -5.636549e-13, -0.355, 0.23396102, 0.17320509, 0.71),
+"format": 34896613377,
+"index_count": 204,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAAAAMAAQAAAAQAAwAFAAQABgAFAAMABAAFAAYAAwACAAYABAAHAAEABgAHAAQAAgABAAgABgACAAgACQABAAcACQAIAAEABwAGAAoACgAJAAcABgAIAAsACwAKAAYACgALAAwACgAMAA0ACgANAA4ACwAPAAwADwALAAgAEAAMAA8AEQAKAA4ACQAKABEADgASABEAEwAQAA8AEgATABQAEwAPABQAFQARABIAEgAUABUAEQAWAAkAEQAVABcAFwAWABEAFwAVABQAGAAJABYAFgAXABgAGAAZAAkAGQAIAAkAGgAYABcAGQAbAAgAGwAcAAgAFwAdABoAFAAdABcAHQAeABoAHQAcAB4AHwAIABwAHQAfABwACAAfAA8AIAAdABQAFAAPACAAHwAdACEADwAfACIAIgAgAA8AHwAhACIAIAAjAB0AIwAhAB0AJAAgACIAJQAjACAAIAAkACUAIQAjACUAIgAmACQAJgAiACEAJQAkACYAIQAnACYAJgAnACUAJQAnACEA"),
+"name": "woodBark",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAADwfE6AACNGMehYzgAAGIyN95jOAAAFRJR6/E6AAAAAAPB3EYAABUSUevcRgAAYjI33mpJAACNGMehakkAANJA//8AAAAAHQr/fwAAAAAdCv9///8AANJA/////wAAalN/1P//AABML/9///8AAGpTfyv//wAAPa7/////AACmm3/U//8AANJAAAD//wAAppt/K///AADEv/9///8AAPPk/3///wAAPa4AAP//AADSQAAAAAAAAD2uAAAAAAAAr1MhLAAAAADWL/9/AAAAAGGbISwAAAAAr1Pd0wAAAABhm93TAAAAAPPk/38AAAAAOr//fwAAAAA9rv//AAAAABrVEqWIyQAAFr7s2l26AAAWvuzaiMkAABrVEqVdugAA//+F1JPGAAD//4XUUr0AAPTxX/WTxgAA9PFf9VK9AAA=")
+}, {
+"aabb": AABB(-0.109243855, -5.636549e-13, -0.355, 0.23396102, 0.17320509, 0.71),
+"format": 34896613377,
+"index_count": 396,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAQAEAAMAAQAAAAQABQADAAQABQAGAAMABQAEAAYAAgADAAYABwAEAAAABwAGAAQAAAACAAgAAgAGAAgAAAAJAAcACAAJAAAABgAHAAoACQAKAAcACAAGAAsACgALAAYACwAMAAgACwAKAA0ADAALAA0ACgAJAA4ADwAOAAkACQAQAA8ADwARAA4AEQAPABAACgAOABIAEwAOABEADgATABQAFAASAA4AEwARABUAFQAUABMAFgAKABIADQAKABYAFwAVABEAFwARABgAEAAYABEAFwAZABUADAAVABkADAAaABUAGgAUABUAGwAZABcAGwAcABkAHQAbABcAGwAdABwAHgAZABwAGQAeAB8AGQAfAAwAHgAcACAAIAAfAB4AHwAgAB0AIQAgABwAIQAdACAAIQAcAB0AHQAiAB8AIgAMAB8AFwAiAB0AIgAIAAwAIgAXACMACAAiACMAIwAXACQAJAAXABgAIwAlAAgAJQAmAAgACAAmAAkAJgAQAAkAJwAlACYAIwAlACcAJQAnACYAJQAjACcAKAAmABAAJgAoABAAJgAoACcAKAAmACcAEAApACgAKQAQACgAKQAQABgAEAApABgAKgAYACkAGAAqACkAKQAoACoAKAApACoAGAAqACQAKgAYACQAKwAqACgAKgArACgAJAArACoAKwAkACoAKwAnACgAJwArACgAKwAkACMAJAArACMAKwAsACcALAArACcAIwAsACsALAAjACsALAAnACMAJwAsACMALQAuAC8ALgAtAC8ALgAUAC0ALgAvABQALwAuABQAFAAuAC0AFAASAC8AEgAUAC8ALQAaABQAGgAtABQALwASABYAEgAvABYAMAAWAC8AFgAwAC8AMAAvAC0ALwAwAC0AFgAwAA0AMAAWAA0ALQAaADEAGgAtADEAMAAxAC0AMQAwAC0AMgAxABoAMQAyABoAMgAaAAwADQAyAAwAMQAyADMADQAzADAAMgAxADMAMwANADIADQAzADIAMwANADAAMAAzADEAMwAwADEA"),
+"name": "woodInner",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 52,
+"vertex_data": PackedByteArray("jRjHoWM4AAAAAAPB8ToAAGIyN95jOAAAFRJR6/E6AAAAAAPB3EYAABUSUevcRgAAYjI33mpJAACNGMehakkAANJA//8AAAAAHQr/fwAAAAAdCv9///8AANJA/////wAAPa7/////AABqU3/U//8AANJAAAD//wAA0kAAAAAAAACvUyEsAAAAAD2uAAAAAAAAalN/K///AAA9rgAA//8AAKabfyv//wAA8+T/f///AABML/9///8AAPPk/38AAAAAYZshLAAAAAAa1RKliMkAAMS//3///wAAGtUSpV26AAD//4XUUr0AABa+7NpdugAA//+F1JPGAAAWvuzaiMkAAPTxX/WTxgAA9PFf9VK9AAA9rv//AAAAAGGb3dMAAAAAOr//fwAAAACvU93TAAAAANYv/38AAAAA2loXwzYHAAAtPv9/NgcAANpa5zw2BwAANZTnPDYHAADjsP9/NgcAADWUF8M2BwAAUbH/f8j4AABtlGU8yPgAAKNaZTzI+AAAvj3/f8j4AABtlJnDyPgAAKabf9T//wAAo1qZw8j4AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_anrhb"]
+resource_name = "log_Mesh log"
+_surfaces = [{
+"aabb": AABB(-0.109243855, -5.636549e-13, -0.355, 0.23396102, 0.17320509, 0.71),
+"attribute_data": PackedByteArray("wZj+ZFGQJmz6h0xe65JMWwaSi4j4bYuI5oukfg2kZ2sYdKR+zZdna/FbZ2sGkkNOMWhna+aLKlgYdCpY+G1DTv//IYAAACGAAAB7Xv//e17EYL9SQlkMX9lKNlRuT7VMYzgHWvE6qE/cRqhPakkHWqxCbEmhRXhadjZ4Wms5bEnxOr9p3Ea/adxG3nTxOt50vV4LUWZW5V72TbxXzFMKTpaiE14ulOpoq4ydXAKek1YGkouI+G2LiM+Lf34NpGdrL3R/fp+XZ2vxW2drBpJDTl9oZ2vPi09YL3RPWPhtQ04AAHte//97Xv//IYAAACGArEKgc2s5oHNrOf1qrEL9apS2oGUiuUFbDcVBW5vHoGUGkv//+G3///htFxEGkhcR+G0XEQaSFxEGkv//+G3//wAAIYAAAHtedjZidv//IYB2NjpooUVidv//e16hRTpok8aYUYjJpGJduqRiUr2YUf//e17//yGAakldZwAAe15qSUB3YzhdZwAAIYBjOEB3"),
+"format": 34896613399,
+"index_count": 204,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAGAAUABgAJAAcABQAKAAgACQALAAcACgAMAAgACQANAAsACgAOAAwADQAOAAsACgAPAA4ADwALAA4AEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAuAC0ALgAxAC8ALQAyADAAMQAzAC8AMgA0ADAAMQA1ADMAMgA2ADQANQA2ADMAMgA3ADYANwAzADYAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgATABNAE4ATgBPAEwAUABOAE0ATgBRAE8ATQBSAFAAUQBTAE8AUgBTAFAAUgBPAFMAVABVAFYAVgBXAFQAWABZAFoAWgBbAFgAXABaAFkAWgBdAFsAWQBeAFwAXQBfAFsAXgBfAFwAXgBbAF8A"),
+"material": SubResource("StandardMaterial3D_wj1ly"),
+"name": "woodBark",
+"primitive": 3,
+"uv_scale": Vector4(27.952755, 29.952755, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("AAADwfE6yveNGMehYzjK92IyN95jOMr3FRJR6/E6yvc9rgAA//8AgNJAAAD//wCAppt/K///AIDz5P9///8AgGpTfyv//wCAxL//f///AIAdCv9///8AgD2u/////wCATC//f///AICmm3/U//8AgGpTf9T//wCA0kD/////AIA9rgAAAAC6wj2uAAD//7rC8+T/f///usLz5P9/AAC6wha+7Npduj/6GtUSpV26P/r//4XUUr0/+vTxX/VSvT/6jRjHoWM4bcYAAAPB8TptxgAAA8HcRm3GjRjHoWpJbcb//4XUUr2AxxrVEqVduoDHGtUSpYjJgMf//4XUk8aAxxUSUevxOrrCFRJR69xGusIAAAPB3Ea6wgAAA8HxOrrCYjI33mpJdImNGMehakl0iQAAA8HcRnSJFRJR69xGdIn//4XUk8aghhrVEqWIyaCGFr7s2ojJoIb08V/1k8aghtJAAAAAAP//Pa4AAAAA//+vUyEsAAD//x0K/38AAP//YZshLAAA///WL/9/AAD///Pk/38AAP//0kD//wAA//86v/9/AAD//69T3dMAAP//YZvd0wAA//89rv//AAD//x0K/38AALrCHQr/f///usLSQAAA//+6wtJAAAAAALrC//+F1FK9usL//4XUk8a6wvTxX/WTxrrC9PFf9VK9usJiMjfeaknVzhUSUevcRtXOFRJR6/E61c5iMjfeYzjVzj2u//////+/0kD//////7/SQP//AAD/vz2u//8AAP+/Pa4AAAAA///SQAAAAAD//9JAAAD/////Pa4AAP/////z5P9///+6wj2u/////7rCGtUSpYjJusLz5P9/AAC6wha+7NqIybrCGtUSpV26usI9rv//AAC6wha+7NpdurrC9PFf9ZPGas0WvuzaiMlqzRa+7NpdumrN9PFf9VK9as3SQP////+6wh0K/3///7rCYjI33mpJusLSQP//AAC6wo0Yx6FqSbrCYjI33mM4usIdCv9/AAC6wo0Yx6FjOLrCs4Bb+LOAW/izgFv4s4Bb+P9/////f////3////9/////f////3////9/////f////3////9/////f////3///6ppqSyqaaksqmmpLKppqSxShVoAUoVaAFKFWgBShVoArURW4q1EVuKtRFbirURW4t1gQz7dYEM+3WBDPt1gQz5UllXTVJZV01SWVdNUllXTzayozs2sqM7NrKjOzayozrGwey2xsHstsbB7LbGwey3/f////3////9/////f////3////9/////f////3////9/////f////3////9///9WU6rpVlOq6VZTqulWU6rpqKxUFqisVBaorFQWqKxUForMRSaKzEUmisxFJorMRSb///9/////f////3////9//3//P/9//z//f/8//3//P6isVBaorFQWqKxUFqisVBaorFQWqKxUFqisVBaorFQWI6W3tSOlt7Ujpbe1I6W3tVSWVdNUllXTVJZV01SWVdNUllXTVJZV01SWVdNUllXT")
+}, {
+"aabb": AABB(-0.109243855, -5.636549e-13, -0.355, 0.23396102, 0.17320509, 0.71),
+"attribute_data": PackedByteArray("UZAmbMGY/mT6h0xe65JMWwqTZ2uEict6enbLevRsZ2uEiQNcenYDXISJy3oKk2drenbLevRsZ2uEiQNcenYDXIjx9Zc16reTY+/AggL4wII16reTiPH1l2PvwIIC+MCC+G2LiAaSi4jmi6R+DaRnaxh0pH7Nl2dr8VtnawaSQ04xaGdr5osqWBh0Klj4bUNOAAAhgP//IYAAAHte//97XkJZDF/EYL9S2Uo2VG5PtUzxOqhPYzgHWtxGqE9qSQdaoUV4WqxCbEl2NnhaazlsSXYOpkTJFeRImxDaWfwH2lnJFeRIdg6mRJsQ2ln8B9pZL3TZCM+L2QhyiZYQjHaWEM+L2QgvdNkIcomWEIx2lhDcRr9p8Tq/adxG3nTxOt50ZlblXr1eC1H2TbxXzFMKTrQQxlkQCMZZng5rRPMVsEgQCMZZtBDGWZ4Oa0TzFbBILpTqaJaiE16rjJ1cAp6TVvhti4gGkouIz4t/fg2kZ2svdH9+n5dna/FbZ2sGkkNOX2hna8+LT1gvdE9Y+G1DTnKJvePPi3rrL3R664x2vePPi3rrcom94y90euuMdr3jAvjaWWPv2lk16uRIiPGmRGPv2lkC+NpZNerkSIjxpkTzFeWTng4qmBAIz4K0EM+Cng4qmPMV5ZMQCM+CtBDPgnp2lRAYdNUI5ovVCISJlRAYdNUIenaVEOaL1QiEiZUQ5otU6xh0VOt6dpPjhImT4xh0VOvmi1TrenaT44SJk+P//3teAAB7Xv//IYAAACGA5ZJna3KJrXqMdq16GW1na3KJIVyMdiFccomteuWSZ2uMdq16GW1na3KJIVyMdiFcazmgc6xCoHNrOf1qrEL9aiK5QVuUtqBlDcVBW5vHoGUL6rBIYPFrRO73xllK78ZZYPFrRAvqsEju98ZZSu/GWUrvz4Lu98+CYPEqmAvq5ZPu98+CSu/PgmDxKpgL6uWT+G3//waS///4bRcRBpIXEQaSFxH4bRcRBpL///ht//8AAHteAAAhgHY2Ynb//yGAdjY6aKFFYnb//3teoUU6aPwHwIKbEMCCyRW3k3YO9ZebEMCC/AfAgskVt5N2DvWXiMmkYpPGmFFduqRiUr2YUf//IYD//3teakldZwAAe15qSUB3YzhdZwAAIYBjOEB3"),
+"format": 34896613399,
+"index_count": 396,
+"index_data": PackedByteArray("AAABAAIAAwACAAEABAAFAAYABgAHAAQABwAIAAQABwAJAAgACgALAAwADQAMAAsADgANAAsADwANAA4AEAARABIAEgATABAAFAAVABYAFwAWABUAGAAZABoAGwAaABkAGgAcABgAHQAaABsAHgAYABwAHwAdABsAIAAeABwAIQAdAB8AIgAeACAAIgAhAB8AIwAeACIAHwAjACIAJAAlACYAJwAmACUAKAApACoAKwAqACkALAAtAC4ALwAuAC0AMAAxADIAMwAyADEANAA1ADYANgA3ADQAOAA5ADoAOwA6ADkAPAA9AD4APgA/ADwAQABBAEIAQwBCAEEARABFAEYARwBGAEUASABJAEoASwBKAEkATABNAE4ATgBPAEwAUABRAFIAUwBSAFEAVABVAFYAVwBWAFUAWABZAFoAWwBaAFkAWgBcAFgAXQBaAFsAXgBYAFwAXwBdAFsAYABeAFwAYQBdAF8AYgBeAGAAYgBhAF8AYwBeAGIAXwBjAGIAZABlAGYAZgBnAGQAaABpAGoAawBqAGkAbABtAG4AbgBvAGwAcABxAHIAcwByAHEAdAB1AHYAdgB3AHQAeAB5AHoAewB6AHkAfAB9AH4AfgB/AHwAgACBAIIAgwCCAIEAhACFAIYAhgCHAIQAiACJAIoAiwCKAIkAjACNAI4AjwCOAI0AkACRAJIAkgCTAJAAkwCUAJAAkwCVAJQAlgCXAJgAmQCYAJcAmgCZAJcAmwCZAJoAnACdAJ4AnwCeAJ0AoAChAKIAowCiAKEApAClAKYApgCnAKQAqACpAKoAqwCqAKkArACtAK4ArgCvAKwAsACxALIAswCyALEAtAC1ALYAtwC2ALUAuAC5ALoAuwC6ALkAvAC9AL4AvwC+AL0AvgDAALwAwQC+AL8AwgC8AMAAwwDBAL8AvwDCAMMAwwDCAMAAxADFAMYAxgDHAMQAyADJAMoAywDKAMkAzADNAM4AzwDOAM0A0ADRANIA0wDSANEA0gDUANAA1QDSANMA1gDQANQA1wDVANMA0wDWANcA1wDWANQA"),
+"material": SubResource("StandardMaterial3D_7hbit"),
+"name": "woodInner",
+"primitive": 3,
+"uv_scale": Vector4(27.952755, 29.952755, 0, 0),
+"vertex_count": 216,
+"vertex_data": PackedByteArray("jRjHoWM4eAAAAAPB8Tp4AGIyN95jOHgAFRJR6/E6eABRsf9/yPgAgG2UZTzI+ACAo1plPMj4AIC+Pf9/yPgAgG2UmcPI+ACAo1qZw8j4AIBtlGU8yPgAAFGx/3/I+AAAo1plPMj4AAC+Pf9/yPgAAG2UmcPI+AAAo1qZw8j4AACvUyEsAAC82Npa5zw2B7zYLT7/fzYHvNjWL/9/AAC82Npa5zw2B6cIr1MhLAAApwgtPv9/NgeoCNYv/38AAKgI0kAAAP//AAA9rgAA//8AAKabfyv//wAA8+T/f///AABqU38r//8AAMS//3///wAAHQr/f///AAA9rv////8AAEwv/3///wAAppt/1P//AABqU3/U//8AANJA/////wAAPa4AAP///w49rgAAAAD/DvPk/3////8O8+T/fwAA/w4a1RKlXbo7ABa+7NpdujsA//+F1FK9OwD08V/1Ur07AAAAA8HxOicXjRjHoWM4JxcAAAPB3EYnF40Yx6FqSScXGtUSpV26DRn//4XUUr0NGRrVEqWIyQ0Z//+F1JPGDRlhm93TAAC82DWUF8M2B7zY47D/fzYHvNg6v/9/AAC82DWUF8M2B6gIYZvd0wAAqAjjsP9/NgeoCDq//38AAKcIYZvd0wAA//+vU93TAAD//9paF8M2B///NZQXwzYH//+vU93TAAAAAGGb3dMAAAAA2loXwzYHAAA1lBfDNgcAABUSUevcRv8OFRJR6/E6/w4AAAPB3Eb/DgAAA8HxOv8OjRjHoWpJqgRiMjfeakmqBAAAA8HcRqoEFRJR69xGqgS+Pf9/yPjfq0wv/3///9+ralN/1P//36ujWpnDyPjfq0wv/3///xQQvj3/f8j4FBBqU3/U//8UEKNamcPI+BQQGtUSpYjJSwP//4XUk8ZLAxa+7NqIyUsD9PFf9ZPGSwM9rgAAAAAAANJAAAAAAAAAr1MhLAAAAAAdCv9/AAAAAGGbISwAAAAA1i//fwAAAADz5P9/AAAAANJA//8AAAAAOr//fwAAAACvU93TAAAAAGGb3dMAAAAAPa7//wAAAADaWuc8Ngf//69TISwAAP//YZshLAAA//81lOc8Ngf//69TISwAAAAA2lrnPDYHAABhmyEsAAAAADWU5zw2BwAA1i//fwAAvNgtPv9/Nge82NpaF8M2B7zYr1Pd0wAAvNgtPv9/NgenCNYv/38AAKcI2loXwzYHpwivU93TAACnCKNaZTzI+N+ralN/K///36tML/9////fq749/3/I+N+ralN/K///FBCjWmU8yPgUEEwv/3///xQQvj3/f8j4FBCjWpnDyPjWqmpTf9T//9aqppt/1P//1qptlJnDyPjWqmpTf9T//9Yqo1qZw8j41iqmm3/U///WKm2UmcPI+NYqppt/K///1qpqU38r///WqqNaZTzI+NaqbZRlPMj41qpqU38r///WKqabfyv//9Yqo1plPMj41iptlGU8yPjWKh0K/3////8OHQr/fwAA/w7SQAAA////DtJAAAAAAP8OLT7/fzYH///aWuc8Ngf//zWU5zw2B///47D/fzYH///aWhfDNgf//zWUF8M2B///2lrnPDYHAAAtPv9/NgcAADWU5zw2BwAA47D/fzYHAADaWhfDNgcAADWUF8M2BwAA//+F1JPG/w7//4XUUr3/DvTxX/WTxv8O9PFf9VK9/w4VElHr3EaAI2IyN95qSYAjFRJR6/E6gCNiMjfeYziAI22UmcPI+N+rppt/1P//36vEv/9////fq1Gx/3/I+N+rppt/1P//FBBtlJnDyPgUEMS//3///xQQUbH/f8j4FBBRsf9/yPjfq8S//3///9+rppt/K///36ttlGU8yPjfq8S//3///xQQUbH/f8j4FBCmm38r//8UEG2UZTzI+BQQ0kD//////z89rv//////P9JA//8AAP8/Pa7//wAA/z/SQAAAAAAAAD2uAAAAAAAA0kAAAP//AAA9rgAA//8AAD2u//////8O8+T/f////w4a1RKliMn/DvPk/38AAP8OFr7s2ojJ/w4a1RKlXbr/Dj2u//8AAP8OFr7s2l26/w46v/9/AAC82OOw/382B7zYNZTnPDYHvNhhmyEsAAC82OOw/382B6cIOr//fwAApwg1lOc8NgenCGGbISwAAKcIFr7s2ojJuCH08V/1k8a4IRa+7Npdurgh9PFf9VK9uCEdCv9/////DtJA//////8OYjI33mpJ/w7SQP//AAD/Do0Yx6FqSf8OYjI33mM4/w4dCv9/AAD/Do0Yx6FjOP8OXQbR9F0G0fRdBtH0XQbR9P9/////f////3////9/////f////3///////3////9/////f////3////9/////f1qhswtaobMLWqGzC1qhswvnWHFv51hxb+dYcW/nWHFv////f////3////9/////f////3////9/////f////3////9/////f////3////9/3/BwON/wcDjf8HA43/BwONp3U3vad1N72ndTe9p3U3uhtLqWobS6lqG0upahtLqWfee/M33nvzN9578zfee/M6ReS/SkXkv0pF5L9KReS/QXp42QF6eNkBenjZAXp42QGq///xqv//8ar///Gq////9/Gq//fxqv/38ar/9/Gq8fD47HHw+Oxx8PjscfD47HrABfjKwAX4ysAF+MrABfjCFfjTIhX40yIV+NMiFfjTKG9hBNhvYQTYb2EE2G9hBNxQiof8UIqH/FCKh/xQiof/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9/49D/f+PQ/3/j0P9/49D/f+RQ/3/kUP9/5FD/f+RQTHRbIUx0WyFMdFshTHRbIXDvFydw7xcncO8XJ3DvFyeMst0gjLLdIIyy3SCMst0g7zKHdu8yh3bvMod27zKHdgAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/39vuB6Pb7gej2+4Ho9vuB6P/3////9/////f////3////9/////f////3//f/9//3//f/9//3//f/9//3//f/9/j0fgcI9H4HCPR+Bwj0fgcFlRTF1ZUUxdWVFMXVlRTF1yTSHfck0h33JNId9yTSHfD813iQ/Nd4kPzXeJD813id2gcc3doHHN3aBxzd2gcc14Ce+yeAnvsngJ77J4Ce6yAAD/fwAA/38AAP9/AAD/f/9//7//f/+//3//v/9//7+PR+Bwj0fgcI9H4HCPR+Bwj0fgcI9H4HCPR+Bwj0fgcLKLo96yi6Pesouj3rKLo96OEOfYjhDn2I4Q59iOEOfY4SBv0OEgb9DhIG/Q4SBv0B8PjscfD47HHw+Oxx8PjscfD47HHw+Oxx8PjscfD47H")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o5o51")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kvfow"]
+points = PackedVector3Array(0.12471716, 0.14377244, 0.19570872, 0.12471716, 0.14377244, 0.17006364, 0.11186947, 0.16599952, 0.19570872, 0.04998979, 0.17320509, 0.35500005, 0.09998362, 0.08658559, 0.35500005, 0.11186947, 0.16599952, 0.17006364, 0.09998362, 0.08658559, -0.355, 0.04998979, 0.17320509, -0.355, -0.050020754, 0.17320509, 0.35500005, 0.04998979, -5.636549e-13, 0.35500005, 0.04998979, -5.636549e-13, -0.355, -0.050020754, 0.17320509, -0.355, -0.100014575, 0.08658559, 0.35500005, -0.09273192, 0.15920085, -0.15852681, -0.050020754, -5.636549e-13, 0.35500005, -0.050020754, -5.636549e-13, -0.355, -0.100014575, 0.08658559, -0.355, -0.09273192, 0.15920085, -0.19153875, -0.109243855, 0.13058199, -0.15852681, -0.109243855, 0.13058199, -0.19153875)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8val"]
+resource_name = "woodBark"
+albedo_color = Color(0.9482425, 0.7443257, 0.6190008, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bp0e"]
+resource_name = "woodInner"
+albedo_color = Color(0.98256004, 0.92759997, 0.87210315, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pu53c"]
+_surfaces = [{
+"aabb": AABB(-0.5, -2.2559732e-17, -0.2527415, 1, 0.41671944, 0.54932165),
+"format": 34896613377,
+"index_count": 264,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAgAEAAAABAACAAMABQABAAAAAQAFAAMAAAAEAAYAAwAGAAQABgAHAAAAAAAHAAUABwAGAAgABQAHAAgACQAGAAMACQAIAAYAAwAFAAoACgAJAAMABQAIAAsACwAKAAUADAAIAAkADQAJAAoACQAOAAwADwANAAoAEAAPAAoADQAPABEAEQAPABAAEQASAA0ADQASABMAEwASABEAEQAUABMAEAAUABEAEwAVAA0AFQATABQACQANABUAFAAQABUAFgAJABUAFQAQABYADgAJABYAEAAKABcAFwAWABAAFgAYAA4AFwAKABkAFgAXABoAGQAKAAsADgAYABsADgAbABwAHQAbABgADAAOABwAHgAdABgAHAAeAAwAHwAMAB4AHgAYAB8ADAAfACAAIAAfABgAGAAWACAAGgAgABYAIAAIAAwACAAgACEAIgAgABoAIgAhACAAGgALACIACwAIACMACwAjACIAJAALABoAJQAjAAgAIQAlAAgACwAkABkAJgAjACUAJwAiACMAIwAmACcAIQAiACcAJQAoACYAKAAlACEAJwAmACgAIQApACgAKAApACcAJwApACEAGgAqACQAKgAaABcAJAAqACsAKwAZACQAKwAsABkALQArACoALAAuABkALwAuAC0AKgAvAC0ALwAZAC4AFwAvACoAGQAvABcA"),
+"name": "woodBark",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("Zb1E/9aKAACasv//1ooAAJqy//8udwAAu60evEhvAABlvUT/LncAALutHrzEkQAAq8DXukhvAACrwNe6xJEAAGXmS7gzsQAAZeZLuF06AACZGR3G4S8AAJkZHcavuwAA//8KxB26AADVcsRzcjQAAP//CsRzMQAA5l/Ec3ozAADmX05GejMAAAll/mkAAAAA1G/+aY0AAADUbxRQjQAAAAllFFAAAAAA1XJORnI0AABl5qQbXToAAJkZ0g3hLwAA///lD3MxAAAAAPDTZCUAAJkZ0g2vuwAA///vqUJFAAD//++pTqYAAP//ACpCRQAA//8AKk6mAAD//+UPHboAAGXmpBszsQAAdEzGSRW5AADdMsZJZLoAAN0yNIdkugAAAADw0yzGAAB0TDSHFbkAABY5/3n//wAAFjn7Vv//AACsR/95P/8AAKxH+1Y//wAAAAAAACzGAAAAADi13q4AAAAAOLWyPAAAAAC3Ht6uAAAAALcesjwAAAAAAABkJQAA")
+}, {
+"aabb": AABB(-0.5, 0.05, -0.122499995, 1, 0.24499999, 0.24499999),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgAEAAAAAAAFAAMABAACAAYAAwAFAAcABgAHAAQABwAGAAMA"),
+"name": "woodInner",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8zE8vsAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAD//zMTMxMAAP//y+zL7AAAAAD//wAAAAD//8vsMxMAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_syryg"]
+resource_name = "log_large_Mesh log_large"
+_surfaces = [{
+"aabb": AABB(-0.5, -2.2559732e-17, -0.2527415, 1, 0.41671944, 0.54932165),
+"attribute_data": PackedByteArray("/3RJvP90QbJEf0GyRH9JvFu6iCV0vUNAcqvDPxewPyUHSABdXmM3WV5j0WoHSAhneI1VoH2fVaBdmwC7F5EAu12b2kZ9n4VheI2FYReR2kaCVJA+f0IQP5hFQyTcT/ojmZewUXG8zVZxvFxkmZd5aQBOVGGnNVRhizpKPW1ISj1tSM1WbUhcZIs6XGSLOs1WizpNw6c1RJ8ATkSfbUhNwxBXeWkfMlxkHzLNVhBXsFFlgwVFYHEFRf90WipEf1oqAKr6MwCqCobTnd8//lX6M9OdJXorYt8//lUKhitiJXpi4rCAgh9We32f0Wpi4lQ5eI3Ran2fN1mCH64+eI03WXlbxySFpMckYHF4rvNgI+Nlg3iuYHESwAufI+NlgxLAXZsAXV2bCGcXkQhnF5EAXYa+CGdCo9FqQqM3WYa+AF1LXOJ/S1wiOqRmxnWzo+J/pGY+RFqZxnWzoyI6Wpk+RP+KYRyejgw3mXwMN7qAYRyzo/gCC58wG/NgMBtLXPgCgBpWe7YB4n+2ASI6gBquPvUYsIAAAAqGAAD6M/UYVDn///oz//8KhgnnsIAJ51Q5eVthGP5VAAAAqgAAhaRhGEj+IjpI/uJ/fuVWe37lrj5LXLH582B64QufeuGzo7H5fOCuPnzgVnsATnlpAE6wUac1eWmnNbBRnB2wgJwdVDmFpK/hAKoQ+v5VEPp5W6/hC5+iJoWk/uR5W/7k82CiJg=="),
+"format": 34896613399,
+"index_count": 264,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAAyADEAMgA1ADMAMQA2ADQANQA3ADMANgA3ADQANgAzADcAOAA5ADoAOgA7ADgAPAA6ADkAOgA9ADsAOQA+ADwAPQA/ADsAPgA/ADwAPwA+ADsAQABBAEIAQgBDAEAARABCAEEAQgBFAEMAQQBGAEQARQBHAEMARgBHAEQARgBDAEcASABJAEoASgBLAEgATABNAE4ATgBPAEwAUABRAFIAUgBTAFAAVABSAFEAUgBVAFMAUQBWAFQAVQBXAFMAVgBXAFQAVgBTAFcAWABZAFoAWgBbAFgAXABdAF4AXgBfAFwAYABhAGIAYgBjAGAAZABlAGYAZgBnAGQAaABpAGoAagBrAGgAbABtAG4AbgBvAGwAcABxAHIAcgBzAHAAdAB1AHYAdgB3AHQAeAB5AHoAegB7AHgAfAB6AHkAewB9AHgAfAB5AH4AfwB4AH0AfwB9AHwAfgB/AHwAgACBAIIAggCDAIAAhACFAIYAhgCHAIQA"),
+"material": SubResource("StandardMaterial3D_m8val"),
+"name": "woodBark",
+"primitive": 3,
+"uv_scale": Vector4(41.391396, 42.37296, 0, 0),
+"vertex_count": 136,
+"vertex_data": PackedByteArray("Zb1E/9aKq9Sasv//1oqr1Jqy//8ud6vUZb1E/y53q9RlvUT/1opshavA17rEkWyFu60evMSRbIWasv//1opshQll/mkAAFHH5l/Ec3ozUcfmX05GejNRxwllFFAAAFHH1XLEc3I0If/mX8RzejMh/wll/mkAACH/1G/+aY0AIf8JZRRQAAAh/+ZfTkZ6MyH/1XJORnI0If/UbxRQjQAh/7utHrxIb9L/q8DXukhv0v9lvUT/LnfS/5qy//8ud9L/3TI0h2S6bLkWOf95//9suRY5+1b//2y53TLGSWS6bLl0TMZJFbk0ut0yxklkujS6Fjn7Vv//NLqsR/tWP/80uqxH/3k//ySBrEf7Vj//JIEWOftW//8kgRY5/3n//ySBFjn/ef//NLrdMjSHZLo0unRMNIcVuTS6rEf/eT//NLp0TMZJFbn3uqxH+1Y///e6rEf/eT//97p0TDSHFbn3uqvA17pIbyHAq8DXusSRIcBlvUT/1oohwGW9RP8udyHAAADw0yzG/78AAAAALMb/vwAAOLXerv+/AADw02Ql/78AALce3q7/vwAAOLWyPP+/AAAAAGQl/78AALcesjz/v5kZ0g3hL9n+ZeakG1062f7mX05GejPZ/pkZHcbhL9n+1XJORnI02f7mX8RzejPZ/mXmS7hdOtn+1XLEc3I02f6ZGR3Gr7ur1JkZHcbhL6vUu60evMSRq9Rl5ku4M7Gr1LutHrxIb6vUq8DXusSRq9Rl5ku4XTqr1KvA17pIb6vUCWX+aQAA2f4JZRRQAADZ/tRvFFCNANn+1G/+aY0A2f7UbxRQjQBHxNVyTkZyNEfE1XLEc3I0R8TUb/5pjQBHxP//5Q8duv+///8KxB26/7///wAqTqb/v///5Q9zMf+////vqU6m/7///wAqQkX/v///CsRzMf+////vqUJF/7+asv//1opKwLutHrzEkUrAu60evEhvSsCasv//LndKwP//CsQdugjRZeZLuDOxCNFl5ku4XToI0f//CsRzMQjRZeakG106TPj//+UPczFM+P//CsRzMUz4ZeZLuF06TPiZGdINr7sDiQAAAAAsxgOJAADw0yzGA4mZGR3Gr7sDiQAA8NNkJfr2AAAAAGQl+vaZGdIN4S/69pkZHcbhL/r2mRkdxq+7VNAAAPDTLMZU0AAA8NNkJVTQmRkdxuEvVND//wrEHbqyh///5Q8durKHZeakGzOxsodl5ku4M7Gyh///5Q9zMQjRZeakG106CNFl5qQbM7EI0f//5Q8dugjRZeZLuDOxJIFl5qQbM7EkgXRMxkkVuSSBdEw0hxW5JIHdMsZJZLokgd0yNIdkuiSBmRnSDa+7JIGZGR3Gr7skgZkZ0g3hL1TQAAAAAGQlVNAAAAAALMZU0JkZ0g2vu1TQZeakG106q9SZGdIN4S+r1JkZ0g2vu6vUZeakGzOxq9SG1EMqhtRDKobUQyqG1EMqfPxBfHz8QXx8/EF8fPxBfP9/////f////3////9////gu9QA4LvUAOC71ADgu9QAKn/hOyp/4Tsqf+E7Kn/hOwuJBAALiQQAC4kEAAuJBAD/f////3////9/////f///wgP7fcID+33DA/t9wwP7ff9/AAD/fwAA/38AAP9/AAD7/Tx8+/08fPv9PHz7/Tx8/38AAP9/AAD/fwAA/38AACKNkQYijZEGIo2RBiKNkQb/f////3////9/////f////3////9//v//f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAhtRDKobUQyqG1EMqhtRDKobUQyqG1EMqhtRDKobUQyr/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAVolQ7VaJUO1WiVDtVolQ7eGnO7Dhpzuw4ac7sOGnO7D/f////3////9/////f////38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AADEzmInxM5iJ8TOYifEzmIn/3/+//9/////f/7//3/+/zswHdg7MB3YOzAd2DswHdj/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAJ1YxE6dWMROnVjETp1YxE67VYdUu1WHVLtVh1S7VYdU")
+}, {
+"aabb": AABB(-0.5, 0.05, -0.122499995, 1, 0.24499999, 0.24499999),
+"attribute_data": PackedByteArray("iZreCzif///GYP//dWXeC///MT7///55DwGCdQ8BrUJ1Zfr+xmDaCjif2gqJmvr+7/6CdQAA/nkAADE+7/6tQg=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwA"),
+"material": SubResource("StandardMaterial3D_4bp0e"),
+"name": "woodInner",
+"primitive": 3,
+"uv_scale": Vector4(39.54064, 41.291103, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8zE8vs5tQAAAAA///m1AAAAAAAAObU//8zEzMT5tQAAP////8//wAAAAD//z////8zE8vsP////8vsy+w/////y+wzE+bUAAD//wAA5tQAAP/////m1P//y+zL7ObU//8zEzMTv4AAAAAAAAC/gAAA//8AAL+A///L7DMTv4BmqjCrZqowq2aqMKtmqjCr/3////9/////f////3///zArl9UwK5fVMCuX1TArl9X/f////3/+//9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pu53c")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b0lc3"]
+points = PackedVector3Array(-0.105422854, 0.13032681, -0.2527415, -0.5, -2.2559732e-17, -0.17251557, -0.105422854, 0.17250456, -0.2527415, -0.06323415, 0.13032681, -0.2516123, -0.5, -2.2559732e-17, 0.17247733, -0.5, 0.34496832, -0.17251557, 0.5, 0.025861407, -0.14665186, -0.06323415, 0.17250456, -0.2516123, -0.220047, 0.14158508, 0.29496703, -0.27701646, 0.14158508, 0.29658017, -0.5, 0.34496832, 0.17247733, 0.5, 0.025861407, 0.14661363, 0.19763118, 0.41671947, 0.002992034, 0.23981988, 0.41549572, 0.002992034, 0.5, 0.3191069, -0.14665186, -0.220047, 0.19856992, 0.29496703, -0.27701646, 0.19856992, 0.29658017, 0.5, 0.3191069, 0.14661363, 0.23981988, 0.41549572, 0.045148283, 0.19763118, 0.41671947, 0.045148283)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krbhm"]
 resource_name = "colormap"
@@ -907,250 +1125,486 @@ shadow_mesh = SubResource("ArrayMesh_1w4s0")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_co8x0"]
 points = PackedVector3Array(-0.5, 0.11998533, -0.5, -0.5, 0.15749267, -0.5, -0.38009006, 0, -0.5, -0.5, 0.11998533, 0.5, -0.5, 0.19498093, -0.34710258, 0.5, 0.19498093, -0.5, -0.38009006, 0, 0.5, 0.37989426, 0, -0.5, -0.5, 0.15749267, 0.5, -0.5, 0.19498093, 0.3470047, 0.5, 0.19498093, 0.5, 0.5, 0.11998533, -0.5, 0.37989426, 0, 0.5, 0.5, 0.11998533, 0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkhd7"]
+resource_name = "woodBark"
+albedo_color = Color(0.9482425, 0.7443257, 0.6190008, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pcpi1"]
+_surfaces = [{
+"aabb": AABB(-0.084714435, 2.0037067e-32, -0.12014924, 0.1694289, 1.247613, 0.2048637),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgABAAMAAgAEAAAABQAAAAQAAAAFAAMABgAEAAIABAAGAAUAAgAHAAYAAwAHAAIABQAGAAgACAAGAAcACQAHAAMABwAJAAgAAwAKAAkACgADAAUACwAIAAkADAAJAAoACQAMAAsACAANAAUABQANAAoADQAIAAsADgAKAA0ACgAOAAwACwAPAA0ADQAPAA4AEAAPAAsAEQAOAA8ADwAQABEADAAOABEACwASABAAEgALAAwAEQAQABIADAATABIAEgATABEAEQATAAwA"),
+"name": "woodBark",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("E+4AABk7AADrEQAAGTsAAOsRAAAt8QAAAACxDUcsAAAT7gAALfEAAP//sQ1HLAAA//+xDf//AAAAALEN//8AAI7iN0mm5wAAcB03SabnAABwHTdJoEQAAO7ICbKieAAAEDcJsqJ4AACO4jdJoEQAABA3CbIAAAAA7sgJsgAAAADiuP//TGoAABxH//9MagAA4rj//2TIAAAcR///ZMgAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bkxir"]
+resource_name = "tree_palmDetailedTall_Mesh tree_palmDetailedTall"
+_surfaces = [{
+"aabb": AABB(-0.084714435, 2.0037067e-32, -0.12014924, 0.1694289, 1.247613, 0.2048637),
+"attribute_data": PackedByteArray("YjIFe5zNBXuczU2KYjJNihuo8gBrs1gpk0xYKeNX8gBrs5kofcX4XoE6+F6TTJkoG6jghuNX4IbjV/t+G6j7fn3Ffl2BOn5dJpnlJ///5ScmmdonJ1UAAF+lAAD//9onP9pGfL8lRnyBOsldfcXJXT/aN3qczVOBYjJTgb8lN3o/2jd6nM1TgWIyU4G/JTd6YjJTgb8lN3o/2jd6nM1Tgb8lN3o/2jd6nM1TgWIyU4Frs9omfcW6XIE6ulyTTNom2GblJ33Ffl2BOn5dAADlJ33FyV0/2kZ8vyVGfIE6yV19xcldP9pGfL8lRnyBOsldfcXJXT/aRny/JUZ8gTrJXRuozQNrs6Ask0ygLONXzQOfWgAA16oAANhm2icAANon"),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQA"),
+"material": SubResource("StandardMaterial3D_nkhd7"),
+"name": "woodBark",
+"primitive": 3,
+"uv_scale": Vector4(9.46057, 96.116066, 0, 0),
+"vertex_count": 72,
+"vertex_data": PackedByteArray("E+4AABk7///rEQAAGTv//+sRAAAt8f//E+4AAC3x///iuP//ZMjHhu7ICbKieMeGEDcJsqJ4x4YcR///ZMjHhu7ICbKieAOHjuI3SabnA4dwHTdJpucDhxA3CbKieAOH4rj//2TI/78cR///ZMj/vxxH//9Mav+/4rj//0xq/7+O4jdJoEQCwI7iN0mm5wLA7sgJsqJ4AsDuyAmyAAACwO7ICbKieAHA4rj//2TIAcDiuP//TGoBwO7ICbIAAAHA//+xDUcsCsD//7EN//8KwI7iN0mm5wrAjuI3SaBECsAAALENRyz//+sRAAAZO///E+4AABk7/////7ENRyz/////sQ3//ymHE+4AAC3xKYfrEQAALfEphwAAsQ3//ymHE+4AAC3xT8D//7EN//9PwP//sQ1HLE/AE+4AABk7T8AAALENRyxPwAAAsQ3//0/A6xEAAC3xT8DrEQAAGTtPwBA3CbIAAP//cB03SaBE//+O4jdJoET//+7ICbIAAP//EDcJsqJ4AsBwHTdJpucCwHAdN0mgRALAEDcJsgAAAsBwHTdJpucKwAAAsQ3//wrAAACxDUcsCsBwHTdJoEQKwHAdN0mgRP//AACxDUcs/////7ENRyz//47iN0mgRP//juI3Sabnu4L//7EN//+7ggAAsQ3//7uCcB03Sabnu4IcR///TGr//xA3CbIAAP//7sgJsgAA///iuP//TGr//xxH//9MagHAHEf//2TIAcAQNwmyongBwBA3CbIAAAHA/3//P/9//z//f/8//3//PwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////fxyEDgIchA4CHIQOAhyEDgJ6g70BeoO9AXqDvQF6g70BC4gGBAuIBgQLiAYEC4gGBF6K//9eiv//Xor//16K//8AAP9/AAD/fwAA/38AAP9/Z3YvE2d2LxNndi8TZ3YvE9BsZ/bQbGf20Gxn9tBsZ/aChv//gob//4KG//+Chv//DYLi+w2C4vsNguL7DYLi+wWE8vcFhPL3BYTy9wWE8vf/f9f7/3/X+/9/1/v/f9f7////f////3////9/////f/9/QPP/f0Dz/39A8/9/QPO8gYT8vIGE/LyBhPy8gYT8")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pcpi1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwgqa"]
+resource_name = "leafsGreen"
+albedo_color = Color(0.4376298, 0.90041584, 0.8381871, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v3s70"]
+_surfaces = [{
+"aabb": AABB(-0.5171645, 0, -0.5171645, 1.034329, 0.19373748, 1.034329),
+"format": 34896613377,
+"index_count": 450,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAgAEAAAABQAEAAIAAgADAAUAAAAEAAYABgAHAAAACAAGAAQABwAGAAgABAAFAAgAAAAHAAkACAAJAAcACQAKAAAACgAJAAgACAAFAAoACgABAAAACgAFAAsACwAMAAoADQALAAUADAALAA0AAwANAAUACgAMAA4AAQAKAA4ADQAOAAwAAQAPAAMADgAPAAEAEAANAAMADgANABAAEQADAA8AAwARABAADwAOABIAEAASAA4ADwATABEAEgATAA8AEQATABQAFQATABIAFAATABUAEgAWABUAFAAXABEAGAARABcAGQAQABEAEQAYABkAGgAVABYAFQAbABQAGwAVABoAFgAcABoAGgAdABsAHAAeABoAHQAaAB4AHAAWAB8AFAAbAB8AGwAdACAAIAAfABsAHwAgABwAIQAfABYAHwAhABQAIgAcACAAHAAiAB4AHQAjACAAIAAjACIAHQAkACMAHgAkAB0AIgAjACUAJQAjACQAJgAkAB4AJAAmACUAHgAnACYAJQAmACcAJwAeACIAJQAoACIAIgAoACcAJwAoACUAFgASACEAKQAUACEAFAApACoAKgAXABQAKwAXACoALAAXACsAFwAsABgAKgAtACsAIQArAC0ALgAqACkALQAqAC4AKQAvAC4ALgAwAC0AMQAuAC8AMAAuADEALwApADIAMAAzAC0ANAAtADMALQA0ACEAKQA0ADIAIQA0ACkAMwA1ADQANAA1ADIANQAzADAAMAAyADUAMgA2AC8ALwA2ADEANwAyADAANgAyADcAMAA4ADcAOAAwADEANwA5ADYAMQA2ADkANwA4ADoAMQA6ADgAOgA5ADcAOQA6ADEAOwArACEAIQA8ADsAPQA7ADwAKwA7AD0APAA+AD0AEgA+ADwAPQA+ABIAPAAhABIAEgAQAD0AIQASABAAPQAQACsAEAArACEAKwAQABkAGQA/ACsAKwA/ACwAPwAZAEAAQAAZABgAQQAsAD8AGAAsAEEAQABCAD8AQQA/AEIAQAAYAEMAQQBDABgARABAAEMAQgBAAEQAQwBBAEUARQBBAEIARQBGAEMAQwBGAEQAQgBHAEUARABHAEIARgBFAEgASABFAEcASQBHAEQARwBJAEgARABKAEkASABJAEoASgBEAEYASABLAEYARgBLAEoASgBLAEgA"),
+"name": "leafsGreen",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 76,
+"vertex_data": PackedByteArray("GucTW/BrAACaw5yY8GsAAJrDnJgOlAAAj6CcmA6UAAAa5xNbDpQAABrniZ0OlAAA//8AAJyJAAD//wAAinEAAP///x+ciQAA////H4pxAAAa54md8GsAAJrD//8OlAAAmsP///BrAACPoP//DpQAAI+g///wawAAj6CcmPBrAAAKj5y4Co8AAAqPOnEKjwAACo+cuPRwAAAKjzpx9HAAAPRwOnH0cAAADpScmG9fAAAOlP//b18AAPRwOnEKjwAADpScmI+gAAAOlP//j6AAAA6UnJhkPAAA8GucmG9fAAAOlP//ZDwAAPBrnJhkPAAADpQTW+QYAADwa///b18AAPBr//9kPAAA9HCcuPRwAAAOlImd5BgAAPBriZ3kGAAA8GsTW+QYAACKcf8fAAAAAIpxAAAAAAAAnIkAAAAAAACcif8fAAAAAG9fnJjwawAAb1+cmA6UAAD0cJy4Co8AAPBrnJiPoAAAb1///w6UAABkPJyYDpQAAGQ8nJjwawAA5BiJnQ6UAADkGBNbDpQAAOQYiZ3wawAAZDz//w6UAABvX///8GsAAGQ8///wawAA5BgTW/BrAAAAAP8fYnYAAAAA/x90jgAAAAAAAGJ2AAAAAAAAdI4AAHd1iN2HigAAd3WI3Xd1AACHiojdh4oAAIeKiN13dQAA8Gv//4+gAAAOlP//msMAAPBrnJiawwAA8Gv//5rDAAAOlJyYmsMAAA6UiZ0a5wAA8GsTWxrnAAAOlBNbGucAAPBriZ0a5wAAYnYAAP//AABidv8f//8AAHSO/x///wAAdI4AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_41jky"]
+resource_name = "tree_palmDetailedTall_Mesh leafs"
+_surfaces = [{
+"aabb": AABB(-0.5171645, 0, -0.5171645, 1.034329, 0.19373748, 1.034329),
+"attribute_data": PackedByteArray("5mpe8eZqqcYYlanGGJVe8Tj4VYA4+DCH1Nusc9TbbWUYlYrU5mqK1OZqc6wYlXOs5mrXORiV1zkYle5h5mruYeZq7mHmatc5GJXXORiV7mG6pntmkJPsbpCToF+6plNQ43Xx7OZqw8UYlcPFM4/x7NGP+nXRj2eYLXBnmC1w+nUAAFWA1RptZdUarHMAADCHRFlTUG5soF9ubOxuRFl7ZtUarHMAADCHAABVgNUabWXlOD1wv109cL9dJJ7lOCSeLXCBYeZqSUgYlUlI0Y+BYRiVirIYlVDg5mpQ4OZqirLmaihYGJUoWNGP6W0tcOltGJVe8eZqXvHmaqnGGJWpxhKLA2bRj3ZvLXB2b+x0A2bmasPFGJXDxTOP8ezjdfHs5Th7Zo4TrHOOE21l5ThTUL9de2a/XVNQ5mpzrBiVc6wYlYrU5mqK1BiVUODmalDg5mqKshiVirLmanfdGJV33RuK///LcP//GJWpxhiVXvHmal7x5mqpxm5soF9ubOxuRFl7ZkRZU1Azj1WAM48wh+N1MIfjdVWAGJXDxTOP8ezjdfHs5mrDxbqme2aQk+xukJOgX7qmU1Bw7G1lcOyscxnHe2Y/ontmP6JTUBnHU1ASiwNm0Y92by1wdm/sdANmEos9k+x0PZPsdCR7Eoske+N18ezmasPFGJXDxTOP8ewYlShY0Y/pbS1w6W3maihYuqZ7ZpCT7G6Qk6BfuqZTUOU4U1C/XVNQv117ZuU4e2aOE21ljhOsc5CToF+6plNQuqZ7ZpCT7G7maklIGJVJSNGPgWEtcIFh5mp33RiVd90biv7/y3D+/25s7G5EWXtmRFlTUG5soF/VGqxzAAAwhwAAVYDVGm1l5mqpxhiVqcYYlV7x5mpe8RKLA2bRj3ZvLXB2b+x0A2Zw7G1lcOyscxnHe2Y/ontmP6JTUBnHU1AzjzCH43Uwh+N1VYAzj1WA0Y+BYS1wgWHmaklIGJVJSD+iJJ4/oj1wGcc9cBnHJJ7U221lOPhVgDj4MIfU26xzbmygX25s7G5EWXtmRFlTUDj4MIfU26xz1NttZTj4VYC/XVNQv117ZuU4e2aOE21l5ThTUI4TrHMtcOlt5mooWBiVKFjRj+lty3D//+Zqd90YlXfdG4r//9GPdm8tcHZv7HQDZhKLA2bRj2eYLXBnmC1w+nXRj/p1GcdTUHDsbWVw7KxzGcd7Zj+iU1A/ontmM49VgDOPMIfjdTCH43VVgBnHe2Y/ontmP6JTUBnHU1Bw7KxzcOxtZeZqirIYlYqyGJVQ4OZqUOA4+FWAOPgwh9TbrHPU221l5mpJSBiVSUjRj4FhLXCBYb9dU1C/XXtm5Th7Zo4TbWXlOFNQjhOscz+iPXAZxz1wGccknj+iJJ4biv7/y3D+/+Zqd90YlXfd43VVgDOPVYAzjzCH43Uwh9UarHMAADCHAABVgNUabWUYlVDg5mpQ4OZqirIYlYqy5TgknuU4PXC/XT1wv10kni1w6W3maihYGJUoWNGP6W0="),
+"format": 34896613399,
+"index_count": 450,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgASwBMAEgASwBNAEwATgBPAFAAUABRAE4AUgBTAFQAVABVAFIAVgBXAFgAWABZAFYAWgBbAFwAXABdAFoAXgBfAGAAYABhAF4AYgBjAGQAZABlAGIAZgBnAGgAaABpAGYAagBrAGwAbABtAGoAbgBvAHAAcABxAG4AcQByAG4AcgBzAG4AdAB1AHYAdgB3AHQAeAB5AHoAegB7AHgAfAB9AH4AfgB/AHwAgACBAIIAggCDAIAAhACFAIYAhgCHAIQAiACJAIoAigCLAIgAiwCMAIgAiwCNAIwAjgCPAJAAkACRAI4AkgCTAJQAlACVAJIAlgCXAJgAmACZAJYAmgCbAJwAnACdAJoAngCfAKAAoAChAJ4AogCjAKQApAClAKIApgCnAKgAqACpAKYAqgCrAKwArACtAKoArQCuAKoArgCvAKoAsACxALIAsgCzALAAtAC1ALYAtgC3ALQAuAC5ALoAugC7ALgAvAC9AL4AvgC/ALwAwADBAMIAwgDDAMAAxADFAMYAxgDHAMQAyADJAMoAygDLAMgAywDMAMgAywDKAM0AzgDPANAA0ADRAM4A0gDTANQA1ADVANIA1gDXANgA2ADZANYA2gDbANwA3ADdANoA3gDfAOAA4ADhAN4A4QDiAN4A4QDjAOIA5ADlAOYA5gDnAOQA6ADpAOoA6gDrAOgA6wDsAOgA6wDtAOwA7gDvAPAA8ADxAO4A8gDzAPQA9AD1APIA9gD3APgA+AD5APYA+gD7APwA/AD9APoA/QD+APoA/QD8AP8AAAEBAQIBAgEDAQABBAEFAQYBBgEHAQQBCAEJAQoBCgELAQgBDAENAQ4BDgEPAQwBEAERARIBEgETARABFAEVARYBFgEXARQBGAEZARoBGgEbARgB"),
+"material": SubResource("StandardMaterial3D_mwgqa"),
+"name": "leafsGreen",
+"primitive": 3,
+"uv_scale": Vector4(38.718388, 35.59056, 0, 0),
+"vertex_count": 284,
+"vertex_data": PackedByteArray("GucTW/BrX86aw5yY8GtfzprDnJgOlF/OGucTWw6UX87///8fnIkvkP//AACciS+QGucTWw6UL5Aa54mdDpQvkA6U//+aw/+/8Gv//5rD/7/wa///j6D/vw6U//+PoP+/DpScmGQ8///wa5yYZDz///BrnJhvX///DpScmG9f///wa///b1//v/Br//9kPP+/DpT//2Q8/78OlP//b1//vw6UnJhvX6O0Co86cfRwo7QKj5y49HCjtA6U//9vX6O0Ynb/H///KKHwa4mdGucooQ6UiZ0a5yihdI7/H///KKH0cDpx9HD///RwOnEKj///Co86cQqP//8Kjzpx9HD//4px/x8AAAPJ8GuJneQYA8nwaxNb5BgDyYpxAAAAAAPJ8Gv//29fo7T0cJy49HCjtPRwOnH0cKO08GucmG9fo7QOlBNbGuf6tnSOAAD///q2dI7/H///+rYOlImdGuf6tprDnJjwa///j6CcmPBr//+PoJyYDpT//5rDnJgOlP//9HCcuPRwcKXwa///b19wpQ6U//9vX3ClCo+cuPRwcKXwa///ZDz///BriZ3kGP//DpSJneQY//8OlP//ZDz//w6UnJhvX///8GucmG9f///0cDpx9HD//wqPOnH0cP//DpQTW+QYNLPwaxNb5Bg0s/BrnJhkPDSzDpScmGQ8NLOHiojdh4qOlwqPnLgKj46X9HCcuAqPjpd3dYjdh4qOlw6UiZ3kGP//8GuJneQY//+Kcf8fAAD//5yJ/x8AAP//DpScmJrD/78OlBNbGuf/vw6UiZ0a5/+/DpT//5rD/78OlJyYj6D/vw6U//+PoP+/DpScmI+g///wa5yYj6D///BrnJiaw///DpScmJrD//8OlImdGud6rPBriZ0a53qs8Gv//5rDeqwOlP//msN6rBrnE1vwa+zIGucTWw6U7Mj//wAAnInsyP//AACKcezIZDycmPBrX87kGBNb8GtfzuQYE1sOlF/OZDycmA6UX870cJy4Co9bi/RwOnEKj1uLb1+cmA6UW4tvX///DpRbi4px/x8AAP//inEAAAAA//+ciQAAAAD//5yJ/x8AAP//5BiJnQ6UZ8YAAP8fdI5nxgAA/x9idmfG5BiJnfBrZ8ZvX5yY8Guj9PRwOnH0cKP09HCcuPRwo/RvX///8Guj9OQYiZ3wa///5BgTW/Br//9kPJyY8Gv//29fnJjwa///b1////Br//9kPP//8Gv//3d1iN2Hik/D9HCcuAqPT8P0cJy49HBPw3d1iN13dU/Dh4qI3YeK/793dYjdh4r/v3d1iN13df+/h4qI3Xd1/7////8fnIlnxhrniZ0OlGfGGueJnfBrZ8b///8finFnxo+gnJjwa6rMCo86cfRwqswKjzpxCo+qzI+gnJgOlKrMj6CcmA6UW4sKjzpxCo9biwqPnLgKj1uLj6D//w6UW4vwa///ZDz/v/Br//9vX/+/8GucmG9f/7/wa5yYZDz/v/BriZ3kGP+/8GsTW+QY/7/0cJy4Co9ay/Br//+PoFrL8GucmI+gWsv0cDpxCo9ayw6U//+PoP//8Gv//4+g///0cJy4Co///wqPnLgKj///DpQTWxrn///waxNbGuf//2J2AAD/////dI4AAP////8KjzpxCo9ayw6UnJiPoFrLDpT//4+gWssKj5y4Co9ayxrnE1vwa/r2//8AAIpx+vb///8finH69hrniZ3wa/r2DpScmJrD///wa5yYmsP///BrE1sa5///DpQTWxrn//93dYjdd3X///RwnLj0cP//Co+cuPRw//+Hiojdd3X//xrniZ0OlACAGucTWw6UAICaw5yYDpQAgI+gnJgOlACAj6D//w6UAICaw///DpQAgP//AACKcf+///8AAJyJ/7////8fnIn/v////x+Kcf+/Co+cuAqPD8gKj5y49HAPyI+g///waw/Ij6D//w6UD8iPoP//DpT/v4+g///wa/+/msP///Br/7+aw///DpT/v/BriZ0a58+vYnb/H///z69idgAA///Pr/BrE1sa58+vCo+cuPRwo/QKjzpx9HCj9I+gnJjwa6P0j6D///Bro/SciQAAAAAv0A6UE1vkGC/QDpSJneQYL9Ccif8fAAAv0I+g///wa///j6CcmPBr//+aw5yY8Gv//xrniZ3wa///msP///Br//8a5xNb8Gv///RwOnEKj8Kv8GucmI+gwq8OlJyYj6DCrwqPOnEKj8KvinEAAAAAhKfwaxNb5BiEpw6UE1vkGISnnIkAAAAAhKcKj5y49HBPwwqPnLgKj0/Dh4qI3YeKT8OHiojdd3VPwwqPnLgKj/+/9HCcuAqP/7/0cJy49HD/vwqPnLj0cP+/8Gv//5rD/7/wa4mdGuf/v/BrE1sa5/+/8GucmJrD/7/wa///j6D/v/BrnJiPoP+/dI7/H///AIB0jgAA//8AgGJ2AAD//wCAYnb/H///AIAOlJyYZDz/vw6UnJhvX/+/DpT//29f/78OlP//ZDz/vw6UE1vkGP+/DpSJneQY/7+aw///DpQdy5rD///wax3LGueJnfBrHcsa54mdDpQdywAA/x9ids/vAAAAAGJ2z+/kGBNb8GvP7+QYiZ3wa8/vb1///w6UD8hvX///8GsPyPRwnLj0cA/I9HCcuAqPD8hvX///DpQAgG9fnJgOlACAZDycmA6UAIDkGImdDpQAgGQ8//8OlACA5BgTWw6UAIBvX5yY8Gv//2Q8nJjwa///ZDycmA6U//9vX5yYDpT//wAAAABiduzIAAAAAHSO7MjkGBNbDpTsyOQYE1vwa+zIAAD/H2J2/78AAP8fdI7/vwAAAAB0jv+/AAAAAGJ2/7/kGBNbDpQEiQAAAAB0jgSJAAD/H3SOBInkGImdDpQEieQYiZ0OlB3L5BiJnfBrHctkPP//8Gsdy2Q8//8OlB3LZDz//w6U/79kPP//8Gv/v29f///wa/+/b1///w6U/7/0cDpx9HCqzG9fnJjwa6rMb1+cmA6Uqsz0cDpxCo+qzCs0FdorNBXaKzQV2is0Fdr/fwAA/38AAP9/AAD/fwAA////f////3////9/////f/9//z//f/8//3//P/9//z////9/////f////3////9//38AAP9/AAD/fwAA/38AAP///3////9/////f////3//f/8//3//P/9//z//f/8//3////9//v//f/7//3////9/////f/7//3////9/////fwAA/38AAP9/AAD/fwAA/3//P/9//z//f/8//3//P////3////9/////f////3//f6DP/3+gz/9/oM//f6DPErP//xKz//8Ss///ErP//wAA/38AAP9/AAD/fwAA/3////9/////f////3////9//39x2f9/cdn/f3HZ/39x2f9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9//z//f/8//3//P/9//z////9/////f////3////9/UT4n31E+J99RPiffUT4n3xVa00sVWtNLFVrTSxVa00v/fwAA/38AAP9/AAD/fwAA/3////9/////f////3///6CdvcSgnb3EoJ29xKCdvcT/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f///3pdB0N6XQdDel0HQ3pdB0P///3////9/////f////39Au6AdQLugHUC7oB1Au6AdfVsDSX1bA0l9WwNJfVsDSf9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3+g1f9/oNX/f6DV/3+g1Sus//8rrP//K6z//yus////fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAN61///etf//3rX//961////f6fi/3+n4v9/p+L/f6fi/3////9/////f////3////9/////f////38AAP9/AAD/fwAA/38AANSfVcDUn1XA1J9VwNSfVcD///9/////f////3////9//3////9//v//f/7//3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f///AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3+9r94Xva/eF72v3he9r94X////f////3////9/////f/9/////f////3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/38AAP9/AAA0xhojNMYaIzTGGiM0xhoj/3////9/////f////3///6m/1B+pv9Qfqb/UH6m/1B//f////3////9/////f////3////9/////f/8//3//P/9//z//f/8/KF+uQShfrkEoX65BKF+uQf9/////f////3////9/////f/7//3////9//v//f/7/GaPKuRmjyrkZo8q5GaPKuf///3////9/////f////3/7Nn3b+zZ92/s2fdv7Nn3b")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_v3s70")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ah8t"]
+_surfaces = [{
+"aabb": AABB(-0.5171645, 0, -0.5171645, 1.034329, 0.19373748, 1.034329),
+"format": 34896613377,
+"index_count": 450,
+"index_data": PackedByteArray("AAABAAIAAwACAAEABAABAAAAAgAFAAAABgAEAAAAAAAHAAYABwAAAAUACAAGAAcABAAGAAgABQAJAAcABwAJAAgACAAJAAUACgAFAAIABQAKAAgACAAKAAQAAgADAAoACwAEAAoABAALAAwAAQAEAAwACgANAAsADAALAA0ADgANAAoADQAOAAwAAwAOAAoADAAPAAEAAQAPAAMAEAAMAA4ADwAMABAAEQAOAAMADgARABAAEgADAA8AAwASABEADwATABIAEAATAA8AFAASABMAFQASABQAFgATABAAEgAVABcAFwARABIAGAATABYAEwAYABQAEAAZABYAGgARABcAFAAbABUAGwAUABoAFQAbABwAGgAUAB0AHQAUABgAHgAXABUAHAAbAB8AGgAfABsAHwAXAB4AFwAfABoAHgAVACAAHAAgABUAHgAhAB8AHAAfACEAIgAeACAAIQAeACIAIAAcACMAIwAcACEAIwAkACAAIAAkACIAIQAlACMAIgAlACEAJAAjACYAJgAjACUAJwAlACIAJQAnACYAIgAoACcAJgAnACgAKAAiACQAJgApACQAJAApACgAKAApACYAHQAqABoAKgAdACsAKwAdACwAGAAsAB0AKwAtACoALQAuACoAKgAuAC8AMAAvAC4ALgAtADAALwAxACoAGgAqADEAMQAvADAALAAxADAAMgAxACwAMQAyABoALAAYADIALAAzACsAMwAsADAANAArADMALQArADQAMAA1ADMAMwA1ADQANgAwAC0ANQAwADYALQA3ADYANwAtADQANgA4ADUANAA5ADcANgA3ADkAOQA0ADUAOQA4ADYANQA4ADkAEQAaADIAOgAaADIAOwARABoAGgA6ADsAEAARADsAMgAQABEAOwA8ABAAOwA6AD0APQA8ADsAEAA8AD0AMgA9ADoAPQAyABAAGQAQADIAMgA+ABkAPgAyABgAGAA/AD4AFgA/ABgAGQA+AEAAQAA+AD8AQQAWABkAPwAWAEEAQABCABkAGQBCAEEAPwBDAEAAQQBDAD8AQgBAAEQAQwBEAEAAQgBFAEEAQwBBAEUARABGAEIAQgBGAEUAQwBHAEQARQBHAEMARgBEAEgASABEAEcASQBHAEUARwBJAEgARQBKAEkASABJAEoASgBFAEYASABLAEYARgBLAEoASgBLAEgA"),
+"name": "leafsGreen",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 76,
+"vertex_data": PackedByteArray("GucTW/BrAACaw5yY8GsAAJrDnJgOlAAAj6CcmA6UAAAa54md8GsAABrnE1sOlAAA////H4pxAAD//wAAinEAAP///x+ciQAA//8AAJyJAAAa54mdDpQAAJrD///wawAAj6D///BrAACaw///DpQAAI+g//8OlAAAj6CcmPBrAAAKj5y49HAAAAqPnLgKjwAACo86cQqPAAAKjzpx9HAAAPRwOnEKjwAADpScmI+gAAAOlJyYb18AAA6U//+PoAAA9HA6cfRwAAAOlP//b18AAPRwnLgKjwAA8GucmI+gAADwa5yYmsMAAG9fnJgOlAAADpT//5rDAADwa///j6AAAA6UnJiawwAA8Gv//5rDAAAOlImdGucAAPBrE1sa5wAADpQTWxrnAADwa4mdGucAAGJ2AAD//wAAYnb/H///AAB0jv8f//8AAHSOAAD//wAAb1///w6UAABkPJyYDpQAAG9fnJjwawAA5BiJnQ6UAABkPP//DpQAAGQ8///wawAA5BiJnfBrAABvX///8GsAAPRwnLj0cAAAZDycmPBrAADkGBNbDpQAAOQYE1vwawAAAAD/H2J2AAAAAP8fdI4AAAAAAABidgAAAAAAAHSOAAB3dYjdh4oAAIeKiN2HigAAh4qI3Xd1AAB3dYjdd3UAAPBr//9vXwAA8GucmG9fAADwa///ZDwAAA6UnJhkPAAADpT//2Q8AADwa5yYZDwAAPBriZ3kGAAADpQTW+QYAAAOlImd5BgAAPBrE1vkGAAAinH/HwAAAACKcQAAAAAAAJyJAAAAAAAAnIn/HwAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_21uw0"]
+resource_name = "tree_palmDetailedTall_Mesh leafs2"
+_surfaces = [{
+"aabb": AABB(-0.5171645, 0, -0.5171645, 1.034329, 0.19373748, 1.034329),
+"attribute_data": PackedByteArray("5mpe8eZqqcYYlanGGJVe8Tj4VYA4+DCH1Nusc9TbbWUYlYrU5mqK1OZqc6wYlXOs5mrXORiV1zkYle5h5mruYRiV7mHmau5h5mrXORiV1zm6pntmkJPsbpCToF+6plNQ43Xx7OZqw8UYlcPFM4/x7C1w+nXRj/p10Y9nmC1wZ5gAAFWA1RptZdUarHMAADCHRFlTUG5soF9ubOxuRFl7ZtUarHMAADCHAABVgNUabWXlOD1wv109cL9dJJ7lOCSeLXCBYeZqSUgYlUlI0Y+BYeZqirIYlYqyGJVQ4OZqUODmaihYGJUoWNGP6W0tcOltGJVe8eZqXvHmaqnGGJWpxhKLA2bRj3ZvLXB2b+x0A2bmasPFGJXDxTOP8ezjdfHs5Th7Zo4TrHOOE21l5ThTUL9de2a/XVNQ5mpzrBiVc6wYlYrU5mqK1BiVUODmalDg5mqKshiVirLLcP//5mp33RiVd90biv//GJWpxhiVXvHmal7x5mqpxm5soF9ubOxuRFl7ZkRZU1Azj1WAM48wh+N1MIfjdVWAGJXDxTOP8ezjdfHs5mrDxbqme2aQk+xukJOgX7qmU1Bw7G1lcOyscxnHe2Y/ontmP6JTUBnHU1ASiwNm0Y92by1wdm/sdANmEos9k+x0PZPsdCR7Eoske+N18ezmasPFGJXDxTOP8ewYlShY0Y/pbS1w6W3maihYuqZ7ZpCT7G6Qk6BfuqZTUOU4U1C/XVNQv117ZuU4e2aOE21ljhOsc5CToF+6plNQuqZ7ZpCT7G7maklIGJVJSNGPgWEtcIFh5mp33RiVd90biv7/y3D+/25s7G5EWXtmRFlTUG5soF/VGqxzAAAwhwAAVYDVGm1l5mqpxhiVqcYYlV7x5mpe8RKLA2bRj3ZvLXB2b+x0A2Zw7G1lcOyscxnHe2Y/ontmP6JTUBnHU1AzjzCH43Uwh+N1VYAzj1WAGJVJSNGPgWEtcIFh5mpJSBnHJJ4/oiSeP6I9cBnHPXDU221lOPhVgDj4MIfU26xzbmygX25s7G5EWXtmRFlTUDj4MIfU26xz1NttZTj4VYC/XVNQv117ZuU4e2aOE21l5ThTUI4TrHMtcOlt5mooWBiVKFjRj+lty3D//+Zqd90YlXfdG4r//9GPdm8tcHZv7HQDZhKLA2bRj2eYLXBnmC1w+nXRj/p1GcdTUHDsbWVw7KxzGcd7Zj+iU1A/ontmM49VgDOPMIfjdTCH43VVgBnHe2Y/ontmP6JTUBnHU1Bw7KxzcOxtZeZqUODmaoqyGJWKshiVUOA4+FWAOPgwh9TbrHPU221lLXCBYeZqSUgYlUlI0Y+BYb9dU1C/XXtm5Th7Zo4TbWXlOFNQjhOscz+iPXAZxz1wGccknj+iJJ4YlXfdG4r+/8tw/v/manfd43VVgDOPVYAzjzCH43Uwh9UarHMAADCHAABVgNUabWUYlYqyGJVQ4OZqUODmaoqyv10knuU4JJ7lOD1wv109cC1w6W3maihYGJUoWNGP6W0="),
+"format": 34896613399,
+"index_count": 450,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgASwBMAEgASwBNAEwATgBPAFAAUABRAE4AUgBTAFQAVABVAFIAVgBXAFgAWABZAFYAWgBbAFwAXABdAFoAXgBfAGAAYABhAF4AYgBjAGQAZABlAGIAZgBnAGgAaABpAGYAagBrAGwAbABtAGoAbgBvAHAAcABxAG4AcQByAG4AcgBzAG4AdAB1AHYAdgB3AHQAeAB5AHoAegB7AHgAfAB9AH4AfgB/AHwAgACBAIIAggCDAIAAhACFAIYAhgCHAIQAiACJAIoAigCLAIgAiwCMAIgAiwCNAIwAjgCPAJAAkACRAI4AkgCTAJQAlACVAJIAlgCXAJgAmACZAJYAmgCbAJwAnACdAJoAngCfAKAAoAChAJ4AogCjAKQApAClAKIApgCnAKgAqACpAKYAqgCrAKwArACtAKoArQCuAKoArgCvAKoAsACxALIAsgCzALAAtAC1ALYAtgC3ALQAuAC5ALoAugC7ALgAvAC9AL4AvgC/ALwAwADBAMIAwgDDAMAAxADFAMYAxgDHAMQAyADJAMoAygDLAMgAywDMAMgAywDKAM0AzgDPANAA0ADRAM4A0gDTANQA1ADVANIA1gDXANgA2ADZANYA2gDbANwA3ADdANoA3gDfAOAA4ADhAN4A4QDiAN4A4QDjAOIA5ADlAOYA5gDnAOQA6ADpAOoA6gDrAOgA6wDsAOgA6wDtAOwA7gDvAPAA8ADxAO4A8gDzAPQA9AD1APIA9gD3APgA+AD5APYA+gD7APwA/AD9APoA/QD+APoA/QD8AP8AAAEBAQIBAgEDAQABBAEFAQYBBgEHAQQBCAEJAQoBCgELAQgBDAENAQ4BDgEPAQwBEAERARIBEgETARABFAEVARYBFgEXARQBGAEZARoBGgEbARgB"),
+"material": SubResource("StandardMaterial3D_mwgqa"),
+"name": "leafsGreen",
+"primitive": 3,
+"uv_scale": Vector4(38.718388, 35.59056, 0, 0),
+"vertex_count": 284,
+"vertex_data": PackedByteArray("GucTW/BrX86aw5yY8GtfzprDnJgOlF/OGucTWw6UX87///8fnIkvkP//AACciS+QGucTWw6UL5Aa54mdDpQvkA6U//+aw/+/8Gv//5rD/7/wa///j6D/vw6U//+PoP+/DpScmGQ8///wa5yYZDz///BrnJhvX///DpScmG9f//8OlP//b1//v/Br//9vX/+/8Gv//2Q8/78OlP//ZDz/vw6UnJhvX6O0Co86cfRwo7QKj5y49HCjtA6U//9vX6O0Ynb/H///KKHwa4mdGucooQ6UiZ0a5yihdI7/H///KKEKjzpx9HD///RwOnH0cP//9HA6cQqP//8KjzpxCo///4px/x8AAAPJ8GuJneQYA8nwaxNb5BgDyYpxAAAAAAPJ8Gv//29fo7T0cJy49HCjtPRwOnH0cKO08GucmG9fo7QOlBNbGuf6tnSOAAD///q2dI7/H///+rYOlImdGuf6tprDnJjwa///j6CcmPBr//+PoJyYDpT//5rDnJgOlP//9HCcuPRwcKXwa///b19wpQ6U//9vX3ClCo+cuPRwcKUOlP//ZDz///Br//9kPP//8GuJneQY//8OlImd5Bj//w6UnJhvX///8GucmG9f///0cDpx9HD//wqPOnH0cP//DpQTW+QYNLPwaxNb5Bg0s/BrnJhkPDSzDpScmGQ8NLOHiojdh4qOlwqPnLgKj46X9HCcuAqPjpd3dYjdh4qOlw6UiZ3kGP//8GuJneQY//+Kcf8fAAD//5yJ/x8AAP//DpScmJrD/78OlBNbGuf/vw6UiZ0a5/+/DpT//5rD/78OlJyYj6D/vw6U//+PoP+/DpScmI+g///wa5yYj6D///BrnJiaw///DpScmJrD//8OlImdGud6rPBriZ0a53qs8Gv//5rDeqwOlP//msN6rP//AACKcezIGucTW/Br7Mga5xNbDpTsyP//AACciezIZDycmPBrX87kGBNb8GtfzuQYE1sOlF/OZDycmA6UX870cJy4Co9bi/RwOnEKj1uLb1+cmA6UW4tvX///DpRbi4px/x8AAP//inEAAAAA//+ciQAAAAD//5yJ/x8AAP//5BiJnQ6UZ8YAAP8fdI5nxgAA/x9idmfG5BiJnfBrZ8ZvX5yY8Guj9PRwOnH0cKP09HCcuPRwo/RvX///8Guj9OQYiZ3wa///5BgTW/Br//9kPJyY8Gv//29fnJjwa///b1////Br//9kPP//8Gv//3d1iN2Hik/D9HCcuAqPT8P0cJy49HBPw3d1iN13dU/Dh4qI3YeK/793dYjdh4r/v3d1iN13df+/h4qI3Xd1/7////8fnIlnxhrniZ0OlGfGGueJnfBrZ8b///8finFnxo+gnJjwa6rMCo86cfRwqswKjzpxCo+qzI+gnJgOlKrMj6CcmA6UW4sKjzpxCo9biwqPnLgKj1uLj6D//w6UW4vwa///ZDz/v/Br//9vX/+/8GucmG9f/7/wa5yYZDz/v/BriZ3kGP+/8GsTW+QY/7/0cJy4Co9ay/Br//+PoFrL8GucmI+gWsv0cDpxCo9ayw6U//+PoP//8Gv//4+g///0cJy4Co///wqPnLgKj///DpQTWxrn///waxNbGuf//2J2AAD/////dI4AAP////8KjzpxCo9ayw6UnJiPoFrLDpT//4+gWssKj5y4Co9ayxrnE1vwa/r2//8AAIpx+vb///8finH69hrniZ3wa/r2DpScmJrD///wa5yYmsP///BrE1sa5///DpQTWxrn//93dYjdd3X///RwnLj0cP//Co+cuPRw//+Hiojdd3X//xrniZ0OlACAGucTWw6UAICaw5yYDpQAgI+gnJgOlACAj6D//w6UAICaw///DpQAgP//AACKcf+///8AAJyJ/7////8fnIn/v////x+Kcf+/j6D//w6UD8gKj5y4Co8PyAqPnLj0cA/Ij6D///BrD8iaw///DpT/v4+g//8OlP+/j6D///Br/7+aw///8Gv/v/BriZ0a58+vYnb/H///z69idgAA///Pr/BrE1sa58+vCo+cuPRwo/QKjzpx9HCj9I+gnJjwa6P0j6D///Bro/SciQAAAAAv0A6UE1vkGC/QDpSJneQYL9Ccif8fAAAv0I+g///wa///j6CcmPBr//+aw5yY8Gv//xrniZ3wa///msP///Br//8a5xNb8Gv///RwOnEKj8Kv8GucmI+gwq8OlJyYj6DCrwqPOnEKj8KvinEAAAAAhKfwaxNb5BiEpw6UE1vkGISnnIkAAAAAhKcKj5y49HBPwwqPnLgKj0/Dh4qI3YeKT8OHiojdd3VPwwqPnLgKj/+/9HCcuAqP/7/0cJy49HD/vwqPnLj0cP+/8Gv//5rD/7/wa4mdGuf/v/BrE1sa5/+/8GucmJrD/7/wa///j6D/v/BrnJiPoP+/dI7/H///AIB0jgAA//8AgGJ2AAD//wCAYnb/H///AIAOlJyYZDz/vw6UnJhvX/+/DpT//29f/78OlP//ZDz/vw6UE1vkGP+/DpSJneQY/78a54mdDpQdy5rD//8OlB3LmsP///BrHcsa54md8GsdywAA/x9ids/vAAAAAGJ2z+/kGBNb8GvP7+QYiZ3wa8/v9HCcuAqPD8hvX///DpQPyG9f///waw/I9HCcuPRwD8hvX///DpQAgG9fnJgOlACAZDycmA6UAIDkGImdDpQAgGQ8//8OlACA5BgTWw6UAIBvX5yY8Gv//2Q8nJjwa///ZDycmA6U//9vX5yYDpT//+QYE1vwa+zIAAAAAGJ27MgAAAAAdI7syOQYE1sOlOzIAAD/H2J2/78AAP8fdI7/vwAAAAB0jv+/AAAAAGJ2/7/kGBNbDpQEiQAAAAB0jgSJAAD/H3SOBInkGImdDpQEiWQ8//8OlB3L5BiJnQ6UHcvkGImd8Gsdy2Q8///wax3Lb1///w6U/79kPP//DpT/v2Q8///wa/+/b1////Br/7/0cDpx9HCqzG9fnJjwa6rMb1+cmA6Uqsz0cDpxCo+qzCs0FdorNBXaKzQV2is0Fdr/fwAA/38AAP9/AAD/fwAA////f////3////9/////f/9//z//f/8//3//P/9//z////9/////f////3////9//38AAP9/AAD/fwAA/38AAP///3////9/////f////3//f/8//3//P/9//z//f/8//3////9//v//f/7//3////9/////f/7//3////9/////fwAA/38AAP9/AAD/fwAA/3//P/9//z//f/8//3//P////3////9/////f////3//f6DP/3+gz/9/oM//f6DPErP//xKz//8Ss///ErP//wAA/38AAP9/AAD/fwAA/3////9/////f////3////9//39x2f9/cdn/f3HZ/39x2f9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9//z//f/8//3//P/9//z////9/////f////3////9/UT4n31E+J99RPiffUT4n3xVa00sVWtNLFVrTSxVa00v/fwAA/38AAP9/AAD/fwAA/3////9/////f////3///6CdvcSgnb3EoJ29xKCdvcT/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f///3pdB0N6XQdDel0HQ3pdB0P///3////9/////f////39Au6AdQLugHUC7oB1Au6AdfVsDSX1bA0l9WwNJfVsDSf9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3+g1f9/oNX/f6DV/3+g1Sus//8rrP//K6z//yus////fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAN61///etf//3rX//961////f6fi/3+n4v9/p+L/f6fi/3////9/////f////3////9/////f////38AAP9/AAD/fwAA/38AANSfVcDUn1XA1J9VwNSfVcD///9/////f////3////9//3////9//v//f/7//3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f///AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3+9r94Xva/eF72v3he9r94X////f////3////9/////f/9/////f////3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/38AAP9/AAA0xhojNMYaIzTGGiM0xhoj/3////9/////f////3///6m/1B+pv9Qfqb/UH6m/1B//f////3////9/////f////3////9/////f/8//3//P/9//z//f/8/KF+uQShfrkEoX65BKF+uQf9/////f////3////9/////f/7//3////9//v//f/7/GaPKuRmjyrkZo8q5GaPKuf///3////9/////f////3/7Nn3b+zZ92/s2fdv7Nn3b")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7ah8t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j00vj"]
+albedo_color = Color(0.78039217, 0.5647059, 0.4392157, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ucfcu"]
+material = SubResource("StandardMaterial3D_j00vj")
+top_radius = 0.0
+bottom_radius = 0.2
+height = 0.8
+radial_segments = 4
+
 [node name="tiles" type="Node3D"]
 
 [node name="arrow2" parent="." instance=ExtResource("1_co8x0")]
+visible = false
 
 [node name="arrows2" parent="." instance=ExtResource("2_jmm24")]
+visible = false
 
 [node name="barrel2" parent="." instance=ExtResource("3_kvfow")]
+visible = false
 
 [node name="bed2" parent="." instance=ExtResource("4_b0lc3")]
+visible = false
 
 [node name="bed_floor2" parent="." instance=ExtResource("5_y6oej")]
+visible = false
 
 [node name="block-grass-corner-low2" parent="." instance=ExtResource("6_53w1h")]
+visible = false
 
 [node name="block-grass-corner-overhang-low2" parent="." instance=ExtResource("7_3avit")]
+visible = false
 
 [node name="block-grass-corner-overhang2" parent="." instance=ExtResource("8_q0y0s")]
+visible = false
 
 [node name="block-grass-corner2" parent="." instance=ExtResource("9_nk6o3")]
+visible = false
 
 [node name="block-grass-curve-half2" parent="." instance=ExtResource("10_pl40v")]
+visible = false
 
 [node name="block-grass-curve-low2" parent="." instance=ExtResource("11_54282")]
+visible = false
 
 [node name="block-grass-curve2" parent="." instance=ExtResource("12_r5me4")]
+visible = false
 
 [node name="block-grass-edge2" parent="." instance=ExtResource("13_s1nbh")]
+visible = false
 
 [node name="block-grass-hexagon2" parent="." instance=ExtResource("14_mdvef")]
+visible = false
 
 [node name="block-grass-large-slope-narrow2" parent="." instance=ExtResource("15_ieb8c")]
+visible = false
 
 [node name="block-grass-large-slope-steep-narrow2" parent="." instance=ExtResource("16_s8m1p")]
+visible = false
 
 [node name="block-grass-large-slope-steep2" parent="." instance=ExtResource("17_0jb0e")]
+visible = false
 
 [node name="block-grass-large-slope2" parent="." instance=ExtResource("18_y6gpq")]
+visible = false
 
 [node name="block-grass-large-tall2" parent="." instance=ExtResource("19_e2tle")]
+visible = false
 
 [node name="block-grass-large2" parent="." instance=ExtResource("20_v7e2r")]
+visible = false
 
 [node name="block-grass-long2" parent="." instance=ExtResource("21_qawgo")]
+visible = false
 
 [node name="block-grass-low-hexagon2" parent="." instance=ExtResource("22_g3wqb")]
+visible = false
 
 [node name="block-grass-low-large2" parent="." instance=ExtResource("23_t2pjb")]
+visible = false
 
 [node name="block-grass-low-long2" parent="." instance=ExtResource("24_7yowx")]
+visible = false
 
 [node name="block-grass-low-narrow2" parent="." instance=ExtResource("25_ukrpc")]
+visible = false
 
 [node name="block-grass-low2" parent="." instance=ExtResource("26_61otv")]
+visible = false
 
 [node name="block-grass-narrow2" parent="." instance=ExtResource("27_ya32i")]
+visible = false
 
 [node name="block-grass-overhang-corner2" parent="." instance=ExtResource("28_q72sn")]
+visible = false
 
 [node name="block-grass-overhang-edge2" parent="." instance=ExtResource("29_ji4gb")]
+visible = false
 
 [node name="block-grass-overhang-hexagon2" parent="." instance=ExtResource("30_lmxvb")]
+visible = false
 
 [node name="block-grass-overhang-large-slope-narrow2" parent="." instance=ExtResource("31_2qif3")]
+visible = false
 
 [node name="block-grass-overhang-large-slope-steep-narrow2" parent="." instance=ExtResource("32_2tg5k")]
+visible = false
 
 [node name="block-grass-overhang-large-slope-steep2" parent="." instance=ExtResource("33_up0lx")]
+visible = false
 
 [node name="block-grass-overhang-large-slope2" parent="." instance=ExtResource("34_6ba3l")]
+visible = false
 
 [node name="block-grass-overhang-large-tall2" parent="." instance=ExtResource("35_sjo64")]
+visible = false
 
 [node name="block-grass-overhang-large2" parent="." instance=ExtResource("36_0afe7")]
+visible = false
 
 [node name="block-grass-overhang-long2" parent="." instance=ExtResource("37_v1w5q")]
+visible = false
 
 [node name="block-grass-overhang-low-hexagon2" parent="." instance=ExtResource("38_biw04")]
+visible = false
 
 [node name="block-grass-overhang-low-large2" parent="." instance=ExtResource("39_ljtsn")]
+visible = false
 
 [node name="block-grass-overhang-low-long2" parent="." instance=ExtResource("40_abtlr")]
+visible = false
 
 [node name="block-grass-overhang-low-narrow2" parent="." instance=ExtResource("41_ty5yl")]
+visible = false
 
 [node name="block-grass-overhang-low2" parent="." instance=ExtResource("42_sjfxo")]
+visible = false
 
 [node name="block-grass-overhang-narrow2" parent="." instance=ExtResource("43_i2mjb")]
+visible = false
 
 [node name="block-grass2" parent="." instance=ExtResource("44_rr06t")]
+visible = false
 
 [node name="block-moving-blue2" parent="." instance=ExtResource("45_4sk2t")]
+visible = false
 
 [node name="block-moving-large2" parent="." instance=ExtResource("46_g3u8o")]
+visible = false
 
 [node name="block-moving2" parent="." instance=ExtResource("47_njg2j")]
+visible = false
 
 [node name="block-snow-corner-low2" parent="." instance=ExtResource("48_w8pj6")]
+visible = false
 
 [node name="block-snow-corner-overhang-low2" parent="." instance=ExtResource("49_goqls")]
+visible = false
 
 [node name="block-snow-corner-overhang2" parent="." instance=ExtResource("50_hjvmj")]
+visible = false
 
 [node name="block-snow-corner2" parent="." instance=ExtResource("51_knva2")]
+visible = false
 
 [node name="block-snow-curve-half2" parent="." instance=ExtResource("52_airse")]
+visible = false
 
 [node name="block-snow-curve-low2" parent="." instance=ExtResource("53_80m1l")]
+visible = false
 
 [node name="block-snow-curve2" parent="." instance=ExtResource("54_g7igx")]
+visible = false
 
 [node name="block-snow-edge2" parent="." instance=ExtResource("55_wyycj")]
+visible = false
 
 [node name="block-snow-hexagon2" parent="." instance=ExtResource("56_a5feh")]
+visible = false
 
 [node name="block-snow-large-slope-narrow2" parent="." instance=ExtResource("57_u0x5p")]
+visible = false
 
 [node name="block-snow-large-slope-steep-narrow2" parent="." instance=ExtResource("58_011e1")]
+visible = false
 
 [node name="block-snow-large-slope-steep2" parent="." instance=ExtResource("59_lsrln")]
+visible = false
 
 [node name="block-snow-large-slope2" parent="." instance=ExtResource("60_iwv8m")]
+visible = false
 
 [node name="block-snow-large-tall2" parent="." instance=ExtResource("61_lm7hp")]
+visible = false
 
 [node name="block-snow-large2" parent="." instance=ExtResource("62_1bjmw")]
+visible = false
 
 [node name="block-snow-long2" parent="." instance=ExtResource("63_rguo1")]
+visible = false
 
 [node name="block-snow-low-hexagon2" parent="." instance=ExtResource("64_1v2x6")]
+visible = false
 
 [node name="block-snow-low-large2" parent="." instance=ExtResource("65_ksb68")]
+visible = false
 
 [node name="block-snow-low-long2" parent="." instance=ExtResource("66_kpevr")]
+visible = false
 
 [node name="block-snow-low-narrow2" parent="." instance=ExtResource("67_hlp02")]
+visible = false
 
 [node name="block-snow-low2" parent="." instance=ExtResource("68_s0ime")]
+visible = false
 
 [node name="block-snow-narrow2" parent="." instance=ExtResource("69_dlm1f")]
+visible = false
 
 [node name="block-snow-overhang-corner2" parent="." instance=ExtResource("70_u23db")]
+visible = false
 
 [node name="block-snow-overhang-edge2" parent="." instance=ExtResource("71_scx7p")]
+visible = false
 
 [node name="block-snow-overhang-hexagon2" parent="." instance=ExtResource("72_qst8l")]
+visible = false
 
 [node name="block-snow-overhang-large-slope-narrow2" parent="." instance=ExtResource("73_rralq")]
+visible = false
 
 [node name="block-snow-overhang-large-slope-steep-narrow2" parent="." instance=ExtResource("74_rpr26")]
+visible = false
 
 [node name="block-snow-overhang-large-slope-steep2" parent="." instance=ExtResource("75_r24f2")]
+visible = false
 
 [node name="block-snow-overhang-large-slope2" parent="." instance=ExtResource("76_rfsgx")]
+visible = false
 
 [node name="block-snow-overhang-large-tall2" parent="." instance=ExtResource("77_0wd43")]
+visible = false
 
 [node name="block-snow-overhang-large2" parent="." instance=ExtResource("78_ofkrm")]
+visible = false
 
 [node name="block-snow-overhang-long2" parent="." instance=ExtResource("79_mwf8v")]
+visible = false
 
 [node name="block-snow-overhang-low-hexagon2" parent="." instance=ExtResource("80_1nu1l")]
+visible = false
 
 [node name="block-snow-overhang-low-large2" parent="." instance=ExtResource("81_08usk")]
+visible = false
 
 [node name="block-snow-overhang-low-long2" parent="." instance=ExtResource("82_tndd6")]
+visible = false
 
 [node name="block-snow-overhang-low-narrow2" parent="." instance=ExtResource("83_re7jc")]
+visible = false
 
 [node name="block-snow-overhang-low2" parent="." instance=ExtResource("84_tx0bd")]
+visible = false
 
 [node name="block-snow-overhang-narrow2" parent="." instance=ExtResource("85_5ncvh")]
+visible = false
 
 [node name="block-snow2" parent="." instance=ExtResource("86_2fpgv")]
+visible = false
 
 [node name="bomb2" parent="." instance=ExtResource("87_2xav6")]
+visible = false
 
 [node name="bridge_center_stone2" parent="." instance=ExtResource("88_t242s")]
+visible = false
 
 [node name="bridge_center_stoneRound2" parent="." instance=ExtResource("89_ebeo5")]
+visible = false
 
 [node name="bridge_center_wood2" parent="." instance=ExtResource("90_yrc72")]
+visible = false
 
 [node name="bridge_center_woodRound2" parent="." instance=ExtResource("91_al5tv")]
+visible = false
 
 [node name="bridge_side_stone2" parent="." instance=ExtResource("92_wakvt")]
+visible = false
 
 [node name="bridge_side_stoneRound2" parent="." instance=ExtResource("93_80lmo")]
+visible = false
 
 [node name="bridge_side_wood2" parent="." instance=ExtResource("94_5fckr")]
+visible = false
 
 [node name="bridge_side_woodRound2" parent="." instance=ExtResource("95_3f8fk")]
+visible = false
 
 [node name="bridge_stone2" parent="." instance=ExtResource("96_twlvw")]
+visible = false
 
 [node name="bridge_stoneNarrow2" parent="." instance=ExtResource("97_wceea")]
+visible = false
 
 [node name="bridge_stoneRound2" parent="." instance=ExtResource("98_blr4l")]
+visible = false
 
 [node name="bridge_stoneRoundNarrow2" parent="." instance=ExtResource("99_gufvk")]
+visible = false
 
 [node name="bridge_wood2" parent="." instance=ExtResource("100_agcqs")]
+visible = false
 
 [node name="bridge_woodNarrow2" parent="." instance=ExtResource("101_c8h0g")]
+visible = false
 
 [node name="bridge_woodRound2" parent="." instance=ExtResource("102_td3f0")]
+visible = false
 
 [node name="bridge_woodRoundNarrow2" parent="." instance=ExtResource("103_3mqd8")]
+visible = false
 
 [node name="button-round2" parent="." instance=ExtResource("104_0x8c3")]
+visible = false
 
 [node name="button-square2" parent="." instance=ExtResource("105_553hv")]
+visible = false
 
 [node name="cactus_short2" parent="." instance=ExtResource("106_nt3ss")]
+visible = false
 
 [node name="cactus_tall2" parent="." instance=ExtResource("107_61076")]
+visible = false
 
 [node name="campfire_bricks2" parent="." instance=ExtResource("108_dctwg")]
+visible = false
 
 [node name="campfire_logs2" parent="." instance=ExtResource("109_d0fqh")]
+visible = false
 
 [node name="campfire_planks2" parent="." instance=ExtResource("110_pej16")]
+visible = false
 
 [node name="campfire_stones2" parent="." instance=ExtResource("111_dcrdx")]
+visible = false
 
 [node name="canoe2" parent="." instance=ExtResource("112_7klh0")]
+visible = false
 
 [node name="canoe_paddle2" parent="." instance=ExtResource("113_i1eoo")]
+visible = false
 
 [node name="chest2" parent="." instance=ExtResource("114_st8al")]
+visible = false
 
 [node name="cliff_blockCave_rock2" parent="." instance=ExtResource("115_8yjlh")]
+visible = false
 
 [node name="cliff_blockCave_stone2" parent="." instance=ExtResource("116_l1nn3")]
+visible = false
 
 [node name="cliff_blockDiagonal_rock2" parent="." instance=ExtResource("117_qow5o")]
+visible = false
 
 [node name="cliff_blockDiagonal_stone2" parent="." instance=ExtResource("118_5wwgb")]
+visible = false
 
 [node name="cliff_blockHalf_rock2" type="Node3D" parent="."]
+visible = false
 
 [node name="cliff_blockHalf_rock" type="MeshInstance3D" parent="cliff_blockHalf_rock2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 mesh = SubResource("ArrayMesh_25cw3")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_ucfcu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockHalf_rock2/cliff_blockHalf_rock"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
@@ -1160,11 +1614,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 shape = SubResource("ConvexPolygonShape3D_cdrbk")
 
 [node name="cliff_blockHalf_stone2" type="Node3D" parent="."]
+visible = false
 
 [node name="cliff_blockHalf_stone" type="MeshInstance3D" parent="cliff_blockHalf_stone2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 mesh = SubResource("ArrayMesh_0mjh1")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_0lrsf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockHalf_stone2/cliff_blockHalf_stone"]
 
@@ -1172,11 +1628,13 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_5hjuj")
 
 [node name="cliff_blockQuarter_rock2" type="Node3D" parent="."]
+visible = false
 
 [node name="cliff_blockQuarter_rock" type="MeshInstance3D" parent="cliff_blockQuarter_rock2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 mesh = SubResource("ArrayMesh_2caxb")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_p0uoy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockQuarter_rock2/cliff_blockQuarter_rock"]
 
@@ -1184,11 +1642,13 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_srrst")
 
 [node name="cliff_blockQuarter_stone2" type="Node3D" parent="."]
+visible = false
 
 [node name="cliff_blockQuarter_stone" type="MeshInstance3D" parent="cliff_blockQuarter_stone2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 mesh = SubResource("ArrayMesh_mjhl4")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_cdrbk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cliff_blockQuarter_stone2/cliff_blockQuarter_stone"]
 
@@ -1196,23 +1656,31 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_23kvv")
 
 [node name="cliff_blockSlopeHalfWalls_rock2" parent="." instance=ExtResource("123_pie3i")]
+visible = false
 
 [node name="cliff_blockSlopeHalfWalls_stone2" parent="." instance=ExtResource("124_7311i")]
+visible = false
 
 [node name="cliff_blockSlopeWalls_rock2" parent="." instance=ExtResource("125_n5o3s")]
+visible = false
 
 [node name="cliff_blockSlopeWalls_stone2" parent="." instance=ExtResource("126_k0721")]
+visible = false
 
 [node name="cliff_blockSlope_rock2" parent="." instance=ExtResource("127_sdvux")]
+visible = false
 
 [node name="cliff_blockSlope_stone2" parent="." instance=ExtResource("128_3w0ox")]
+visible = false
 
 [node name="cliff_block_rock2" type="Node3D" parent="."]
+visible = false
 
 [node name="cliff_block_rock" type="MeshInstance3D" parent="cliff_block_rock2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 mesh = SubResource("ArrayMesh_xj6b5")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_5hjuj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cliff_block_rock2/cliff_block_rock"]
 
@@ -1220,11 +1688,13 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_8op65")
 
 [node name="cliff_block_stone2" type="Node3D" parent="."]
+visible = false
 
 [node name="cliff_block_stone" type="MeshInstance3D" parent="cliff_block_stone2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 mesh = SubResource("ArrayMesh_wm4ys")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_srrst")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cliff_block_stone2/cliff_block_stone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
@@ -1234,366 +1704,579 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 shape = SubResource("ConvexPolygonShape3D_78wm2")
 
 [node name="cliff_cave_rock2" parent="." instance=ExtResource("131_t88g5")]
+visible = false
 
 [node name="cliff_cave_stone2" parent="." instance=ExtResource("132_s3ogt")]
+visible = false
 
 [node name="cliff_cornerInnerLarge_rock2" parent="." instance=ExtResource("133_10fik")]
+visible = false
 
 [node name="cliff_cornerInnerLarge_stone2" parent="." instance=ExtResource("134_byr8v")]
+visible = false
 
 [node name="cliff_cornerInnerTop_rock2" parent="." instance=ExtResource("135_d2ijd")]
+visible = false
 
 [node name="cliff_cornerInnerTop_stone2" parent="." instance=ExtResource("136_b1oe2")]
+visible = false
 
 [node name="cliff_cornerInner_rock2" parent="." instance=ExtResource("137_7vbhd")]
+visible = false
 
 [node name="cliff_cornerInner_stone2" parent="." instance=ExtResource("138_0qvam")]
+visible = false
 
 [node name="cliff_cornerLarge_rock2" parent="." instance=ExtResource("139_8c6ro")]
+visible = false
 
 [node name="cliff_cornerLarge_stone2" parent="." instance=ExtResource("140_0644l")]
+visible = false
 
 [node name="cliff_cornerTop_rock2" parent="." instance=ExtResource("141_fto2v")]
+visible = false
 
 [node name="cliff_cornerTop_stone2" parent="." instance=ExtResource("142_kbqdu")]
+visible = false
 
 [node name="cliff_corner_rock2" parent="." instance=ExtResource("143_5pqi7")]
+visible = false
 
 [node name="cliff_corner_stone2" parent="." instance=ExtResource("144_0ahv4")]
+visible = false
 
 [node name="cliff_diagonal_rock2" parent="." instance=ExtResource("145_0vyim")]
+visible = false
 
 [node name="cliff_diagonal_stone2" parent="." instance=ExtResource("146_tqoua")]
+visible = false
 
 [node name="cliff_halfCornerInner_rock2" parent="." instance=ExtResource("147_fh2nn")]
+visible = false
 
 [node name="cliff_halfCornerInner_stone2" parent="." instance=ExtResource("148_unp8h")]
+visible = false
 
 [node name="cliff_halfCorner_rock2" parent="." instance=ExtResource("149_niq7r")]
+visible = false
 
 [node name="cliff_halfCorner_stone2" parent="." instance=ExtResource("150_uiirm")]
+visible = false
 
 [node name="cliff_half_rock2" parent="." instance=ExtResource("151_bcsi3")]
+visible = false
 
 [node name="cliff_half_stone2" parent="." instance=ExtResource("152_eggu5")]
+visible = false
 
 [node name="cliff_large_rock2" parent="." instance=ExtResource("153_kmkar")]
+visible = false
 
 [node name="cliff_large_stone2" parent="." instance=ExtResource("154_afdok")]
+visible = false
 
 [node name="cliff_rock2" parent="." instance=ExtResource("155_i34bx")]
+visible = false
 
 [node name="cliff_stepsCornerInner_rock2" parent="." instance=ExtResource("156_g3y3j")]
+visible = false
 
 [node name="cliff_stepsCornerInner_stone2" parent="." instance=ExtResource("157_7jnqc")]
+visible = false
 
 [node name="cliff_stepsCorner_rock2" parent="." instance=ExtResource("158_bhy7y")]
+visible = false
 
 [node name="cliff_stepsCorner_stone2" parent="." instance=ExtResource("159_jga7n")]
+visible = false
 
 [node name="cliff_steps_rock2" parent="." instance=ExtResource("160_tcv4m")]
+visible = false
 
 [node name="cliff_steps_stone2" parent="." instance=ExtResource("161_ycsa3")]
+visible = false
 
 [node name="cliff_stone2" parent="." instance=ExtResource("162_d2ky2")]
+visible = false
 
 [node name="cliff_topDiagonal_rock2" parent="." instance=ExtResource("163_kt23w")]
+visible = false
 
 [node name="cliff_topDiagonal_stone2" parent="." instance=ExtResource("164_t6wpn")]
+visible = false
 
 [node name="cliff_top_rock2" parent="." instance=ExtResource("165_261th")]
+visible = false
 
-[node name="cliff_top_stone2" parent="." instance=ExtResource("166_lees4")]
+[node name="cliff_top_stone2" type="Node3D" parent="."]
+visible = false
+
+[node name="cliff_top_stone" type="MeshInstance3D" parent="cliff_top_stone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_12tf5")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_23kvv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cliff_top_stone2/cliff_top_stone"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cliff_top_stone2/cliff_top_stone/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_jmm24")
 
 [node name="cliff_waterfallTop_rock2" parent="." instance=ExtResource("167_hboo3")]
+visible = false
 
 [node name="cliff_waterfallTop_stone2" parent="." instance=ExtResource("168_duu5s")]
+visible = false
 
 [node name="cliff_waterfall_rock2" parent="." instance=ExtResource("169_pbpy2")]
+visible = false
 
 [node name="cliff_waterfall_stone2" parent="." instance=ExtResource("170_8kedq")]
+visible = false
 
 [node name="coin-bronze2" parent="." instance=ExtResource("171_2mjax")]
+visible = false
 
 [node name="coin-gold2" parent="." instance=ExtResource("172_rg287")]
+visible = false
 
 [node name="coin-silver2" parent="." instance=ExtResource("173_1y65f")]
+visible = false
 
 [node name="crate-item-strong2" parent="." instance=ExtResource("174_sg371")]
+visible = false
 
 [node name="crate-item2" parent="." instance=ExtResource("175_sraan")]
+visible = false
 
 [node name="crate-strong2" parent="." instance=ExtResource("176_clwee")]
+visible = false
 
 [node name="crate2" parent="." instance=ExtResource("177_u3vcv")]
+visible = false
 
 [node name="crops_bambooStageA2" parent="." instance=ExtResource("178_773ky")]
+visible = false
 
 [node name="crops_bambooStageB2" parent="." instance=ExtResource("179_cunkd")]
+visible = false
 
 [node name="crops_cornStageA2" parent="." instance=ExtResource("180_mb6v0")]
+visible = false
 
 [node name="crops_cornStageB2" parent="." instance=ExtResource("181_3wgxi")]
+visible = false
 
 [node name="crops_cornStageC2" parent="." instance=ExtResource("182_8qdrn")]
+visible = false
 
 [node name="crops_cornStageD2" parent="." instance=ExtResource("183_76wpo")]
+visible = false
 
 [node name="crops_dirtDoubleRow2" parent="." instance=ExtResource("184_eoq3h")]
+visible = false
 
 [node name="crops_dirtDoubleRowCorner2" parent="." instance=ExtResource("185_06dnf")]
+visible = false
 
 [node name="crops_dirtDoubleRowEnd2" parent="." instance=ExtResource("186_akeox")]
+visible = false
 
 [node name="crops_dirtRow2" parent="." instance=ExtResource("187_w88vr")]
+visible = false
 
 [node name="crops_dirtRowCorner2" parent="." instance=ExtResource("188_6afvi")]
+visible = false
 
 [node name="crops_dirtRowEnd2" parent="." instance=ExtResource("189_6v37m")]
+visible = false
 
 [node name="crops_dirtSingle2" parent="." instance=ExtResource("190_1k4ik")]
+visible = false
 
 [node name="crops_leafsStageA2" parent="." instance=ExtResource("191_pew0p")]
+visible = false
 
 [node name="crops_leafsStageB2" parent="." instance=ExtResource("192_j3g0c")]
+visible = false
 
 [node name="crops_wheatStageA2" parent="." instance=ExtResource("193_xlo3g")]
+visible = false
 
 [node name="crops_wheatStageB2" parent="." instance=ExtResource("194_edjds")]
+visible = false
 
 [node name="crop_carrot2" parent="." instance=ExtResource("195_vh1hx")]
+visible = false
 
 [node name="crop_melon2" parent="." instance=ExtResource("196_ag1bj")]
+visible = false
 
 [node name="crop_pumpkin2" parent="." instance=ExtResource("197_23ick")]
+visible = false
 
 [node name="crop_turnip2" parent="." instance=ExtResource("198_qmtcu")]
+visible = false
 
 [node name="door-large-open2" parent="." instance=ExtResource("199_m2e2a")]
+visible = false
 
 [node name="door-open2" parent="." instance=ExtResource("200_t05gl")]
+visible = false
 
 [node name="door-rotate-large2" parent="." instance=ExtResource("201_y1ww2")]
+visible = false
 
 [node name="door-rotate2" parent="." instance=ExtResource("202_i22fi")]
+visible = false
 
 [node name="fence-broken2" parent="." instance=ExtResource("203_vjdos")]
+visible = false
 
 [node name="fence-corner-curved2" parent="." instance=ExtResource("204_7mnhm")]
+visible = false
 
 [node name="fence-corner2" parent="." instance=ExtResource("205_j47ro")]
+visible = false
 
 [node name="fence-low-broken2" parent="." instance=ExtResource("206_4doya")]
+visible = false
 
 [node name="fence-low-corner-curved2" parent="." instance=ExtResource("207_eowfa")]
+visible = false
 
 [node name="fence-low-corner2" parent="." instance=ExtResource("208_3vcx2")]
+visible = false
 
 [node name="fence-low-straight2" parent="." instance=ExtResource("209_46gk6")]
+visible = false
 
 [node name="fence-straight2" parent="." instance=ExtResource("210_jgwcr")]
+visible = false
 
 [node name="fence_bend2" parent="." instance=ExtResource("211_r1ofp")]
+visible = false
 
 [node name="fence_bendCenter2" parent="." instance=ExtResource("212_bvof2")]
+visible = false
 
 [node name="fence_corner2" parent="." instance=ExtResource("213_8002m")]
+visible = false
 
 [node name="fence_gate2" parent="." instance=ExtResource("214_35uay")]
+visible = false
 
 [node name="fence_planks2" parent="." instance=ExtResource("215_m4ft1")]
+visible = false
 
 [node name="fence_planksDouble2" parent="." instance=ExtResource("216_bhgwv")]
+visible = false
 
 [node name="fence_simple2" parent="." instance=ExtResource("217_bbquh")]
+visible = false
 
 [node name="fence_simpleCenter2" parent="." instance=ExtResource("218_4napy")]
+visible = false
 
 [node name="fence_simpleDiagonal2" parent="." instance=ExtResource("219_p2jc2")]
+visible = false
 
 [node name="fence_simpleDiagonalCenter2" parent="." instance=ExtResource("220_mq3d3")]
+visible = false
 
 [node name="fence_simpleHigh2" parent="." instance=ExtResource("221_vmo0e")]
+visible = false
 
 [node name="fence_simpleLow2" parent="." instance=ExtResource("222_pt6eg")]
+visible = false
 
 [node name="flag2" parent="." instance=ExtResource("223_i5oak")]
+visible = false
 
 [node name="flowers-tall2" parent="." instance=ExtResource("224_1erjl")]
+visible = false
 
 [node name="flowers" parent="." instance=ExtResource("225_n44w7")]
+visible = false
 
 [node name="flower_purpleA2" parent="." instance=ExtResource("226_1p0pc")]
+visible = false
 
 [node name="flower_purpleB2" parent="." instance=ExtResource("227_j1t04")]
+visible = false
 
 [node name="flower_purpleC2" parent="." instance=ExtResource("228_do4ye")]
+visible = false
 
 [node name="flower_redA2" parent="." instance=ExtResource("229_iiwhr")]
+visible = false
 
 [node name="flower_redB2" parent="." instance=ExtResource("230_i1328")]
+visible = false
 
 [node name="flower_redC2" parent="." instance=ExtResource("231_31lkc")]
+visible = false
 
 [node name="flower_yellowA2" parent="." instance=ExtResource("232_fv4vo")]
+visible = false
 
 [node name="flower_yellowB2" parent="." instance=ExtResource("233_1hsq0")]
+visible = false
 
 [node name="flower_yellowC2" parent="." instance=ExtResource("234_gfq7e")]
+visible = false
 
 [node name="grass2" parent="." instance=ExtResource("235_arwtr")]
+visible = false
 
 [node name="grass_large2" parent="." instance=ExtResource("236_5b7ki")]
+visible = false
 
 [node name="grass_leafs2" parent="." instance=ExtResource("237_an3v7")]
+visible = false
 
 [node name="grass_leafsLarge2" parent="." instance=ExtResource("238_78xhf")]
+visible = false
 
 [node name="ground_grass2" parent="." instance=ExtResource("239_sx1cf")]
+visible = false
 
 [node name="ground_pathBend2" parent="." instance=ExtResource("240_cvuc6")]
+visible = false
 
 [node name="ground_pathBendBank2" parent="." instance=ExtResource("241_6bsaw")]
+visible = false
 
 [node name="ground_pathCorner2" parent="." instance=ExtResource("242_7gtbf")]
+visible = false
 
 [node name="ground_pathCornerSmall2" parent="." instance=ExtResource("243_wpeim")]
+visible = false
 
 [node name="ground_pathCross2" parent="." instance=ExtResource("244_dbq72")]
+visible = false
 
 [node name="ground_pathEnd2" parent="." instance=ExtResource("245_apnbm")]
+visible = false
 
 [node name="ground_pathEndClosed2" parent="." instance=ExtResource("246_y8q10")]
+visible = false
 
 [node name="ground_pathOpen2" parent="." instance=ExtResource("247_yybmf")]
+visible = false
 
 [node name="ground_pathRocks2" parent="." instance=ExtResource("248_pqf4b")]
+visible = false
 
 [node name="ground_pathSide2" parent="." instance=ExtResource("249_103cc")]
+visible = false
 
 [node name="ground_pathSideOpen2" parent="." instance=ExtResource("250_kxhfg")]
+visible = false
 
 [node name="ground_pathSplit2" parent="." instance=ExtResource("251_acb23")]
+visible = false
 
 [node name="ground_pathStraight2" parent="." instance=ExtResource("252_3kbws")]
+visible = false
 
 [node name="ground_pathTile2" parent="." instance=ExtResource("253_mxlmb")]
+visible = false
 
 [node name="ground_riverBend2" parent="." instance=ExtResource("254_a44s3")]
+visible = false
 
 [node name="ground_riverBendBank2" parent="." instance=ExtResource("255_xeqad")]
+visible = false
 
 [node name="ground_riverCorner2" parent="." instance=ExtResource("256_dt763")]
+visible = false
 
 [node name="ground_riverCornerSmall2" parent="." instance=ExtResource("257_n1fiu")]
+visible = false
 
 [node name="ground_riverCross2" parent="." instance=ExtResource("258_7wubv")]
+visible = false
 
 [node name="ground_riverEnd2" parent="." instance=ExtResource("259_bqkto")]
+visible = false
 
 [node name="ground_riverEndClosed2" parent="." instance=ExtResource("260_r1unr")]
+visible = false
 
 [node name="ground_riverOpen2" parent="." instance=ExtResource("261_fblal")]
+visible = false
 
 [node name="ground_riverRocks2" parent="." instance=ExtResource("262_m6eql")]
+visible = false
 
 [node name="ground_riverSide2" parent="." instance=ExtResource("263_j8ph1")]
+visible = false
 
 [node name="ground_riverSideOpen2" parent="." instance=ExtResource("264_cn6p2")]
+visible = false
 
 [node name="ground_riverSplit2" parent="." instance=ExtResource("265_lrdc1")]
+visible = false
 
 [node name="ground_riverStraight2" parent="." instance=ExtResource("266_2r3ul")]
+visible = false
 
 [node name="ground_riverTile2" parent="." instance=ExtResource("267_wh7oc")]
+visible = false
 
 [node name="hanging_moss2" parent="." instance=ExtResource("268_2s6ha")]
+visible = false
 
 [node name="heart2" parent="." instance=ExtResource("269_43n1u")]
+visible = false
 
 [node name="hedge-corner2" parent="." instance=ExtResource("270_68prk")]
+visible = false
 
 [node name="hedge2" parent="." instance=ExtResource("271_esphk")]
+visible = false
 
 [node name="jewel2" parent="." instance=ExtResource("272_rt5mr")]
+visible = false
 
 [node name="key2" parent="." instance=ExtResource("273_wgaw3")]
+visible = false
 
 [node name="ladder-broken2" parent="." instance=ExtResource("274_prlqi")]
+visible = false
 
 [node name="ladder-long2" parent="." instance=ExtResource("275_5hew4")]
+visible = false
 
 [node name="ladder2" parent="." instance=ExtResource("276_s7n6h")]
+visible = false
 
 [node name="lever2" parent="." instance=ExtResource("277_itpxf")]
+visible = false
 
 [node name="lily_large2" parent="." instance=ExtResource("278_g54mw")]
+visible = false
 
 [node name="lily_small2" parent="." instance=ExtResource("279_ry52t")]
+visible = false
 
 [node name="lock2" parent="." instance=ExtResource("280_ds03a")]
+visible = false
 
-[node name="log2" parent="." instance=ExtResource("281_rshcn")]
+[node name="log2" type="Node3D" parent="."]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0, 0, 0)
+visible = false
 
-[node name="log_large2" parent="." instance=ExtResource("282_dbuyu")]
+[node name="log" type="MeshInstance3D" parent="log2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_anrhb")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="log2/log"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="log2/log/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_kvfow")
+
+[node name="log_large2" type="Node3D" parent="."]
+visible = false
+
+[node name="log_large" type="MeshInstance3D" parent="log_large2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("ArrayMesh_syryg")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="log_large2/log_large"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="log_large2/log_large/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_b0lc3")
 
 [node name="log_stack2" parent="." instance=ExtResource("283_cmps5")]
+visible = false
 
 [node name="log_stackLarge2" parent="." instance=ExtResource("284_n4x2a")]
+visible = false
 
 [node name="mushrooms2" parent="." instance=ExtResource("285_ar7gq")]
+visible = false
 
 [node name="mushroom_red2" parent="." instance=ExtResource("286_o3or0")]
+visible = false
 
 [node name="mushroom_redGroup2" parent="." instance=ExtResource("287_koba5")]
+visible = false
 
 [node name="mushroom_redTall2" parent="." instance=ExtResource("288_6ynlp")]
+visible = false
 
 [node name="mushroom_tan2" parent="." instance=ExtResource("289_qphe4")]
+visible = false
 
 [node name="mushroom_tanGroup2" parent="." instance=ExtResource("290_d2eo8")]
+visible = false
 
 [node name="mushroom_tanTall2" parent="." instance=ExtResource("291_6xkm7")]
+visible = false
 
 [node name="path_stone2" parent="." instance=ExtResource("292_auouy")]
+visible = false
 
 [node name="path_stoneCircle2" parent="." instance=ExtResource("293_i82yy")]
+visible = false
 
 [node name="path_stoneCorner2" parent="." instance=ExtResource("294_5qtr7")]
+visible = false
 
 [node name="path_stoneEnd2" parent="." instance=ExtResource("295_gqmah")]
+visible = false
 
 [node name="path_wood2" parent="." instance=ExtResource("296_1fq2w")]
+visible = false
 
 [node name="path_woodCorner2" parent="." instance=ExtResource("297_hwpvd")]
+visible = false
 
 [node name="path_woodEnd2" parent="." instance=ExtResource("298_chejk")]
+visible = false
 
 [node name="plant2" parent="." instance=ExtResource("299_a27vn")]
+visible = false
 
 [node name="plant_bush2" parent="." instance=ExtResource("300_8vo7b")]
+visible = false
 
 [node name="plant_bushDetailed2" parent="." instance=ExtResource("301_eosxf")]
+visible = false
 
 [node name="plant_bushLarge2" parent="." instance=ExtResource("302_dujxb")]
+visible = false
 
 [node name="plant_bushLargeTriangle2" parent="." instance=ExtResource("303_oisxe")]
+visible = false
 
 [node name="plant_bushSmall2" parent="." instance=ExtResource("304_raacg")]
+visible = false
 
 [node name="plant_bushTriangle2" parent="." instance=ExtResource("305_3j4kn")]
+visible = false
 
 [node name="plant_flatShort2" parent="." instance=ExtResource("306_vq3lx")]
+visible = false
 
 [node name="plant_flatTall2" parent="." instance=ExtResource("307_eojo1")]
+visible = false
 
 [node name="platform-fortified2" parent="." instance=ExtResource("308_0tgyq")]
+visible = false
 
 [node name="platform-overhang2" parent="." instance=ExtResource("309_jutwx")]
+visible = false
 
 [node name="platform-ramp2" parent="." instance=ExtResource("310_37d0g")]
+visible = false
 
 [node name="platform2" type="Node3D" parent="."]
+visible = false
 
 [node name="platform" type="MeshInstance3D" parent="platform2"]
 mesh = SubResource("ArrayMesh_200oo")
@@ -1605,317 +2288,528 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_co8x0")
 
 [node name="platform_beach2" parent="." instance=ExtResource("312_eianf")]
+visible = false
 
 [node name="platform_grass2" parent="." instance=ExtResource("313_h3je7")]
+visible = false
 
 [node name="platform_stone2" parent="." instance=ExtResource("314_c5hv0")]
+visible = false
 
 [node name="poles2" parent="." instance=ExtResource("315_uxtq8")]
+visible = false
 
 [node name="pot_large2" parent="." instance=ExtResource("316_gk1rs")]
+visible = false
 
 [node name="pot_small2" parent="." instance=ExtResource("317_whoqu")]
+visible = false
 
 [node name="rocks2" parent="." instance=ExtResource("318_1hpr3")]
+visible = false
 
 [node name="rock_largeA2" parent="." instance=ExtResource("319_y66xf")]
+visible = false
 
 [node name="rock_largeB2" parent="." instance=ExtResource("320_vybjv")]
+visible = false
 
 [node name="rock_largeC2" parent="." instance=ExtResource("321_4116a")]
+visible = false
 
 [node name="rock_largeD2" parent="." instance=ExtResource("322_suesd")]
+visible = false
 
 [node name="rock_largeE2" parent="." instance=ExtResource("323_kpnpg")]
+visible = false
 
 [node name="rock_largeF2" parent="." instance=ExtResource("324_kyhn4")]
+visible = false
 
 [node name="rock_smallA2" parent="." instance=ExtResource("325_e8s7y")]
+visible = false
 
 [node name="rock_smallB2" parent="." instance=ExtResource("326_vximb")]
+visible = false
 
 [node name="rock_smallC2" parent="." instance=ExtResource("327_0w1mq")]
+visible = false
 
 [node name="rock_smallD2" parent="." instance=ExtResource("328_wapbf")]
+visible = false
 
 [node name="rock_smallE2" parent="." instance=ExtResource("329_wkc6i")]
+visible = false
 
 [node name="rock_smallF2" parent="." instance=ExtResource("330_3pkyg")]
+visible = false
 
 [node name="rock_smallFlatA2" parent="." instance=ExtResource("331_v7cb8")]
+visible = false
 
 [node name="rock_smallFlatB2" parent="." instance=ExtResource("332_fhehi")]
+visible = false
 
 [node name="rock_smallFlatC2" parent="." instance=ExtResource("333_v1kto")]
+visible = false
 
 [node name="rock_smallG2" parent="." instance=ExtResource("334_s5haq")]
+visible = false
 
 [node name="rock_smallH2" parent="." instance=ExtResource("335_o7wmt")]
+visible = false
 
 [node name="rock_smallI2" parent="." instance=ExtResource("336_boxn7")]
+visible = false
 
 [node name="rock_smallTopA2" parent="." instance=ExtResource("337_jhe4x")]
+visible = false
 
 [node name="rock_smallTopB2" parent="." instance=ExtResource("338_phgi2")]
+visible = false
 
 [node name="rock_tallA2" parent="." instance=ExtResource("339_pk3oj")]
+visible = false
 
 [node name="rock_tallB2" parent="." instance=ExtResource("340_5gphx")]
+visible = false
 
 [node name="rock_tallC2" parent="." instance=ExtResource("341_sbxcj")]
+visible = false
 
 [node name="rock_tallD2" parent="." instance=ExtResource("342_aspcj")]
+visible = false
 
 [node name="rock_tallE2" parent="." instance=ExtResource("343_55ys0")]
+visible = false
 
 [node name="rock_tallF2" parent="." instance=ExtResource("344_cbnue")]
+visible = false
 
 [node name="rock_tallG2" parent="." instance=ExtResource("345_67kga")]
+visible = false
 
 [node name="rock_tallH2" parent="." instance=ExtResource("346_r0h5n")]
+visible = false
 
 [node name="rock_tallI2" parent="." instance=ExtResource("347_huq8c")]
+visible = false
 
 [node name="rock_tallJ2" parent="." instance=ExtResource("348_27y0a")]
+visible = false
 
 [node name="saw2" parent="." instance=ExtResource("349_dm03k")]
+visible = false
 
 [node name="sign2" parent="." instance=ExtResource("350_ynbxd")]
+visible = false
 
 [node name="spike-block-wide2" parent="." instance=ExtResource("351_xfj86")]
+visible = false
 
 [node name="spike-block2" parent="." instance=ExtResource("352_7iuy1")]
+visible = false
 
 [node name="statue_block2" parent="." instance=ExtResource("353_mejg4")]
+visible = false
 
 [node name="statue_column2" parent="." instance=ExtResource("354_riniu")]
+visible = false
 
 [node name="statue_columnDamaged2" parent="." instance=ExtResource("355_dcy05")]
+visible = false
 
 [node name="statue_head2" parent="." instance=ExtResource("356_7dcxi")]
+visible = false
 
 [node name="statue_obelisk2" parent="." instance=ExtResource("357_doq6s")]
+visible = false
 
 [node name="statue_ring2" parent="." instance=ExtResource("358_lcmib")]
+visible = false
 
 [node name="stones2" parent="." instance=ExtResource("359_ybcp1")]
+visible = false
 
 [node name="stone_largeA2" parent="." instance=ExtResource("360_hini7")]
+visible = false
 
 [node name="stone_largeB2" parent="." instance=ExtResource("361_3e4e6")]
+visible = false
 
 [node name="stone_largeC2" parent="." instance=ExtResource("362_hkgem")]
+visible = false
 
 [node name="stone_largeD2" parent="." instance=ExtResource("363_4ny10")]
+visible = false
 
 [node name="stone_largeE2" parent="." instance=ExtResource("364_upxvt")]
+visible = false
 
 [node name="stone_largeF2" parent="." instance=ExtResource("365_dunn5")]
+visible = false
 
 [node name="stone_smallA2" parent="." instance=ExtResource("366_etpli")]
+visible = false
 
 [node name="stone_smallB2" parent="." instance=ExtResource("367_mkctp")]
+visible = false
 
 [node name="stone_smallC2" parent="." instance=ExtResource("368_kd2nx")]
+visible = false
 
 [node name="stone_smallD2" parent="." instance=ExtResource("369_jbhtw")]
+visible = false
 
 [node name="stone_smallE2" parent="." instance=ExtResource("370_tw0ub")]
+visible = false
 
 [node name="stone_smallF2" parent="." instance=ExtResource("371_d7lh1")]
+visible = false
 
 [node name="stone_smallFlatA2" parent="." instance=ExtResource("372_o353c")]
+visible = false
 
 [node name="stone_smallFlatB2" parent="." instance=ExtResource("373_18i36")]
+visible = false
 
 [node name="stone_smallFlatC2" parent="." instance=ExtResource("374_h1pls")]
+visible = false
 
 [node name="stone_smallG2" parent="." instance=ExtResource("375_lf2qf")]
+visible = false
 
 [node name="stone_smallH2" parent="." instance=ExtResource("376_m1ar3")]
+visible = false
 
 [node name="stone_smallI2" parent="." instance=ExtResource("377_dovke")]
+visible = false
 
 [node name="stone_smallTopA2" parent="." instance=ExtResource("378_s18xx")]
+visible = false
 
 [node name="stone_smallTopB2" parent="." instance=ExtResource("379_vfn6c")]
+visible = false
 
 [node name="stone_tallA2" parent="." instance=ExtResource("380_blppe")]
+visible = false
 
 [node name="stone_tallB2" parent="." instance=ExtResource("381_nln6p")]
+visible = false
 
 [node name="stone_tallC2" parent="." instance=ExtResource("382_khjpr")]
+visible = false
 
 [node name="stone_tallD2" parent="." instance=ExtResource("383_j0f7p")]
+visible = false
 
 [node name="stone_tallE2" parent="." instance=ExtResource("384_bwvtc")]
+visible = false
 
 [node name="stone_tallF2" parent="." instance=ExtResource("385_tcewd")]
+visible = false
 
 [node name="stone_tallG2" parent="." instance=ExtResource("386_kveh7")]
+visible = false
 
 [node name="stone_tallH2" parent="." instance=ExtResource("387_he6x7")]
+visible = false
 
 [node name="stone_tallI2" parent="." instance=ExtResource("388_mbnw7")]
+visible = false
 
 [node name="stone_tallJ2" parent="." instance=ExtResource("389_0b144")]
+visible = false
 
 [node name="stump_old2" parent="." instance=ExtResource("390_aeud8")]
+visible = false
 
 [node name="stump_oldTall2" parent="." instance=ExtResource("391_gyyqe")]
+visible = false
 
 [node name="stump_round2" parent="." instance=ExtResource("392_oi64q")]
+visible = false
 
 [node name="stump_roundDetailed2" parent="." instance=ExtResource("393_2shis")]
+visible = false
 
 [node name="stump_square2" parent="." instance=ExtResource("394_v81f3")]
+visible = false
 
 [node name="stump_squareDetailed2" parent="." instance=ExtResource("395_aalry")]
+visible = false
 
 [node name="stump_squareDetailedWide2" parent="." instance=ExtResource("396_f2gbq")]
+visible = false
 
 [node name="tent_detailedClosed2" parent="." instance=ExtResource("397_wfq14")]
+visible = false
 
 [node name="tent_detailedOpen2" parent="." instance=ExtResource("398_3kqah")]
+visible = false
 
 [node name="tent_smallClosed2" parent="." instance=ExtResource("399_i252t")]
+visible = false
 
 [node name="tent_smallOpen2" parent="." instance=ExtResource("400_4trcn")]
+visible = false
 
 [node name="trap-spikes-large2" parent="." instance=ExtResource("401_uy783")]
+visible = false
 
 [node name="trap-spikes2" parent="." instance=ExtResource("402_ixen4")]
+visible = false
 
 [node name="tree-pine-small2" parent="." instance=ExtResource("403_r4xxt")]
+visible = false
 
 [node name="tree-pine-snow-small2" parent="." instance=ExtResource("404_7bbbk")]
+visible = false
 
 [node name="tree-pine-snow2" parent="." instance=ExtResource("405_hq4vs")]
+visible = false
 
 [node name="tree-pine2" parent="." instance=ExtResource("406_dxrpu")]
+visible = false
 
 [node name="tree-snow2" parent="." instance=ExtResource("407_xq0fc")]
+visible = false
 
 [node name="tree2" parent="." instance=ExtResource("408_d34aq")]
+visible = false
 
 [node name="tree_blocks2" parent="." instance=ExtResource("409_dcytx")]
+visible = false
 
 [node name="tree_blocks_dark2" parent="." instance=ExtResource("410_wsjtv")]
+visible = false
 
 [node name="tree_blocks_fall2" parent="." instance=ExtResource("411_re87m")]
+visible = false
 
 [node name="tree_cone2" parent="." instance=ExtResource("412_uemr1")]
+visible = false
 
 [node name="tree_cone_dark2" parent="." instance=ExtResource("413_huoq1")]
+visible = false
 
 [node name="tree_cone_fall2" parent="." instance=ExtResource("414_xgqnq")]
+visible = false
 
 [node name="tree_default2" parent="." instance=ExtResource("415_ie7xy")]
+visible = false
 
 [node name="tree_default_dark2" parent="." instance=ExtResource("416_8bm6l")]
+visible = false
 
 [node name="tree_default_fall2" parent="." instance=ExtResource("417_7lpsn")]
+visible = false
 
 [node name="tree_detailed2" parent="." instance=ExtResource("418_8o8j8")]
+visible = false
 
 [node name="tree_detailed_dark2" parent="." instance=ExtResource("419_tytij")]
+visible = false
 
 [node name="tree_detailed_fall2" parent="." instance=ExtResource("420_rhysp")]
+visible = false
 
 [node name="tree_fat2" parent="." instance=ExtResource("421_t81cp")]
+visible = false
 
 [node name="tree_fat_darkh2" parent="." instance=ExtResource("422_n6nst")]
+visible = false
 
 [node name="tree_fat_fall2" parent="." instance=ExtResource("423_xwtss")]
+visible = false
 
 [node name="tree_oak2" parent="." instance=ExtResource("424_rd37f")]
+visible = false
 
 [node name="tree_oak_dark2" parent="." instance=ExtResource("425_kk82i")]
+visible = false
 
 [node name="tree_oak_fall2" parent="." instance=ExtResource("426_3n5fk")]
+visible = false
 
 [node name="tree_palm2" parent="." instance=ExtResource("427_bf4kv")]
+visible = false
 
 [node name="tree_palmBend2" parent="." instance=ExtResource("428_cbiw4")]
+visible = false
 
 [node name="tree_palmDetailedShort2" parent="." instance=ExtResource("429_5urcp")]
+visible = false
 
-[node name="tree_palmDetailedTall2" parent="." instance=ExtResource("430_hddb0")]
+[node name="tree_palmDetailedTall2" type="Node3D" parent="."]
+visible = false
+
+[node name="tree_palmDetailedTall" type="MeshInstance3D" parent="tree_palmDetailedTall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0004554987, -0.05000006, -0.005603455)
+mesh = SubResource("ArrayMesh_bkxir")
+skeleton = NodePath("")
+
+[node name="leafs" type="MeshInstance3D" parent="tree_palmDetailedTall2/tree_palmDetailedTall"]
+transform = Transform3D(0.70710677, 0, -0.70710665, 0, 1.35, 0, 0.70710665, 0, 0.70710677, 1.776574e-08, 1.1619214, 0.002567085)
+mesh = SubResource("ArrayMesh_41jky")
+skeleton = NodePath("")
+
+[node name="leafs2" type="MeshInstance3D" parent="tree_palmDetailedTall2/tree_palmDetailedTall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.776575e-08, 1.1619213, 0.004640045)
+mesh = SubResource("ArrayMesh_21uw0")
+skeleton = NodePath("")
+
+[node name="wood_spikes" type="Node3D" parent="."]
+visible = false
+
+[node name="wood_spike" type="Node3D" parent="wood_spikes"]
+
+[node name="tree_palmDetailedTall" type="MeshInstance3D" parent="wood_spikes/wood_spike"]
+transform = Transform3D(0.38, 0, 0, 0, 0.39, 0, 0, 0, 0.385, -0.0004554987, -0.05000006, -0.005603455)
+mesh = SubResource("ArrayMesh_bkxir")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wood_spikes/wood_spike"]
+transform = Transform3D(0.074246205, 0, 0.074246205, 0, 0.105, 0, -0.074246205, 0, 0.074246205, -0.00018362328, 0.47803414, -0.005239472)
+mesh = SubResource("CylinderMesh_ucfcu")
+
+[node name="wood_spike2" type="Node3D" parent="wood_spikes"]
+transform = Transform3D(-0.45574215, 0, 0.6756657, 0, 0.815, 0, -0.6756657, 0, -0.45574215, 0, -0.010313019, 0.055293083)
+
+[node name="tree_palmDetailedTall" type="MeshInstance3D" parent="wood_spikes/wood_spike2"]
+transform = Transform3D(0.38, 0, 0, 0, 0.39, 0, 0, 0, 0.385, -0.0004554987, -0.05000006, -0.005603455)
+mesh = SubResource("ArrayMesh_bkxir")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wood_spikes/wood_spike2"]
+transform = Transform3D(0.074246205, 0, 0.074246205, 0, 0.105, 0, -0.074246205, 0, 0.074246205, -0.00018362328, 0.47803414, -0.005239472)
+mesh = SubResource("CylinderMesh_ucfcu")
+
+[node name="wood_spike3" type="Node3D" parent="wood_spikes"]
+transform = Transform3D(0.5266561, 0, -0.62197936, 0, 0.68, 0, 0.62197936, 0, 0.5266561, 0.025889426, -0.017055392, -0.053027213)
+
+[node name="tree_palmDetailedTall" type="MeshInstance3D" parent="wood_spikes/wood_spike3"]
+transform = Transform3D(0.38, 0, 0, 0, 0.39, 0, 0, 0, 0.385, -0.0004554987, -0.05000006, -0.005603455)
+mesh = SubResource("ArrayMesh_bkxir")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wood_spikes/wood_spike3"]
+transform = Transform3D(0.074246205, 0, 0.074246205, 0, 0.105, 0, -0.074246205, 0, 0.074246205, -0.00018362328, 0.47803414, -0.005239472)
+mesh = SubResource("CylinderMesh_ucfcu")
 
 [node name="tree_palmShort2" parent="." instance=ExtResource("431_7idgg")]
+visible = false
 
 [node name="tree_palmTall2" parent="." instance=ExtResource("432_7uwix")]
+visible = false
 
 [node name="tree_pineDefaultA2" parent="." instance=ExtResource("433_sf1jr")]
+visible = false
 
 [node name="tree_pineDefaultB2" parent="." instance=ExtResource("434_xejwj")]
+visible = false
 
 [node name="tree_pineGroundA2" parent="." instance=ExtResource("435_j1ak8")]
+visible = false
 
 [node name="tree_pineGroundB2" parent="." instance=ExtResource("436_qhyih")]
+visible = false
 
 [node name="tree_pineRoundA2" parent="." instance=ExtResource("437_fx0dn")]
+visible = false
 
 [node name="tree_pineRoundB2" parent="." instance=ExtResource("438_s8yqh")]
+visible = false
 
 [node name="tree_pineRoundC2" parent="." instance=ExtResource("439_4lf4l")]
+visible = false
 
 [node name="tree_pineRoundD2" parent="." instance=ExtResource("440_b3ttk")]
+visible = false
 
 [node name="tree_pineRoundE2" parent="." instance=ExtResource("441_qnkht")]
+visible = false
 
 [node name="tree_pineRoundF2" parent="." instance=ExtResource("442_fmuaa")]
+visible = false
 
 [node name="tree_pineSmallA2" parent="." instance=ExtResource("443_njeok")]
+visible = false
 
 [node name="tree_pineSmallB2" parent="." instance=ExtResource("444_4ttea")]
+visible = false
 
 [node name="tree_pineSmallC2" parent="." instance=ExtResource("445_2wkam")]
+visible = false
 
 [node name="tree_pineSmallD2" parent="." instance=ExtResource("446_gee0t")]
+visible = false
 
 [node name="tree_pineTallA2" parent="." instance=ExtResource("447_fs562")]
+visible = false
 
 [node name="tree_pineTallA_detailed2" parent="." instance=ExtResource("448_g3xfe")]
+visible = false
 
 [node name="tree_pineTallB2" parent="." instance=ExtResource("449_nah4q")]
+visible = false
 
 [node name="tree_pineTallB_detailed2" parent="." instance=ExtResource("450_icneb")]
+visible = false
 
 [node name="tree_pineTallC2" parent="." instance=ExtResource("451_id2md")]
+visible = false
 
 [node name="tree_pineTallC_detailed2" parent="." instance=ExtResource("452_xs1te")]
+visible = false
 
 [node name="tree_pineTallD2" parent="." instance=ExtResource("453_huxmr")]
+visible = false
 
 [node name="tree_pineTallD_detailed2" parent="." instance=ExtResource("454_4p6wd")]
+visible = false
 
 [node name="tree_plateau2" parent="." instance=ExtResource("455_ppr2h")]
+visible = false
 
 [node name="tree_plateau_dark2" parent="." instance=ExtResource("456_kfftx")]
+visible = false
 
 [node name="tree_plateau_fall2" parent="." instance=ExtResource("457_vrjv4")]
+visible = false
 
 [node name="tree_simple2" parent="." instance=ExtResource("458_jiuuy")]
+visible = false
 
 [node name="tree_simple_dark2" parent="." instance=ExtResource("459_ixiix")]
+visible = false
 
 [node name="tree_simple_fall2" parent="." instance=ExtResource("460_5jkkk")]
+visible = false
 
 [node name="tree_small2" parent="." instance=ExtResource("461_8je5m")]
+visible = false
 
 [node name="tree_small_dark2" parent="." instance=ExtResource("462_1cbie")]
+visible = false
 
 [node name="tree_small_fall2" parent="." instance=ExtResource("463_vaqhj")]
+visible = false
 
 [node name="tree_tall2" parent="." instance=ExtResource("464_y6r1e")]
+visible = false
 
 [node name="tree_tall_dark2" parent="." instance=ExtResource("465_4uuwb")]
+visible = false
 
 [node name="tree_tall_fall2" parent="." instance=ExtResource("466_tujky")]
+visible = false
 
 [node name="tree_thin2" parent="." instance=ExtResource("467_w6atd")]
+visible = false
 
 [node name="tree_thin_dark2" parent="." instance=ExtResource("468_31vd1")]
+visible = false
 
 [node name="tree_thin_fall2" parent="." instance=ExtResource("469_kk1to")]
+visible = false
