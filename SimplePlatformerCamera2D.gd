@@ -1,5 +1,7 @@
 extends Camera3D
-## simple 2D platformer camera that follows the player on x and y axis
+## Simple 2D platformer camera that follows the player on X and Y axes
+## Keeps Z position fixed to view the 2D plane
+
 @export var follow_target: Node3D  # The player to follow
 @export var follow_smoothing: float = 0.1  # Lower = smoother (0 = instant)
 @export var fixed_z_distance: float = 10.0  # Distance from the 2D plane
@@ -9,23 +11,27 @@ extends Camera3D
 @export var bounds_min: Vector2 = Vector2(-20, 0)
 @export var bounds_max: Vector2 = Vector2(20, 25)
 
+func _ready() -> void:
+	# Ensure we're using orthographic projection for 2D look
+	projection = PROJECTION_ORTHOGONAL
+
 func _physics_process(delta: float) -> void:
 	if not follow_target:
 		return
 	
-	# get player target position
+	# Get target position
 	var target_pos := follow_target.global_position
 	
-	# calculates the desired x and y position
+	# Calculate desired camera position (follow X and Y, fixed Z)
 	var desired_x := target_pos.x
 	var desired_y := target_pos.y
 	
 	# Apply bounds if enabled
-	#if use_bounds:
-		#desired_x = clamp(desired_x, bounds_min.x, bounds_max.x)
-		#desired_y = clamp(desired_y, bounds_min.y, bounds_max.y)
+	if use_bounds:
+		desired_x = clamp(desired_x, bounds_min.x, bounds_max.x)
+		desired_y = clamp(desired_y, bounds_min.y, bounds_max.y)
 	
-	# how smooth the camera moves to the player
+	# Smoothly move camera or snap instantly
 	if follow_smoothing > 0.0:
 		var current := global_position
 		var target := Vector3(desired_x, desired_y, target_pos.z + fixed_z_distance)

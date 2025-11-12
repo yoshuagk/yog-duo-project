@@ -1,0 +1,135 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcwceoignpyeo"]
+
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_itfl2"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_ds0q2"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_hutdy"]
+[ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="5_4qvuk"]
+[ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="6_x0h62"]
+[ext_resource type="Resource" uid="uid://c620jlqml2qp" path="res://forms/default_form.tres" id="7_tfphp"]
+[ext_resource type="Script" uid="uid://d3mjtj6twkuai" path="res://abilities.gd" id="8_1hsxj"]
+[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="9_7135o"]
+
+[sub_resource type="Resource" id="Resource_v68xu"]
+script = ExtResource("3_hutdy")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwrkv"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="level" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -10.325804, -2.4762053, -7.749011)
+use_collision = true
+size = Vector3(0.7605219, 4.625, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.4007, -10.0342)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -23.528633, 10.0521145, -7.749011)
+use_collision = true
+size = Vector3(0.13986206, 29.55664, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 22.719532, 10.0521145, -7.749011)
+use_collision = true
+size = Vector3(0.13986206, 29.55664, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 18.192574, -2.4762053, -7.749011)
+use_collision = true
+size = Vector3(0.3408873, 4.625, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -6.313601, 4.1050067, -7.749011)
+use_collision = true
+size = Vector3(0.098534584, 0.49560547, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 3.1069903, 4.049693, -7.749011)
+use_collision = true
+size = Vector3(0.098534584, 0.49560547, 1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -11.2205715, 7.66324, -7.749011)
+use_collision = true
+size = Vector3(0.098534584, 0.49560547, 1)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -1.4644814, 7.66324, -7.749011)
+use_collision = true
+size = Vector3(0.098534584, 0.49560547, 1)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 7.7522106, 7.66324, -7.749011)
+use_collision = true
+size = Vector3(0.098534584, 0.49560547, 1)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -6.313601, 11.656597, -7.749011)
+use_collision = true
+size = Vector3(0.098534584, 0.49560547, 1)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="level"]
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, 3.1069903, 11.601283, -7.749011)
+use_collision = true
+size = Vector3(0.098534584, 0.49560547, 1)
+
+[node name="Camera3D" type="Camera3D" parent="level"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 0.92240286, 2.79713)
+projection = 1
+size = 12.617071
+
+[node name="PhantomCameraHost" type="Node" parent="level/Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("1_itfl2")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PhantomCamera3D" type="Node3D" parent="level" node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 0.92240286, 2.79713)
+top_level = true
+script = ExtResource("2_ds0q2")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Player/CharacterBody3D")
+tween_resource = SubResource("Resource_v68xu")
+inactive_update_mode = 1
+follow_damping = true
+follow_damping_value = Vector3(0.2, 0.2, 0)
+follow_distance = 10.0
+dead_zone_width = 0.15
+dead_zone_height = 0.5
+spring_length = 10.0
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="Player" type="Node3D" parent="level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 0, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="level/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
+script = ExtResource("5_4qvuk")
+
+[node name="FormController" type="Node" parent="level/Player/CharacterBody3D" node_paths=PackedStringArray("character_body", "movement_script", "collision_shape", "visuals_container", "abilities_container")]
+script = ExtResource("6_x0h62")
+character_body = NodePath("..")
+movement_script = NodePath("..")
+collision_shape = NodePath("../CollisionShape3D")
+visuals_container = NodePath("../Visuals")
+abilities_container = NodePath("../Abilities")
+default_form = ExtResource("7_tfphp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/Player/CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_xwrkv")
+
+[node name="Visuals" type="Node3D" parent="level/Player/CharacterBody3D"]
+
+[node name="Abilities" type="Node" parent="level/Player/CharacterBody3D" node_paths=PackedStringArray("character_body")]
+script = ExtResource("8_1hsxj")
+character_body = NodePath("..")
+spirit_move_radius = 5.0
+
+[node name="HealthComponent" type="Node3D" parent="level/Player/CharacterBody3D"]
+script = ExtResource("9_7135o")

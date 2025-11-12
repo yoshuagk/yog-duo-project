@@ -8,6 +8,7 @@ script = ExtResource("1_1")
 form_name = &"Large"
 speed = 3.5
 gravity_scale = 5.0
+can_wall_climb = true
 collider_radius = 0.8
 collider_height = 3.0
 camera_offset_y = 0.5
