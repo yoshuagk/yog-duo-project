@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://xl5ne75t3xql"]
+[gd_scene load_steps=12 format=3 uid="uid://xl5ne75t3xql"]
 
 [ext_resource type="Texture2D" uid="uid://ju0qf5duln0c" path="res://Assets/Images/fox room.png" id="2_u41wg"]
 [ext_resource type="MeshLibrary" uid="uid://b8h6bcvmt4q31" path="res://Assets/tiles.tres" id="3_3hk22"]
 [ext_resource type="Script" uid="uid://gmxt3vrytbue" path="res://death_and_respawn.gd" id="3_ju13t"]
+[ext_resource type="Script" uid="uid://c0hvmpa51btha" path="res://AltarInteractable.gd" id="4_1wxkl"]
+[ext_resource type="Resource" uid="uid://dq0ssulyp5cai" path="res://forms/small_form.tres" id="5_8bvaq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0sap"]
 albedo_texture = ExtResource("2_u41wg")
@@ -14,6 +16,14 @@ size = Vector3(0.58021545, 3.2523575, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g7jkb"]
 size = Vector3(11.204254, 0.5369873, 1)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_7bmct"]
+emission_enabled = true
+emission = Color(0.14000297, 0.26477826, 0.73926175, 1)
+emission_energy_multiplier = 4.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6tvym"]
+size = Vector3(0.13574219, 3.7467804, 1.1065521)
 
 [node name="Fox Altar Area" type="Node3D"]
 
@@ -72,3 +82,20 @@ respawn_point_name = "fox_altar_area_spawn"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Spikes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5352936, -0.23150635, 0)
 shape = SubResource("BoxShape3D_g7jkb")
+
+[node name="Altar 2" type="CSGBox3D" parent="."]
+transform = Transform3D(14.478586, 0, 0, 0, 0.99999994, 5.986321e-09, 0, -3.7252934e-09, 1.6069394, 9.903597, -1.9898877, -0.28759456)
+size = Vector3(0.027492523, 2.9623108, 0.30810547)
+material = SubResource("ORMMaterial3D_7bmct")
+
+[node name="InteractZone" type="Node3D" parent="Altar 2"]
+
+[node name="Area3D" type="Area3D" parent="Altar 2/InteractZone"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("4_1wxkl")
+form_to_grant = ExtResource("5_8bvaq")
+interactable_name = "Altar 2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Altar 2/InteractZone/Area3D"]
+transform = Transform3D(0.85000014, 0, 0, 0, 0.85, -2.2351742e-08, 0, 3.562309e-08, 0.85, 0, -0.14419353, 0.3261162)
+shape = SubResource("BoxShape3D_6tvym")

@@ -48,8 +48,8 @@ shape = SubResource("BoxShape3D_fp10v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.59377, -4.5384464, -31.349413)
 collision_layer = 3
 collision_mask = 3
-metadata/target_level = "fox_altar_level"
-metadata/target_spawn = "fox_altar_area_spawn"
+metadata/target_level = "bear_altar_level"
+metadata/target_spawn = "bear_altar_area_exit_spawn"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene_Triggers/bear_altar_scene_trigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.46777344, 0)

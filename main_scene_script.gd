@@ -12,7 +12,7 @@ var levels = {
 	"forest_level": "res://scenes/forest_area.tscn",
 	"fox_altar_level": "res://scenes/fox_altar_area.tscn",
 	"cave_level": "res://scenes/cave_area.tscn",
-	"bear_altar_level": "res://scenes/cave_area.tscn"
+	"bear_altar_level": "res://scenes/bear_altar_area.tscn"
 }
 
 func _ready():
