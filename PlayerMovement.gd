@@ -45,7 +45,7 @@ var keys_collected: int = 0
 
 ## Jump delay tracking
 var _jump_delay_timer: float = 0.0
-const JUMP_DELAY: float = 0.5  # 0.5 second delay
+const JUMP_DELAY: float = 0.1  # 0.5 second delay
 
 func _ready() -> void:
 	_jump_velocity = sqrt(2.0 * gravity * jump_height)
