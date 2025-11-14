@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PlayerForm" load_steps=3 format=3 uid="uid://dq0ssulyp5cai"]
 
 [ext_resource type="Script" uid="uid://dhbh7qf4ws0bu" path="res://PlayerForm.gd" id="1_1"]
-[ext_resource type="Texture2D" uid="uid://ba4co73xtppv3" path="res://images/placeholder/Fox.png" id="2_ut87v"]
+[ext_resource type="PackedScene" uid="uid://4ao2msrulhaj" path="res://characters/fox.glb" id="1_ut87v"]
 
 [resource]
 script = ExtResource("1_1")
@@ -12,5 +12,9 @@ gravity_scale = 2.0
 collider_radius = 0.8
 collider_height = 0.8
 camera_offset_y = -0.4
-sprite_texture = ExtResource("2_ut87v")
+mesh_scene = ExtResource("1_ut87v")
+animation_prefix = "f_"
+visual_scale = Vector3(0.4, 0.4, 0.4)
+visual_rotation = Vector3(0, 90, 0)
+visual_position_offset = Vector3(0, -0.2, 0)
 debug_color = Color(0.3, 0.8, 0.3, 1)

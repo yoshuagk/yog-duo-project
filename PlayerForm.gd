@@ -35,10 +35,14 @@ class_name PlayerForm
 @export var mesh_scene: PackedScene = null
 ## Optional sprite texture to use as a simple placeholder visual (ignored if mesh_scene is set)
 @export var sprite_texture: Texture2D = null
+## Animation prefix for this form's animations (e.g., "d_" for default, "f_" for fox, "b_" for bear)
+@export var animation_prefix: String = "d_"
 ## Optional scale applied to the instantiated visual (mesh_scene or sprite)
 @export var visual_scale: Vector3 = Vector3.ONE
-## Optional Y offset applied to the visual so feet align with the ground
-@export var visual_y_offset: float = 0.0
+## Optional rotation applied to the visual in degrees (Euler angles)
+@export var visual_rotation: Vector3 = Vector3.ZERO
+## Optional position offset applied to the visual (for centering models)
+@export var visual_position_offset: Vector3 = Vector3.ZERO
 
 @export_group("Abilities")
 ## Ability scenes to enable for this form (e.g., AttackAbility, DashAbility)

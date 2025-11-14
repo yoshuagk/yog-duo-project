@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PlayerForm" load_steps=3 format=3 uid="uid://cbxaxu4vb4f4j"]
 
 [ext_resource type="Script" uid="uid://dhbh7qf4ws0bu" path="res://PlayerForm.gd" id="1_1"]
-[ext_resource type="Texture2D" uid="uid://clqu82o1x86at" path="res://images/placeholder/Bear.png" id="2_shy0n"]
+[ext_resource type="PackedScene" uid="uid://dlc4ajrc8t3w8" path="res://characters/bear.glb" id="1_shy0n"]
 
 [resource]
 script = ExtResource("1_1")
@@ -12,5 +12,9 @@ can_wall_climb = true
 collider_radius = 0.7
 collider_height = 1.5
 camera_offset_y = 0.5
-sprite_texture = ExtResource("2_shy0n")
+mesh_scene = ExtResource("1_shy0n")
+animation_prefix = "b_"
+visual_scale = Vector3(0.5, 0.5, 0.5)
+visual_rotation = Vector3(0, 90, 0)
+visual_position_offset = Vector3(0, -0.1, 0)
 debug_color = Color(0.8, 0.3, 0.3, 1)

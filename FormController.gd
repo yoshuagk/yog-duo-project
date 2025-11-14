@@ -162,6 +162,12 @@ func _update_visuals(form: PlayerForm) -> void:
 		print("FormController: Using mesh_scene")
 		_active_visual_node = form.mesh_scene.instantiate()
 		visuals_container.add_child(_active_visual_node)
+		
+		# Find and pass AnimationPlayer to movement script
+		var anim_player := _find_animation_player(_active_visual_node)
+		if anim_player and movement_script and movement_script.has_method("set_animation_player"):
+			movement_script.set_animation_player(anim_player, form.animation_prefix)
+			print("FormController: AnimationPlayer found and connected with prefix '%s'" % form.animation_prefix)
 	elif form.sprite_texture:
 		print("FormController: Using sprite_texture")
 		# Create a textured quad as a simple billboard sprite placeholder
@@ -206,8 +212,10 @@ func _update_visuals(form: PlayerForm) -> void:
 
 	# Apply per-form visual transform adjustments
 	if _active_visual_node:
-		if "position" in _active_visual_node:
-			_active_visual_node.position.y += form.visual_y_offset
+		if "position" in _active_visual_node and form.visual_position_offset != Vector3.ZERO:
+			_active_visual_node.position = form.visual_position_offset
+		if "rotation_degrees" in _active_visual_node and form.visual_rotation != Vector3.ZERO:
+			_active_visual_node.rotation_degrees = form.visual_rotation
 		if "scale" in _active_visual_node and form.visual_scale != Vector3.ONE:
 			_active_visual_node.scale *= form.visual_scale
 		print("FormController: Visual node final position: %s" % _active_visual_node.global_position)
@@ -260,3 +268,15 @@ func has_form_by_name(form_name: StringName) -> bool:
 		if f.form_name == form_name:
 			return true
 	return false
+
+## Recursively search for AnimationPlayer in instantiated model
+func _find_animation_player(node: Node) -> AnimationPlayer:
+	if node is AnimationPlayer:
+		return node as AnimationPlayer
+	
+	for child in node.get_children():
+		var result := _find_animation_player(child)
+		if result:
+			return result
+	
+	return null

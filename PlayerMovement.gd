@@ -13,6 +13,11 @@ var _jump_velocity: float
 ## Reference to visuals node for rotation
 @onready var visuals: Node3D = $Visuals
 
+## Animation player from current form's model
+var _animation_player: AnimationPlayer = null
+## Animation prefix for current form (e.g., "d_", "f_", "b_")
+var _animation_prefix: String = "d_"
+
 ## Wall climbing state
 var is_wall_climbing: bool = false
 var _wall_normal: Vector3 = Vector3.ZERO
@@ -38,6 +43,10 @@ var _nearby_interactables: Array[Interactable] = []
 ## Key collection tracking
 var keys_collected: int = 0
 
+## Jump delay tracking
+var _jump_delay_timer: float = 0.0
+const JUMP_DELAY: float = 0.5  # 0.5 second delay
+
 func _ready() -> void:
 	_jump_velocity = sqrt(2.0 * gravity * jump_height)
 	
@@ -49,7 +58,18 @@ func _ready() -> void:
 func recalculate_jump() -> void:
 	_jump_velocity = sqrt(2.0 * gravity * jump_height)
 
+## Called by FormController to set the animation player from the current form
+func set_animation_player(anim_player: AnimationPlayer, anim_prefix: String = "d_") -> void:
+	_animation_player = anim_player
+	_animation_prefix = anim_prefix
+	if _animation_player:
+		print("AnimationPlayer set with prefix '%s' and animations: " % _animation_prefix, _animation_player.get_animation_list())
+
 func _physics_process(delta: float) -> void:
+	# Update jump delay timer
+	if _jump_delay_timer > 0.0:
+		_jump_delay_timer -= delta
+	
 	if is_spirit_mode:
 		# Free-fly 2D movement: left/right = X, up/down = Y, ignore gravity and jump
 		var input_x := float(Input.get_action_strength("move_right") - Input.get_action_strength("move_left"))
@@ -93,6 +113,9 @@ func _physics_process(delta: float) -> void:
 	# Check for wall climbing opportunity after moving (only if not in spirit mode)
 	if not is_spirit_mode and can_wall_climb and not is_wall_climbing:
 		_check_for_wall()
+	
+	# Update animations based on movement state
+	_update_animations()
 
 
 func _handle_normal_movement(delta: float) -> void:
@@ -112,15 +135,22 @@ func _handle_normal_movement(delta: float) -> void:
 		velocity.y -= gravity * delta
 	else:
 		if Input.is_action_just_pressed("jump"):
-			velocity.y = _jump_velocity
-		else:
+			# Start jump delay timer
+			_jump_delay_timer = JUMP_DELAY
+		
+		# Execute jump after delay
+		if _jump_delay_timer > 0.0 and _jump_delay_timer <= JUMP_DELAY - 0.016:  # After at least one frame
+			if _jump_delay_timer <= JUMP_DELAY * 0.5:  # Halfway through delay
+				velocity.y = _jump_velocity
+				_jump_delay_timer = 0.0  # Reset timer
+		elif _jump_delay_timer <= 0.0:
 			velocity.y = 0.0
 
 
 func _handle_wall_climbing(delta: float) -> void:
 	# Vertical movement on wall (move_up/move_down)
 	var input_y := int(Input.is_action_pressed("move_up")) - int(Input.is_action_pressed("move_down"))
-	velocity.y = input_y * speed * 0.8  # Slightly slower climb speed
+	velocity.y = input_y * speed * 0.8 
 	
 	# Horizontal movement along wall (limited)
 	var input_x := int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
@@ -315,3 +345,89 @@ func collect_key() -> void:
 ## Get the number of keys collected
 func get_key_count() -> int:
 	return keys_collected
+
+## Play a specific ability animation (called from abilities script)
+func play_ability_animation(anim_name: String, speed: float = 1.0) -> void:
+	if not _animation_player:
+		return
+	
+	var full_anim_name := _animation_prefix + anim_name
+	if _animation_player.has_animation(full_anim_name):
+		_animation_player.play(full_anim_name)
+		_animation_player.speed_scale = speed
+		print("Playing ability animation: %s" % full_anim_name)
+	else:
+		print("Warning: Animation '%s' not found" % full_anim_name)
+
+## Update which animation is playing based on current movement state
+func _update_animations() -> void:
+	if not _animation_player:
+		return
+	
+	# Build animation names with prefix
+	var anim_idle := _animation_prefix + "idle"
+	var anim_walk := _animation_prefix + "walk"
+	var anim_jump := _animation_prefix + "jump"
+	var anim_fall := _animation_prefix + "fall"
+	var anim_climb := _animation_prefix + "climb"
+	var anim_wall_pose := _animation_prefix + "wall_pose"
+	var anim_wallclimb := _animation_prefix + "wallclimb"
+	
+	# Determine which animation should play
+	if is_spirit_mode:
+		if _animation_player.current_animation != anim_idle:
+			_animation_player.play(anim_idle)
+			_animation_player.speed_scale = 1.0
+	elif is_wall_climbing:
+		# Check if player is moving on wall (climbing) or just holding
+		var is_moving: bool = abs(velocity.x) > 0.1 or abs(velocity.y) > 0.1
+		if is_moving:
+			# Moving on wall - use wallclimb animation
+			if _animation_player.has_animation(anim_wallclimb):
+				if _animation_player.current_animation != anim_wallclimb:
+					_animation_player.play(anim_wallclimb)
+					_animation_player.speed_scale = 5.0
+			else:
+				# Fallback to regular climb
+				if _animation_player.current_animation != anim_climb:
+					_animation_player.play(anim_climb)
+					_animation_player.speed_scale = 1.0
+		else:
+			# Holding on wall - use wall_pose animation
+			if _animation_player.has_animation(anim_wall_pose):
+				if _animation_player.current_animation != anim_wall_pose:
+					_animation_player.play(anim_wall_pose)
+					_animation_player.speed_scale = 1.0
+			else:
+				# Fallback to regular climb
+				if _animation_player.current_animation != anim_climb:
+					_animation_player.play(anim_climb)
+					_animation_player.speed_scale = 1.0
+	elif is_mantling:
+		if _animation_player.current_animation != anim_climb:
+			_animation_player.play(anim_climb)
+			_animation_player.speed_scale = 2.0
+	elif not is_on_floor():
+		# In air - check direction
+		if velocity.y > 0.5:
+			if _animation_player.current_animation != anim_jump:
+				_animation_player.play(anim_jump)
+				_animation_player.speed_scale = 5.0
+		else:
+			if _animation_player.current_animation != anim_fall:
+				_animation_player.play(anim_fall)
+				_animation_player.speed_scale = 1.0
+	else:
+		# On ground - walk or idle
+		if _jump_delay_timer > 0.0:
+			if _animation_player.current_animation != anim_jump:
+				_animation_player.play(anim_jump)
+				_animation_player.speed_scale = 4.0
+		elif abs(velocity.x) > 0.1:
+			if _animation_player.current_animation != anim_walk:
+				_animation_player.play(anim_walk)
+				_animation_player.speed_scale = 7.0 
+		else:
+			if _animation_player.current_animation != anim_idle:
+				_animation_player.play(anim_idle)
+				_animation_player.speed_scale = 1.0

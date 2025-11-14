@@ -119,6 +119,11 @@ func _use_default_ability() -> void:
 func _use_fox_ability() -> void:
 	print("=== FOX FORM ABILITY ACTIVATED ===")
 	
+	# Play dig animation
+	var movement_script := form_controller.movement_script if form_controller else null
+	if movement_script and movement_script.has_method("play_ability_animation"):
+		movement_script.play_ability_animation("dig", 1.0)
+	
 	# get the player body
 	var player := get_parent() as CharacterBody3D
 	# check if player body is found
@@ -177,6 +182,11 @@ func _is_diggable(block: Node) -> bool:
 ## bear form ability
 func _use_bear_ability() -> void:
 	print("=== BEAR FORM ABILITY ACTIVATED ===")
+	
+	# Play attack animation
+	var movement_script := form_controller.movement_script if form_controller else null
+	if movement_script and movement_script.has_method("play_ability_animation"):
+		movement_script.play_ability_animation("attack", 1.5)
 	
 	# Find or create the BearHitbox
 	var hitbox: BearHitbox = get_node_or_null("BearHitbox")
