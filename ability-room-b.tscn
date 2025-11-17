@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b8pbb6mn2mtkb"]
+[gd_scene load_steps=29 format=3 uid="uid://b8pbb6mn2mtkb"]
 
 [ext_resource type="Script" uid="uid://djpycqkhl3rqv" path="res://PlayerMovement.gd" id="5_x0l45"]
 [ext_resource type="Script" uid="uid://cjdqc2lrnui4o" path="res://FormController.gd" id="6_3l6ch"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://bgx2fmdplmnjt" path="res://KeyCollectible.gd" id="11_x0l45"]
 [ext_resource type="Script" uid="uid://syvmwwx412rw" path="res://DoorInteractable.gd" id="11_yp778"]
 [ext_resource type="Resource" uid="uid://dq0ssulyp5cai" path="res://forms/small_form.tres" id="13_x0l45"]
+[ext_resource type="PackedScene" uid="uid://cy5dryxs5tqcl" path="res://characters/enemy/Spider.glb" id="14_3l6ch"]
+[ext_resource type="Script" uid="uid://qududu37fh73" path="res://enemy_spider.gd" id="14_q6x0n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6akl3"]
 
@@ -42,6 +44,19 @@ emission_energy_multiplier = 4.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_q6x0n"]
 size = Vector3(0.13574219, 5.463501, 0.88934326)
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q6x0n"]
+radius = 0.48388672
+height = 0.96777344
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_briw4"]
+size = Vector3(2.3596344, 0.85863876, 2.0148315)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jyiea"]
+size = Vector3(2.359497, 1.4496307, 4.21439)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lyy3y"]
+size = Vector3(2.4127197, 1.0627441, 0.6563721)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
@@ -63,7 +78,7 @@ use_collision = true
 size = Vector3(0.114852905, 28.76416, 1)
 
 [node name="Player" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.023342, 12.763259, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.565334, 13.0732565, 0)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92240286, -7.20287)
@@ -119,9 +134,9 @@ transform = Transform3D(0.85000014, 0, 0, 0, 0.85, -2.2351742e-08, 0, 3.562309e-
 shape = SubResource("BoxShape3D_yp778")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -12.332045, 11.810263, -7.749011)
+transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -5.1182404, 11.810263, -7.749011)
 use_collision = true
-size = Vector3(0.5329238, 1.245697, 1)
+size = Vector3(0.18198925, 1.245697, 1)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="."]
 transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -8.563982, 16.445177, -7.749011)
@@ -238,3 +253,48 @@ size = Vector3(0.034954548, 0.78881836, 1)
 transform = Transform3D(41.11196, 0, 0, 0, 1, 0, 0, 0, 4.6832232, -12.442526, 12.117235, -7.749011)
 use_collision = true
 size = Vector3(0.034954548, 0.78881836, 1)
+
+[node name="Spider" type="CharacterBody3D" parent="." node_paths=PackedStringArray("detection_zone", "attack_range", "health_component", "hurtbox", "patrol_area")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.872633, 0.5384023, -7.570751)
+script = ExtResource("14_q6x0n")
+patrol_range = 3.0
+detection_zone = NodePath("DetectionZone")
+attack_range = NodePath("AttackRange")
+health_component = NodePath("HealthComponent")
+hurtbox = NodePath("hurtbox")
+patrol_area = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spider"]
+transform = Transform3D(0.915, 0, 0, 0, 0.915, 0, 0, 0, 0.915, -0.017033577, 0.45817018, -0.049927235)
+shape = SubResource("CapsuleShape3D_q6x0n")
+
+[node name="Root Scene" parent="Spider" instance=ExtResource("14_3l6ch")]
+transform = Transform3D(0.415, 0, 0, 0, 0.415, 0, 0, 0, 0.415, 0, 0, 0)
+
+[node name="HealthComponent" type="Node3D" parent="Spider"]
+script = ExtResource("9_briw4")
+max_health = 3
+current_health = 3
+
+[node name="hurtbox" type="Area3D" parent="Spider"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("8_6akl3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spider/hurtbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012471651, 0.4355475, -0.0077818404)
+shape = SubResource("BoxShape3D_briw4")
+debug_color = Color(0.7939061, 0.3607364, 0.59527606, 0.41960785)
+
+[node name="DetectionZone" type="Area3D" parent="Spider"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spider/DetectionZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012145996, 0.715477, 0.56009865)
+shape = SubResource("BoxShape3D_jyiea")
+
+[node name="AttackRange" type="Area3D" parent="Spider"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spider/AttackRange"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007385254, 0.5609131, 0.81085205)
+shape = SubResource("BoxShape3D_lyy3y")

@@ -8,6 +8,11 @@ var can_wall_climb: bool = false
 var collider_radius: float = 0.5  # Used for wall detection
 var collider_height: float = 2.0  # Used for ledge/mantle placement
 
+# Movement smoothing
+@export var acceleration: float = 30.0
+@export var deceleration: float = 40.0
+@export var turn_smooth: float = 12.0  # Higher = snappier turn; lower = smoother
+
 var _jump_velocity: float
 
 ## Reference to visuals node for rotation
@@ -17,6 +22,9 @@ var _jump_velocity: float
 var _animation_player: AnimationPlayer = null
 ## Animation prefix for current form (e.g., "d_", "f_", "b_")
 var _animation_prefix: String = "d_"
+## Override animation (e.g., attack, headshake) that temporarily suppresses state machine
+var _override_animation: String = ""
+
 
 ## Wall climbing state
 var is_wall_climbing: bool = false
@@ -63,12 +71,44 @@ func set_animation_player(anim_player: AnimationPlayer, anim_prefix: String = "d
 	_animation_player = anim_player
 	_animation_prefix = anim_prefix
 	if _animation_player:
-		print("AnimationPlayer set with prefix '%s' and animations: " % _animation_prefix, _animation_player.get_animation_list())
+		#print("AnimationPlayer set with prefix '%s' and animations: " % _animation_prefix, _animation_player.get_animation_list())
+		# Connect finished signal once (avoid duplicate connections)
+		if not _animation_player.animation_finished.is_connected(_on_animation_finished):
+			_animation_player.animation_finished.connect(_on_animation_finished)
+
+## Play an override animation that should not be interrupted by movement state until it finishes
+func play_override_animation(anim_name: String, speed: float = 1.0) -> void:
+	if not _animation_player:
+		return
+	var full_name := _animation_prefix + anim_name
+	if _animation_player.has_animation(full_name):
+		_override_animation = full_name
+		_animation_player.play(full_name, -1, speed, false)
+		_animation_player.speed_scale = speed
+		# Freeze any movement states while override plays
+		is_wall_climbing = false
+		is_mantling = false
+		velocity = Vector3.ZERO
+		#print("Override animation playing: %s" % full_name)
+	else:
+		print("Warning: Override animation '%s' not found" % full_name)
+
+func _on_animation_finished(anim_name: String) -> void:
+	if _override_animation != "" and anim_name == _override_animation:
+		#print("Override animation finished: %s" % anim_name)
+		_override_animation = ""
 
 func _physics_process(delta: float) -> void:
 	# Update jump delay timer
 	if _jump_delay_timer > 0.0:
 		_jump_delay_timer -= delta
+
+	# If an override animation is active, freeze movement entirely
+	if _override_animation != "":
+		velocity = Vector3.ZERO
+		move_and_slide()
+		_update_animations()
+		return
 	
 	if is_spirit_mode:
 		# Free-fly 2D movement: left/right = X, up/down = Y, ignore gravity and jump
@@ -121,14 +161,19 @@ func _physics_process(delta: float) -> void:
 func _handle_normal_movement(delta: float) -> void:
 	# horizontal input (x-axis only)
 	var input_x := int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
-	velocity.x = input_x * speed
+	# Smooth acceleration/deceleration toward target speed
+	var target_vx := float(input_x) * speed
+	var accel := acceleration if abs(target_vx) > abs(velocity.x) else deceleration
+	velocity.x = move_toward(velocity.x, target_vx, accel * delta)
 	velocity.z = 0.0
 	
-	# Instant turn to face movement direction (rotate visuals only)
-	if input_x > 0:
-		rotation.y = 0  # Face right
-	elif input_x < 0:
-		rotation.y = PI  # Face left (180 degrees)
+	# Smoothly turn to face movement direction (ease rotation)
+	var target_y := rotation.y
+	if velocity.x > 0.05:
+		target_y = 0.0  # Face right
+	elif velocity.x < -0.05:
+		target_y = PI   # Face left
+	rotation.y = lerp_angle(rotation.y, target_y, clamp(turn_smooth * delta, 0.0, 1.0))
 
 	# gravity and jump
 	if not is_on_floor():
@@ -163,7 +208,7 @@ func _handle_wall_climbing(delta: float) -> void:
 		velocity = _wall_normal * speed * 1.2  # Push outward
 		velocity.y = _jump_velocity * 0.8  # Half jump height
 		is_wall_climbing = false
-		print("Bear: Jumped off wall!")
+		#print("Bear: Jumped off wall!")
 		return
 	
 	# Check if still touching wall
@@ -171,11 +216,11 @@ func _handle_wall_climbing(delta: float) -> void:
 		# Try to mantle over ledge before letting go
 		if _try_start_mantle():
 			is_wall_climbing = false
-			print("Bear: Mantling over ledge")
+			#print("Bear: Mantling over ledge")
 			return
 		else:
 			is_wall_climbing = false
-			print("Bear: Left wall")
+			#print("Bear: Left wall")
 
 
 func _check_for_wall() -> void:
@@ -207,7 +252,7 @@ func _check_for_wall() -> void:
 				is_wall_climbing = true
 				_wall_normal = hit_normal
 				velocity.y = 0  # Stop falling when attaching to wall
-				print("Bear: Grabbed wall! (Normal: %s)" % hit_normal)
+				#print("Bear: Grabbed wall! (Normal: %s)" % hit_normal)
 				return
 
 
@@ -230,7 +275,7 @@ func _is_touching_wall() -> bool:
 		var hit_normal: Vector3 = result.normal
 		# Verify it's still a wall
 		if abs(hit_normal.y) < 0.3:
-			print("Bear: Still on wall")
+			#print("Bear: Still on wall")
 			return true
 	
 	return false
@@ -276,14 +321,15 @@ func _try_start_mantle() -> bool:
 
 			_mantle_target = land_point
 			is_mantling = true
-			print("Bear: Ledge detected, starting mantle to %s" % _mantle_target)
+			#print("Bear: Ledge detected, starting mantle to %s" % _mantle_target)
 			return true
 
 	return false
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact_key"):
-		interact()
+		if is_on_floor():
+			interact()
 
 
 ## Called when player enters an interactable's Area3D
@@ -319,11 +365,19 @@ func set_spirit_mode(enabled: bool) -> void:
 		collision_layer = 8  # Spirit layer (different from player layer 2)
 		collision_mask = 0   # Don't collide with anything
 		velocity = Vector3.ZERO
+		# Apply bright white glow effect
+		var form_controller = get_node_or_null("FormController")
+		if form_controller and form_controller.has_method("set_spirit_glow"):
+			form_controller.set_spirit_glow(true)
 	else:
 		# Restore collisions and reset velocity
 		collision_layer = _saved_collision_layer
 		collision_mask = _saved_collision_mask
 		velocity = Vector3.ZERO
+		# Remove glow effect
+		var form_controller = get_node_or_null("FormController")
+		if form_controller and form_controller.has_method("set_spirit_glow"):
+			form_controller.set_spirit_glow(false)
 		# Clear bounds by default when leaving spirit mode
 		clear_spirit_bounds()
 
@@ -363,6 +417,9 @@ func play_ability_animation(anim_name: String, speed: float = 1.0) -> void:
 func _update_animations() -> void:
 	if not _animation_player:
 		return
+	# If an override animation is active, do not change it
+	if _override_animation != "":
+		return
 	
 	# Build animation names with prefix
 	var anim_idle := _animation_prefix + "idle"
@@ -376,7 +433,7 @@ func _update_animations() -> void:
 	# Determine which animation should play
 	if is_spirit_mode:
 		if _animation_player.current_animation != anim_idle:
-			_animation_player.play(anim_idle)
+			_animation_player.play(anim_idle, 0.15)
 			_animation_player.speed_scale = 1.0
 	elif is_wall_climbing:
 		# Check if player is moving on wall (climbing) or just holding
@@ -385,49 +442,49 @@ func _update_animations() -> void:
 			# Moving on wall - use wallclimb animation
 			if _animation_player.has_animation(anim_wallclimb):
 				if _animation_player.current_animation != anim_wallclimb:
-					_animation_player.play(anim_wallclimb)
+					_animation_player.play(anim_wallclimb, 0.08)
 					_animation_player.speed_scale = 5.0
 			else:
 				# Fallback to regular climb
 				if _animation_player.current_animation != anim_climb:
-					_animation_player.play(anim_climb)
+					_animation_player.play(anim_climb, 0.08)
 					_animation_player.speed_scale = 1.0
 		else:
 			# Holding on wall - use wall_pose animation
 			if _animation_player.has_animation(anim_wall_pose):
 				if _animation_player.current_animation != anim_wall_pose:
-					_animation_player.play(anim_wall_pose)
+					_animation_player.play(anim_wall_pose, 0.12)
 					_animation_player.speed_scale = 1.0
 			else:
 				# Fallback to regular climb
 				if _animation_player.current_animation != anim_climb:
-					_animation_player.play(anim_climb)
+					_animation_player.play(anim_climb, 0.12)
 					_animation_player.speed_scale = 1.0
 	elif is_mantling:
 		if _animation_player.current_animation != anim_climb:
-			_animation_player.play(anim_climb)
+			_animation_player.play(anim_climb, 0.05)
 			_animation_player.speed_scale = 2.0
 	elif not is_on_floor():
 		# In air - check direction
 		if velocity.y > 0.5:
 			if _animation_player.current_animation != anim_jump:
-				_animation_player.play(anim_jump)
+				_animation_player.play(anim_jump, 0.06)
 				_animation_player.speed_scale = 5.0
 		else:
 			if _animation_player.current_animation != anim_fall:
-				_animation_player.play(anim_fall)
+				_animation_player.play(anim_fall, 0.10)
 				_animation_player.speed_scale = 1.0
 	else:
 		# On ground - walk or idle
 		if _jump_delay_timer > 0.0:
 			if _animation_player.current_animation != anim_jump:
-				_animation_player.play(anim_jump)
+				_animation_player.play(anim_jump, 0.10)
 				_animation_player.speed_scale = 4.0
 		elif abs(velocity.x) > 0.1:
 			if _animation_player.current_animation != anim_walk:
-				_animation_player.play(anim_walk)
+				_animation_player.play(anim_walk, 0.12)
 				_animation_player.speed_scale = 7.0 
 		else:
 			if _animation_player.current_animation != anim_idle:
-				_animation_player.play(anim_idle)
+				_animation_player.play(anim_idle, 0.15)
 				_animation_player.speed_scale = 1.0

@@ -18,6 +18,17 @@ height = 1.7836914
 [node name="General_Level" type="Node3D"]
 script = ExtResource("1_l4qex")
 
+[node name="FadeOverlay" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="FadeOverlay"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
 [node name="Level_Container" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target")]

@@ -29,5 +29,6 @@ func heal(amount: int) -> void:
 
 func _on_death() -> void:
 	print("%s died!" % get_parent().name)
-	# Queue free the parent (the entity that has this component)
-	get_parent().queue_free()
+	# Don't queue_free the player - let the main scene handle respawn
+	if get_parent().name != "CharacterBody3D":  # Not the player
+		get_parent().queue_free()

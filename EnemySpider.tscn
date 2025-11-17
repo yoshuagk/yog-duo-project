@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://dlul2myd7fw8g"]
+
+[ext_resource type="PackedScene" uid="uid://cy5dryxs5tqcl" path="res://characters/enemy/Spider.glb" id="1_cdsuw"]
+[ext_resource type="Script" uid="uid://qududu37fh73" path="res://enemy_spider.gd" id="1_i27k5"]
+[ext_resource type="Script" uid="uid://bvovdgchcwtah" path="res://health_component.gd" id="2_i27k5"]
+[ext_resource type="Script" uid="uid://6k8sycu8m2si" path="res://Hurtbox.gd" id="3_sxn8o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_67amm"]
+size = Vector3(1.9315186, 0.9279785, 2.0441895)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bm41o"]
+size = Vector3(2.3596344, 0.85863876, 2.0148315)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4wsi4"]
+size = Vector3(2.359497, 1.4496307, 4.21439)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o4dt3"]
+size = Vector3(2.4127197, 1.0627441, 0.6563721)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i27k5"]
+size = Vector3(2.4123535, 1.2764282, 8.008759)
+
+[node name="Spider" type="CharacterBody3D"]
+script = ExtResource("1_i27k5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.915, 0, 0, 0, 0.915, 0, 0, 0, 0.915, -0.017033383, 0.41215214, -0.04992736)
+shape = SubResource("BoxShape3D_67amm")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_cdsuw")]
+transform = Transform3D(0.415, 0, 0, 0, 0.415, 0, 0, 0, 0.415, 0, 0, 0)
+
+[node name="HealthComponent" type="Node3D" parent="."]
+script = ExtResource("2_i27k5")
+
+[node name="hurtbox" type="Area3D" parent="."]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("3_sxn8o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hurtbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012471651, 0.4355475, -0.0077818404)
+shape = SubResource("BoxShape3D_bm41o")
+debug_color = Color(0.7939061, 0.3607364, 0.59527606, 0.41960785)
+
+[node name="DetectionZone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012145996, 0.715477, 0.56009865)
+shape = SubResource("BoxShape3D_4wsi4")
+
+[node name="AttackRange" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackRange"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007385254, 0.5609131, 0.81085205)
+shape = SubResource("BoxShape3D_o4dt3")
+
+[node name="PatrolArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PatrolArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005249023, 0.61972046, -0.008346557)
+shape = SubResource("BoxShape3D_i27k5")

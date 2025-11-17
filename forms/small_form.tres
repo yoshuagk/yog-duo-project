@@ -16,5 +16,5 @@ mesh_scene = ExtResource("1_ut87v")
 animation_prefix = "f_"
 visual_scale = Vector3(0.4, 0.4, 0.4)
 visual_rotation = Vector3(0, 90, 0)
-visual_position_offset = Vector3(0, -0.2, 0)
+visual_position_offset = Vector3(0, -0.3, 0)
 debug_color = Color(0.3, 0.8, 0.3, 1)
