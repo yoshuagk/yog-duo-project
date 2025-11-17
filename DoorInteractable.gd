@@ -28,8 +28,50 @@ func _end_game() -> void:
 	print("=== GAME COMPLETE ===")
 	print("Congratulations! You collected all the keys!")
 	
-	# Wait a moment before quitting
-	await get_tree().create_timer(2.0).timeout
+	# Get reference to main scene for fade overlay
+	var main = get_tree().root.get_node_or_null("Main")
+	if main and main.has_method("fade_to_black"):
+		await main.fade_to_black()
+	
+	# Create Demo Completed UI
+	_show_completion_screen()
+	
+	# Wait before quitting
+	await get_tree().create_timer(5.0).timeout
 	
 	# Quit the game
 	get_tree().quit()
+
+func _show_completion_screen() -> void:
+	# Create a CanvasLayer for the completion screen
+	var canvas = CanvasLayer.new()
+	canvas.layer = 200  # Above everything else
+	get_tree().root.add_child(canvas)
+	
+	# Background panel (semi-transparent black)
+	var bg = ColorRect.new()
+	bg.color = Color(0, 0, 0, 0.9)
+	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+	canvas.add_child(bg)
+	
+	# "Demo Completed" text
+	var title = Label.new()
+	title.text = "DEMO COMPLETED"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	title.set_anchors_preset(Control.PRESET_CENTER)
+	title.position = Vector2(-200, -100)
+	title.size = Vector2(400, 100)
+	title.add_theme_font_size_override("font_size", 48)
+	canvas.add_child(title)
+	
+	# "Thank you for playing!" text
+	var subtitle = Label.new()
+	subtitle.text = "Thank you for playing!"
+	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	subtitle.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	subtitle.set_anchors_preset(Control.PRESET_CENTER)
+	subtitle.position = Vector2(-200, 20)
+	subtitle.size = Vector2(400, 50)
+	subtitle.add_theme_font_size_override("font_size", 24)
+	canvas.add_child(subtitle)

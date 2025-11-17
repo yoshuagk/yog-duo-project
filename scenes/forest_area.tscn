@@ -228,7 +228,7 @@ mesh = SubResource("BoxMesh_w6jwk")
 
 [node name="Area3D" type="Area3D" parent="door-open2"]
 script = ExtResource("4_6k1n5")
-keys_required = 2
+keys_required = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door-open2/Area3D"]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0.28247067, 0.23052979)

@@ -53,7 +53,11 @@ var keys_collected: int = 0
 
 ## Jump delay tracking
 var _jump_delay_timer: float = 0.0
-const JUMP_DELAY: float = 0.1  # 0.5 second delay
+const JUMP_DELAY: float = 0.1  # 0.1 second delay
+
+## Variable jump height
+var _is_jumping: bool = false  # Track if player initiated a jump
+@export var jump_cut_multiplier: float = 0.5  # How much to reduce velocity when jump released early
 
 func _ready() -> void:
 	_jump_velocity = sqrt(2.0 * gravity * jump_height)
@@ -178,6 +182,11 @@ func _handle_normal_movement(delta: float) -> void:
 	# gravity and jump
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		
+		# Variable jump: if player releases jump button while moving upward, cut velocity
+		if _is_jumping and Input.is_action_just_released("jump") and velocity.y > 0:
+			velocity.y *= jump_cut_multiplier
+			_is_jumping = false
 	else:
 		if Input.is_action_just_pressed("jump"):
 			# Start jump delay timer
@@ -187,9 +196,11 @@ func _handle_normal_movement(delta: float) -> void:
 		if _jump_delay_timer > 0.0 and _jump_delay_timer <= JUMP_DELAY - 0.016:  # After at least one frame
 			if _jump_delay_timer <= JUMP_DELAY * 0.5:  # Halfway through delay
 				velocity.y = _jump_velocity
+				_is_jumping = true  # Mark that we're in a jump
 				_jump_delay_timer = 0.0  # Reset timer
 		elif _jump_delay_timer <= 0.0:
 			velocity.y = 0.0
+			_is_jumping = false  # Not jumping when grounded
 
 
 func _handle_wall_climbing(delta: float) -> void:
