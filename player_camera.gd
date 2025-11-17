@@ -9,6 +9,13 @@ extends Camera3D
 @export var bounds_min: Vector2 = Vector2(-20, 0)
 @export var bounds_max: Vector2 = Vector2(20, 25)
 
+## Instantly snap camera to target position (no smoothing)
+func snap_to_target() -> void:
+	if not follow_target:
+		return
+	var target_pos := follow_target.global_position
+	global_position = Vector3(target_pos.x, target_pos.y, target_pos.z + fixed_z_distance)
+
 func _physics_process(delta: float) -> void:
 	if not follow_target:
 		return

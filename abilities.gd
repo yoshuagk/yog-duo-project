@@ -30,12 +30,12 @@ func _input(event: InputEvent) -> void:
 ## triggers the ability based on the current form
 func use_ability() -> void:
 	if not form_controller:
-		print("AbilitiesContainer: No FormController found!")
+		print("No FormController found!")
 		return
 	
 	var current_form := form_controller.get_current_form()
 	if not current_form:
-		print("AbilitiesContainer: No active form!")
+		print("No active form!")
 		return
 	
 	# checks which form is active and execute the form specific ability
@@ -75,7 +75,7 @@ func _use_default_ability() -> void:
 			if movement_script.has_method("clear_spirit_bounds"):
 				movement_script.clear_spirit_bounds()
 		is_spirit = false
-		print("Back to body")
+		#print("Back to body")
 		return
 
 	# Otherwise, enter spirit state and drop a statue at current position
@@ -112,58 +112,22 @@ func _use_default_ability() -> void:
 			movement_script.set_spirit_bounds(default_statue.global_position, spirit_move_radius)
 
 	is_spirit = true
-	print("placed statue at %s" % default_statue.global_position)
+	#print("placed statue at %s" % default_statue.global_position)
 
 
 ## Fox form ability to dig through to special diggable blocks
 func _use_fox_ability() -> void:
 	print("=== FOX FORM ABILITY ACTIVATED ===")
 	
-	# Play dig animation
+	# Play dig animation (override to prevent interruption)
 	var movement_script := form_controller.movement_script if form_controller else null
-	if movement_script and movement_script.has_method("play_ability_animation"):
-		movement_script.play_ability_animation("dig", 1.0)
-	
-	# get the player body
-	var player := get_parent() as CharacterBody3D
-	# check if player body is found
-	#if not player:
-		#print("Error: Could not find player CharacterBody3D")
-		#return
-	
-	# checks if player is on the ground
-	#if not player.is_on_floor():
-		#print("Fox cannot dig while in the air!")
-		#return
-	
-	# Create a raycast to detect what's below the player
-	var space_state := player.get_world_3d().direct_space_state
-	var player_pos := player.global_position
-	
-	# Cast ray from player position downward
-	var ray_start := player_pos
-	var ray_end := player_pos + Vector3.DOWN * 2.0  # checks 2 units below
-	
-	var query := PhysicsRayQueryParameters3D.create(ray_start, ray_end)
-	query.collision_mask = 1  # Collide with world layer
-	
-	var result := space_state.intersect_ray(query)
-	
-	# checls if block object below is diggable
-	if result:
-		var hit_object = result.collider
-		print("Fox detected object below: %s" % hit_object.name)
+	if movement_script and movement_script.has_method("play_override_animation"):
+		movement_script.play_override_animation("dig", 1.5)
 		
-		# check if it's a diggable block
-		# in this case a CSGBOX3D which is in the diggable group
-		if hit_object is CSGBox3D and _is_diggable(hit_object):
-			print("Digging through %s!" % hit_object.name)
-			hit_object.queue_free()  # removes the block
-			# logic for particle effects, sound, animation here later
-		else:
-			print("This block cannot be dug through!")
-	else:
-		print("Nothing detected below fox")
+		# Wait for animation to finish before breaking block
+		var anim_player = movement_script._animation_player
+		if anim_player and not anim_player.animation_finished.is_connected(_on_fox_dig_finished):
+			anim_player.animation_finished.connect(_on_fox_dig_finished, CONNECT_ONE_SHOT)
 
 ## check if a block is diggabl
 func _is_diggable(block: Node) -> bool:
@@ -179,38 +143,72 @@ func _is_diggable(block: Node) -> bool:
 		return true
 	
 	return false
+
+## Called after dig animation finishes to break the block
+func _on_fox_dig_finished(_anim_name: String) -> void:
+	# get the player body
+	var player := get_parent() as CharacterBody3D
+	if not player:
+		print("Error: Could not find player CharacterBody3D")
+		return
+	
+	# Create a raycast to detect what's below the player
+	var space_state := player.get_world_3d().direct_space_state
+	var player_pos := player.global_position
+	
+	# Cast ray from player position downward
+	var ray_start := player_pos
+	var ray_end := player_pos + Vector3.DOWN * 2.0  # checks 2 units below
+	
+	var query := PhysicsRayQueryParameters3D.create(ray_start, ray_end)
+	query.collision_mask = 1  # Collide with world layer
+	
+	var result := space_state.intersect_ray(query)
+	
+	# check if block object below is diggable
+	if result:
+		var hit_object = result.collider
+		#print("Fox detected object below: %s" % hit_object.name)
+		
+		# check if it's a diggable block
+		# in this case a CSGBOX3D which is in the diggable group
+		if hit_object is CSGBox3D and _is_diggable(hit_object):
+			#print("Digging through %s!" % hit_object.name)
+			hit_object.queue_free()  # removes the block
+			# logic for particle effects, sound, animation here later
+		else:
+			print("This block cannot be dug through!")
+	else:
+		print("Nothing detected below fox")
+
 ## bear form ability
 func _use_bear_ability() -> void:
 	print("=== BEAR FORM ABILITY ACTIVATED ===")
 	
-	# Play attack animation
-	var movement_script := form_controller.movement_script if form_controller else null
-	if movement_script and movement_script.has_method("play_ability_animation"):
-		movement_script.play_ability_animation("attack", 1.5)
-	
 	# Find or create the BearHitbox
 	var hitbox: BearHitbox = get_node_or_null("BearHitbox")
 	if not hitbox:
-		push_warning("BearHitbox not found under Abilities node!")
+		push_warning("BearHitbox not found under Abilities node")
 		return
 	
 	# Check if ready to attack
 	if not hitbox.is_ready_to_attack():
-		print("Bear attack on cooldown")
+		#print("Bear attack on cooldown")
 		return
 	
-	# Get player position and facing direction
+	# Play attack animation (override so movement does not cancel it)
+	var movement_script := form_controller.movement_script if form_controller else null
+	if movement_script and movement_script.has_method("play_override_animation"):
+		movement_script.play_override_animation("attack", 2.4)
+	
+	#print("Bear attacks")
+	
+	# Wait for attack to reach impact point before activating hitbox
+	# Adjust this delay to match when the attack visually connects (e.g., 0.4s for midway)
+	await get_tree().create_timer(0.4).timeout
+	
+	# Activate hitbox after delay
 	var player := get_parent() as CharacterBody3D
-	if not player:
-		return
-	
-	# Determine facing direction from Visuals rotation
-	#var visuals := player.get_node_or_null("Visuals")
-	#var facing_right := true
-	#if visuals:
-		# If rotation.y is PI (180 degrees), player is facing left
-		#facing_right = abs(visuals.rotation.y) < 1.0
-	
-	# Trigger the attack
-	hitbox.perform_attack(player.global_position)
-	print("Bear attacks")
+	if player and hitbox:
+		hitbox.perform_attack(player.global_position)
+		#print("Bear attack hitbox activated")
